@@ -12,25 +12,10 @@ copyright: 'Copyright &copy; 2024 University of Colorado Boulder'
 
 # Page tree
 nav:
-  - Home: index.md
   - Orientation:
        - Orientation Slides: orientation/slides.md
        - Code of Conduct: orientation/code-of-conduct.md
        - Participant agreement: orientation/participant_agreement.md
-       - ESIIL training: orientation/esiil_training.md
-       - Markdown: orientation/markdown_basics.md
-       - Cyverse: orientation/cyverse_basics.md
-       - Art Gallery: orientation/art_gallery.md
-       - Docker: orientation/docker_basics.md
-  - Meeting Notes:
-       - First meeting: meeting-notes/first_meeting_notes.md
-  - Code documentation:
-       - Data processing: code/data_processing.md
-       - Data analysis: code/data_analysis.md
-       - Visualizations: code/visualizations.md
-  - References:
-       - Notes from readings: references/notes_from_readings.md
-       - Citations: references/citations.md
 
 # Configuration
 theme:
