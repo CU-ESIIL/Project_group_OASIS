@@ -1,6 +1,6 @@
 # Welcome to ESIIL Education Student OASIS
 
-This is the central resource for ESIIL working groups.
+This is the central resource for ESIIL project groups.
 
 ## Embedded Website
 
