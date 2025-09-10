@@ -12,6 +12,7 @@ copyright: 'Copyright &copy; 2024 University of Colorado Boulder'
 
 # Page tree
 nav:
+  - Home: index.md
   - Orientation:
        - Orientation Slides: orientation/slides.md
        - Code of Conduct: orientation/code-of-conduct.md
