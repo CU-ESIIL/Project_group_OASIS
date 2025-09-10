@@ -1,0 +1,21 @@
+ name: Publish docs via GitHub
+ on:
+   push:
+     branches:
+       - main
+
+ jobs:
+   build:
+     name: Deploy docs
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v4
+       - uses: actions/setup-python@v5
+         with:
+           python-version: '3.11'
+       - name: run requirements file
+         run:  pip install -r requirements.txt 
+       - name: Deploy docs
+         run: mkdocs gh-deploy --force
+         env:
+           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
