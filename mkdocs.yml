@@ -13,6 +13,10 @@ copyright: 'Copyright &copy; 2024 University of Colorado Boulder'
 # Page tree
 nav:
   - Home: index.md
+  - Instructions:
+       - Day 1 — Define & Explore: instructions/day1.md
+       - Day 2 — Data & Methods: instructions/day2.md
+       - Day 3 — Insights & Sharing: instructions/day3.md
   - Orientation:
        - Orientation Slides: orientation/slides.md
        - Code of Conduct: orientation/code-of-conduct.md
@@ -70,3 +74,6 @@ plugins:
     - mkdocs-jupyter:
           include_source: True
           ignore_h1_titles: True
+markdown_extensions:
+  - toc:
+      toc_depth: 2
