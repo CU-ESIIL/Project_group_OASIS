@@ -1,72 +1,171 @@
-# [Your Project Group Name]
+---
+layout: page
+title: Project Sprint — 3-Day Science Showcase
+permalink: /
+---
 
-Welcome to the [Your Project Group Name] repository, part of the Environmental Data Science Innovation and Inclusion Lab (ESIIL). This repository serves as the central hub for our project group, hosting our project description, proposals, member bios, codebase, and more.
+<!-- =========================================================
+HERO (Swap hero.jpg, title, strapline, and the three links)
+========================================================= -->
 
-test edit 
+![Wide banner of the study system](assets/hero.jpg)
 
-## Our Project
+# Project Sprint: Clear, Short Title
 
-[Provide a brief overview of your project here. Explain what you aim to achieve, the importance of your project, and its expected impact.]
+**One sentence on impact:** In 3 days, we explore *X* to inform *Y*, producing actionable visuals, a concise brief, and shareable code.
 
-## Project Proposal
+**[Project brief (PDF)](#) · [View shared code](code.md) · [Data & access](data.md)**
 
-[Link to the detailed project proposal document or include the proposal directly in the repository. This should outline the goals, methodologies, anticipated challenges, and projected timelines.]
+> **About this site:** This is a public, in-progress record of a 3-day project at the Innovation Summit. Edit everything here in your browser: open a file → pencil icon → Commit changes.
 
-## Group Members
+---
 
-[List the names and a brief description of each group member, possibly linking to their personal or professional web pages.]
+## How to use this page (for the team)
+- **Edit this file:** `docs/index.md` → ✎ → change text → **Commit changes**.
+- **Add images:** upload to `docs/assets/` and reference like `assets/your_file.png`.
+- Keep **text short** and **visuals first**. Think “slide captions,” not essays.
 
-- **Member 1**: Brief description or role within the group.
-- **Member 2**: Brief description or role within the group.
-- ...
+---
 
-## Code Repository
+## Day 1 — Define & Explore
+*Focus: questions, hypotheses, context; add at least one visual (photo of whiteboard/notes).*
 
-This section of the repository will include all the code developed for the project. You can structure it as follows:
+### Our question(s)
+<!-- EDIT: Replace bullets with your own. Encourage divergent takes. -->
+- What are we trying to understand or change?
+- Why now? Why here?
+- Who benefits if we succeed?
 
-- **Analysis Code**: Scripts for data analysis, statistical modeling, etc.
-- **Data Processing**: Scripts for cleaning, merging, and managing datasets.
-- **Visualization**: Code for creating figures, charts, and interactive visualizations.
+### Hypotheses / intentions
+<!-- EDIT: Plain language, short and honest. -->
+- We think that …
+- We intend to test whether …
+- We will know we’re onto something if …
 
-## Meeting Notes and Agendas
+### Why this matters (the “upshot”)
+<!-- EDIT: 2–3 sentences max, decision-oriented. -->
+Explain who is impacted and how this could change decisions or understanding.
 
-Meeting notes and agendas will be regularly updated here to keep all group members informed and engaged with the progress and direction of the project.
+### Inspirations (papers, datasets, tools)
+<!-- EDIT: Swap in your own links. -->
+- Publication: [Influential paper title](https://doi.org/xxxx)
+- Dataset portal: [Example data hub](https://example.org)
+- Tool/tech: [Method or library](https://example.org)
 
-## Contributing to This Repository
+### Field notes / visuals
+<!-- EDIT: Replace with a real smartphone photo or sketch; keep filename simple. -->
+![Whiteboard brainstorm (replace this)](assets/day1_whiteboard.jpg)
+*Caption: What this shows and why it’s useful today.*
 
-We welcome contributions from all group members. To maintain the quality and integrity of the repository, please adhere to the following guidelines:
+> **Different perspectives:** Briefly capture disagreements or alternate framings. These can unlock innovation.
 
-- Make sure all commits have a clear and concise message.
-- Document any major changes or decisions in the meeting notes.
-- Review and merge changes through pull requests to ensure oversight.
+---
 
-## Getting Help
+## Day 2 — Data & Methods
+*Focus: what we’re testing and building; show a first visual (plot/map/screenshot/GIF).*
 
-If you encounter any issues or have questions about how to contribute, please refer to the [ESIIL Support Page](https://esiil.org/support) or contact the repository maintainers directly.
+### Data sources we’re exploring
+<!-- EDIT: Link each source; add size/notes if relevant. -->
+- Source A — link and 1-line description
+- Source B — link and 1-line description
 
-## Customize Your Repository
+### Methods / technologies we’re testing
+- Approach 1 (e.g., time-series break detection)
+- Approach 2 (e.g., random forest on features)
+- Visualization (e.g., map tiles, small multiples)
 
-As a new project group, you'll want to make this repository your own. Here's how to get started:
+### Challenges identified
+- Data gaps / quality issues
+- Method limitations / compute constraints
+- Open questions we need to decide on
 
-1. **Edit This Readme**: Replace the placeholder content with information about your specific project. Ensure that the introduction, project overview, and objectives clearly reflect your group's research focus.
+### Prototype visuals
+<!-- EDIT: Swap examples; keep file sizes modest. -->
+#### Static figure
+![Early pattern we’re seeing](assets/figure1.png)
+*Figure 1.* One line on what this suggests.
 
-2. **Update Group Member Bios**: Add details about each group member's expertise, role in the project, and professional background. Include links to personal or professional web pages to foster community engagement and collaboration.
+#### Animated change (GIF)
+![Seasonal/temporal change animation](assets/change.gif)
+*Figure 2.* One line on what changes across time.
 
-3. **Organize Your Code**: Structure your codebase in a way that is logical and accessible. Use directories and clear naming conventions to make it easy for all members to find and contribute to different parts of the project.
+#### Interactive map (iframe)
+<iframe
+  title="Study area (OpenStreetMap)"
+  src="https://www.openstreetmap.org/export/embed.html?bbox=-105.35%2C39.90%2C-105.10%2C40.10&layer=mapnik&marker=40.000%2C-105.225"
+  width="100%" height="360" frameborder="0"></iframe>
+<p><a href="https://www.openstreetmap.org/?mlat=40.000&mlon=-105.225#map=12/40.0000/-105.2250">Open full map</a></p>
 
-4. **Document Your Data**: Include a data directory with README files explaining the datasets, sources, and any preprocessing steps. This will help new members understand and work with the project's data effectively.
+> If an embed doesn’t load, put the normal link directly under it.
 
-5. **Outline Your Methods**: Create a detailed METHODS.md file where you describe the methodologies, software, and tools you will be using in your research. This transparency will support reproducibility and collaborative development.
+---
 
-6. **Set Up Project Management**: Utilize the 'Issues' and 'Projects' features on GitHub to track tasks, discuss ideas, and manage your workflow. This can help in maintaining a clear view of progress and priorities.
+## Day 3 — Insights & Sharing
+*Focus: synthesis; highlight 2–3 visuals that tell the story; keep text crisp.*
 
-7. **Add a License**: Choose and include an appropriate open-source license for your project, ensuring that the broader community understands how they can use and contribute to your work.
+### Findings at a glance
+<!-- EDIT: 2–4 bullets, each a headline in plain language with a number if possible. -->
+- Headline 1 — what, where, how much
+- Headline 2 — change/trend/contrast
+- Headline 3 — implication for practice or policy
 
-8. **Create Contribution Guidelines**: Establish a CONTRIBUTING.md file with instructions for members on how to propose changes, submit issues, and contribute code.
+### Visuals that tell the story
+<!-- EDIT: Swap visuals; prioritize clarity. -->
+![Main result figure](assets/main_result.png)
+*Figure 3.* What this shows and why it matters.
 
-9. **Review and Merge Workflow**: Decide on a workflow for reviewing and merging changes. Will you use branch protection? Who will have merge privileges? Document this process to avoid confusion.
+<iframe
+  title="Short explainer video (optional)"
+  width="100%" height="360"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
 
-10. **Establish Communication Channels**: Beyond GitHub, set up additional communication channels like Slack, Discord, or email lists for quick and informal discussions.
+### What’s next?
+- Immediate follow-ups
+- What we would do with one more week/month
+- Who should see this next
 
-Remember, the goal is to make your repository clear, accessible, and useful for all current and future members of your project group. Happy researching!
+---
 
+## Featured links (image buttons)
+<!-- EDIT: Replace images/links; keep alt text meaningful and motion subtle. -->
+<table>
+<tr>
+<td align="center" width="33%">
+  <a href="#"><img src="assets/button_brief.gif" alt="Project brief PDF" width="240"><br><strong>Read the brief</strong></a>
+</td>
+<td align="center" width="33%">
+  <a href="code.md"><img src="assets/button_code.gif" alt="View shared code" width="240"><br><strong>View code</strong></a>
+</td>
+<td align="center" width="33%">
+  <a href="data.md"><img src="assets/button_data.gif" alt="Explore data" width="240"><br><strong>Explore data</strong></a>
+</td>
+</tr>
+</table>
+
+---
+
+## Team
+| Name | Role | Contact | GitHub |
+|------|------|---------|--------|
+| Jane Doe | Lead | jane.doe@example.org | @janedoe |
+| John Smith | Analyst | john.smith@example.org | @jsmith |
+
+---
+
+## Cite & reuse
+If you use these materials, please cite:
+
+> Lastname, A., Lastname, B. (2025). *Project title*. DOI or URL.
+
+License: CC-BY-4.0 unless noted. See dataset licenses on the **[Data](data.md)** page.
+
+---
+
+<!-- EDIT HINTS
+- Upload images to docs/assets/ and reference as assets/filename.png
+- Keep images ~1200 px wide; avoid >5–8 MB per file.
+- Use short, active sentences; this is a scrolling “slide deck.”
+- Update this page at least once per day during the sprint.
+-->
