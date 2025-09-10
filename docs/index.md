@@ -1,6 +1,6 @@
-# [Your Working Group Name]
+# [Your Project Group Name]
 
-Welcome to the [Your Working Group Name] repository, part of the Environmental Data Science Innovation and Inclusion Lab (ESIIL). This repository serves as the central hub for our working group, hosting our project description, proposals, member bios, codebase, and more.
+Welcome to the [Your Project Group Name] repository, part of the Environmental Data Science Innovation and Inclusion Lab (ESIIL). This repository serves as the central hub for our project group, hosting our project description, proposals, member bios, codebase, and more.
 
 test edit 
 
@@ -46,7 +46,7 @@ If you encounter any issues or have questions about how to contribute, please re
 
 ## Customize Your Repository
 
-As a new working group, you'll want to make this repository your own. Here's how to get started:
+As a new project group, you'll want to make this repository your own. Here's how to get started:
 
 1. **Edit This Readme**: Replace the placeholder content with information about your specific project. Ensure that the introduction, project overview, and objectives clearly reflect your group's research focus.
 
@@ -68,5 +68,5 @@ As a new working group, you'll want to make this repository your own. Here's how
 
 10. **Establish Communication Channels**: Beyond GitHub, set up additional communication channels like Slack, Discord, or email lists for quick and informal discussions.
 
-Remember, the goal is to make your repository clear, accessible, and useful for all current and future members of your working group. Happy researching!
+Remember, the goal is to make your repository clear, accessible, and useful for all current and future members of your project group. Happy researching!
 
