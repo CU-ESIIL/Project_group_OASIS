@@ -26,7 +26,6 @@ Welcome to the **[Your Working Group Name]** repository, an integral part of the
   - **orientation/**: Onboarding materials and training resources.
   - **meeting-notes/**: Notes from group meetings.
   - **code/**: Documentation for data processing, analysis, and visualization.
-  - **manuscript/**: Drafts and manuscript content.
   - **references/**: Citations and reading notes.
 
 ## Meeting Notes and Agendas
