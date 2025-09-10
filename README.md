@@ -2,6 +2,8 @@
 
 # Project Group OASIS
 
+Version 1.0.0
+
 Welcome to the collaboration space for the OASIS project group of the Environmental Data Science Innovation and Inclusion Lab (ESIIL). This repository and its companion website gather everything new teammates need to start working together.
 
 ## Getting Started
