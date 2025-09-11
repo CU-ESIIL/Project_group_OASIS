@@ -218,73 +218,73 @@ The steps section of the file defines what will be run by the Action. An overvie
 ### Running the Action
 From your repositories GitHub page, click on the Actions tab 
 ![Actions](../assets/docker_basics/actions.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: actions.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/actions.png)
 
 Find the workflow in the Workflow navigation menu and click on it
 ![Workflows](../assets/docker_basics/workflows.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: workflows.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/workflows.png)
 
 Click on the run workflow dropdown and click Run Workflow
 ![RunWorkflow](../assets/docker_basics/run_workflow.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: run_workflow.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/run_workflow.png)
 
 ## Deploying the Image on CyVerse
 First go to de.cyverse.org and login. From there go to the Apps dashboard and click on Manage Tools.
 
 ![ManageTools](../assets/docker_basics/manage_tools.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: manage_tools.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/manage_tools.png)
 
 ### Adding the Image as a Tool
 Then click Add Tool.
 
 ![AddTool](../assets/docker_basics/add_tool.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: add_tool.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/add_tool.png)
 
 Give the Tool a descriptive name and set the initial version. The version can be whatever you like but 1.0 makes the most sense.
 
 ![ToolName](../assets/docker_basics/tool_name.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: tool_name.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/tool_name.png)
 
 Set the Image Name to esiil/name_of_your_image and the tag to whichever tag you would like the Tool to use. Most Tools will use the latest tag.
 
 ![ImageName](../assets/docker_basics/image_name.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: image_name.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/image_name.png)
 
 You can see all of this information on the ESIIL dockerhub page.
 
 ![DockerHub](../assets/docker_basics/dockerhub.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: dockerhub.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/dockerhub.png)
 
 Leave the Entrypoint blank, and set the working directory to /home/jovyan/data-store and the UID to 1000. Add container port 8888. This will mount and give you access to the cyverse data store. Because the file explorer GUI will not let you go above the working directory that is set, you will have to use the terminal to go up one directory and copy over any files you included in your container.
 
 ![ContainerPort](../assets/docker_basics/container_port.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: container_port.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/container_port.png)
 
 Leave all of the restrictions blank and then save the Tool
 
 ![Restrictions](../assets/docker_basics/restrictions.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: restrictions.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/restrictions.png)
 
 ### Associating the Tool with an App
 Go back to the Apps dashboard and click create
 
 ![CreateApp](../assets/docker_basics/create_app.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: create_app.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/create_app.png)
 
 Just like for the Tool, give a descriptive name and description
 
 ![AppName](../assets/docker_basics/app_name.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: app_name.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/app_name.png)
 
 For "Tool used" click select and then search for the name of the tool that was just added and then click on its row and then select at the bottom.
 
 ![ToolSearch](../assets/docker_basics/tool_search.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: tool_search.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/tool_search.png)
 
 From the app creation screen click Next, and then click next through the next steps until you get to completion. From there click Save and Launch
 
 ![SaveandLaunch](../assets/docker_basics/save_and_launch.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/docker_basics)
+[Raw photo location: save_and_launch.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/save_and_launch.png)
 
 From there you can go through the deployment of your app like you would deploy any other app on CyVerse and test it out.
 
