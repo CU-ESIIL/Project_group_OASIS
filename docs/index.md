@@ -68,7 +68,12 @@ Explain who is impacted and how this could change decisions or understanding.
 
 ### Data sources we’re exploring
 <!-- EDIT: Link each source; add size/notes if relevant. -->
-- Source A — link and 1-line description
+- **Source A**
+
+  ![Pattern revealed during exploration](assets/explore_data_plot.png)
+  [Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets)
+  *Snapshot showing initial data patterns.*
+
 - Source B — link and 1-line description
 
 ### Methods / technologies we’re testing
