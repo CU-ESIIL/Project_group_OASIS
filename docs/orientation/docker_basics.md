@@ -218,59 +218,73 @@ The steps section of the file defines what will be run by the Action. An overvie
 ### Running the Action
 From your repositories GitHub page, click on the Actions tab 
 ![Actions](../assets/docker_basics/actions.png)
+[Raw photo location](../assets/docker_basics/)
 
 Find the workflow in the Workflow navigation menu and click on it
 ![Workflows](../assets/docker_basics/workflows.png)
+[Raw photo location](../assets/docker_basics/)
 
 Click on the run workflow dropdown and click Run Workflow
 ![RunWorkflow](../assets/docker_basics/run_workflow.png)
+[Raw photo location](../assets/docker_basics/)
 
 ## Deploying the Image on CyVerse
 First go to de.cyverse.org and login. From there go to the Apps dashboard and click on Manage Tools.
 
 ![ManageTools](../assets/docker_basics/manage_tools.png)
+[Raw photo location](../assets/docker_basics/)
 
 ### Adding the Image as a Tool
 Then click Add Tool.
 
 ![AddTool](../assets/docker_basics/add_tool.png)
+[Raw photo location](../assets/docker_basics/)
 
 Give the Tool a descriptive name and set the initial version. The version can be whatever you like but 1.0 makes the most sense.
 
 ![ToolName](../assets/docker_basics/tool_name.png)
+[Raw photo location](../assets/docker_basics/)
 
 Set the Image Name to esiil/name_of_your_image and the tag to whichever tag you would like the Tool to use. Most Tools will use the latest tag.
 
 ![ImageName](../assets/docker_basics/image_name.png)
+[Raw photo location](../assets/docker_basics/)
 
 You can see all of this information on the ESIIL dockerhub page.
 
 ![DockerHub](../assets/docker_basics/dockerhub.png)
+[Raw photo location](../assets/docker_basics/)
 
 Leave the Entrypoint blank, and set the working directory to /home/jovyan/data-store and the UID to 1000. Add container port 8888. This will mount and give you access to the cyverse data store. Because the file explorer GUI will not let you go above the working directory that is set, you will have to use the terminal to go up one directory and copy over any files you included in your container.
 
 ![ContainerPort](../assets/docker_basics/container_port.png)
+[Raw photo location](../assets/docker_basics/)
 
 Leave all of the restrictions blank and then save the Tool
 
 ![Restrictions](../assets/docker_basics/restrictions.png)
+[Raw photo location](../assets/docker_basics/)
 
 ### Associating the Tool with an App
 Go back to the Apps dashboard and click create
 
 ![CreateApp](../assets/docker_basics/create_app.png)
+[Raw photo location](../assets/docker_basics/)
 
 Just like for the Tool, give a descriptive name and description
 
 ![AppName](../assets/docker_basics/app_name.png)
+[Raw photo location](../assets/docker_basics/)
 
 For "Tool used" click select and then search for the name of the tool that was just added and then click on its row and then select at the bottom.
 
 ![ToolSearch](../assets/docker_basics/tool_search.png)
+[Raw photo location](../assets/docker_basics/)
 
 From the app creation screen click Next, and then click next through the next steps until you get to completion. From there click Save and Launch
 
 ![SaveandLaunch](../assets/docker_basics/save_and_launch.png)
+[Raw photo location](../assets/docker_basics/)
 
 From there you can go through the deployment of your app like you would deploy any other app on CyVerse and test it out.
 

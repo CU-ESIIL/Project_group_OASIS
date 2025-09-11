@@ -9,6 +9,7 @@ HERO (Swap hero.jpg, title, strapline, and the three links)
 ========================================================= -->
 
 ![Wide banner of the study system](assets/hero.jpg)
+[Raw photo location](assets/)
 
 # Project Sprint: Clear, Short Title
 
@@ -55,6 +56,7 @@ Explain who is impacted and how this could change decisions or understanding.
 ### Field notes / visuals
 <!-- EDIT: Replace with a real smartphone photo or sketch; keep filename simple. -->
 ![Whiteboard brainstorm (replace this)](assets/day1_whiteboard.jpg)
+[Raw photo location](assets/)
 *Caption: What this shows and why it’s useful today.*
 
 > **Different perspectives:** Briefly capture disagreements or alternate framings. These can unlock innovation.
@@ -83,10 +85,12 @@ Explain who is impacted and how this could change decisions or understanding.
 <!-- EDIT: Swap examples; keep file sizes modest. -->
 #### Static figure
 ![Early pattern we’re seeing](assets/figure1.png)
+[Raw photo location](assets/)
 *Figure 1.* One line on what this suggests.
 
 #### Animated change (GIF)
 ![Seasonal/temporal change animation](assets/change.gif)
+[Raw photo location](assets/)
 *Figure 2.* One line on what changes across time.
 
 #### Interactive map (iframe)
@@ -112,6 +116,7 @@ Explain who is impacted and how this could change decisions or understanding.
 ### Visuals that tell the story
 <!-- EDIT: Swap visuals; prioritize clarity. -->
 ![Main result figure](assets/main_result.png)
+[Raw photo location](assets/)
 *Figure 3.* What this shows and why it matters.
 
 <iframe
