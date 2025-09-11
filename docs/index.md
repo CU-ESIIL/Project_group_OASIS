@@ -9,7 +9,7 @@ HERO (Swap hero.jpg, title, strapline, and the three links)
 ========================================================= -->
 
 ![Wide banner of the study system](assets/hero.jpg)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets)
+[Raw photo location: hero.jpg](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/hero.jpg)
 
 # Project Sprint: Clear, Short Title
 
@@ -56,7 +56,7 @@ Explain who is impacted and how this could change decisions or understanding.
 ### Field notes / visuals
 <!-- EDIT: Replace with a real smartphone photo or sketch; keep filename simple. -->
 ![Whiteboard brainstorm (replace this)](assets/day1_whiteboard.jpg)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets)
+[Raw photo location: day1_whiteboard.jpg](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/day1_whiteboard.jpg)
 *Caption: What this shows and why it’s useful today.*
 
 > **Different perspectives:** Briefly capture disagreements or alternate framings. These can unlock innovation.
@@ -71,7 +71,7 @@ Explain who is impacted and how this could change decisions or understanding.
 - **Source A**
 
   ![Pattern revealed during exploration](assets/explore_data_plot.png)
-  [Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets)
+[Raw photo location: explore_data_plot.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/explore_data_plot.png)
   *Snapshot showing initial data patterns.*
 
 - Source B — link and 1-line description
@@ -90,12 +90,12 @@ Explain who is impacted and how this could change decisions or understanding.
 <!-- EDIT: Swap examples; keep file sizes modest. -->
 #### Static figure
 ![Early pattern we’re seeing](assets/figure1.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets)
+[Raw photo location: figure1.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/figure1.png)
 *Figure 1.* One line on what this suggests.
 
 #### Animated change (GIF)
 ![Seasonal/temporal change animation](assets/change.gif)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets)
+[Raw photo location: change.gif](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/change.gif)
 *Figure 2.* One line on what changes across time.
 
 #### Interactive map (iframe)
@@ -121,7 +121,7 @@ Explain who is impacted and how this could change decisions or understanding.
 ### Visuals that tell the story
 <!-- EDIT: Swap visuals; prioritize clarity. -->
 ![Main result figure](assets/main_result.png)
-[Raw photo location](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets)
+[Raw photo location: main_result.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/main_result.png)
 *Figure 3.* What this shows and why it matters.
 
 <iframe
