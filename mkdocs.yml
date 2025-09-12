@@ -18,7 +18,7 @@ nav:
        - Day 2 — Data & Methods: instructions/day2.md
        - Day 3 — Insights & Sharing: instructions/day3.md
        - Save to persistent storage: instructions/save-to-persistent-storage.md
-       - Push to GitHub: instructions/push-to-github.md
+       - Git/GitHub Widget in JupyterLab: instructions/push-to-github.md
   - Orientation:
        - Orientation Slides: orientation/slides.md
        - Code of Conduct: orientation/code-of-conduct.md
