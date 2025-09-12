@@ -112,6 +112,9 @@ Explain who is impacted and how this could change decisions or understanding.
 ## Day 3 — Insights & Sharing
 *Focus: synthesis; highlight 2–3 visuals that tell the story; keep text crisp.*
 
+![Team photo at start of Day 3](assets/team_photo.jpg)
+[Raw photo location: team_photo.jpg](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/team_photo.jpg)
+
 ### Findings at a glance
 <!-- EDIT: 2–4 bullets, each a headline in plain language with a number if possible. -->
 - Headline 1 — what, where, how much
