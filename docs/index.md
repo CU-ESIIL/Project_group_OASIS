@@ -4,6 +4,8 @@ title: Project Sprint — 3-Day Science Showcase
 permalink: /
 ---
 
+<p style="text-align: right;"><a href="https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md" title="Edit this page">✏️</a></p>
+
 <!-- =========================================================
 HERO (Swap hero.jpg, title, strapline, and the three links)
 ========================================================= -->
