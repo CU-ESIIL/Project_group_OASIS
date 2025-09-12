@@ -20,6 +20,7 @@ nav:
        - Link to GitHub: instructions/link-to-github.md
        - Git/GitHub Widget in JupyterLab: instructions/push-to-github.md
        - Save to persistent storage: instructions/save-to-persistent-storage.md
+       - RStudio Proxy Workaround: instructions/open-rstudio.md
   - Orientation:
        - Orientation Slides: orientation/slides.md
        - Code of Conduct: orientation/code-of-conduct.md
