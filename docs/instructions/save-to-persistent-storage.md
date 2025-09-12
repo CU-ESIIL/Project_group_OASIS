@@ -32,6 +32,8 @@ COMMUNITY="i:/iplant/home/shared/esiil/Innovation_summit/${GROUP_NAME}"
 PERSONAL="i:/iplant/home/${USERNAME}"
 ```
 
+> **Note:** GoCommands uses `i:` to denote paths on the CyVerse Data Store. Include this prefix for any remote path (for example, `i:/iplant/home/...`). Local filesystem paths should not have the `i:` prefix.
+
 ---
 
 ## A) Save data **to the community folder**
@@ -68,17 +70,11 @@ LOCAL_DST="./data/"
 
 ## C) **Move** data from the community folder **to your personal space**
 ```bash
-# 1) Pull from the community folder to a local staging area
-mkdir -p ./from_community
-REMOTE_SRC="${COMMUNITY}/deliverables/"
-LOCAL_STAGE="./from_community/"
+# Copy directly between two Data Store locations
+REMOTE_SRC="i:/iplant/home/shared/esiil/Innovation_summit/${GROUP_NAME}/deliverables/"
+REMOTE_PERSONAL_DST="i:/iplant/home/${USERNAME}/projects/innovation_summit_2025/deliverables/"
 
-./gocmd get --icat --retry 3 -d -k -r "${REMOTE_SRC}" "${LOCAL_STAGE}"
-
-# 2) Push from local staging to your personal folder
-REMOTE_PERSONAL_DST="${PERSONAL}/projects/innovation_summit_2025/deliverables/"
-
-./gocmd put --diff --icat --retry 3 -d -k -r "${LOCAL_STAGE}" "${REMOTE_PERSONAL_DST}"
+./gocmd cp --icat --retry 3 -d -k -r "${REMOTE_SRC}" "${REMOTE_PERSONAL_DST}"
 
 # Verify contents
 ./gocmd ls "${REMOTE_PERSONAL_DST}"
