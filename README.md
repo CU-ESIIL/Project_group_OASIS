@@ -5,6 +5,9 @@ This guide is written for people who may be brand new to GitHub. It will show yo
 1. A **website** to communicate your science to others.
 2. A **hub for sharing code** within your group.
 
+
+**Template users:** If you are using this repository as a template, start with [TEMPLATE_GUIDE.md](TEMPLATE_GUIDE.md) for the required name and link updates.
+
 ---
 
 ## 1) Understanding the Repository
