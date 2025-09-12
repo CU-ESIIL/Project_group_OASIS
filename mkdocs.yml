@@ -17,8 +17,9 @@ nav:
        - Day 1 — Define & Explore: instructions/day1.md
        - Day 2 — Data & Methods: instructions/day2.md
        - Day 3 — Insights & Sharing: instructions/day3.md
-       - Save to persistent storage: instructions/save-to-persistent-storage.md
+       - Link to GitHub: instructions/link-to-github.md
        - Push to GitHub: instructions/push-to-github.md
+       - Save to persistent storage: instructions/save-to-persistent-storage.md
   - Orientation:
        - Orientation Slides: orientation/slides.md
        - Code of Conduct: orientation/code-of-conduct.md
