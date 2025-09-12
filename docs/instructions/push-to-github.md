@@ -6,7 +6,7 @@ permalink: /instructions/push/
 
 # Using the Git/GitHub Widget in JupyterLab (JupyterHub)
 
-This page assumes your repository **already exists** and has been cloned into JupyterHub. It also assumes you’ve already set up **SSH authentication** (see the SSH page before continuing).
+This page assumes your repository **already exists** and has been cloned into JupyterHub. It also assumes you’ve already set up **SSH authentication** (see the [Link to GitHub](link-to-github.md) page before continuing).
 
 ---
 
