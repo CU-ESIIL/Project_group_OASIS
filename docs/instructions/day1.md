@@ -34,6 +34,8 @@ Open **Home** → edit `docs/index.md` → fill in:
 
 > If you’re using a CyVerse Jupyter environment and want to sync with GitHub.
 
+[![Launch in CyVerse DE](https://img.shields.io/badge/Launch-CyVerse%20DE-0b6efd?style=flat-square)](https://de.cyverse.org/apps/de/faf1d268-44cc-11ed-9715-008cfa5ae621/launch?saved-launch-id=dc65718e-1964-4d11-99ad-bf901cddda99)
+
 **Clone the repo (HTTPS is easiest for beginners):**
 
 ```bash

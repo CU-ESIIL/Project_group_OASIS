@@ -231,6 +231,8 @@ Click on the run workflow dropdown and click Run Workflow
 ## Deploying the Image on CyVerse
 First go to de.cyverse.org and login. From there go to the Apps dashboard and click on Manage Tools.
 
+[![Launch in CyVerse DE](https://img.shields.io/badge/Launch-CyVerse%20DE-0b6efd?style=flat-square)](https://de.cyverse.org/apps/de/faf1d268-44cc-11ed-9715-008cfa5ae621/launch?saved-launch-id=dc65718e-1964-4d11-99ad-bf901cddda99)
+
 ![ManageTools](../assets/docker_basics/manage_tools.png)
 [Raw photo location: manage_tools.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/docker_basics/manage_tools.png)
 

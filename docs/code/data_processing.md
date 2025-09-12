@@ -14,6 +14,7 @@ This is my draft text
 List and describe data sources used, including links to cloud-optimized sources. Highlight permissions and compliance with data ownership guidelines.
 
 ## CyVerse Discovery Environment
+[![Launch in CyVerse DE](https://img.shields.io/badge/Launch-CyVerse%20DE-0b6efd?style=flat-square)](https://de.cyverse.org/apps/de/faf1d268-44cc-11ed-9715-008cfa5ae621/launch?saved-launch-id=dc65718e-1964-4d11-99ad-bf901cddda99)
 Instructions for setting up and using the CyVerse Discovery Environment for data processing. Tips for cloud-based data access and processing.
 
 ## Data Processing Steps

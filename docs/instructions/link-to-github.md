@@ -10,6 +10,8 @@ This page walks you through generating an SSH key inside JupyterHub and adding i
 
 > **Prereq:** Open a **Jupyter Notebook**, paste the code below into a cell, and click the **Run/Play ▶️** button to execute it.
 
+[![Launch in CyVerse DE](https://img.shields.io/badge/Launch-CyVerse%20DE-0b6efd?style=flat-square)](https://de.cyverse.org/apps/de/faf1d268-44cc-11ed-9715-008cfa5ae621/launch?saved-launch-id=dc65718e-1964-4d11-99ad-bf901cddda99)
+
 ---
 
 ## 1) Run this one‑cell setup script in a Notebook
