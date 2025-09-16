@@ -13,7 +13,7 @@ HERO (Swap hero.jpg, title, strapline, and the three links)
 ![Wide banner of the study system](assets/hero.jpg)
 [Raw photo location: hero.jpg](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/hero.jpg)
 
-# Project Sprint: Clear, Short Title
+# Project Sprint: Clear, Short Title 📣
 
 **One sentence on impact:** In 3 days, we explore *X* to inform *Y*, producing actionable visuals, a concise brief, and shareable code.
 
@@ -33,19 +33,22 @@ HERO (Swap hero.jpg, title, strapline, and the three links)
 ## Day 1 — Define & Explore
 *Focus: questions, hypotheses, context; add at least one visual (photo of whiteboard/notes).*
 
-### Our question(s)
+### Our product 📣
+- What product do you want to create as a team?
+
+### Our question(s) 📣
 <!-- EDIT: Replace bullets with your own. Encourage divergent takes. -->
 - What are we trying to understand or change?
 - Why now? Why here?
 - Who benefits if we succeed?
 
-### Hypotheses / intentions
+### Hypotheses / intentions [Optional: probably not relevant is you are creating an educational tool]
 <!-- EDIT: Plain language, short and honest. -->
 - We think that …
 - We intend to test whether …
 - We will know we’re onto something if …
 
-### Why this matters (the “upshot”)
+### Why this matters (the “upshot”) 📣
 <!-- EDIT: 2–3 sentences max, decision-oriented. -->
 Explain who is impacted and how this could change decisions or understanding.
 
@@ -113,6 +116,10 @@ Explain who is impacted and how this could change decisions or understanding.
 
 ## Day 3 — Insights & Sharing
 *Focus: synthesis; highlight 2–3 visuals that tell the story; keep text crisp.*
+
+### Project Sprint: Clear, Short Title
+
+### Product: type of product
 
 ![Team photo at start of Day 3](assets/team_photo.jpg)
 [Raw photo location: team_photo.jpg](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/team_photo.jpg)
