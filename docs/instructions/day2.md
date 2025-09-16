@@ -10,9 +10,9 @@ permalink: /instructions/day2/
 ## 1) Explore the Data Library & Analytics Library
 - Browse your **Data Library** for candidate datasets (portals, STAC catalogs, archives). Capture links and notes.
 - Browse your **Analytics Library** for example workflows (scripts, notebooks).
-- Log 2–4 promising items on **Home** → `docs/index.md` under:
-  - **Data sources we’re exploring** (links + 1-line notes)
-  - **Methods / technologies we’re testing** (stats, models, viz)
+- Make edits on **Home** → `docs/index.md` under:
+  - **Data sources we’re exploring**: Add 2-4 promising data sources (links + 1-line notes)
+  - **Methods / technologies we’re testing**: Add 2-4 methods/technologies you're testing (stats, models, viz)
 
 ## 2) Transfer or access data via gocmd (if needed)
 > Use when moving files to/from institutional storage (e.g., CyVerse Data Store).
@@ -42,7 +42,7 @@ curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/
 
 ## 3) Show early results (visual-first)
 
-* Add **Prototype visuals** on **Home** → `docs/index.md`:
+* Add **Visuals** on **Home** → `docs/index.md`:
 
   * A static figure (PNG)
   * A small GIF for change over time (if you have one)
