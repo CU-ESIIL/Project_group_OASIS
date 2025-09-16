@@ -91,7 +91,7 @@ Explain who is impacted and how this could change decisions or understanding.
 - Method limitations / compute constraints
 - Open questions we need to decide on
 
-### Prototype visuals
+### Visuals
 <!-- EDIT: Swap examples; keep file sizes modest. -->
 #### Static figure
 ![Early pattern we’re seeing](assets/figure1.png)
