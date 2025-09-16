@@ -11,8 +11,9 @@ permalink: /instructions/day1/
 - Names, roles, what each person wants to learn or contribute in 3 days.
 - Add your names to **[Team](../team.md)** (top nav → Team). Edit the table, keep it simple.
 
-## 2) Define your question(s) and hypotheses
+## 2) Define your product, question(s) and hypotheses
 Open **Home** → edit `docs/index.md` → fill in:
+- **Our product**: describe the desired, tangible outcomes for your group
 - **Our question(s)**: 2–4 bullets; invite divergent framings.
 - **Hypotheses / intentions**: short, plain-language "we think…" statements.
 - **Why this matters (upshot)**: who benefits and how decisions could change.
