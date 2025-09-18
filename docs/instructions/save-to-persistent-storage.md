@@ -14,12 +14,12 @@ curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/
 
 # Configure iRODS (accept defaults for Host/Port/Zone; use your CyVerse creds)
 ./gocmd init
-./gocmd whoami
+./gocmd auth login  # follow prompts to authenticate with CyVerse
 ```
 
 **Community folder root (read/write for teams):**
 ```
-/iplant/home/shared/esiil/Innovation_summit/<GROUP_NAME>
+i:/iplant/home/shared/esiil/Innovation_summit/<GROUP_NAME>
 ```
 
 Set environment variables:
