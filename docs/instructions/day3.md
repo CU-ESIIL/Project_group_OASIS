@@ -4,7 +4,7 @@ title: Day 3 — Insights & Sharing
 permalink: /instructions/day3/
 ---
 
-# Day 3 — Insights & Sharing
+# Final Report Out — Insights & Sharing
 **Focus:** synthesize what you learned, polish visuals, and create a short, public-facing story. Make a plan for next steps.
 
 ## 1) Findings at a glance
@@ -31,7 +31,7 @@ permalink: /instructions/day3/
 - Verify licenses (code and data) are stated.
 
 ## 6) Report-out prep
-- Practice a **2-minute walkthrough** of the homepage: Why → Questions → Data/Methods → Findings → Next.
+- Practice a **2-minute walkthrough** of the homepage 📣: Why → Questions → Data/Methods → Findings → Next.
 - If you made a short video or recorded demo, embed with an iframe on **Home**.
 
 ## Day 3 checklist
