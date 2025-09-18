@@ -42,7 +42,7 @@ HERO (Swap hero.jpg, title, strapline, and the three links)
 - Why now? Why here?
 - Who benefits if we succeed?
 
-### Hypotheses / intentions [Optional: probably not relevant is you are creating an educational tool]
+### Hypotheses / intentions [Optional: probably not relevant if you are creating an educational tool]
 <!-- EDIT: Plain language, short and honest. -->
 - We think that …
 - We intend to test whether …
@@ -114,7 +114,7 @@ Explain who is impacted and how this could change decisions or understanding.
 
 ---
 
-## Day 3 — Insights & Sharing
+## Final Share Out — Insights & Sharing 📣
 *Focus: synthesis; highlight 2–3 visuals that tell the story; keep text crisp.*
 
 ### Project Sprint: Clear, Short Title
