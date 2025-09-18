@@ -15,10 +15,13 @@ This guide is written for people who may be brand new to GitHub. It will show yo
 Think of this repository like a **shared online folder**. Inside it, there are a few important parts:
 
 * **README.md** — This file (what you are reading now). It explains how things work.
-* **docs/** — This folder powers your website. Everything you put here will show up on the web.
-* **src/** — This folder is where you share your code (scripts, notebooks, analysis).
 * **data/** — Optional. Small datasets can go here.
 * **outputs/** — Optional. Figures, results, and reports can go here.
+
+### Storage
+
+- **Code (`code/`)** — Share scripts, notebooks, and analysis utilities. Keep filenames clear and include short comments at the top so teammates understand the purpose quickly.
+- **Documentation (`docs/` and `documentation/`)** — Everything inside `docs/` powers the public website, while `documentation/` can host internal notes or extended write-ups. Update these areas regularly so the story on the site and your working docs stay in sync.
 
 ---
 
