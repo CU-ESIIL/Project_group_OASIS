@@ -8,8 +8,8 @@ permalink: /instructions/day2/
 **Focus:** try a few datasets and analyses. Keep it visual, keep it simple. Update the site to reflect what you test.
 
 ## 1) Explore the Data Library & Analytics Library
-- Browse your **Data Library** for candidate datasets (portals, STAC catalogs, archives). Capture links and notes.
-- Browse your **Analytics Library** for example workflows (scripts, notebooks).
+- Browse your [**Data Library**](https://cu-esiil.github.io/data-library/innovation-summit-2025/) for candidate datasets (portals, STAC catalogs, archives). Capture links and notes.
+- Browse your [**Analytics Library**](https://cu-esiil.github.io/analytics-library/innovation-summit-2025/) for example workflows (scripts, notebooks).
 - Make edits on **Home** → `docs/index.md` under:
   - **Data sources we’re exploring**: Add 2-4 promising data sources (links + 1-line notes)
   - **Methods / technologies we’re testing**: Add 2-4 methods/technologies you're testing (stats, models, viz)
