@@ -23,19 +23,24 @@ permalink: /instructions/day2/
 GOCMD_VER=$(curl -L -s https://raw.githubusercontent.com/cyverse/gocommands/main/VERSION.txt); \
 curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/gocmd-${GOCMD_VER}-linux-amd64.tar.gz | tar zxvf -
 
-# Initialize and verify identity
+# Initialize and authenticate
 ./gocmd init
-./gocmd whoami
+./gocmd auth login  # follow prompts for CyVerse credentials
+
+# Optionally confirm access to your home directory
+./gocmd ls i:/iplant/home/YOUR_USER
 ```
+
+> Remote Data Store paths must include the `i:` prefix (for example, `i:/iplant/home/...`). Local paths should omit it.
 
 **Example transfers:**
 
 ```bash
 # Upload a local file to the Data Store
-./gocmd put ./outputs/figure1.png /iplant/home/YOUR_USER/sprint/figure1.png
+./gocmd put ./outputs/figure1.png i:/iplant/home/YOUR_USER/sprint/figure1.png
 
 # Download from the Data Store to your working dir
-./gocmd get /iplant/home/YOUR_USER/sprint/input.csv ./data/input.csv
+./gocmd get i:/iplant/home/YOUR_USER/sprint/input.csv ./data/input.csv
 ```
 
 > Keep large data out of GitHub. Store externally, link from the **Data** page.

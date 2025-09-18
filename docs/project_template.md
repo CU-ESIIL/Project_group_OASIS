@@ -107,7 +107,7 @@ Project one-liner: _(write it here)_
 GOCMD_VER=$(curl -L -s https://raw.githubusercontent.com/cyverse/gocommands/main/VERSION.txt); \
 curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/gocmd-${GOCMD_VER}-linux-amd64.tar.gz | tar zxvf -
 ./gocmd init
-./gocmd whoami
+./gocmd auth login  # follow prompts to authenticate
 ```
 
    > *(macOS uses a different tarball)*
