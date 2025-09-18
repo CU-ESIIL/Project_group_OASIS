@@ -115,11 +115,7 @@ Explain who is impacted and how this could change decisions or understanding.
 ---
 
 ## Final Share Out — Insights & Sharing 
-*Focus: synthesis; highlight 2–3 visuals that tell the story; keep text crisp.*
-
-### Project Sprint: Clear, Short Title 
-
-### Product: type of product 
+*Focus: synthesis; highlight 2–3 visuals that tell the story; keep text crisp. Practice a 2-minute walkthrough of the homepage 📣: Why → Questions → Data/Methods → Findings → Next.*
 
 ![Team photo at start of Day 3](assets/team_photo.jpg)
 [Raw photo location: team_photo.jpg](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/team_photo.jpg)
