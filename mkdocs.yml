@@ -33,8 +33,9 @@ theme:
   font:
     text: 'Open Sans'
     code: 'Roboto Mono'
-  logo: 'assets/esiil_content/ESIIL_logo.png'
+  logo: 'assets/esiil_content/esiil_oasis_logo.png'
   favicon: 'assets/esiil_content/favicon.ico'
+  custom_dir: docs/overrides
   # setting features for the navigation tab
   features:
     - navigation.sections
