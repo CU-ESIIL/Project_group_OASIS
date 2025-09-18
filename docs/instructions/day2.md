@@ -56,9 +56,9 @@ curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/
 
 ## 4) Link runnable code
 
-* Put scripts/notebooks in `src/`.
-* On **Code** (`docs/code.md`), add a short entry per script: what it does, inputs, how to run.
-* Keep names clear: `src/pipeline.py`, `src/notebooks/explore.ipynb`.
+* Run at least one workflow and capture a shareable output — a plot, table, map, or other scientific product. Save static outputs (PNG, GIF, JPG) to the site, or embed live results (for example, an iframe for an HTML widget or interactive table).
+* Keep scripts and notebooks in `code/` with clear names (for example, `code/pipeline.py`, `code/notebooks/explore.ipynb`).
+* On **Code** (`docs/code.md`), add a short entry for each workflow: what it does, required inputs, how to run it, and where to view the output (linked image, iframe, or hosted artifact).
 
 ## 5) Day 2 checklist
 
