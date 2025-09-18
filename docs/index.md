@@ -71,7 +71,7 @@ Explain who is impacted and how this could change decisions or understanding.
 ## Day 2 — Data & Methods
 *Focus: what we’re testing and building; show a first visual (plot/map/screenshot/GIF).*
 
-### Data sources we’re exploring
+### Data sources we’re exploring 📣
 <!-- EDIT: Link each source; add size/notes if relevant. -->
 - **Source A**
 
@@ -81,7 +81,7 @@ Explain who is impacted and how this could change decisions or understanding.
 
 - Source B — link and 1-line description
 
-### Methods / technologies we’re testing
+### Methods / technologies we’re testing 📣
 - Approach 1 (e.g., time-series break detection)
 - Approach 2 (e.g., random forest on features)
 - Visualization (e.g., map tiles, small multiples)
@@ -114,7 +114,7 @@ Explain who is impacted and how this could change decisions or understanding.
 
 ---
 
-## Final Share Out — Insights & Sharing 📣
+## Final Share Out — Insights & Sharing 
 *Focus: synthesis; highlight 2–3 visuals that tell the story; keep text crisp.*
 
 ### Project Sprint: Clear, Short Title
@@ -124,13 +124,13 @@ Explain who is impacted and how this could change decisions or understanding.
 ![Team photo at start of Day 3](assets/team_photo.jpg)
 [Raw photo location: team_photo.jpg](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/team_photo.jpg)
 
-### Findings at a glance
+### Findings at a glance 📣
 <!-- EDIT: 2–4 bullets, each a headline in plain language with a number if possible. -->
 - Headline 1 — what, where, how much
 - Headline 2 — change/trend/contrast
 - Headline 3 — implication for practice or policy
 
-### Visuals that tell the story
+### Visuals that tell the story 📣
 <!-- EDIT: Swap visuals; prioritize clarity. -->
 ![Main result figure](assets/main_result.png)
 [Raw photo location: main_result.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/main_result.png)
