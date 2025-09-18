@@ -21,8 +21,9 @@ nav:
        - Git/GitHub Widget in JupyterLab: instructions/push-to-github.md
        - Save to persistent storage: instructions/save-to-persistent-storage.md
        - RStudio Proxy Workaround: instructions/open-rstudio.md
-  - Your code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
-  - Your documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation
+  - Storage:
+       - Your code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
+       - Your documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation
   - Orientation:
        - Summit slides: orientation/slides.md
        - ESIIL training: orientation/esiil_training.md
