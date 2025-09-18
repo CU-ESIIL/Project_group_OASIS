@@ -23,16 +23,6 @@ HERO (Swap hero.jpg, title, strapline, and the three links)
 
 ---
 
-## Storage
-
-### Code
-- Keep shared scripts, notebooks, and utilities in the [`code/`](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code) directory. Document how to run them in a README or within the files so teammates and visitors can reproduce your workflow.
-
-### Documentation
-- Use the [`docs/`](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs) folder to publish project updates on this site. Longer internal notes can live in [`documentation/`](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation); summarize key takeaways here so the public story stays current.
-
----
-
 ## How to use this page (for the team)
 - **Edit this file:** `docs/index.md` → ✎ → change text → **Commit changes**.
 - **Add images:** upload to `docs/assets/` and reference like `assets/your_file.png`.
@@ -184,6 +174,17 @@ Explain who is impacted and how this could change decisions or understanding.
 | Jane Doe | Lead | jane.doe@example.org | @janedoe |
 | John Smith | Analyst | john.smith@example.org | @jsmith |
 
+---
+
+
+
+## Storage
+
+### Code
+- Keep shared scripts, notebooks, and utilities in the [`code/`](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code) directory. Document how to run them in a README or within the files so teammates and visitors can reproduce your workflow.
+
+### Documentation
+- Use the [`docs/`](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs) folder to publish project updates on this site. Longer internal notes can live in [`documentation/`](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation); summarize key takeaways here so the public story stays current.
 ---
 
 ## Cite & reuse
