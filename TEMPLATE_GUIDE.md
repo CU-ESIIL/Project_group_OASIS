@@ -22,6 +22,7 @@ Ask Codex to open `mkdocs.yml` and update the following keys so the published si
 - `repo_name`: short display label such as `"ORG/Project"`.
 - `repo_url`: the full GitHub URL to the repository.
 - Confirm the `theme`, `nav`, and plugins look right for your project. Update any navigation labels that still reference “Project Group OASIS.”
+- Update the `nav` item labeled **Your persistent storage** so it links to your team’s CyVerse folder. Replace `Group_1` in the URL with the number that matches your repository name (for example, a repo ending in `_5` should use `Group_5`). If the shared link needs a unique `resourceId`, grab the correct link directly from the Data Store interface while viewing your group’s folder.
 
 ### Top-level files
 
@@ -66,6 +67,8 @@ If you are using any of the orientation materials, skim the files in `docs/orien
 ## 4. Persistent storage instructions
 
 Update `docs/instructions/save-to-persistent-storage.md` so it points to your team’s storage location. Edit the `GROUP_NAME`, base path, and any screenshots that mention the original template.
+
+> **Reminder:** The template ships with `Group_1` placeholders for the navigation link and shell snippets. Swap these for your group’s identifier (matching the number in your repo name). If your team has a custom share link from the Data Store, copy it from the CyVerse web UI to keep the `resourceId` accurate.
 
 ---
 
