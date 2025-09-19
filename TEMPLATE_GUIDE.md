@@ -1,41 +1,88 @@
 # Template Customization Checklist
 
-This repository is a template for new project groups. After cloning or copying it, work through the steps below to update names and links to your group's information.
+This repository is a template for new project groups. After you generate a project-specific copy, walk through the sections below before adding new content. The checklist is written so you can copy/paste the steps into Codex (or any coding assistant) to make the required edits for you.
 
-## 1. Rename the repository
-- On GitHub go to **Settings → General → Repository name** and rename it to your project.
-- If you already cloned the repo locally, update the remote: `git remote set-url origin <new_repo_url>`.
+---
 
-## 2. Update MkDocs configuration (`mkdocs.yml`)
-- `site_name`: your project or group name.
-- `site_url`: `https://<org>.github.io/<new_repo_name>`.
-- `repo_name`: the display name of your repository.
-- `repo_url`: full GitHub URL for the repo.
+## 1. Prepare the repository
 
-## 3. Update top-level files
-- `README.md`: change the title and any example links to use your new repo name.
-- `CITATION.cff`: set the `title` and other metadata (authors, version, DOI) for your project.
+1. **Rename the repo** – On GitHub go to **Settings → General → Repository name** and rename it to match your project. If you already cloned the repo locally, update the remote with `git remote set-url origin <new_repo_url>`.
+2. **Enable GitHub Actions** – When GitHub shows the banner “Workflows aren’t being run,” open the **Actions** tab and click **I understand, enable workflows** so deployment jobs can start.
 
-## 4. Customize project template page (`docs/project_template.md`)
-- Edit the front matter fields such as `repo_owner`, `repo_name`, `contact_slack`, and `contact_email`.
-- Replace placeholder text, images, and links with your team's content.
+---
 
-## 5. Fix links to this repository
-- Search the entire repository for `Project_group_OASIS` and replace it with your new repo name.
-- Pay special attention to image links in `docs/index.md`, `docs/orientation/cyverse_basics.md`, `docs/orientation/docker_basics.md`, and `docs/orientation/art_gallery*`.
-- Linux example: `rg -l 'Project_group_OASIS' docs | xargs sed -i 's/Project_group_OASIS/<new_repo_name>/g'`.
+## 2. Update configuration and metadata
 
-## 6. Persistent storage instructions
-- In `docs/instructions/save-to-persistent-storage.md`, set `GROUP_NAME` to your team's folder name and update any paths.
+### MkDocs configuration (`mkdocs.yml`)
 
-## 7. Verify GitHub Pages
-- In **Settings → Pages**, set the source to **Deploy from a branch**, branch `main`, folder `/docs`.
-- After committing changes, confirm the site builds at your updated `site_url`.
+Ask Codex to open `mkdocs.yml` and update the following keys so the published site shows the correct project details:
 
-Work through this list before adding new content. Keep this file for future reference or remove it after setup.
+- `site_name`: plain-language project or group name (e.g., `"Mountain Snow Analysis"`).
+- `site_url`: `https://<org>.github.io/<repo>` (replace with your organization/user and new repo name).
+- `repo_name`: short display label such as `"ORG/Project"`.
+- `repo_url`: the full GitHub URL to the repository.
+- Confirm the `theme`, `nav`, and plugins look right for your project. Update any navigation labels that still reference “Project Group OASIS.”
 
-## Automation (first run)
-After you create a repo from this template:
-1. Go to **Actions → Bootstrap new repo → Run workflow** (if it didn’t run automatically).
-2. (Optional) In **Settings → Secrets and variables → Actions**, add a secret named `COMMUNITY_STORAGE_BASE` with your base path (e.g., `i:/iplant/home/shared/earthlab/esiil-community/Innovation-Summit-2025/groups`). If your repo name ends with `__<number>`, we’ll link to `${COMMUNITY_STORAGE_BASE}/<number>`.
-3. Your site will publish to `https://<org>.github.io/<repo>/` when the workflow completes.
+### Top-level files
+
+- `README.md`: change the title, short description, and any sample URLs to your new project name.
+- `CITATION.cff`: edit `title`, `abstract`, author list, and other metadata to reflect your team.
+- `LICENSE`: confirm the license you want to use and update the copyright line if needed.
+
+### Search-and-replace the old name
+
+Run a repository-wide search for `Project_group_OASIS` and replace it with your new repo name. Pay attention to:
+
+- Front-matter in the Markdown files inside `docs/` (for example, hero images or repo links).
+- Any sample links in documentation under `docs/orientation/`.
+- YAML config files in `.github/` and `workflows/` if you copied them forward.
+
+---
+
+## 3. Refresh the website content
+
+Use the bullets below as prompts for Codex so it can edit each file.
+
+- `docs/index.md`
+  - Update the first-level heading to your project name.
+  - Rewrite the intro section with your project summary, goals, or call to action.
+  - Review the resources block between `<!--RESOURCES_START-->` and `<!--RESOURCES_END-->`; set the repository link, storage link, and any other quick links you want to feature.
+- `docs/project_template.md`
+  - Adjust the front-matter fields (`repo_owner`, `repo_name`, `contact_slack`, `contact_email`, etc.).
+  - Replace placeholder hero images, figures, and descriptive text with your team’s content.
+- `docs/team.md`
+  - Add each team member with name, role, and contact info.
+- `docs/code.md`
+  - List important analysis scripts or notebooks and link to their paths in the repo.
+- `docs/updates.md`
+  - Add your first status entry or remove the placeholder timeline.
+- `docs/resources/`
+  - Add links to shared drives, data catalogs, or collaboration tools relevant to your group.
+
+If you are using any of the orientation materials, skim the files in `docs/orientation/` and swap in screenshots or instructions that match your environment.
+
+---
+
+## 4. Persistent storage instructions
+
+Update `docs/instructions/save-to-persistent-storage.md` so it points to your team’s storage location. Edit the `GROUP_NAME`, base path, and any screenshots that mention the original template.
+
+---
+
+## 5. Turn on GitHub Pages with MkDocs
+
+1. Open **Settings → Pages**.
+2. Under **Build and deployment → Source**, choose **GitHub Actions**. This tells GitHub to use the provided `Deploy site (MkDocs)` workflow.
+3. Still on the Pages screen, make sure **Allow GitHub Actions to deploy to GitHub Pages** is enabled (GitHub may prompt you automatically on first deploy).
+4. Go to the **Actions** tab, open the **Deploy site (MkDocs)** workflow, and run it (click **Run workflow** → `main`). The workflow builds the MkDocs site and publishes it to Pages.
+5. Once the job succeeds, your site will be available at `https://<org>.github.io/<repo>/`. Update the `site_url` in `mkdocs.yml` if the link differs.
+
+---
+
+## 6. Final checks
+
+- Confirm all navigation links in the live site work as expected.
+- Delete any leftover placeholder sections or TODO comments.
+- Share the Pages URL with your team once you verify the site renders correctly.
+
+Keep this file for future reference so anyone (or any assistant) can re-run the setup steps if needed.
