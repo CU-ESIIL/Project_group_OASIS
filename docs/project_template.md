@@ -2,8 +2,8 @@
 layout: default
 title: "OASIS: 3-Day Team Template"
 subtitle: "A friction-free guide for collaborative research sprints"
-hero_image: assets/template/hero.jpg
-team_logo: assets/template/team-logo.png
+hero_image: assets/template/hero.svg
+team_logo: assets/template/team-logo.svg
 contact_slack: "#oasis-project-room"
 contact_email: "team@example.org"
 repo_owner: "cu-esiil"
@@ -16,13 +16,13 @@ edit_path: "docs/project_template.md"
 {{ page.subtitle }}
 
 {% if page.hero_image %}
-![Hero Image]({{ page.hero_image }})
+<img src="{{ page.hero_image }}" alt="Hero Image" />
 {% else %}
 <div style="width:100%;height:200px;background:#eee;display:flex;align-items:center;justify-content:center;">Set `hero_image` in front matter</div>
 {% endif %}
 
 {% if page.team_logo %}
-![Team Logo]({{ page.team_logo }})
+<img src="{{ page.team_logo }}" alt="Team Logo" />
 {% endif %}
 
 [✏️ Edit this page](https://github.com/{{ page.repo_owner }}/{{ page.repo_name }}/edit/main/{{ page.edit_path }})  
