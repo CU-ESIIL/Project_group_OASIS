@@ -2,7 +2,7 @@ name: Bootstrap new repo
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -20,70 +20,80 @@ jobs:
 
       - name: Derive names
         id: names
+        shell: bash
         run: |
+          set -euo pipefail
           REPO="${{ github.event.repository.name }}"
           OWNER="${{ github.repository_owner }}"
-          # Site title: turn separators into spaces, Title Case via python
-          TITLE=$(python - <<'PY'
-import os,re
-name=os.environ["REPO"]
-name=re.sub(r'__',' ',name)
-name=re.sub(r'[-_]+' ,' ',name)
-title=' '.join(w.capitalize() for w in name.split())
-print(title)
-PY
-)
-          # Extract group id: prefer double-underscore suffix (…__N), fallback to trailing digits
+
+          # Humanize repo name -> Title Case
+          TITLE="$(python -c 'import os,re; n=os.environ["REPO"]; n=re.sub(r"__", " ", n); n=re.sub(r"[-_]+", " ", n); print(" ".join(w.capitalize() for w in n.split()))')"
+
+          # Extract group id (…__N or trailing digits)
+          GROUP_ID=""
           if [[ "$REPO" =~ __([0-9]+)$ ]]; then
             GROUP_ID="${BASH_REMATCH[1]}"
           elif [[ "$REPO" =~ ([0-9]+)$ ]]; then
             GROUP_ID="${BASH_REMATCH[1]}"
-          else
-            GROUP_ID=""
           fi
-          echo "repo=$REPO"         >> $GITHUB_OUTPUT
-          echo "owner=$OWNER"       >> $GITHUB_OUTPUT
-          echo "title=$TITLE"       >> $GITHUB_OUTPUT
-          echo "group_id=$GROUP_ID" >> $GITHUB_OUTPUT
-          echo "site_url=https://$OWNER.github.io/$REPO/" >> $GITHUB_OUTPUT
+
+          {
+            echo "repo=$REPO"
+            echo "owner=$OWNER"
+            echo "title=$TITLE"
+            echo "group_id=$GROUP_ID"
+            echo "site_url=https://${OWNER}.github.io/${REPO}/"
+          } >> "$GITHUB_OUTPUT"
 
       - name: Inject storage link (optional)
         id: storage
+        shell: bash
         run: |
+          set -euo pipefail
           GROUP_ID="${{ steps.names.outputs.group_id }}"
           BASE="${{ secrets.COMMUNITY_STORAGE_BASE }}"
-          if [[ -n "$BASE" && -n "$GROUP_ID" ]]; then
+          if [[ -n "${BASE:-}" && -n "${GROUP_ID:-}" ]]; then
             mkdir -p docs/resources
-            echo "# Shared Storage\n\n- Group folder: ${BASE}/${GROUP_ID}\n" > docs/resources/storage.md
-            echo "has_storage=true" >> $GITHUB_OUTPUT
+            printf "# Shared Storage\n\n- Group folder: %s/%s\n" "$BASE" "$GROUP_ID" > docs/resources/storage.md
+            echo "has_storage=true" >> "$GITHUB_OUTPUT"
           else
-            echo "has_storage=false" >> $GITHUB_OUTPUT
+            echo "has_storage=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Replace placeholders in mkdocs.yml and docs
+        shell: bash
         run: |
-          TITLE="${{ steps.names.outputs.title }}"
-          SITE_URL="${{ steps.names.outputs.site_url }}"
+          set -euo pipefail
+          TITLE='${{ steps.names.outputs.title }}'
+          SITE_URL='${{ steps.names.outputs.site_url }}'
           REPO_URL="https://github.com/${{ github.repository }}"
+
           # mkdocs.yml
-          if [ -f mkdocs.yml ]; then
-            sed -i.bak "s|^site_name:.*|site_name: \"${TITLE}\"|g" mkdocs.yml || true
-            if grep -q '^site_url:' mkdocs.yml; then
-              sed -i.bak "s|^site_url:.*|site_url: \"${SITE_URL}\"|g" mkdocs.yml || true
+          if [[ -f mkdocs.yml ]]; then
+            if grep -qE '^site_name:' mkdocs.yml; then
+              sed -i.bak "s|^site_name:.*|site_name: \"${TITLE}\"|g" mkdocs.yml
             else
-              printf "\nsite_url: \"%s\"\n" "$SITE_URL" >> mkdocs.yml
+              printf "\nsite_name: \"%s\"\n" "$TITLE" >> mkdocs.yml
+            fi
+            if grep -qE '^site_url:' mkdocs.yml; then
+              sed -i.bak "s|^site_url:.*|site_url: \"${SITE_URL}\"|g" mkdocs.yml
+            else
+              printf "site_url: \"%s\"\n" "$SITE_URL" >> mkdocs.yml
             fi
           fi
-          # docs/index.md (H1 + resource block)
-          if [ -f docs/index.md ]; then
-            awk 'NR==1{sub(/^# .*/, "# '"${TITLE}"'"); print; next} 1' docs/index.md > docs/index.md.tmp && mv docs/index.md.tmp docs/index.md
-            STORAGE_FLAG="${{ steps.storage.outputs.has_storage }}"
-            if [ "$STORAGE_FLAG" = "true" ]; then
-              perl -0777 -pe "s|<!--RESOURCES_START-->.*<!--RESOURCES_END-->|<!--RESOURCES_START-->\n\n**Repo:** ${REPO_URL}  \\n**Shared storage:** See [resources/storage.md](resources/storage.md)\n\n<!--RESOURCES_END-->|s" -i docs/index.md || \
-              printf "\n\n<!--RESOURCES_START-->\n\n**Repo:** %s  \\n**Shared storage:** See [resources/storage.md](resources/storage.md)\n\n<!--RESOURCES_END-->\n" "$REPO_URL" >> docs/index.md
+
+          # docs/index.md
+          if [[ -f docs/index.md ]]; then
+            awk 'NR==1{ if ($0 ~ /^# /) {$0="# '"${TITLE}"'"} else {print "# '"${TITLE}"'"; print} }1' docs/index.md > docs/index.md.tmp
+            mv docs/index.md.tmp docs/index.md
+
+            STORAGE_FLAG='${{ steps.storage.outputs.has_storage }}'
+            if [[ "$STORAGE_FLAG" == "true" ]]; then
+              perl -0777 -pe 's|<!--RESOURCES_START-->.*?<!--RESOURCES_END-->|<!--RESOURCES_START-->\n\n**Repo:** '"${REPO_URL}"'  \\n**Shared storage:** See [resources/storage.md](resources/storage.md)\n\n<!--RESOURCES_END-->|s' -i docs/index.md \
+              || printf "\n\n<!--RESOURCES_START-->\n\n**Repo:** %s  \\n**Shared storage:** See [resources/storage.md](resources/storage.md)\n\n<!--RESOURCES_END-->\n" "$REPO_URL" >> docs/index.md
             else
-              perl -0777 -pe "s|<!--RESOURCES_START-->.*<!--RESOURCES_END-->|<!--RESOURCES_START-->\n\n**Repo:** ${REPO_URL}\n\n<!--RESOURCES_END-->|s" -i docs/index.md || \
-              printf "\n\n<!--RESOURCES_START-->\n\n**Repo:** %s\n\n<!--RESOURCES_END-->\n" "$REPO_URL" >> docs/index.md
+              perl -0777 -pe 's|<!--RESOURCES_START-->.*?<!--RESOURCES_END-->|<!--RESOURCES_START-->\n\n**Repo:** '"${REPO_URL}"'\n\n<!--RESOURCES_END-->|s' -i docs/index.md \
+              || printf "\n\n<!--RESOURCES_START-->\n\n**Repo:** %s\n\n<!--RESOURCES_END-->\n" "$REPO_URL" >> docs/index.md
             fi
           fi
 
@@ -99,7 +109,9 @@ PY
         uses: actions/configure-pages@v5
 
       - name: Build site with MkDocs
+        shell: bash
         run: |
+          set -euo pipefail
           pipx install mkdocs-material
           mkdocs build --strict --verbose
         env:
@@ -118,5 +130,5 @@ PY
         uses: peter-evans/create-issue-from-file@v5
         with:
           title: "✅ Repo bootstrap complete"
-          content-filepath: .github/ISSUE_TEMPLATES/SETUP_COMPLETE.md
+          content-filepath: .github/ISSUE_TEMPLATE/SETUP_COMPLETE.md
           labels: setup
