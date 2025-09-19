@@ -14,25 +14,22 @@ copyright: 'Copyright &copy; 2024 University of Colorado Boulder'
 nav:
   - Home: index.md
   - Instructions:
-       - Day 1 — Define & Explore: instructions/day1.md
-       - Day 2 — Data & Methods: instructions/day2.md
-       - Final Share Out — Insights & Sharing: instructions/day3.md
-       - Link to GitHub: instructions/link-to-github.md
-       - Git/GitHub Widget in JupyterLab: instructions/push-to-github.md
-       - Save to persistent storage: instructions/save-to-persistent-storage.md
-       - RStudio Proxy Workaround: instructions/open-rstudio.md
+      - Day 1 — Define & Explore: instructions/day1.md
+      - Day 2 — Data & Methods: instructions/day2.md
+      - Final Share Out — Insights & Sharing: instructions/day3.md
+  - Manuals:
+      - Link to GitHub: instructions/link-to-github.md
+      - Git/GitHub Widget in JupyterLab: instructions/push-to-github.md
+      - Save to persistent storage: instructions/save-to-persistent-storage.md
+      - RStudio Proxy Workaround: instructions/open-rstudio.md
   - Storage:
-       - Your code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
-       - Your documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation
+      - Your code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
+      - Your documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation
   - Orientation:
-       - Summit slides: orientation/slides.md
-       - ESIIL training: orientation/esiil_training.md
-       - Code of conduct: orientation/code-of-conduct.md
-       - Participant agreement: orientation/participant_agreement.md
-       - CyVerse basics: orientation/cyverse_basics.md
-       - Docker basics: orientation/docker_basics.md
-       - Markdown basics: orientation/markdown_basics.md
-       - Art gallery: orientation/art_gallery.md
+      - Summit slides: orientation/slides.md
+      - ESIIL training: orientation/esiil_training.md
+      - Code of conduct: orientation/code-of-conduct.md
+      - Participant agreement: orientation/participant_agreement.md
 
 # Configuration
 theme:
