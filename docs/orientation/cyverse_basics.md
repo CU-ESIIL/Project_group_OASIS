@@ -53,8 +53,8 @@
 ## Set up your GitHub credentials
 
 ### If you would prefer to follow a video instead of a written outline, we have prepared a video here:
-<a href="https://www.youtube.com/watch?v=nOwOzPJEQbU">
-    <img src="https://img.youtube.com/vi/nOwOzPJEQbU/0.jpg" style="width: 100%;">
+<a href="https://www.youtube.com/watch?v=ASTGFZ0d6Ps">
+    <img src="https://img.youtube.com/vi/ASTGFZ0d6Ps/0.jpg" style="width: 100%;">
 </a>
 
 1. From Jupyter Lab, click on the Git Extension icon on the left menu:
