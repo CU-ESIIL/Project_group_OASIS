@@ -33,3 +33,9 @@ This repository is a template for new project groups. After cloning or copying i
 - After committing changes, confirm the site builds at your updated `site_url`.
 
 Work through this list before adding new content. Keep this file for future reference or remove it after setup.
+
+## Automation (first run)
+After you create a repo from this template:
+1. Go to **Actions → Bootstrap new repo → Run workflow** (if it didn’t run automatically).
+2. (Optional) In **Settings → Secrets and variables → Actions**, add a secret named `COMMUNITY_STORAGE_BASE` with your base path (e.g., `i:/iplant/home/shared/earthlab/esiil-community/Innovation-Summit-2025/groups`). If your repo name ends with `__<number>`, we’ll link to `${COMMUNITY_STORAGE_BASE}/<number>`.
+3. Your site will publish to `https://<org>.github.io/<repo>/` when the workflow completes.
