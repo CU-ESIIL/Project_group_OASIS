@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' width='960' height='540' viewBox='0 0 960 540' role='img' aria-labelledby='app_name-title app_name-desc'>
+  <title id='app_name-title'>App details</title>
+  <desc id='app_name-desc'>Fields for entering the app name and description during creation.</desc>
+  <rect width='940' height='520' x='10' y='10' rx='24' ry='24' fill='#eef2ff' stroke='#4f46e5' stroke-width='4'/>
+  <text x='480' y='140' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='28' fill='#312e81'>Documentation Placeholder</text>
+  <text x='480' y='210' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='42' font-weight='bold' fill='#1e1b4b'>App details</text>
+  <text x="480" y="280" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#1f2937">Fields for entering the app name and</text>
+  <text x="480" y="312" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#1f2937">description during creation.</text>
+  <text x='480' y='470' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='18' fill='#4338ca'>Replace app_name.svg with a real screenshot to update the guide.</text>
+</svg>

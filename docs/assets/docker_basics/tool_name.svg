@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' width='960' height='540' viewBox='0 0 960 540' role='img' aria-labelledby='tool_name-title tool_name-desc'>
+  <title id='tool_name-title'>Tool details</title>
+  <desc id='tool_name-desc'>Form fields used to enter the tool name and version when registering an image.</desc>
+  <rect width='940' height='520' x='10' y='10' rx='24' ry='24' fill='#eef2ff' stroke='#4f46e5' stroke-width='4'/>
+  <text x='480' y='140' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='28' fill='#312e81'>Documentation Placeholder</text>
+  <text x='480' y='210' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='42' font-weight='bold' fill='#1e1b4b'>Tool details</text>
+  <text x="480" y="280" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#1f2937">Form fields used to enter the tool name and</text>
+  <text x="480" y="312" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" fill="#1f2937">version when registering an image.</text>
+  <text x='480' y='470' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='18' fill='#4338ca'>Replace tool_name.svg with a real screenshot to update the guide.</text>
+</svg>
