@@ -13,8 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - uses: actions/configure-pages@v5
-      - run: pipx install mkdocs-material && mkdocs build --strict
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Build site
+        run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
         with: { path: site }
       - uses: actions/deploy-pages@v4
