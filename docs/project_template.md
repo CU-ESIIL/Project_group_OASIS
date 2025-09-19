@@ -107,7 +107,9 @@ Project one-liner: _(write it here)_
 GOCMD_VER=$(curl -L -s https://raw.githubusercontent.com/cyverse/gocommands/main/VERSION.txt); \
 curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/gocmd-${GOCMD_VER}-linux-amd64.tar.gz | tar zxvf -
 ./gocmd init
-./gocmd auth login  # follow prompts to authenticate
+
+# Quick sanity check: can you list your home?
+./gocmd ls i:/iplant/home/YOUR_USER
 ```
 
    > *(macOS uses a different tarball)*

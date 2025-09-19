@@ -6,15 +6,17 @@ permalink: /instructions/save/
 
 # Save to Persistent Storage with GoCommands
 
-### 0) One-time setup (install + login)
+### 0) One-time setup (install + init)
 ```bash
 # Install GoCommands (Linux x86_64)
 GOCMD_VER=$(curl -L -s https://raw.githubusercontent.com/cyverse/gocommands/main/VERSION.txt); \
 curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/gocmd-${GOCMD_VER}-linux-amd64.tar.gz | tar zxvf -
 
-# Configure iRODS (accept defaults for Host/Port/Zone; use your CyVerse creds)
+# Configure iRODS (accept defaults for Host/Port/Zone; use your CyVerse username)
 ./gocmd init
-./gocmd auth login  # follow prompts to authenticate with CyVerse
+
+# Quick sanity check: can you list your home?
+./gocmd ls i:/iplant/home/YOUR_USER
 ```
 
 **Community folder root (read/write for teams):**
@@ -32,7 +34,7 @@ COMMUNITY="i:/iplant/home/shared/esiil/Innovation_summit/${GROUP_NAME}"
 PERSONAL="i:/iplant/home/${USERNAME}"
 ```
 
-> **Note:** GoCommands uses `i:` to denote paths on the CyVerse Data Store. Include this prefix for any remote path (for example, `i:/iplant/home/...`). Local filesystem paths should not have the `i:` prefix.
+> **Note:** `i:` indicates an iRODS remote path. Omit `i:` for local filesystem paths.
 
 ---
 
@@ -42,7 +44,10 @@ PERSONAL="i:/iplant/home/${USERNAME}"
 LOCAL_SRC="outputs/run-YYYYMMDD"
 REMOTE_DST="${COMMUNITY}/outputs/"
 
-./gocmd put --icat --retry 3 -d -k -r "${LOCAL_SRC}" "${REMOTE_DST}"
+./gocmd put --progress -K --icat -r "${LOCAL_SRC}" "${REMOTE_DST}"
+
+# Optional sync-like upload to skip unchanged files
+./gocmd put --progress -K --icat --diff -r "${LOCAL_SRC}" "${REMOTE_DST}"
 ```
 - `put` uploads from local → CyVerse Data Store
 - `-r` is recursive; `--diff` (optional) only sends changed files
@@ -50,6 +55,16 @@ REMOTE_DST="${COMMUNITY}/outputs/"
 Verify upload:
 ```bash
 ./gocmd ls "${REMOTE_DST}"
+```
+
+> **Troubleshooting:**
+```bash
+# If a path "is not found", list upward, then drill down to confirm exact names
+./gocmd ls i:/iplant/home/shared/esiil/Innovation_summit
+./gocmd ls i:/iplant/home/shared/esiil/Innovation_summit/${GROUP_NAME}
+
+# Inspect type and permissions if a collection exists but transfers fail
+./gocmd stat i:/iplant/home/shared/esiil/Innovation_summit/${GROUP_NAME}/<EXACT_NAME>
 ```
 
 ---
@@ -61,7 +76,7 @@ mkdir -p ./data
 REMOTE_SRC="${COMMUNITY}/shared_data/"
 LOCAL_DST="./data/"
 
-./gocmd get --icat --retry 3 -d -k -r "${REMOTE_SRC}" "${LOCAL_DST}"
+./gocmd get --progress -K --icat -r "${REMOTE_SRC}" "${LOCAL_DST}"
 ```
 - `get` downloads from CyVerse → local machine
 - Use for pulling common datasets your team prepared
@@ -74,7 +89,7 @@ LOCAL_DST="./data/"
 REMOTE_SRC="i:/iplant/home/shared/esiil/Innovation_summit/${GROUP_NAME}/deliverables/"
 REMOTE_PERSONAL_DST="i:/iplant/home/${USERNAME}/projects/innovation_summit_2025/deliverables/"
 
-./gocmd cp --icat --retry 3 -d -k -r "${REMOTE_SRC}" "${REMOTE_PERSONAL_DST}"
+./gocmd cp --progress -K --icat -r "${REMOTE_SRC}" "${REMOTE_PERSONAL_DST}"
 
 # Verify contents
 ./gocmd ls "${REMOTE_PERSONAL_DST}"

@@ -23,24 +23,47 @@ permalink: /instructions/day2/
 GOCMD_VER=$(curl -L -s https://raw.githubusercontent.com/cyverse/gocommands/main/VERSION.txt); \
 curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/gocmd-${GOCMD_VER}-linux-amd64.tar.gz | tar zxvf -
 
-# Initialize and authenticate
+# Configure iRODS (accept defaults for Host/Port/Zone; use your CyVerse username)
 ./gocmd init
-./gocmd auth login  # follow prompts for CyVerse credentials
 
-# Optionally confirm access to your home directory
+# Quick sanity check: can you list your home?
 ./gocmd ls i:/iplant/home/YOUR_USER
 ```
 
-> Remote Data Store paths must include the `i:` prefix (for example, `i:/iplant/home/...`). Local paths should omit it.
+> `i:` indicates an iRODS remote path. Omit `i:` for local filesystem paths.
 
 **Example transfers:**
 
 ```bash
-# Upload a local file to the Data Store
-./gocmd put ./outputs/figure1.png i:/iplant/home/YOUR_USER/sprint/figure1.png
+# Single file download (shared path → local ./data/)
+./gocmd get --progress -K --icat \
+  i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024/Buffalo_creek-BC1-06_20_24/Buffalo_creek-BC1-06_20_24_1_all_layers.tif \
+  ./data/
 
-# Download from the Data Store to your working dir
-./gocmd get i:/iplant/home/YOUR_USER/sprint/input.csv ./data/input.csv
+# Folder download (entire collection)
+./gocmd get --progress -K --icat -r \
+  i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024/Buffalo_creek-BC3-06_20_24 \
+  ./data/
+
+# Upload a results folder to your home
+./gocmd put --progress -K --icat -r \
+  ./outputs/run_01 \
+  i:/iplant/home/YOUR_USER/projects/myproj/outputs/run_01
+
+# Optional sync-like upload to skip unchanged files
+./gocmd put --progress -K --icat --diff -r \
+  ./outputs/run_01 \
+  i:/iplant/home/YOUR_USER/projects/myproj/outputs/run_01
+```
+
+> **Troubleshooting:**
+```bash
+# If a path "is not found", list upward, then drill down to confirm exact names
+./gocmd ls i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024
+./gocmd ls i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024/Buffalo*
+
+# Inspect type and permissions if a collection exists but transfers fail
+./gocmd stat i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024/<EXACT_NAME>
 ```
 
 > Keep large data out of GitHub. Store externally, link from the **Data** page.
