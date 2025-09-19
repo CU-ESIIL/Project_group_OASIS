@@ -1,12 +1,18 @@
+# GitHub Actions workflow that builds and deploys the MkDocs site to GitHub Pages.
+# Ensure the github-pages environment allows the main branch (or all branches)
+# and that required reviewers / wait timers are disabled so this deployment can proceed.
 name: Deploy site (MkDocs)
+
 on:
   push:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches:
+      - main  # Deploy whenever changes land on the main branch.
+  workflow_dispatch:  # Allow manual redeploys from the Actions tab.
 
 permissions:
-  pages: write
-  id-token: write
+  pages: write      # Required for deployment to the GitHub Pages environment.
+  id-token: write   # Required for OIDC authentication during deployment.
+  contents: read    # Default read access for fetching the repository contents.
 
 jobs:
   build-deploy:
@@ -15,18 +21,30 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-      - uses: actions/setup-python@v5
+          fetch-depth: 0  # Ensure full history for MkDocs plugins that may need it.
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - uses: actions/configure-pages@v5
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Build site
-        run: mkdocs build --strict
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: site }
-      - id: deployment
+
+      - name: Build MkDocs site
+        run: mkdocs build --strict --site-dir dist  # Output the static site into ./dist.
+
+      - name: Upload static site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist  # Upload the built MkDocs site for deployment.
+
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
