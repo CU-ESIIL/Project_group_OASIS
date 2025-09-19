@@ -32,6 +32,18 @@ nav:
       - Code of conduct: orientation/code-of-conduct.md
       - Participant agreement: orientation/participant_agreement.md
 
+not_in_nav: |
+  data.md
+  instructions.md
+  project_template.md
+  assets/cyverse_basics/README.md
+  assets/docker_basics/README.md
+  assets/template/README.md
+  orientation/art_gallery.md
+  orientation/cyverse_basics.md
+  orientation/docker_basics.md
+  orientation/markdown_basics.md
+
 # Configuration
 theme:
   highlightjs: true
