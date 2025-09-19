@@ -128,13 +128,17 @@ Explain who is impacted and how this could change decisions or understanding.
 
 ### Visuals that tell the story 📣
 <!-- EDIT: Swap visuals; prioritize clarity. -->
-![Fire hull visualization](assets/fire_hull.png)
+![Lead conclusion visual placeholder](assets/fire_hull.png)
 [Raw photo location: fire_hull.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/fire_hull.png)
-*Figure 2.* Fire hull view highlighting the event perimeter we derived from the remote-sensing tracks.
+*Visual 1.* Swap in the primary graphic that clearly communicates your core takeaway.
 
-![Main result figure](assets/main_result.png)
+![Supporting panels for key insights](assets/hull_panels.png)
+[Raw photo location: hull_panels.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/hull_panels.png)
+*Visual 2.* Use a complementary panel, collage, or set of snapshots that reinforces supporting evidence.
+
+![Complementary result figure placeholder](assets/main_result.png)
 [Raw photo location: main_result.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/main_result.png)
-*Figure 3.* What this shows and why it matters.
+*Visual 3.* Highlight an additional visual that captures a secondary insight or next step.
 
 <iframe
   title="Short explainer video (optional)"
