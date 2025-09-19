@@ -25,6 +25,7 @@ nav:
   - Storage:
       - Your code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
       - Your documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation
+      - Your persistent storage: /iplant/home/shared/esiil/Innovation_summit/Group_1
   - Orientation:
       - Summit slides: orientation/slides.md
       - ESIIL training: orientation/esiil_training.md
