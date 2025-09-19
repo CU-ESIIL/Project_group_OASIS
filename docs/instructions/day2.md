@@ -57,8 +57,21 @@ curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/
 ## 4) Link runnable code
 
 * Run at least one workflow and capture a shareable output — a plot, table, map, or other scientific product. Save static outputs (PNG, GIF, JPG) to the site, or embed live results (for example, an iframe for an HTML widget or interactive table).
-* Keep scripts and notebooks in `code/` with clear names (for example, `code/pipeline.py`, `code/notebooks/explore.ipynb`).
-* On **Code** (`docs/code.md`), add a short entry for each workflow: what it does, required inputs, how to run it, and where to view the output (linked image, iframe, or hosted artifact).
+* Save all of your scripts and notebooks in the [code/](https://github.com/cu-esiil/Project_group_OASIS/tree/main/code) folder. This keeps everyone’s work in one place and makes it easy to find later. Don’t worry if your code isn’t perfect—the important thing is to make it runnable and shareable.
+* After you’ve run your code, take a screenshot or save the result as a file. Then add it to the **Code** page (`docs/code.md`) so others can see what your code does. Even a quick plot or table is great!
+* On **Code** (`docs/code.md`), add a short entry for each workflow: what it does, required inputs, how to run it, and where to view the output (linked image, iframe, or hosted artifact). Use the template below to get started:
+
+````markdown
+### Fire perimeter analysis
+**What this code does:** Shows how fire perimeters grow each day using FIRED polygons.  
+**Inputs needed:** `data/fired_perimeters.geojson`  
+**How to run it:**
+```bash
+python code/fire_perimeter_analysis.py
+```
+**What to look for:** The script makes a plot of fire spread over time.  
+**Results:** [spread_plot.png](results/spread_plot.png)
+````
 
 ## 5) Day 2 checklist
 
