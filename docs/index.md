@@ -128,6 +128,10 @@ Explain who is impacted and how this could change decisions or understanding.
 
 ### Visuals that tell the story 📣
 <!-- EDIT: Swap visuals; prioritize clarity. -->
+![Fire hull visualization](assets/fire_hull.png)
+[Raw photo location: fire_hull.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/fire_hull.png)
+*Figure 2.* Fire hull view highlighting the event perimeter we derived from the remote-sensing tracks.
+
 ![Main result figure](assets/main_result.png)
 [Raw photo location: main_result.png](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/main_result.png)
 *Figure 3.* What this shows and why it matters.
