@@ -1,7 +1,7 @@
-site_name: 'ESIIL Project Group OASIS'
+site_name: "Project Title"
 site_description: 'Central resource for ESIIL project groups'
 site_author: Ty Tuff
-site_url: https://cu-esiil.github.io/Project_group_home
+site_url: "https://OWNER.github.io/REPO/"
 
 # Repository
 repo_name: Project-group-home

@@ -1,0 +1,122 @@
+name: Bootstrap new repo
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Derive names
+        id: names
+        run: |
+          REPO="${{ github.event.repository.name }}"
+          OWNER="${{ github.repository_owner }}"
+          # Site title: turn separators into spaces, Title Case via python
+          TITLE=$(python - <<'PY'
+import os,re
+name=os.environ["REPO"]
+name=re.sub(r'__',' ',name)
+name=re.sub(r'[-_]+' ,' ',name)
+title=' '.join(w.capitalize() for w in name.split())
+print(title)
+PY
+)
+          # Extract group id: prefer double-underscore suffix (…__N), fallback to trailing digits
+          if [[ "$REPO" =~ __([0-9]+)$ ]]; then
+            GROUP_ID="${BASH_REMATCH[1]}"
+          elif [[ "$REPO" =~ ([0-9]+)$ ]]; then
+            GROUP_ID="${BASH_REMATCH[1]}"
+          else
+            GROUP_ID=""
+          fi
+          echo "repo=$REPO"         >> $GITHUB_OUTPUT
+          echo "owner=$OWNER"       >> $GITHUB_OUTPUT
+          echo "title=$TITLE"       >> $GITHUB_OUTPUT
+          echo "group_id=$GROUP_ID" >> $GITHUB_OUTPUT
+          echo "site_url=https://$OWNER.github.io/$REPO/" >> $GITHUB_OUTPUT
+
+      - name: Inject storage link (optional)
+        id: storage
+        run: |
+          GROUP_ID="${{ steps.names.outputs.group_id }}"
+          BASE="${{ secrets.COMMUNITY_STORAGE_BASE }}"
+          if [[ -n "$BASE" && -n "$GROUP_ID" ]]; then
+            mkdir -p docs/resources
+            echo "# Shared Storage\n\n- Group folder: ${BASE}/${GROUP_ID}\n" > docs/resources/storage.md
+            echo "has_storage=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_storage=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Replace placeholders in mkdocs.yml and docs
+        run: |
+          TITLE="${{ steps.names.outputs.title }}"
+          SITE_URL="${{ steps.names.outputs.site_url }}"
+          REPO_URL="https://github.com/${{ github.repository }}"
+          # mkdocs.yml
+          if [ -f mkdocs.yml ]; then
+            sed -i.bak "s|^site_name:.*|site_name: \"${TITLE}\"|g" mkdocs.yml || true
+            if grep -q '^site_url:' mkdocs.yml; then
+              sed -i.bak "s|^site_url:.*|site_url: \"${SITE_URL}\"|g" mkdocs.yml || true
+            else
+              printf "\nsite_url: \"%s\"\n" "$SITE_URL" >> mkdocs.yml
+            fi
+          fi
+          # docs/index.md (H1 + resource block)
+          if [ -f docs/index.md ]; then
+            awk 'NR==1{sub(/^# .*/, "# '"${TITLE}"'"); print; next} 1' docs/index.md > docs/index.md.tmp && mv docs/index.md.tmp docs/index.md
+            STORAGE_FLAG="${{ steps.storage.outputs.has_storage }}"
+            if [ "$STORAGE_FLAG" = "true" ]; then
+              perl -0777 -pe "s|<!--RESOURCES_START-->.*<!--RESOURCES_END-->|<!--RESOURCES_START-->\n\n**Repo:** ${REPO_URL}  \\n**Shared storage:** See [resources/storage.md](resources/storage.md)\n\n<!--RESOURCES_END-->|s" -i docs/index.md || \
+              printf "\n\n<!--RESOURCES_START-->\n\n**Repo:** %s  \\n**Shared storage:** See [resources/storage.md](resources/storage.md)\n\n<!--RESOURCES_END-->\n" "$REPO_URL" >> docs/index.md
+            else
+              perl -0777 -pe "s|<!--RESOURCES_START-->.*<!--RESOURCES_END-->|<!--RESOURCES_START-->\n\n**Repo:** ${REPO_URL}\n\n<!--RESOURCES_END-->|s" -i docs/index.md || \
+              printf "\n\n<!--RESOURCES_START-->\n\n**Repo:** %s\n\n<!--RESOURCES_END-->\n" "$REPO_URL" >> docs/index.md
+            fi
+          fi
+
+      - name: Commit bootstrap changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(bootstrap): set site title/urls and resources"
+          commit_user_name: "oasis-bot"
+          commit_user_email: "oasis-bot@users.noreply.github.com"
+          branch: main
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build site with MkDocs
+        run: |
+          pipx install mkdocs-material
+          mkdocs build --strict --verbose
+        env:
+          PYTHONWARNINGS: ignore
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v4
+
+      - name: Open a “Setup complete” issue
+        if: always()
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "✅ Repo bootstrap complete"
+          content-filepath: .github/ISSUE_TEMPLATES/SETUP_COMPLETE.md
+          labels: setup

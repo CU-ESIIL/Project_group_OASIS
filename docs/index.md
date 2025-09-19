@@ -1,19 +1,17 @@
----
-layout: page
-title: Project Sprint — 3-Day Science Showcase
-permalink: /
----
+# Project Title
+
+<!--RESOURCES_START-->
+(This block will be updated automatically on first run.)
+<!--RESOURCES_END-->
 
 <p style="text-align: right;"><a href="https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md" title="Edit this page">✏️</a></p>
- 
+
 <!-- =========================================================
 HERO (Swap hero.jpg, title, strapline, and the three links)
 ========================================================= -->
 
 ![Wide banner of the study system](assets/hero.jpg)
 [Raw photo location: hero.jpg](https://github.com/CU-ESIIL/Project_group_OASIS/blob/main/docs/assets/hero.jpg)
-
-# Project Sprint: Clear, Short Title 📣 
 
 **One sentence on impact:** In 3 days, we explore *X* to inform *Y*, producing actionable visuals, a concise brief, and shareable code.
 
