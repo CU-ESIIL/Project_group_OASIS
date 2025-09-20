@@ -1,7 +1,6 @@
 # Project Title
 
 <!--RESOURCES_START-->
-(This block will be updated automatically on first run.)
 <!--RESOURCES_END-->
 
 <p style="text-align: right;"><a href="https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md" title="Edit this page">✏️</a></p>
