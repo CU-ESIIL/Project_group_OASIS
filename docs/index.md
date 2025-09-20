@@ -1,4 +1,4 @@
-# Project Title
+# Project Title (Change as a group activity)
 
 
 <p style="text-align: right;"><a href="https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md" title="Edit this page">✏️</a></p>
