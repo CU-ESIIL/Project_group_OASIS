@@ -1,50 +1,48 @@
-# GitHub Actions workflow that builds and deploys the MkDocs site to GitHub Pages.
-# Ensure the github-pages environment allows the main branch (or all branches)
-# and that required reviewers / wait timers are disabled so this deployment can proceed.
-name: Deploy site (MkDocs)
+name: Deploy Pages
 
 on:
   push:
     branches:
-      - main  # Deploy whenever changes land on the main branch.
-  workflow_dispatch:  # Allow manual redeploys from the Actions tab.
+      - main
+  workflow_dispatch:
 
 permissions:
-  pages: write      # Required for deployment to the GitHub Pages environment.
-  id-token: write   # Required for OIDC authentication during deployment.
-  contents: read    # Default read access for fetching the repository contents.
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Build site
+        run: mkdocs build --strict --site-dir dist
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Ensure full history for MkDocs plugins that may need it.
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Build MkDocs site
-        run: mkdocs build --strict --site-dir dist  # Output the static site into ./dist.
-
-      - name: Upload static site artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist  # Upload the built MkDocs site for deployment.
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
