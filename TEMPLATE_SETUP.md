@@ -1,17 +1,22 @@
-# Template Setup Guide
+# Post-Template Setup Checklist
 
-Welcome! After creating a repository from this template, complete the following steps to ensure your MkDocs site deploys successfully on GitHub Pages.
+After creating a repository from this template, follow the steps below to prepare your MkDocs site for deployment.
 
-## Update site metadata
-- Edit `mkdocs.yml` and customize `site_name`, `site_url`, and `repo_url` to match your project.
+## Update `mkdocs.yml`
+- Set `site_name` to your project's title.
+- Update `site_url` to `https://<org>.github.io/<repo>/` so navigation links point to the deployed site.
+- Set `repo_url` to the GitHub URL of your new repository.
 
-## Review GitHub Pages environment settings
-- In **Settings → Environments → github-pages**, verify that deployments from the `main` branch (or "All branches") are allowed. Adjust the allowed branches if necessary.
+## Review GitHub settings in the new repository
+- **Settings → Pages**: set **Source** to **GitHub Actions**.
+- **Settings → Actions → General**: under **Workflow permissions**, choose **Read and write permissions**.
+- **Settings → Environments → github-pages**: allow deployments from **All branches** or add the `main` branch explicitly.
 
-## Confirm organization permissions
-- If you are using this template within an organization that restricts GitHub Actions, ask an administrator to permit Actions for the new repository before triggering the workflow.
+## Common pitfalls & fixes
+- **Branch "main" not allowed** → adjust the `github-pages` environment's branch policy to include `main`.
+- **Multiple artifacts named github-pages** → ensure the workflow only contains one `upload-pages-artifact` step.
+- **Build fails due to missing plugins** → add each referenced plugin to `requirements.txt` and rerun the workflow.
+- **Blank site** → confirm `mkdocs build` outputs files to the `dist/` directory and that `site_url` matches your `https://<org>.github.io/<repo>/` path.
 
-## Quick fixes for common errors
-- **Branch not allowed**: Update the allowed branches for the `github-pages` environment so it accepts `main`.
-- **Multiple artifacts uploaded**: Make sure only one Pages artifact is uploaded by your workflow and remove extra upload steps.
-- **Blank site after deployment**: Confirm that `mkdocs build` outputs content into the `dist` directory and that required theme or plugin dependencies are installed.
+## Trigger the first deployment
+Push a small change to `docs/index.md` or run the workflow manually with **Run workflow** (workflow_dispatch) to start the initial publish.
