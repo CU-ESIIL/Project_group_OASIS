@@ -4,6 +4,3 @@ mkdocs-material
 
 # Add each MkDocs plugin or extension referenced in mkdocs.yml below.
 # Example: mkdocs-awesome-plugin
-mkdocstrings[python]
-mkdocs-git-revision-date-plugin
-mkdocs-jupyter
