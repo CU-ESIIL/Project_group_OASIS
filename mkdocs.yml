@@ -48,9 +48,7 @@ not_in_nav: |
 theme:
   highlightjs: true
   name: material
-  font:
-    text: 'Open Sans'
-    code: 'Roboto Mono'
+  font: false
   logo: 'assets/esiil_content/esiil_oasis_logo.png'
   favicon: 'assets/esiil_content/favicon.ico'
   custom_dir: docs/overrides
@@ -88,6 +86,7 @@ extra:
     # link: https://github.com/cu-esiil/
 
 extra_css:
+  - stylesheets/tokens.css
   - stylesheets/extra.css
 
 plugins:
