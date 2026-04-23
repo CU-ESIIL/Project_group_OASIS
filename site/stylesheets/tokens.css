@@ -1,0 +1,100 @@
+/*
+ * Design tokens for the Project OASIS MkDocs site.
+ * These values aim to echo the calm, institutional visual language of esiil.org
+ * while staying fully markdown-driven and easy to extend.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Brand */
+  --oasis-color-brand-900: #12344d;
+  --oasis-color-brand-800: #164764;
+  --oasis-color-brand-700: #1e607f;
+  --oasis-color-brand-600: #2b7b96;
+  --oasis-color-accent: #2f8f9d;
+  --oasis-color-accent-soft: #d9eef0;
+  --oasis-color-green: #6e8f62;
+
+  /* Text */
+  --oasis-color-text-strong: #173042;
+  --oasis-color-text: #355061;
+  --oasis-color-text-soft: #607887;
+  --oasis-color-link: #1f6988;
+  --oasis-color-link-hover: #164f67;
+
+  /* Surfaces */
+  --oasis-color-bg: #f5f8f8;
+  --oasis-color-bg-alt: #eef4f4;
+  --oasis-color-surface: #ffffff;
+  --oasis-color-surface-muted: #f8fbfb;
+  --oasis-color-border: #d7e3e4;
+  --oasis-color-border-strong: #c3d3d7;
+
+  /* Spacing */
+  --oasis-space-1: 0.25rem;
+  --oasis-space-2: 0.5rem;
+  --oasis-space-3: 0.75rem;
+  --oasis-space-4: 1rem;
+  --oasis-space-5: 1.5rem;
+  --oasis-space-6: 2rem;
+  --oasis-space-7: 3rem;
+  --oasis-space-8: 4rem;
+
+  /* Typography */
+  --oasis-font-sans: "Aptos", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --oasis-font-mono: "Roboto Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --oasis-font-size-0: 0.95rem;
+  --oasis-font-size-1: 1rem;
+  --oasis-font-size-2: 1.125rem;
+  --oasis-font-size-3: 1.35rem;
+  --oasis-font-size-4: 1.8rem;
+  --oasis-font-size-5: 2.5rem;
+  --oasis-line-height-body: 1.75;
+  --oasis-line-height-tight: 1.2;
+
+  /* Shape */
+  --oasis-radius-sm: 0.45rem;
+  --oasis-radius-md: 0.8rem;
+  --oasis-radius-lg: 1.15rem;
+  --oasis-radius-pill: 999px;
+
+  /* Shadows */
+  --oasis-shadow-sm: 0 8px 24px rgba(18, 52, 77, 0.08);
+  --oasis-shadow-md: 0 16px 40px rgba(18, 52, 77, 0.12);
+  --oasis-shadow-lg: 0 24px 54px rgba(18, 52, 77, 0.16);
+
+  /* Motion */
+  --oasis-transition-fast: 180ms ease;
+  --oasis-transition-base: 240ms ease;
+
+  /* Map tokens onto Material variables where helpful */
+  --md-default-bg-color: var(--oasis-color-bg);
+  --md-default-fg-color: var(--oasis-color-text);
+  --md-default-fg-color--light: var(--oasis-color-text-soft);
+  --md-primary-fg-color: var(--oasis-color-brand-900);
+  --md-primary-fg-color--light: var(--oasis-color-brand-700);
+  --md-primary-fg-color--dark: #0c2435;
+  --md-accent-fg-color: var(--oasis-color-accent);
+  --md-accent-fg-color--transparent: rgba(47, 143, 157, 0.14);
+  --md-typeset-a-color: var(--oasis-color-link);
+  --md-text-font-family: var(--oasis-font-sans);
+  --md-code-font-family: var(--oasis-font-mono);
+}
+
+@media screen and (max-width: 76.1875em) {
+  :root {
+    --oasis-font-size-5: 2.15rem;
+    --oasis-font-size-4: 1.65rem;
+  }
+}
+
+@media screen and (max-width: 44.9375em) {
+  :root {
+    --oasis-space-7: 2.5rem;
+    --oasis-space-8: 3rem;
+    --oasis-font-size-5: 1.9rem;
+    --oasis-font-size-4: 1.45rem;
+    --oasis-font-size-3: 1.2rem;
+  }
+}

@@ -4,8 +4,8 @@ site_author: Ty Tuff
 site_url: "https://OWNER.github.io/REPO/"
 
 # Repository
-repo_name: Project-group-home
-repo_url: https://github.com/CU-ESIIL/Project_group_oasis
+repo_name: Project_group_OASIS
+repo_url: https://github.com/CU-ESIIL/Project_group_OASIS
 edit_uri: edit/main/docs/
 # Copyright
 copyright: 'Copyright &copy; 2024 University of Colorado Boulder'
@@ -62,6 +62,7 @@ theme:
     - toc.integrate
     - toc.follow
     - content.code.copy
+    - content.action.edit
   # Default values, taken from mkdocs_theme.yml
   language: en
   palette:
@@ -89,6 +90,9 @@ extra_css:
   - stylesheets/tokens.css
   - stylesheets/extra.css
 
+hooks:
+  - hooks.py
+
 plugins:
     - search
     - mkdocstrings
@@ -99,3 +103,9 @@ plugins:
 markdown_extensions:
   - toc:
       toc_depth: 2
+  - pymdownx.snippets:
+      base_path:
+        - docs
+
+validation:
+  omitted_files: ignore

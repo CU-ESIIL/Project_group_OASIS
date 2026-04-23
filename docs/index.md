@@ -202,3 +202,7 @@ License: CC-BY-4.0 unless noted. See dataset licenses on the **[Data](data.md)**
 - Use short, active sentences; this is a scrolling “slide deck.”
 - Update this page at least once per day during the sprint.
 -->
+
+## Site Health
+
+--8<-- "_site_health.md"

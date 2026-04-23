@@ -39,6 +39,9 @@ jobs:
             python -m pip install mkdocs
           fi
 
+      - name: Generate site health report
+        run: python scripts/site_health.py
+
       - name: Build MkDocs site
         run: mkdocs build --strict --clean --site-dir dist
 

@@ -1,0 +1,400 @@
+/*
+ * Visual styling for the Project OASIS MkDocs site.
+ * The goal is to keep markdown as the source of truth while making
+ * Material render closer to the polished, airy ESIIL aesthetic.
+ */
+
+/* Base page */
+body {
+  background:
+    radial-gradient(circle at top left, rgba(47, 143, 157, 0.09), transparent 30%),
+    linear-gradient(180deg, #f7fafa 0%, #f3f7f7 100%);
+  color: var(--oasis-color-text);
+}
+
+.md-main {
+  background: transparent;
+}
+
+.md-main__inner {
+  margin-top: var(--oasis-space-6);
+}
+
+.md-content {
+  max-width: 48rem;
+}
+
+.md-content__inner {
+  margin: 0;
+  padding-bottom: var(--oasis-space-8);
+}
+
+.md-grid {
+  max-width: 88rem;
+}
+
+/* Header and navigation chrome */
+.md-header {
+  background: linear-gradient(135deg, var(--oasis-color-brand-900), #173e59 62%, var(--oasis-color-brand-700));
+  box-shadow: 0 12px 32px rgba(18, 52, 77, 0.16);
+}
+
+.md-header__inner,
+.md-tabs__inner {
+  max-width: 88rem;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2.25rem;
+}
+
+.md-header__title,
+.md-tabs__link,
+.md-header__button,
+.md-search__icon {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.md-tabs {
+  background: rgba(10, 32, 49, 0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.md-tabs__link {
+  margin-top: 0;
+  padding: 0.95rem 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.84;
+  transition:
+    color var(--oasis-transition-fast),
+    opacity var(--oasis-transition-fast),
+    transform var(--oasis-transition-fast);
+}
+
+.md-tabs__link:is(:hover, :focus-visible),
+.md-tabs__item--active .md-tabs__link {
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.md-header__topic:first-child,
+.md-header__topic:last-child {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.md-search__form {
+  border-radius: var(--oasis-radius-pill);
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Sidebar and navigation surfaces */
+.md-sidebar__scrollwrap {
+  scrollbar-color: var(--oasis-color-border-strong) transparent;
+}
+
+.md-nav--lifted > .md-nav__list > .md-nav__item > .md-nav__link,
+.md-nav__title,
+.md-nav__item .md-nav__link {
+  border-radius: var(--oasis-radius-sm);
+}
+
+.md-nav__link {
+  transition:
+    color var(--oasis-transition-fast),
+    background-color var(--oasis-transition-fast),
+    padding-left var(--oasis-transition-fast);
+}
+
+.md-nav__link:is(:hover, :focus-visible) {
+  background: rgba(47, 143, 157, 0.08);
+  color: var(--oasis-color-brand-800);
+  padding-left: 0.25rem;
+}
+
+.md-nav__item .md-nav__link--active {
+  color: var(--oasis-color-brand-900);
+  font-weight: 700;
+}
+
+/* Content shell */
+.md-typeset {
+  color: var(--oasis-color-text);
+  font-size: var(--oasis-font-size-0);
+  line-height: var(--oasis-line-height-body);
+}
+
+.md-typeset > :first-child {
+  margin-top: 0;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  color: var(--oasis-color-text-strong);
+  font-family: var(--oasis-font-sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h1 {
+  margin: 0 0 var(--oasis-space-5);
+  font-size: var(--oasis-font-size-5);
+  line-height: 1.05;
+}
+
+.md-typeset h2 {
+  margin-top: var(--oasis-space-8);
+  margin-bottom: var(--oasis-space-4);
+  padding-bottom: var(--oasis-space-3);
+  font-size: var(--oasis-font-size-4);
+  line-height: var(--oasis-line-height-tight);
+  border-bottom: 1px solid var(--oasis-color-border);
+}
+
+.md-typeset h3 {
+  margin-top: var(--oasis-space-6);
+  margin-bottom: var(--oasis-space-3);
+  font-size: var(--oasis-font-size-3);
+}
+
+.md-typeset h4 {
+  margin-top: var(--oasis-space-5);
+  margin-bottom: var(--oasis-space-2);
+  font-size: var(--oasis-font-size-2);
+}
+
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol,
+.md-typeset blockquote,
+.md-typeset table,
+.md-typeset .admonition,
+.md-typeset details,
+.md-typeset hr,
+.md-typeset iframe {
+  margin-top: 0;
+  margin-bottom: var(--oasis-space-5);
+}
+
+.md-typeset strong {
+  color: var(--oasis-color-text-strong);
+}
+
+.md-typeset a {
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+  transition:
+    color var(--oasis-transition-fast),
+    background-color var(--oasis-transition-fast),
+    box-shadow var(--oasis-transition-fast),
+    transform var(--oasis-transition-fast);
+}
+
+.md-typeset a:is(:hover, :focus-visible) {
+  color: var(--oasis-color-link-hover);
+}
+
+.md-typeset p > a,
+.md-typeset li > a,
+.md-typeset p > strong > a,
+.md-typeset li > strong > a {
+  font-weight: 600;
+}
+
+.md-typeset p > strong > a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0.2rem 0.45rem 0.45rem 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid transparent;
+  border-radius: var(--oasis-radius-pill);
+  background: linear-gradient(180deg, var(--oasis-color-brand-700), var(--oasis-color-brand-900));
+  box-shadow: var(--oasis-shadow-sm);
+  color: #ffffff;
+}
+
+.md-typeset p > strong > a:is(:hover, :focus-visible) {
+  color: #ffffff;
+  box-shadow: var(--oasis-shadow-md);
+  transform: translateY(-2px);
+}
+
+.md-typeset a[href$=".pdf"],
+.md-typeset a[href*="github.com/CU-ESIIL/Project_group_OASIS/tree/main"] {
+  border-bottom: 1px solid rgba(31, 105, 136, 0.24);
+}
+
+.md-typeset hr {
+  border-bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--oasis-color-border-strong), transparent);
+}
+
+/* Callouts and quoted content */
+.md-typeset blockquote {
+  padding: var(--oasis-space-4) var(--oasis-space-5);
+  border-left: 4px solid var(--oasis-color-accent);
+  border-radius: 0 var(--oasis-radius-md) var(--oasis-radius-md) 0;
+  background: linear-gradient(180deg, rgba(47, 143, 157, 0.08), rgba(47, 143, 157, 0.03));
+  color: var(--oasis-color-text-strong);
+  box-shadow: inset 0 0 0 1px rgba(47, 143, 157, 0.08);
+}
+
+/* Lists */
+.md-typeset ul,
+.md-typeset ol {
+  padding-left: 1.2rem;
+}
+
+.md-typeset li {
+  margin-bottom: 0.35rem;
+}
+
+.md-typeset li::marker {
+  color: var(--oasis-color-accent);
+}
+
+/* Code and preformatted blocks */
+.md-typeset code {
+  padding: 0.12rem 0.38rem;
+  border-radius: 0.35rem;
+  background: rgba(22, 71, 100, 0.08);
+  color: var(--oasis-color-brand-900);
+}
+
+.md-typeset pre > code {
+  border-radius: var(--oasis-radius-md);
+}
+
+/* Media */
+.md-typeset img,
+.md-typeset svg,
+.md-typeset iframe {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--oasis-color-border);
+  border-radius: var(--oasis-radius-md);
+  background: var(--oasis-color-surface);
+  box-shadow: var(--oasis-shadow-sm);
+}
+
+.md-typeset img {
+  transition:
+    transform var(--oasis-transition-base),
+    box-shadow var(--oasis-transition-base);
+}
+
+.md-typeset img:is(:hover, :focus-visible) {
+  transform: translateY(-2px);
+  box-shadow: var(--oasis-shadow-md);
+}
+
+.md-typeset figure,
+.md-typeset .mermaid {
+  margin: 0 0 var(--oasis-space-5);
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--oasis-color-border);
+  border-radius: var(--oasis-radius-md);
+  background: var(--oasis-color-surface);
+  box-shadow: var(--oasis-shadow-sm);
+}
+
+.md-typeset table:not([class]) th {
+  padding: 0.95rem 1rem;
+  background: linear-gradient(180deg, var(--oasis-color-bg-alt), #e7f0f1);
+  color: var(--oasis-color-text-strong);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.95rem 1rem;
+  border-top: 1px solid var(--oasis-color-border);
+  vertical-align: top;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) td {
+  background: rgba(238, 244, 244, 0.72);
+}
+
+.md-typeset table:not([class]) tr:hover td {
+  background: rgba(217, 238, 240, 0.72);
+}
+
+.md-typeset .tabbed-set,
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--oasis-radius-md);
+  background: var(--oasis-color-surface);
+  box-shadow: var(--oasis-shadow-sm);
+}
+
+.md-typeset__table {
+  margin-bottom: var(--oasis-space-5);
+  border-radius: var(--oasis-radius-md);
+}
+
+/* Utility alignment for inline edit icon pattern in the homepage */
+.md-typeset p[style*="text-align: right;"] {
+  margin-bottom: 0;
+}
+
+/* Footer */
+.md-footer {
+  background: #102b3d;
+}
+
+.md-footer-meta {
+  background: #0c2231;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+  .md-main__inner {
+    margin-top: var(--oasis-space-5);
+  }
+
+  .md-content {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-header__title {
+    margin-left: 0.2rem;
+  }
+
+  .md-typeset {
+    font-size: 0.92rem;
+  }
+
+  .md-typeset h2 {
+    margin-top: var(--oasis-space-7);
+  }
+
+  .md-typeset p > strong > a {
+    width: 100%;
+    justify-content: center;
+    margin-right: 0;
+  }
+}
