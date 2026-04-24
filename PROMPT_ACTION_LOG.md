@@ -395,3 +395,36 @@ Verification
 Open questions and follow-up
 
 * Preview the deployed sidebar to confirm the logo size is right.
+
+2026-04-24
+
+Prompt
+
+User clarified: "You are working on the wrong thing... we want both [the top header logo and title] back. The thing we're talking about is the white space below that where we had a logo that we got rid of... we wanted to keep the group logo."
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/stylesheets/extra.css
+* docs/assets/esiil_content/
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Restored `site_name: "OASIS Project Group Template"` so the top blue header shows both the ESIIL logo and the title text again.
+* Removed the header-title hiding rule.
+* Re-added `docs/assets/esiil_content/group_logo.svg`.
+* Updated the sidebar title area so it stays visible, hides only the sidebar text, and displays the group logo in the white sidebar brand space.
+* Kept `custom_dir` removed so GitHub Actions does not fail on a missing `docs/overrides` folder.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed.
+* Inspected rendered `site/index.html` and confirmed the header title text is present again.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the deployed sidebar to confirm the group logo size and placement match the desired old scene.
