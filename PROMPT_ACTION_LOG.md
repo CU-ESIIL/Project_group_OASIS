@@ -263,3 +263,28 @@ Verification
 Open questions and follow-up
 
 * Replace the Digital Twins and Causal Inference placeholder pages with final lesson links or materials when available.
+
+2026-04-24
+
+Prompt
+
+User asked: "I don't need this project title here, we have it above and to the right, we don't need it here, just a larger logo."
+
+Files and folders inspected
+
+* docs/stylesheets/extra.css
+* docs/javascripts/home-brand-link.js
+
+Actions taken
+
+* Hid the repeated sidebar project title next to the group logo.
+* Increased the sidebar group logo size and brand-area height.
+
+Verification
+
+* Ran `node --check docs/javascripts/home-brand-link.js`.
+* Ran `python3 scripts/site_health.py`; it generated `docs/_site_health.md` with 6 existing template warnings.
+
+Open questions and follow-up
+
+* Preview the rendered sidebar and tune logo size if needed for narrow screens.
