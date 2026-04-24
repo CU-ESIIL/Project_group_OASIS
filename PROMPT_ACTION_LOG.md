@@ -180,3 +180,27 @@ Verification
 Open questions and follow-up
 
 * Preview after a MkDocs build to verify the sidebar brand click behavior in the rendered Material theme.
+
+2026-04-24
+
+Prompt
+
+User clarified: "This logo is still linking to an outside repo instead of the home page. I want the home and the logo to link to home. The logo in the top bar can stay linked to the outside link."
+
+Files and folders inspected
+
+* docs/javascripts/home-brand-link.js
+
+Actions taken
+
+* Broadened the sidebar logo rewrite so every `a.md-logo` outside the top `.md-header` links to the site Home page.
+* Preserved the top header logo's external OASIS link.
+
+Verification
+
+* Ran `node --check docs/javascripts/home-brand-link.js`.
+* Ran `python3 scripts/site_health.py`; it generated `docs/_site_health.md` with 6 existing template warnings.
+
+Open questions and follow-up
+
+* Preview the rendered sidebar after the next MkDocs build to confirm Material's lower logo markup is caught.

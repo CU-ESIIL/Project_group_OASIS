@@ -4,15 +4,15 @@
 
   const homeHref = homeLink?.getAttribute("href") || ".";
 
-  const linkSidebarBrand = () => {
-    document.querySelectorAll(".md-sidebar--primary .md-nav__title").forEach((title) => {
-      const logo = title.querySelector("a.md-logo");
-      if (logo) {
-        logo.setAttribute("href", homeHref);
-        logo.setAttribute("title", "Home");
-        logo.setAttribute("aria-label", "Home");
-      }
+  const linkHomeBrand = () => {
+    document.querySelectorAll("a.md-logo").forEach((logo) => {
+      if (logo.closest(".md-header")) return;
+      logo.setAttribute("href", homeHref);
+      logo.setAttribute("title", "Home");
+      logo.setAttribute("aria-label", "Home");
+    });
 
+    document.querySelectorAll(".md-sidebar--primary .md-nav__title").forEach((title) => {
       if (title.dataset.homeBrandLinked === "true") return;
       title.dataset.homeBrandLinked = "true";
       title.addEventListener("click", (event) => {
@@ -31,8 +31,8 @@
     });
   };
 
-  linkSidebarBrand();
+  linkHomeBrand();
   if (typeof document$ !== "undefined") {
-    document$.subscribe(linkSidebarBrand);
+    document$.subscribe(linkHomeBrand);
   }
 })();
