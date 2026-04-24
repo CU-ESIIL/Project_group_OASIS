@@ -524,3 +524,30 @@ Verification
 Open questions and follow-up
 
 * Preview the deployed sidebar to confirm the larger logo does not overlap the Public Front Page nav label.
+
+2026-04-24
+
+Prompt
+
+User asked: "Make the logo twice that big within the same space so it really fills the space. Also, can you make the group titles in the side bar our branded green? This is 'instructions' 'specialty tracks' 'manuals' etc."
+
+Files and folders inspected
+
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Doubled the sidebar group-logo pseudo-element size from `8.8rem` by `6.4rem` to `17.6rem` by `12.8rem` while keeping the same compact block height.
+* Colored top-level sidebar group labels with the branded green token.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed.
+* Confirmed built CSS contains the doubled logo dimensions and branded green sidebar-label rules.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the sidebar; this intentionally overfills the compact block, so tune the negative margin if it overlaps the first nav link.

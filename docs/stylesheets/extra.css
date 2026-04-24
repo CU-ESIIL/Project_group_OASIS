@@ -128,6 +128,16 @@ body {
   font-weight: 700;
 }
 
+.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link {
+  color: var(--oasis-color-accent-green);
+  font-weight: 700;
+}
+
+.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link:is(:hover, :focus-visible),
+.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link--active {
+  color: var(--oasis-color-accent-green);
+}
+
 .md-sidebar--primary .md-nav__title {
   display: flex;
   align-items: center;
@@ -141,9 +151,9 @@ body {
 .md-sidebar--primary .md-nav__title::before {
   content: "";
   display: block;
-  width: 8.8rem;
-  height: 6.4rem;
-  margin-top: -0.45rem;
+  width: 17.6rem;
+  height: 12.8rem;
+  margin-top: -1.15rem;
   background: url("../assets/esiil_content/group_logo.svg") center / contain no-repeat;
 }
 
