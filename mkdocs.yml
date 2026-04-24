@@ -56,7 +56,6 @@ theme:
   font: false
   logo: 'assets/oasis_logo.png'
   favicon: 'assets/esiil_content/favicon.ico'
-  custom_dir: docs/overrides
   # setting features for the navigation tab
   features:
     - navigation.sections

@@ -40,12 +40,15 @@ def main() -> int:
     require("logo: 'assets/oasis_logo.png'" in mkdocs_text, "Header logo should use docs/assets/oasis_logo.png.", errors)
     require("homepage: https://cu-esiil.github.io/Project_group_OASIS/" in mkdocs_text,
             "Material homepage should point the logo to the Project_group_OASIS homepage.", errors)
+    require("custom_dir:" not in mkdocs_text, "custom_dir should not point to a missing overrides folder.", errors)
     require("extra_javascript:" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be registered.", errors)
     require("home-brand-link.js" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be referenced.", errors)
     require(logo.exists(), "docs/assets/oasis_logo.png is missing.", errors)
     require(not logo_override.exists(), "Custom logo override should be removed so Material handles the homepage link.", errors)
-    require(".md-sidebar--primary .md-nav__title" in css_text and "display: none" in css_text,
-            "Duplicate sidebar branding title should be hidden with a scoped selector.", errors)
+    require(".md-sidebar--primary .md-nav__title" in css_text and "display: flex" in css_text,
+            "Sidebar branding area should be visible for the group logo.", errors)
+    require(".md-sidebar--primary .md-nav__title .md-ellipsis" in css_text and "display: none" in css_text,
+            "Sidebar title text should be hidden while keeping the logo visible.", errors)
     require(".md-header__title" in css_text and "display: none" in css_text,
             "Header title text should be hidden so only the logo shows.", errors)
 

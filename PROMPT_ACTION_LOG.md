@@ -364,3 +364,34 @@ Verification
 Open questions and follow-up
 
 * Preview the deployed header to confirm the logo dimensions feel right with the blank site title.
+
+2026-04-24
+
+Prompt
+
+User clarified: "You understand we just want a logo for the group at the top of the side bar. We are not modifying the top bar or anything else. We got this error: Config value 'theme': The path set in custom_dir ... docs/overrides does not exist."
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/stylesheets/extra.css
+* scripts/template_regression_check.py
+* docs/assets/
+
+Actions taken
+
+* Removed the stale `custom_dir: docs/overrides` setting from `mkdocs.yml` so GitHub Actions no longer fails when the untracked overrides folder is absent.
+* Changed the sidebar branding CSS from hiding the whole sidebar title block to showing the sidebar logo while hiding only the adjacent title text.
+* Updated the template regression check to verify that `custom_dir` is not configured and that the sidebar logo area remains visible.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed.
+* Inspected rendered `site/index.html` and confirmed the sidebar logo markup is present.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the deployed sidebar to confirm the logo size is right.

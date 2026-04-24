@@ -133,6 +133,27 @@ body {
 }
 
 .md-sidebar--primary .md-nav__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 6.5rem;
+  padding: var(--oasis-space-4) 0;
+}
+
+.md-sidebar--primary .md-nav__title .md-logo {
+  margin: 0;
+  padding: 0;
+}
+
+.md-sidebar--primary .md-nav__title .md-logo img,
+.md-sidebar--primary .md-nav__title .md-logo svg {
+  width: auto;
+  height: 5rem;
+  max-width: 10rem;
+  object-fit: contain;
+}
+
+.md-sidebar--primary .md-nav__title .md-ellipsis {
   display: none;
 }
 
