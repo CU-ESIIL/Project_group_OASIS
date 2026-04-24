@@ -89,6 +89,9 @@ extra_css:
   - stylesheets/tokens.css
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/home-brand-link.js
+
 hooks:
   - hooks.py
 

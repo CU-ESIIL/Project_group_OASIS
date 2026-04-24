@@ -151,3 +151,32 @@ Verification
 Open questions and follow-up
 
 * Preview the header after dependencies are installed to confirm the wordmark size feels right across desktop and mobile.
+
+2026-04-24
+
+Prompt
+
+User asked: "Can we make the lower logo and project title into a home page logo that links back to the home page? The top banner logo can still link to OASIS."
+
+Files and folders inspected
+
+* docs/overrides/partials/logo.html
+* mkdocs.yml
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Added `docs/javascripts/home-brand-link.js` to make the primary sidebar brand area link to the site Home page.
+* Registered the script in `mkdocs.yml`.
+* Added a pointer cursor to the lower/sidebar brand title area.
+* Preserved the top header logo link to `https://cu-esiil.github.io/home/`.
+
+Verification
+
+* Ran `node --check docs/javascripts/home-brand-link.js`.
+* Ran `python3 scripts/site_health.py`; it generated `docs/_site_health.md` with 6 existing template warnings.
+* Confirmed the top logo partial still links to OASIS and the new sidebar script is registered in MkDocs.
+
+Open questions and follow-up
+
+* Preview after a MkDocs build to verify the sidebar brand click behavior in the rendered Material theme.
