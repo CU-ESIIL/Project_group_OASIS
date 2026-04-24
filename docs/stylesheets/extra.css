@@ -1,14 +1,12 @@
 /*
  * Visual styling for the Project OASIS MkDocs site.
- * The goal is to keep markdown as the source of truth while making
- * Material render closer to the polished, airy ESIIL aesthetic.
+ * The goal is to keep markdown as the source of truth while applying
+ * the ESIIL style guide colors, type scale, and button treatment.
  */
 
 /* Base page */
 body {
-  background:
-    radial-gradient(circle at top left, rgba(47, 143, 157, 0.09), transparent 30%),
-    linear-gradient(180deg, #f7fafa 0%, #f3f7f7 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--oasis-color-bg-alt) 100%);
   color: var(--oasis-color-text);
 }
 
@@ -35,8 +33,8 @@ body {
 
 /* Header and navigation chrome */
 .md-header {
-  background: linear-gradient(135deg, var(--oasis-color-brand-900), #173e59 62%, var(--oasis-color-brand-700));
-  box-shadow: 0 12px 32px rgba(18, 52, 77, 0.16);
+  background: var(--oasis-color-primary-blue);
+  box-shadow: 0 12px 32px rgba(22, 26, 25, 0.14);
 }
 
 .md-header__inner,
@@ -46,7 +44,10 @@ body {
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 2.25rem;
+  width: auto;
+  height: 2.35rem;
+  max-width: 8rem;
+  object-fit: contain;
 }
 
 .md-header__title,
@@ -57,7 +58,7 @@ body {
 }
 
 .md-tabs {
-  background: rgba(10, 32, 49, 0.16);
+  background: rgba(22, 26, 25, 0.16);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -117,13 +118,13 @@ body {
 }
 
 .md-nav__link:is(:hover, :focus-visible) {
-  background: rgba(47, 143, 157, 0.08);
-  color: var(--oasis-color-brand-800);
+  background: rgba(66, 188, 220, 0.12);
+  color: var(--oasis-color-primary-blue);
   padding-left: 0.25rem;
 }
 
 .md-nav__item .md-nav__link--active {
-  color: var(--oasis-color-brand-900);
+  color: var(--oasis-color-primary-blue);
   font-weight: 700;
 }
 
@@ -142,19 +143,20 @@ body {
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4 {
-  color: var(--oasis-color-text-strong);
   font-family: var(--oasis-font-sans);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .md-typeset h1 {
+  color: var(--oasis-color-body-text);
   margin: 0 0 var(--oasis-space-5);
   font-size: var(--oasis-font-size-5);
   line-height: 1.05;
 }
 
 .md-typeset h2 {
+  color: var(--oasis-color-primary-blue);
   margin-top: var(--oasis-space-8);
   margin-bottom: var(--oasis-space-4);
   padding-bottom: var(--oasis-space-3);
@@ -164,15 +166,24 @@ body {
 }
 
 .md-typeset h3 {
+  color: var(--oasis-color-accent-blue);
   margin-top: var(--oasis-space-6);
   margin-bottom: var(--oasis-space-3);
   font-size: var(--oasis-font-size-3);
 }
 
 .md-typeset h4 {
+  color: var(--oasis-color-primary-blue);
   margin-top: var(--oasis-space-5);
   margin-bottom: var(--oasis-space-2);
+  font-size: var(--oasis-font-size-3);
+}
+
+.md-typeset h5 {
+  color: var(--oasis-color-primary-blue);
   font-size: var(--oasis-font-size-2);
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .md-typeset p,
@@ -217,23 +228,25 @@ body {
   display: inline-flex;
   align-items: center;
   margin: 0.2rem 0.45rem 0.45rem 0;
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 2.5rem;
   border: 1px solid transparent;
-  border-radius: var(--oasis-radius-pill);
-  background: linear-gradient(180deg, var(--oasis-color-brand-700), var(--oasis-color-brand-900));
+  border-radius: 0;
+  background: linear-gradient(90deg, var(--oasis-color-accent-blue), var(--oasis-color-light-green));
   box-shadow: var(--oasis-shadow-sm);
-  color: #ffffff;
+  color: var(--oasis-color-body-text);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .md-typeset p > strong > a:is(:hover, :focus-visible) {
-  color: #ffffff;
+  color: var(--oasis-color-body-text);
   box-shadow: var(--oasis-shadow-md);
   transform: translateY(-2px);
 }
 
 .md-typeset a[href$=".pdf"],
 .md-typeset a[href*="github.com/CU-ESIIL/Project_group_OASIS/tree/main"] {
-  border-bottom: 1px solid rgba(31, 105, 136, 0.24);
+  border-bottom: 1px solid rgba(66, 188, 220, 0.42);
 }
 
 .md-typeset hr {
@@ -245,11 +258,11 @@ body {
 /* Callouts and quoted content */
 .md-typeset blockquote {
   padding: var(--oasis-space-4) var(--oasis-space-5);
-  border-left: 4px solid var(--oasis-color-accent);
+  border-left: 4px solid var(--oasis-color-accent-blue);
   border-radius: 0 var(--oasis-radius-md) var(--oasis-radius-md) 0;
-  background: linear-gradient(180deg, rgba(47, 143, 157, 0.08), rgba(47, 143, 157, 0.03));
+  background: linear-gradient(180deg, rgba(66, 188, 220, 0.12), rgba(227, 227, 227, 0.18));
   color: var(--oasis-color-text-strong);
-  box-shadow: inset 0 0 0 1px rgba(47, 143, 157, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(66, 188, 220, 0.16);
 }
 
 /* Lists */
@@ -263,15 +276,15 @@ body {
 }
 
 .md-typeset li::marker {
-  color: var(--oasis-color-accent);
+  color: var(--oasis-color-accent-green);
 }
 
 /* Code and preformatted blocks */
 .md-typeset code {
   padding: 0.12rem 0.38rem;
   border-radius: 0.35rem;
-  background: rgba(22, 71, 100, 0.08);
-  color: var(--oasis-color-brand-900);
+  background: rgba(227, 227, 227, 0.62);
+  color: var(--oasis-color-primary-blue);
 }
 
 .md-typeset pre > code {
@@ -319,7 +332,7 @@ body {
 
 .md-typeset table:not([class]) th {
   padding: 0.95rem 1rem;
-  background: linear-gradient(180deg, var(--oasis-color-bg-alt), #e7f0f1);
+  background: linear-gradient(180deg, var(--oasis-color-bg-alt), var(--oasis-color-gray-relief));
   color: var(--oasis-color-text-strong);
   font-size: 0.76rem;
   font-weight: 700;
@@ -334,11 +347,11 @@ body {
 }
 
 .md-typeset table:not([class]) tr:nth-child(even) td {
-  background: rgba(238, 244, 244, 0.72);
+  background: rgba(227, 227, 227, 0.32);
 }
 
 .md-typeset table:not([class]) tr:hover td {
-  background: rgba(217, 238, 240, 0.72);
+  background: rgba(66, 188, 220, 0.12);
 }
 
 .md-typeset .tabbed-set,
@@ -361,11 +374,11 @@ body {
 
 /* Footer */
 .md-footer {
-  background: #102b3d;
+  background: var(--oasis-color-primary-blue);
 }
 
 .md-footer-meta {
-  background: #0c2231;
+  background: var(--oasis-color-body-text);
 }
 
 /* Responsive adjustments */

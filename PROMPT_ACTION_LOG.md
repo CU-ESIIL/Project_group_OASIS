@@ -90,3 +90,64 @@ Verification
 Open questions and follow-up
 
 * Install the dependencies in `requirements.txt` to run a full local MkDocs build.
+
+2026-04-24
+
+Prompt
+
+User asked: "Can you update the style with this style guide? Also, the PDF button on the home page just takes us to the top of the page rather than to the PDF."
+
+Files and folders inspected
+
+* /Users/tuff/Downloads/ESIIL STYLE GUIDE.pdf
+* docs/index.md
+* docs/stylesheets/tokens.css
+* docs/stylesheets/extra.css
+* docs/assets/
+
+Actions taken
+
+* Mapped the ESIIL style guide palette, typography scale, and gradient button treatment into the site CSS tokens and custom styles.
+* Updated the homepage Project brief PDF link from `#` to the existing PDF in `docs/assets/`.
+
+Verification
+
+* Rendered the one-page style guide PDF to an image for visual inspection because the PDF contains no extractable text.
+* Confirmed the linked PDF asset exists.
+* Ran `python3 scripts/site_health.py`; it generated `docs/_site_health.md` with 6 existing template warnings.
+* Searched the edited styles and homepage for stale legacy colors, negative letter spacing, and placeholder `#` links.
+* Attempted `python3 -m mkdocs build --strict --clean`; it failed because local Python does not have the `mkdocs` module installed.
+
+Open questions and follow-up
+
+* Run a full MkDocs build after installing the dependencies in `requirements.txt`.
+
+2026-04-24
+
+Prompt
+
+User asked: "Can we also swap out the logo with this image instead of the current one? Don't delete the current image, we may use it other places."
+
+Files and folders inspected
+
+* /Users/tuff/Downloads/Final_ESIIL%20Wordmark%20Color_0.png
+* mkdocs.yml
+* docs/overrides/partials/logo.html
+* docs/assets/esiil_content/
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Copied the new ESIIL wordmark into `docs/assets/esiil_content/esiil_wordmark_color.png`.
+* Updated `mkdocs.yml` to use the new wordmark as the MkDocs header logo.
+* Adjusted header logo sizing for the wider wordmark.
+* Left the existing `docs/assets/esiil_content/esiil_oasis_logo.png` file untouched.
+
+Verification
+
+* Confirmed both the new wordmark and previous logo files exist.
+* Ran `python3 scripts/site_health.py`; it generated `docs/_site_health.md` with 6 existing template warnings.
+
+Open questions and follow-up
+
+* Preview the header after dependencies are installed to confirm the wordmark size feels right across desktop and mobile.

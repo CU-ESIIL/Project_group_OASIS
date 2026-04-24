@@ -49,7 +49,7 @@ theme:
   highlightjs: true
   name: material
   font: false
-  logo: 'assets/esiil_content/esiil_oasis_logo.png'
+  logo: 'assets/esiil_content/esiil_wordmark_color.png'
   favicon: 'assets/esiil_content/favicon.ico'
   custom_dir: docs/overrides
   # setting features for the navigation tab
