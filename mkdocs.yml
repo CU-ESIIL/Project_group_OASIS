@@ -8,7 +8,7 @@ repo_name: Project_group_OASIS
 repo_url: https://github.com/CU-ESIIL/Project_group_OASIS
 edit_uri: edit/main/docs/
 # Copyright
-copyright: 'Copyright &copy; 2024 University of Colorado Boulder'
+copyright: 'Copyright &copy; 2024 University of Colorado Boulder · MIT License'
 
 # Page tree
 nav:
@@ -112,6 +112,8 @@ plugins:
 markdown_extensions:
   - toc:
       toc_depth: 2
+  - attr_list
+  - md_in_html
   - pymdownx.snippets:
       base_path:
         - docs

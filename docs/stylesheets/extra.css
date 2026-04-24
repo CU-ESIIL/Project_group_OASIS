@@ -102,6 +102,10 @@ body {
   letter-spacing: 0.04em;
 }
 
+.md-header__topic + .md-header__topic {
+  display: none;
+}
+
 .md-search__form {
   border-radius: var(--oasis-radius-pill);
   background-color: rgba(255, 255, 255, 0.14);
@@ -109,6 +113,14 @@ body {
 
 .md-search__input::placeholder {
   color: rgba(255, 255, 255, 0.75);
+}
+
+.md-typeset h1 {
+  color: var(--oasis-color-primary-blue);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: var(--oasis-color-accent-blue);
 }
 
 /* Sidebar and navigation surfaces */
@@ -177,6 +189,31 @@ body {
 
 .md-sidebar--primary .md-nav__title .md-ellipsis {
   display: none;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--oasis-space-5);
+  margin: var(--oasis-space-5) 0 var(--oasis-space-7);
+}
+
+.person-card {
+  height: 100%;
+  padding: var(--oasis-space-5);
+  border: 1px solid var(--oasis-color-border);
+  border-radius: var(--oasis-radius-md);
+  background: var(--oasis-color-surface);
+  box-shadow: var(--oasis-shadow-sm);
+}
+
+.person-card h3 {
+  margin-top: 0;
+  color: var(--oasis-color-primary-blue);
+}
+
+[data-md-color-scheme="slate"] .person-card h3 {
+  color: var(--oasis-color-accent-blue);
 }
 
 /* Content shell */

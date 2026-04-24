@@ -60,7 +60,31 @@ Data source:
 Team member row:
 
 ```markdown
-| Name | Role | Contact | GitHub |
-|---|---|---|---|
-| Jane Doe | Data lead | jane@example.org | @janedoe |
+<div class="person-card" markdown>
+
+### Jane Doe
+
+**Role / affiliation:** Data lead, example institution
+
+**Excited to work on:** One sentence on the project question or product.
+
+**Background:** Two or three short sentences about relevant experience, perspective, or motivation.
+
+**Skills / data:** Skills, datasets, tools, or connections this person brings.
+
+**Human detail:** A small detail that makes the page feel like a team of people.
+
+**Profile:** [Profile link](https://example.org)
+
+</div>
 ```
+
+Create one file per person in `docs/people/`, then include that file from `docs/index.md`. This helps teammates edit their own entry without creating merge conflicts. Prefer one profile link over raw contact details; do not publish email and GitHub handles together.
+
+Citation:
+
+```markdown
+This sentence uses a source [@oasisProjectTemplate].
+```
+
+Add BibTeX entries to `docs/references.bib`, then cite them with `[@citationKey]` on `docs/index.md`. Keep `{{ references }}` where the generated reference list should appear.

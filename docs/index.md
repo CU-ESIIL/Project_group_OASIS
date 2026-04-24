@@ -4,20 +4,19 @@
 
 **Purpose:** This example front page shows how a project group can turn a 3-day sprint into a clear public story: a focused question, a visible team, early artifacts, method choices, uncertainty, and polished share-out figures.
 
-**[Project brief](assets/files/project_brief.pdf) · [View code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code) · [Data & access](data.md)**
-
-<p><a class="md-button md-button--primary" href="https://what-uses-more.com">What Uses More?</a></p>
-
 ## People
 
-| Name | Role | Contact | GitHub |
-|------|------|---------|--------|
-| Jane Doe | Project lead | jane.doe@example.org | @janedoe |
-| John Smith | Analysis lead | john.smith@example.org | @jsmith |
+<div class="people-grid" markdown>
+
+--8<-- "people/jane-doe.md"
+
+--8<-- "people/john-smith.md"
+
+</div>
 
 ## Idea Generation & Collaboration
 
-The group began with a practical question: how can fire perimeter data be translated into visuals that make spread speed easier to compare across events, places, and time windows?
+The group began with a practical question: how can fire perimeter data be translated into visuals that make spread speed easier to compare across events, places, and time windows? That framing borrows from earlier fire-spread modeling work [@finney1998].
 
 ![Whiteboard notes from early framing](assets/whiteboards/day1_whiteboard.jpg)
 *Early notes captured the core comparison problem: speed is not just where fire moved, but how quickly the boundary changed and where uncertainty enters the story.*
@@ -35,11 +34,15 @@ The first pass focused on producing quick visual artifacts rather than a perfect
 ![Early exploration plot](assets/explorations/explore_data_plot.png)
 *First-pass output showing whether the available data can support a visible comparison. This kind of rough figure is useful even when it exposes gaps or confusing assumptions.*
 
+<p><a class="md-button" href="data.md">Open data notes</a></p>
+
 Early method notes:
 
 - Convert perimeter change into comparable time intervals.
 - Flag gaps where time stamps or geometry quality limit interpretation.
 - Use static figures first, then decide whether an interactive view is worth the extra effort.
+
+<p><a class="md-button" href="https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code">View shared code</a></p>
 
 ## Refinement
 
@@ -82,24 +85,7 @@ Fire-spread comparison becomes more reusable when perimeter change is summarized
 ![Complementary result figure](assets/figures/main_result.png)
 *Complementary result. This figure should point toward the next version of the workflow.*
 
-## Featured Outputs
-
-<table>
-<tr>
-<td align="center" width="25%">
-  <a href="assets/files/project_brief.pdf"><img src="assets/button_brief.gif" alt="Project brief PDF" width="220"><br><strong>Read the brief</strong></a>
-</td>
-<td align="center" width="25%">
-  <a href="https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code"><img src="assets/button_code.gif" alt="View shared code" width="220"><br><strong>View code</strong></a>
-</td>
-<td align="center" width="25%">
-  <a href="data.md"><img src="assets/button_data.gif" alt="Explore data" width="220"><br><strong>Explore data</strong></a>
-</td>
-<td align="center" width="25%">
-  <a class="md-button md-button--primary" href="https://what-uses-more.com">What Uses More?</a>
-</td>
-</tr>
-</table>
+<p><a class="md-button md-button--primary" href="assets/files/project_brief.pdf">Read the project brief PDF</a></p>
 
 ## Next Steps
 
@@ -108,11 +94,15 @@ Fire-spread comparison becomes more reusable when perimeter change is summarized
 - Turn the most reusable steps into a short notebook.
 - Share the outputs with groups comparing disturbance speed, recovery, or monitoring workflows.
 
+<p><a class="md-button" href="https://what-uses-more.com">Compare computing costs</a></p>
+
 ## Cite & Reuse
 
-> Project Group Authors. (2026). *OASIS fire speed working example*. URL or DOI.
+This site is a reusable project-group template [@oasisProjectTemplate]. Replace this example citation with the sources, datasets, and software your group actually used.
 
-License: CC-BY-4.0 unless noted. See dataset licenses on the **[Data](data.md)** page.
+License: MIT unless noted. See dataset licenses on the **[Data](data.md)** page.
+
+{{ references }}
 
 ## Site Health
 

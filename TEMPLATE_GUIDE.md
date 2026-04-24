@@ -28,7 +28,7 @@ Ask Codex to open `mkdocs.yml` and update the following keys so the published si
 
 - `README.md`: change the title, short description, and any sample URLs to your new project name.
 - `CITATION.cff`: edit `title`, `abstract`, author list, and other metadata to reflect your team.
-- `LICENSE`: confirm the license you want to use and update the copyright line if needed.
+- `LICENSE`: this template uses the MIT License; update the copyright line if needed.
 
 ### Search-and-replace the old name
 
@@ -47,14 +47,20 @@ Use the bullets below as prompts for Codex so it can edit each file.
 - `docs/index.md`
   - Update the first-level heading to your project name.
   - Rewrite the intro section with your project summary, goals, or call to action.
-  - Keep the page as a dense, single-page scaffold for the sprint: purpose, Day 1, Day 2, Final Share Out, links, team, storage, and citation.
-  - Complete the Final Share Out with 3-5 claim-based insights. Each insight should link evidence, state confidence, name limitations, and point to reusable outputs or next steps.
-  - Review the hero links, Featured links, Storage, and Cite & reuse sections; set repository, storage, data, brief, and code links for your group.
+  - Keep the page public-facing: title, hero image, purpose, people, collaboration, methods, refinement, polished results, citations, and health report.
+  - Place links where they help the reader: data links in data/methods sections, code links in methods sections, and PDF links near polished outputs.
+  - Keep the final results claim-based. Each insight should link evidence, state confidence, name limitations, and point to reusable outputs or next steps.
+  - Do not rebuild a top-level button cluster or Featured Outputs section.
+- `docs/people/`
+  - Give each person their own Markdown file so simultaneous edits do not collide.
+  - Include name, role/affiliation, what they are excited to work on, short background, skills/data, a human detail, and one profile link.
+  - Do not publish email and GitHub handles together.
+- `docs/references.bib`
+  - Add sources as BibTeX entries and cite them in Markdown with `[@citationKey]`.
+  - Leave `{{ references }}` where the generated reference list should appear.
 - `docs/project_template.md`
   - Adjust the front-matter fields (`repo_owner`, `repo_name`, `contact_slack`, `contact_email`, etc.).
   - Replace placeholder hero images, figures, and descriptive text with your team’s content.
-- `docs/team.md`
-  - Add each team member with name, role, and contact info.
 - `docs/code.md`
   - List important analysis scripts or notebooks and link to their paths in the repo.
 - `docs/updates.md`
@@ -87,7 +93,7 @@ Update `docs/instructions/save-to-persistent-storage.md` so it points to your te
 ## 6. Final checks
 
 - Confirm all navigation links in the live site work as expected.
-- Confirm the homepage still reads like a reusable project scaffold, not a finished report for one specific group.
+- Confirm the homepage reads like a polished public-facing example that a new group can replace with its own narrative.
 - Confirm image placeholders and raw file links are still present so non-technical editors can replace artifacts from GitHub.
 - Delete any leftover placeholder sections or TODO comments.
 - Share the Pages URL with your team once you verify the site renders correctly.

@@ -620,3 +620,49 @@ Verification
 Open questions and follow-up
 
 * Confirm after deploy that `https://what-uses-more.com` allows iframe embedding in GitHub Pages. If it blocks embedding, keep the button link as the working fallback.
+
+2026-04-24
+
+Prompt
+
+User asked: "Improve the Project Group OASIS site so it is a clean, intuitive, forkable template. Keep the project/group name persistent in the header, make the main title ESIIL blue, refactor people into per-person files and cards, move buttons into context, remove Featured Outputs, add BibTeX citations, and set/reflect MIT license."
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/index.md
+* docs/instructions.md
+* docs/instructions/day3.md
+* docs/stylesheets/extra.css
+* hooks.py
+* README.md
+* TEMPLATE_GUIDE.md
+* AGENTS.md
+* LICENSE
+* scripts/site_health.py
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Kept the Material header title visible and added CSS to hide the dynamic section title so the project/group name stays persistent while scrolling.
+* Styled page H1 headings with the ESIIL brand blue, with an accessible dark-mode alternate.
+* Replaced the People table with snippet-included per-person Markdown files in `docs/people/`, rendered as cards on the front page.
+* Removed the top-level button cluster and Featured Outputs section.
+* Moved buttons into context: data notes in methods, code in methods, PDF in polished results, and compute-cost comparison near next steps.
+* Added `docs/references.bib` and a lightweight MkDocs hook that converts `[@citationKey]` citations into page-local references at `{{ references }}`.
+* Updated participant and template guidance to explain per-person files, BibTeX citations, contextual buttons, and MIT licensing.
+* Updated the footer copyright line to include MIT License.
+* Expanded regression and health checks to protect the new people, citation, navigation, header, and license-related behavior.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `git diff --check`; passed.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed with the standard Material for MkDocs 2.0 warning and expected git-revision-date warnings for new people files.
+* Confirmed the built homepage contains people cards, rendered references, no Featured Outputs section, and persistent-header CSS.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the rendered people cards in a browser after deploy and adjust card copy/spacing if the real team entries run much longer than the examples.

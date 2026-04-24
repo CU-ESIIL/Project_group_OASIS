@@ -18,6 +18,9 @@ def main() -> int:
     mkdocs = ROOT / "mkdocs.yml"
     css = ROOT / "docs" / "stylesheets" / "extra.css"
     tokens = ROOT / "docs" / "stylesheets" / "tokens.css"
+    hooks = ROOT / "hooks.py"
+    references = ROOT / "docs" / "references.bib"
+    people_dir = ROOT / "docs" / "people"
     logo = ROOT / "docs" / "assets" / "oasis_logo.png"
     group_logo = ROOT / "docs" / "assets" / "esiil_content" / "group_logo.svg"
     logo_override = ROOT / "docs" / "overrides" / "partials" / "logo.html"
@@ -28,21 +31,38 @@ def main() -> int:
     mkdocs_text = mkdocs.read_text(encoding="utf-8") if mkdocs.exists() else ""
     css_text = css.read_text(encoding="utf-8") if css.exists() else ""
     tokens_text = tokens.read_text(encoding="utf-8") if tokens.exists() else ""
+    hooks_text = hooks.read_text(encoding="utf-8") if hooks.exists() else ""
+    references_text = references.read_text(encoding="utf-8") if references.exists() else ""
 
     require(index.exists(), "docs/index.md is missing.", errors)
     require("## People" in index_text, "Public Front Page people section is missing.", errors)
+    require('--8<-- "people/' in index_text, "Public Front Page should include per-person files.", errors)
     require("## Idea Generation & Collaboration" in index_text, "Public Front Page process section is missing.", errors)
     require("## Polished Results & Figures" in index_text, "Public Front Page polished results section is missing.", errors)
+    require("## Featured Outputs" not in index_text, "Featured Outputs section should be removed.", errors)
     require("https://what-uses-more.com" in index_text, "What Uses More button/link is missing.", errors)
+    require("assets/files/project_brief.pdf" in index_text and "Polished Results & Figures" in index_text,
+            "Project brief PDF should be linked near polished outputs.", errors)
+    require("View shared code" in index_text and "Methods Development & Early Results" in index_text,
+            "Code button should be placed in the methods section.", errors)
+    require("Open data notes" in index_text and "data.md" in index_text,
+            "Data button should point to data notes in context.", errors)
+    require("[@" in index_text, "Public Front Page should use BibTeX citation keys.", errors)
+    require("{{ references }}" in index_text, "Public Front Page should include references marker.", errors)
     require("## How to edit the Public Front Page" in instructions_text,
             "Instructions edit guide section is missing.", errors)
     require("## Where files go" in instructions_text, "Instructions file map is missing.", errors)
+    require("docs/people/" in instructions_text, "Instructions should explain per-person profile files.", errors)
+    require("docs/references.bib" in instructions_text, "Instructions should explain BibTeX references.", errors)
 
     for folder in ["hero", "whiteboards", "explorations", "figures", "team", "files"]:
         require((ROOT / "docs" / "assets" / folder).is_dir(), f"docs/assets/{folder}/ is missing.", errors)
 
     require("toc.integrate" not in mkdocs_text, "toc.integrate should not be enabled.", errors)
     require("content.action.edit" in mkdocs_text, "MkDocs edit action should remain enabled.", errors)
+    require("site_name: \"OASIS Project Group Template\"" in mkdocs_text,
+            "Header site title should remain visible and persistent.", errors)
+    require("md_in_html" in mkdocs_text, "md_in_html should be enabled for editable card includes.", errors)
     require("AI for Sustainability" in mkdocs_text, "AI for Sustainability nav section is missing.", errors)
     require("Defining AI: ai-for-sustainability/defining-ai.md" in mkdocs_text,
             "Defining AI nav item is missing.", errors)
@@ -53,8 +73,6 @@ def main() -> int:
     require("Specialty Tracks" in mkdocs_text, "Specialty Tracks nav section is missing.", errors)
     require(mkdocs_text.find("AI for Sustainability") < mkdocs_text.find("Specialty Tracks"),
             "AI for Sustainability should appear before Specialty Tracks in nav.", errors)
-    require("site_name: \"OASIS Project Group Template\"" in mkdocs_text,
-            "Header site title should be visible again.", errors)
     require("logo: 'assets/oasis_logo.png'" in mkdocs_text, "Header logo should use docs/assets/oasis_logo.png.", errors)
     require("homepage: https://cu-esiil.github.io/Project_group_OASIS/" in mkdocs_text,
             "Material homepage should point the logo to the Project_group_OASIS homepage.", errors)
@@ -63,6 +81,10 @@ def main() -> int:
     require("home-brand-link.js" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be referenced.", errors)
     require(logo.exists(), "docs/assets/oasis_logo.png is missing.", errors)
     require(group_logo.exists(), "docs/assets/esiil_content/group_logo.svg is missing.", errors)
+    require(references.exists(), "docs/references.bib is missing.", errors)
+    require("@misc{oasisProjectTemplate" in references_text, "Template reference BibTeX entry is missing.", errors)
+    require((people_dir / "jane-doe.md").exists(), "Example person file jane-doe.md is missing.", errors)
+    require((people_dir / "john-smith.md").exists(), "Example person file john-smith.md is missing.", errors)
     require((ai_dir / "defining-ai.md").exists(), "Defining AI page is missing.", errors)
     require((ai_dir / "defining-sustainability.md").exists(), "Defining Sustainability page is missing.", errors)
     require((ai_dir / "what-does-it-cost.md").exists(), "What Does It Cost page is missing.", errors)
@@ -81,10 +103,18 @@ def main() -> int:
             "Sidebar title text should be hidden while keeping the logo visible.", errors)
     require(".md-header__title {\n  display: none;" not in css_text,
             "Header title text should not be hidden.", errors)
+    require(".md-header__topic + .md-header__topic" in css_text and "display: none" in css_text,
+            "Dynamic section title should be hidden so the header keeps the project/group name.", errors)
+    require(".md-typeset h1" in css_text and "var(--oasis-color-primary-blue)" in css_text,
+            "Main page title should use ESIIL brand blue.", errors)
+    require(".people-grid" in css_text and ".person-card" in css_text,
+            "People card/grid styles are missing.", errors)
     require('[data-md-color-scheme="slate"]' in tokens_text,
             "Dark mode token overrides are missing.", errors)
     require('[data-md-color-scheme="slate"] body' in css_text,
             "Dark mode page styling is missing.", errors)
+    require("REFERENCE_MARKER" in hooks_text and "references.bib" in hooks_text,
+            "Citation hook should render references from docs/references.bib.", errors)
 
     if errors:
         print("Template regression check failed:")

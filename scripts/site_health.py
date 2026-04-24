@@ -10,7 +10,8 @@ REPORT = DOCS / "_site_health.md"
 MKDOCS = ROOT / "mkdocs.yml"
 REQUIRED = ["docs/index.md", "mkdocs.yml", "README.md", "AGENTS.md", "PROMPT_ACTION_LOG.md",
             "docs/stylesheets/tokens.css", "docs/stylesheets/extra.css",
-            "docs/instructions/day1.md", "docs/instructions/day2.md", "docs/instructions/day3.md"]
+            "docs/instructions/day1.md", "docs/instructions/day2.md", "docs/instructions/day3.md",
+            "docs/references.bib"]
 ASSET_DIRS = ["docs/assets/hero", "docs/assets/whiteboards", "docs/assets/explorations",
               "docs/assets/figures", "docs/assets/team", "docs/assets/files"]
 PLACEHOLDERS = ["[link]", "TODO", "TBD", "CHANGE_ME", "REPLACE_ME"]

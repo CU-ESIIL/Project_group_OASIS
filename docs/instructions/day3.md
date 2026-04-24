@@ -38,10 +38,10 @@ permalink: /instructions/day3/
   - What you would do with one more month
   - Who should see this next
 
-## 7) Polish & acknowledge
-- Add team details to **Team** page.
-- Add any citations to **Cite & reuse** on **Public Front Page**.
-- Verify licenses (code and data) are stated.
+## 7) Polish, cite, and acknowledge
+- Add or update one file per person in `docs/people/`.
+- Add citations to `docs/references.bib`, then cite them on **Public Front Page** with `[@citationKey]`.
+- Verify licenses are stated. This repository uses the MIT License; dataset licenses may differ and should be named near the relevant data links.
 
 ## 8) Report-out prep
 - Practice a **2-minute walkthrough** of the homepage 📣: Why → Questions → Data/Methods → Insights → Limits → Next.
