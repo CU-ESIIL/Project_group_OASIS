@@ -204,3 +204,32 @@ Verification
 Open questions and follow-up
 
 * Preview the rendered sidebar after the next MkDocs build to confirm Material's lower logo markup is caught.
+
+2026-04-24
+
+Prompt
+
+User asked: "That fixed the link but now I want to make a group logo so we don't have duplicates next to each other."
+
+Files and folders inspected
+
+* docs/javascripts/home-brand-link.js
+* docs/stylesheets/extra.css
+* docs/assets/esiil_content/
+* mkdocs.yml
+
+Actions taken
+
+* Added `docs/assets/esiil_content/group_logo.svg` as a reusable group-logo placeholder using ESIIL colors.
+* Updated the non-header brand script so lower/sidebar logos link to Home and use the group-logo image.
+* Kept the top banner logo configured as the ESIIL wordmark.
+* Added sidebar-specific sizing for the group logo.
+
+Verification
+
+* Ran `node --check docs/javascripts/home-brand-link.js`.
+* Ran `python3 scripts/site_health.py`; it generated `docs/_site_health.md` with 6 existing template warnings.
+
+Open questions and follow-up
+
+* Preview the rendered sidebar and adjust the group-logo size if the Material theme spacing differs across viewports.

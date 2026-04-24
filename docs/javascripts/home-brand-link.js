@@ -3,6 +3,8 @@
     .find((link) => link.textContent.trim() === "Home");
 
   const homeHref = homeLink?.getAttribute("href") || ".";
+  const homeUrl = new URL(homeHref, document.baseURI);
+  const groupLogoUrl = new URL("assets/esiil_content/group_logo.svg", homeUrl);
 
   const linkHomeBrand = () => {
     document.querySelectorAll("a.md-logo").forEach((logo) => {
@@ -10,6 +12,10 @@
       logo.setAttribute("href", homeHref);
       logo.setAttribute("title", "Home");
       logo.setAttribute("aria-label", "Home");
+      logo.querySelectorAll("img").forEach((image) => {
+        image.setAttribute("src", groupLogoUrl.toString());
+        image.setAttribute("alt", "Project group logo");
+      });
     });
 
     document.querySelectorAll(".md-sidebar--primary .md-nav__title").forEach((title) => {

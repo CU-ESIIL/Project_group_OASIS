@@ -132,6 +132,12 @@ body {
   cursor: pointer;
 }
 
+.md-sidebar--primary .md-nav__title .md-logo img {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
+}
+
 /* Content shell */
 .md-typeset {
   color: var(--oasis-color-text);
