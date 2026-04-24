@@ -428,3 +428,33 @@ Verification
 Open questions and follow-up
 
 * Preview the deployed sidebar to confirm the group logo size and placement match the desired old scene.
+
+2026-04-24
+
+Prompt
+
+User reported: "You made space for the logo and fixed the header, but there is no logo in the white space."
+
+Files and folders inspected
+
+* docs/stylesheets/extra.css
+* docs/assets/esiil_content/group_logo.svg
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Changed the sidebar group logo rendering to use `.md-sidebar--primary .md-nav__title::before`.
+* Hid Material's sidebar logo anchor in that same area so the group mark does not depend on the header-logo image element.
+* Updated the regression check to require the sidebar pseudo-element logo rule.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed.
+* Confirmed the built CSS contains the `group_logo.svg` pseudo-element rule.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Refresh the deployed page after GitHub Pages rebuilds to confirm the group logo appears in the white sidebar brand space.

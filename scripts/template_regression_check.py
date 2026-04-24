@@ -52,6 +52,8 @@ def main() -> int:
             "Sidebar branding area should be visible for the group logo.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "font-size: 0" in css_text,
             "Sidebar title text node should be hidden while keeping the logo visible.", errors)
+    require(".md-sidebar--primary .md-nav__title::before" in css_text,
+            "Sidebar group logo should render from the title pseudo-element.", errors)
     require("group_logo.svg" in css_text,
             "Sidebar branding area should use the group logo asset.", errors)
     require(".md-sidebar--primary .md-nav__title .md-ellipsis" in css_text and "display: none" in css_text,

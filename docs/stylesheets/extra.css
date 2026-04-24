@@ -137,21 +137,18 @@ body {
   font-size: 0;
 }
 
-.md-sidebar--primary .md-nav__title .md-logo {
-  margin: 0;
-  padding: 0;
+.md-sidebar--primary .md-nav__title::before {
+  content: "";
+  display: block;
   width: 10rem;
   height: 8rem;
   background: url("../assets/esiil_content/group_logo.svg") center / contain no-repeat;
 }
 
-.md-sidebar--primary .md-nav__title .md-logo img,
-.md-sidebar--primary .md-nav__title .md-logo svg {
-  width: auto;
-  height: 5rem;
-  max-width: 10rem;
-  object-fit: contain;
-  opacity: 0;
+.md-sidebar--primary .md-nav__title .md-logo {
+  display: none;
+  margin: 0;
+  padding: 0;
 }
 
 .md-sidebar--primary .md-nav__title .md-ellipsis {
