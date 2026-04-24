@@ -17,6 +17,10 @@ nav:
       - Day 1 — Define & Explore: instructions/day1.md
       - Day 2 — Data & Methods: instructions/day2.md
       - Final Share Out — Insights & Sharing: instructions/day3.md
+  - AI for Sustainability:
+      - Defining AI: ai-for-sustainability/defining-ai.md
+      - Defining Sustainability: ai-for-sustainability/defining-sustainability.md
+      - What Does It Cost?: ai-for-sustainability/what-does-it-cost.md
   - Specialty Tracks:
       - LLM: https://cu-esiil.github.io/LLM_lesson_exemplar/
       - Digital Twins: specialty-tracks/digital-twins.md
@@ -69,18 +73,20 @@ theme:
   language: en
   palette:
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: white)"
-      primary: 'white'
+    - scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
 
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
-        name: Switch to system preference
+        name: Switch to light mode
 
 # Options
 extra:

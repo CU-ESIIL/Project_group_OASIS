@@ -551,3 +551,72 @@ Verification
 Open questions and follow-up
 
 * Preview the sidebar; this intentionally overfills the compact block, so tune the negative margin if it overlaps the first nav link.
+
+2026-04-24
+
+Prompt
+
+User asked: "Render a new group image that fills the sidebar space, says project group, and has minimalist on-brand flair. Add a button for https://what-uses-more.com, move people near the top of the front page, make the front page read like a polished example narrative, move editing instructions to the instructions pages, and make dark mode actually work."
+
+Files and folders inspected
+
+* docs/index.md
+* docs/instructions.md
+* docs/assets/esiil_content/group_logo.svg
+* docs/stylesheets/extra.css
+* docs/stylesheets/tokens.css
+* mkdocs.yml
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Replaced the sidebar group logo SVG with a larger minimalist Project Group mark using ESIIL colors, subtle gradient, and light texture.
+* Reworked the Public Front Page into a polished fire-speed working example with people near the top, process sections in narrative order, polished results, citations, and the health report.
+* Added a front-page link/button target for https://what-uses-more.com.
+* Moved operational editing guidance, file placement, and copy-paste patterns into the Instructions page.
+* Updated dark-mode palette settings and CSS variables so dark mode changes page background, text, links, tables, surfaces, and footer styling.
+* Updated the template regression check to match the new split between public-facing front page and editing instructions.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed with only the upstream Material for MkDocs 2.0 warning.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview dark mode and the oversized sidebar logo in the browser after deployment; spacing may need one visual tuning pass on narrow screens.
+
+2026-04-24
+
+Prompt
+
+User asked: "Add a new sidebar category after Instructions but before Specialty Tracks called AI for Sustainability, with pages for Defining AI, Defining Sustainability, and What Does It Cost. The cost page should include the What Uses More calculator in an iframe."
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/
+* scripts/template_regression_check.py
+* scripts/site_health.py
+
+Actions taken
+
+* Added an AI for Sustainability sidebar section between Instructions and Specialty Tracks.
+* Created `docs/ai-for-sustainability/defining-ai.md`.
+* Created `docs/ai-for-sustainability/defining-sustainability.md`.
+* Created `docs/ai-for-sustainability/what-does-it-cost.md` with an embedded What Uses More calculator iframe and a fallback button link.
+* Updated the site health navigation list and template regression check to protect the new nav section and pages.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `git diff --check`; passed.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed with the standard Material for MkDocs 2.0 warning and expected git-revision-date warnings for newly added files.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Confirm after deploy that `https://what-uses-more.com` allows iframe embedding in GitHub Pages. If it blocks embedding, keep the button link as the working fallback.

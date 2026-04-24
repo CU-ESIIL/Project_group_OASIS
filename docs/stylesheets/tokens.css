@@ -88,6 +88,37 @@
   --md-code-font-family: var(--oasis-font-mono);
 }
 
+[data-md-color-scheme="slate"] {
+  color-scheme: dark;
+
+  --oasis-color-body-text: #f4f7f6;
+  --oasis-color-text-strong: #ffffff;
+  --oasis-color-text: #d8e2df;
+  --oasis-color-text-soft: #aebfba;
+  --oasis-color-link: #7bd6ea;
+  --oasis-color-link-hover: #6bd28f;
+
+  --oasis-color-bg: #0f1718;
+  --oasis-color-bg-alt: #131f21;
+  --oasis-color-surface: #182426;
+  --oasis-color-surface-muted: #203032;
+  --oasis-color-border: #324346;
+  --oasis-color-border-strong: #496063;
+  --oasis-color-accent-soft: rgba(66, 188, 220, 0.18);
+
+  --oasis-shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.28);
+  --oasis-shadow-md: 0 16px 40px rgba(0, 0, 0, 0.36);
+  --oasis-shadow-lg: 0 24px 54px rgba(0, 0, 0, 0.44);
+
+  --md-default-bg-color: var(--oasis-color-bg);
+  --md-default-fg-color: var(--oasis-color-text);
+  --md-default-fg-color--light: var(--oasis-color-text-soft);
+  --md-primary-fg-color: #18384d;
+  --md-accent-fg-color: var(--oasis-color-accent-blue);
+  --md-accent-fg-color--transparent: rgba(66, 188, 220, 0.2);
+  --md-typeset-a-color: var(--oasis-color-link);
+}
+
 @media screen and (max-width: 76.1875em) {
   :root {
     --oasis-font-size-5: 2.85rem;
