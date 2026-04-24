@@ -288,3 +288,42 @@ Verification
 Open questions and follow-up
 
 * Preview the rendered sidebar and tune logo size if needed for narrow screens.
+
+2026-04-24
+
+Prompt
+
+User asked: "Make Project_group_OASIS edit-driven and fix sidebar logo."
+
+Files and folders inspected
+
+* docs/index.md
+* mkdocs.yml
+* docs/overrides/partials/logo.html
+* docs/stylesheets/extra.css
+* docs/javascripts/home-brand-link.js
+* scripts/site_health.py
+* docs/assets/
+
+Actions taken
+
+* Reworked the homepage into an editing guide with a GitHub web-edit workflow, file map, copy-paste Markdown patterns, day-by-day checklists, and direct replacement instructions.
+* Created structured asset folders for hero images, whiteboards, explorations, final figures, team images, and downloadable files.
+* Copied existing placeholder assets into the new folder structure and updated homepage references.
+* Updated MkDocs metadata to use the real Project_group_OASIS site URL and a non-placeholder site name.
+* Removed the sidebar logo JavaScript workaround and group-logo asset.
+* Hid Material's duplicate primary-sidebar title block with a narrow `.md-sidebar--primary .md-nav__title` selector while preserving the top OASIS logo link and normal Home nav link.
+* Updated the site health script to check required asset folders and avoid flagging intentional instructional language as stale placeholders.
+* Added `scripts/template_regression_check.py` for lightweight template regressions.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Attempted direct `python3 -m pip install -r requirements.txt`; system Python refused because it is externally managed.
+* Created a temporary virtual environment in `/tmp`, installed requirements after allowing network access, and ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the rendered site to confirm the narrow sidebar branding selector matches the deployed Material markup.

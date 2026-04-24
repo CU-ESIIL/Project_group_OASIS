@@ -11,9 +11,10 @@ MKDOCS = ROOT / "mkdocs.yml"
 REQUIRED = ["docs/index.md", "mkdocs.yml", "README.md", "AGENTS.md", "PROMPT_ACTION_LOG.md",
             "docs/stylesheets/tokens.css", "docs/stylesheets/extra.css",
             "docs/instructions/day1.md", "docs/instructions/day2.md", "docs/instructions/day3.md"]
-PLACEHOLDERS = ["[link]", "TODO", "TBD", "Project Title", "OWNER.github.io/REPO",
-                "Your code", "Your documentation", "Your persistent storage"]
-NAV_ITEMS = ["Home", "Instructions", "Manuals", "Storage", "Orientation"]
+ASSET_DIRS = ["docs/assets/hero", "docs/assets/whiteboards", "docs/assets/explorations",
+              "docs/assets/figures", "docs/assets/team", "docs/assets/files"]
+PLACEHOLDERS = ["[link]", "TODO", "TBD", "CHANGE_ME", "REPLACE_ME"]
+NAV_ITEMS = ["Home", "Instructions", "Manuals", "Specialty Tracks", "Storage", "Orientation"]
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 
 
@@ -38,6 +39,10 @@ def text_files() -> list[Path]:
 
 def missing_file_issues() -> list[str]:
     return [f"⚠ Missing required file: {path}" for path in REQUIRED if not (ROOT / path).exists()]
+
+
+def missing_asset_dir_issues() -> list[str]:
+    return [f"⚠ Missing asset folder: {path}" for path in ASSET_DIRS if not (ROOT / path).is_dir()]
 
 
 def placeholder_issues() -> list[str]:
@@ -85,7 +90,7 @@ def write_report(issues: list[str]) -> None:
 
 
 def main() -> int:
-    issues = missing_file_issues() + placeholder_issues() + navigation_issues() + internal_link_issues()
+    issues = missing_file_issues() + missing_asset_dir_issues() + placeholder_issues() + navigation_issues() + internal_link_issues()
     write_report(issues)
     print(f"Generated {REPORT.relative_to(ROOT)} with {len(issues)} warning(s).")
     return 0

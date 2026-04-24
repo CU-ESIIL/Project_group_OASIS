@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
-  <title id="title">Project group logo placeholder</title>
-  <desc id="desc">A reusable project group logo placeholder using ESIIL colors.</desc>
-  <rect width="320" height="320" rx="56" fill="#ffffff"/>
-  <circle cx="160" cy="132" r="82" fill="#42BCDC"/>
-  <path d="M80 185 L122 150 L156 178 L218 116 L258 154 L258 232 L80 232 Z" fill="#007135"/>
-  <path d="M75 184 H114 L150 154 L184 182 L224 141 L262 176" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="160" y="278" text-anchor="middle" font-family="Aptos, Segoe UI, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#234A65">GROUP</text>
-</svg>

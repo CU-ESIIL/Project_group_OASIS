@@ -129,27 +129,6 @@ body {
 }
 
 .md-sidebar--primary .md-nav__title {
-  cursor: pointer;
-  min-height: 8rem;
-}
-
-.md-sidebar--primary .md-nav__title .md-logo img {
-  width: 7rem;
-  height: 7rem;
-  object-fit: contain;
-}
-
-.md-sidebar--primary .md-nav__title .md-logo {
-  width: 7rem;
-  height: 7rem;
-  background: url("../assets/esiil_content/group_logo.svg") center / contain no-repeat;
-}
-
-.md-sidebar--primary .md-nav__title .md-logo img {
-  opacity: 0;
-}
-
-.md-sidebar--primary .md-nav__title .md-ellipsis {
   display: none;
 }
 
