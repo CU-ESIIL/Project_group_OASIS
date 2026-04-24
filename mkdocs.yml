@@ -22,6 +22,11 @@ nav:
       - Git/GitHub Widget in JupyterLab: instructions/push-to-github.md
       - Save to persistent storage: instructions/save-to-persistent-storage.md
       - RStudio Proxy Workaround: instructions/open-rstudio.md
+  - Specialty Tracks:
+      - LLM: https://cu-esiil.github.io/LLM_lesson_exemplar/
+      - Digital Twins: specialty-tracks/digital-twins.md
+      - Earth Embeddings: https://center-for-effective-global-action-cega.github.io/MOSAIKS-Training-Manual/en/index.html
+      - Causal Inference: specialty-tracks/causal-inference.md
   - Storage:
       - Your code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
       - Your documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation

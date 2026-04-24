@@ -138,6 +138,16 @@ body {
   object-fit: contain;
 }
 
+.md-sidebar--primary .md-nav__title .md-logo {
+  width: 4.5rem;
+  height: 4.5rem;
+  background: url("../assets/esiil_content/group_logo.svg") center / contain no-repeat;
+}
+
+.md-sidebar--primary .md-nav__title .md-logo img {
+  opacity: 0;
+}
+
 /* Content shell */
 .md-typeset {
   color: var(--oasis-color-text);

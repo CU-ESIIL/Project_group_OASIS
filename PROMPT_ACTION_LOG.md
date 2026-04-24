@@ -233,3 +233,33 @@ Verification
 Open questions and follow-up
 
 * Preview the rendered sidebar and adjust the group-logo size if the Material theme spacing differs across viewports.
+
+2026-04-24
+
+Prompt
+
+User asked: "We have 4 possible specialty tracks. I need to add a new category of stuff in the side bar for specialty tracks with a unique link. The four tracks are LLM, Digital twins, Earth embeddings, and causal inference. Here is the link to the LLM lesson https://cu-esiil.github.io/LLM_lesson_exemplar/ and here is one for the embeddings lesson https://center-for-effective-global-action-cega.github.io/MOSAIKS-Training-Manual/en/index.html The other two need a markdown placeholder file. Also, still have the double logo problem. We want the bottom logo to be different."
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/javascripts/home-brand-link.js
+* docs/stylesheets/extra.css
+* docs/assets/esiil_content/
+
+Actions taken
+
+* Added a Specialty Tracks section to the sidebar navigation.
+* Linked LLM and Earth Embeddings to their external lesson sites.
+* Added placeholder pages for Digital Twins and Causal Inference.
+* Strengthened the sidebar logo replacement so the lower logo visually uses the group-logo asset via CSS as well as JS.
+
+Verification
+
+* Ran `node --check docs/javascripts/home-brand-link.js`.
+* Ran `python3 scripts/site_health.py`; it generated `docs/_site_health.md` with 6 existing template warnings.
+* Confirmed the new nav labels, external URLs, placeholder pages, and group-logo CSS references are present.
+
+Open questions and follow-up
+
+* Replace the Digital Twins and Causal Inference placeholder pages with final lesson links or materials when available.
