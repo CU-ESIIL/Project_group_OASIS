@@ -1,4 +1,4 @@
-site_name: "OASIS Project Group Template"
+site_name: " "
 site_description: 'Central resource for ESIIL project groups'
 site_author: Ty Tuff
 site_url: "https://cu-esiil.github.io/Project_group_OASIS/"
@@ -54,7 +54,7 @@ theme:
   highlightjs: true
   name: material
   font: false
-  logo: 'assets/esiil_content/esiil_wordmark_color.png'
+  logo: 'assets/oasis_logo.png'
   favicon: 'assets/esiil_content/favicon.ico'
   custom_dir: docs/overrides
   # setting features for the navigation tab
@@ -86,6 +86,7 @@ theme:
 
 # Options
 extra:
+  homepage: https://cu-esiil.github.io/Project_group_OASIS/
   social:
     - icon: fontawesome/brands/github
     # link: https://github.com/cu-esiil/

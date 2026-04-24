@@ -16,12 +16,12 @@ def main() -> int:
     index = ROOT / "docs" / "index.md"
     mkdocs = ROOT / "mkdocs.yml"
     css = ROOT / "docs" / "stylesheets" / "extra.css"
-    logo = ROOT / "docs" / "overrides" / "partials" / "logo.html"
+    logo = ROOT / "docs" / "assets" / "oasis_logo.png"
+    logo_override = ROOT / "docs" / "overrides" / "partials" / "logo.html"
 
     index_text = index.read_text(encoding="utf-8") if index.exists() else ""
     mkdocs_text = mkdocs.read_text(encoding="utf-8") if mkdocs.exists() else ""
     css_text = css.read_text(encoding="utf-8") if css.exists() else ""
-    logo_text = logo.read_text(encoding="utf-8") if logo.exists() else ""
 
     require(index.exists(), "docs/index.md is missing.", errors)
     require("## How to edit this project page" in index_text, "Homepage edit guide section is missing.", errors)
@@ -36,11 +36,18 @@ def main() -> int:
     require("toc.integrate" not in mkdocs_text, "toc.integrate should not be enabled.", errors)
     require("content.action.edit" in mkdocs_text, "MkDocs edit action should remain enabled.", errors)
     require("Specialty Tracks" in mkdocs_text, "Specialty Tracks nav section is missing.", errors)
+    require("site_name: \" \"" in mkdocs_text, "site_name should be blank to avoid header title clutter.", errors)
+    require("logo: 'assets/oasis_logo.png'" in mkdocs_text, "Header logo should use docs/assets/oasis_logo.png.", errors)
+    require("homepage: https://cu-esiil.github.io/Project_group_OASIS/" in mkdocs_text,
+            "Material homepage should point the logo to the Project_group_OASIS homepage.", errors)
     require("extra_javascript:" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be registered.", errors)
     require("home-brand-link.js" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be referenced.", errors)
+    require(logo.exists(), "docs/assets/oasis_logo.png is missing.", errors)
+    require(not logo_override.exists(), "Custom logo override should be removed so Material handles the homepage link.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "display: none" in css_text,
             "Duplicate sidebar branding title should be hidden with a scoped selector.", errors)
-    require("https://cu-esiil.github.io/home/" in logo_text, "Top logo should link to the OASIS home landing page.", errors)
+    require(".md-header__title" in css_text and "display: none" in css_text,
+            "Header title text should be hidden so only the logo shows.", errors)
 
     if errors:
         print("Template regression check failed:")

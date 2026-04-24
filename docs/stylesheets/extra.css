@@ -57,6 +57,10 @@ body {
   color: rgba(255, 255, 255, 0.95);
 }
 
+.md-header__title {
+  display: none;
+}
+
 .md-tabs {
   background: rgba(22, 26, 25, 0.16);
   border-top: 1px solid rgba(255, 255, 255, 0.1);

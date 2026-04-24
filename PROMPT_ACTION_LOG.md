@@ -327,3 +327,40 @@ Verification
 Open questions and follow-up
 
 * Preview the rendered site to confirm the narrow sidebar branding selector matches the deployed Material markup.
+
+2026-04-24
+
+Prompt
+
+User asked: "Add header logo to Project_group_OASIS and remove text clutter."
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/overrides/partials/logo.html
+* docs/assets/
+* docs/assets/esiil_content/
+* docs/stylesheets/extra.css
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Added `docs/assets/oasis_logo.png` by reusing the existing ESIIL wordmark asset.
+* Updated `mkdocs.yml` to use `theme.logo: assets/oasis_logo.png`.
+* Set `site_name` to a blank string value to prevent header title text clutter.
+* Set `extra.homepage` to `https://cu-esiil.github.io/Project_group_OASIS/` so the logo links to the Project_group_OASIS homepage.
+* Removed the custom `docs/overrides/partials/logo.html` override so Material handles the logo link normally.
+* Added a small `.md-header__title { display: none; }` CSS rule for header spacing.
+* Updated the template regression check to verify the standard Material logo configuration.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed.
+* Inspected rendered `site/index.html` and confirmed the header logo uses `assets/oasis_logo.png` and links to `https://cu-esiil.github.io/Project_group_OASIS/`.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the deployed header to confirm the logo dimensions feel right with the blank site title.
