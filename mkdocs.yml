@@ -59,7 +59,6 @@ theme:
     - navigation.tracking
     - navigation.indexes
     - navigation.top
-    - toc.integrate
     - toc.follow
     - content.code.copy
     - content.action.edit

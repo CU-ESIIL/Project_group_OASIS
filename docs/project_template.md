@@ -149,40 +149,40 @@ head(df)
 
 <a id="day3"></a>
 <details>
-<summary><strong>Day 3 — Plan &amp; Share</strong></summary>
+<summary><strong>Day 3 — Synthesize &amp; Share</strong></summary>
 
 ### Objectives
-- Draft a plan-on-a-page for next steps
-- Create a short communication artifact
-- Prepare a demo for sharing
-- Decide who will own follow-ups
+- State 3-5 evidence-backed insights
+- Link each insight to an artifact
+- Name confidence, limitations, and next steps
+- Identify reusable outputs for other groups
 
 ### Steps
-1. **Plan on a Page** – Outline what’s next:
-   - [ ] Goals
-   - [ ] Data needed
-   - [ ] Methods to try
-   - [ ] Roles & timeline
-2. **Comms Box** – Prepare a 100-word abstract and image:
+1. **One-sentence takeaway** – Write one specific sentence that states the core result, product, or lesson.
+2. **Core insights** – Add 3-5 insights. For each one, include what you found, why it matters, the evidence/artifact link, and confidence: High / Medium / Low.
+3. **Comms Box** – Prepare a short abstract and image:
 
 ```markdown
-<!-- 100-word abstract example -->
-Climate extremes threaten mountain ecosystems. In three days we built a rainfall model
-and produced early visualizations to guide local decision-makers.
+<!-- Short abstract placeholder -->
+In three days we created [product/output] to help [user/audience] understand or decide [specific issue].
+Our strongest evidence is [artifact/link], but [limitation] remains uncertain.
 
 <!-- Replace the image below with your artifact -->
 ![Outreach Graphic](assets/results/placeholder.png)
 ```
 
-3. **Demo Checklist**
+4. **Limitations and reuse** – List what did not work, what not to overclaim, and anything another group can reuse.
+5. **Demo Checklist**
    - [ ] Show the updated project page
-   - [ ] Display one analysis result
-   - [ ] Share the plan-on-a-page
+   - [ ] Display 2-3 evidence artifacts
+   - [ ] State confidence and one key limitation
    - [ ] Collect feedback and record next actions
 
 ### Day 3 Checklist
-- [ ] Plan drafted
-- [ ] Abstract & image added
+- [ ] One-sentence takeaway added
+- [ ] 3-5 insights include evidence links and confidence
+- [ ] Limitations and reusable outputs listed
+- [ ] Abstract and image added
 - [ ] Demo items rehearsed
 - [ ] Next steps assigned
 
@@ -230,4 +230,3 @@ A: Yes, but for quick sprints stick to `main` and small commits.
 <small>
 {{ page.repo_name }} — Last updated {{ site.time | date: "%Y-%m-%d" }} · Slack: {{ page.contact_slack }} · Email: [{{ page.contact_email }}](mailto:{{ page.contact_email }})
 </small>
-

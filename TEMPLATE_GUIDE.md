@@ -47,7 +47,9 @@ Use the bullets below as prompts for Codex so it can edit each file.
 - `docs/index.md`
   - Update the first-level heading to your project name.
   - Rewrite the intro section with your project summary, goals, or call to action.
-  - Review the resources block between `<!--RESOURCES_START-->` and `<!--RESOURCES_END-->`; set the repository link, storage link, and any other quick links you want to feature.
+  - Keep the page as a dense, single-page scaffold for the sprint: purpose, Day 1, Day 2, Final Share Out, links, team, storage, and citation.
+  - Complete the Final Share Out with 3-5 claim-based insights. Each insight should link evidence, state confidence, name limitations, and point to reusable outputs or next steps.
+  - Review the hero links, Featured links, Storage, and Cite & reuse sections; set repository, storage, data, brief, and code links for your group.
 - `docs/project_template.md`
   - Adjust the front-matter fields (`repo_owner`, `repo_name`, `contact_slack`, `contact_email`, etc.).
   - Replace placeholder hero images, figures, and descriptive text with your team’s content.
@@ -85,6 +87,8 @@ Update `docs/instructions/save-to-persistent-storage.md` so it points to your te
 ## 6. Final checks
 
 - Confirm all navigation links in the live site work as expected.
+- Confirm the homepage still reads like a reusable project scaffold, not a finished report for one specific group.
+- Confirm image placeholders and raw file links are still present so non-technical editors can replace artifacts from GitHub.
 - Delete any leftover placeholder sections or TODO comments.
 - Share the Pages URL with your team once you verify the site renders correctly.
 
