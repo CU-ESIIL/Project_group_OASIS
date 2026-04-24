@@ -87,27 +87,27 @@ Data source:
 People profile:
 
 ```markdown
-### Jane Doe
-
-**Role or affiliation**
-
-Data lead, example institution.
-
-**What I am excited to explore**
-
-One or two sentences on what you are curious about in this project.
-
-**Skills, data, or perspectives I bring**
-
-Skills, datasets, tools, field experience, design skills, or facilitation skills.
-
-**Something human**
-
-A small detail that helps others connect with you.
-
-**Optional link**
-
-[Profile link](https://example.org)
+> ### Jane Doe
+>
+> **Role or affiliation**
+>
+> Data lead, example institution.
+>
+> **What I am excited to explore**
+>
+> One or two sentences on what you are curious about in this project.
+>
+> **Skills, data, or perspectives I bring**
+>
+> Skills, datasets, tools, field experience, design skills, or facilitation skills.
+>
+> **Something human**
+>
+> A small detail that helps others connect with you.
+>
+> **Optional link**
+>
+> [Profile link](https://example.org)
 ```
 
 Create one file per person in `docs/people/`, then include that file from `docs/index.md`. This helps teammates edit their own entry without creating merge conflicts. Prefer one profile link over raw contact details; do not publish email and GitHub handles together.

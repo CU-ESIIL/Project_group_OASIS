@@ -23,6 +23,8 @@ Replace the example profiles with your group’s profiles. Each person should ed
 
 --8<-- "people/jane-doe.md"
 
+---
+
 --8<-- "people/john-smith.md"
 
 ## Project Question { #project-question }

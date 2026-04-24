@@ -157,56 +157,113 @@ body {
 .md-typeset h2#methods-and-code::before,
 .md-typeset h2#results::before,
 .md-typeset h2#polished-outputs::before {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  content: "";
+  display: inline-block;
   flex: 0 0 2rem;
   width: 2rem;
   height: 2rem;
   border: 2px solid var(--oasis-color-body-text);
   background: var(--oasis-color-surface);
-  color: var(--oasis-color-body-text);
-  font-size: 0.58rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  line-height: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 0.18rem 0.18rem 0 var(--oasis-color-gray-relief);
 }
 
 .md-typeset h2#people::before {
-  content: "PPL";
+  background-image: url("../assets/stickers/people.png");
   border-color: var(--oasis-color-primary-blue);
 }
 
 .md-typeset h2#project-question::before {
-  content: "Q";
+  background-image: url("../assets/stickers/question.png");
   border-color: var(--oasis-color-primary-blue);
 }
 
 .md-typeset h2#specialty-tracks-and-strategy::before {
-  content: "TRK";
+  background-image: url("../assets/stickers/tracks.png");
   border-color: var(--oasis-color-primary-blue);
 }
 
 .md-typeset h2#data-exploration::before {
-  content: "DAT";
+  background-image: url("../assets/stickers/data.png");
   border-color: var(--oasis-color-accent-blue);
 }
 
 .md-typeset h2#methods-and-code::before {
-  content: "MTH";
+  background-image: url("../assets/stickers/methods.png");
   border-color: var(--oasis-color-accent-blue);
 }
 
 .md-typeset h2#results::before {
-  content: "RES";
+  background-image: url("../assets/stickers/results.png");
   border-color: var(--oasis-color-accent-green);
 }
 
 .md-typeset h2#polished-outputs::before {
-  content: "OUT";
+  background-image: url("../assets/stickers/outputs.png");
   border-color: var(--oasis-color-accent-green);
   box-shadow: 0.18rem 0.18rem 0 var(--oasis-color-light-green);
+}
+
+.md-typeset blockquote:has(> h3) {
+  margin: var(--oasis-space-4) 0;
+  padding: var(--oasis-space-5);
+  border: 1px solid var(--oasis-color-border);
+  border-left: 0.45rem solid var(--oasis-color-accent-green);
+  border-radius: var(--oasis-radius-md);
+  background: var(--oasis-color-surface);
+  box-shadow: var(--oasis-shadow-sm);
+}
+
+.md-typeset blockquote:has(> h3) h3 {
+  margin-top: 0;
+  color: var(--oasis-color-primary-blue);
+}
+
+.md-typeset blockquote:has(> h3) + hr {
+  display: none;
+}
+
+.md-typeset img.task-sticker {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 0 var(--oasis-space-2);
+  border: 2px solid var(--oasis-color-border);
+  box-shadow: 0.18rem 0.18rem 0 var(--oasis-color-gray-relief);
+}
+
+.md-typeset h2[id^="a-"],
+.md-typeset h2[id^="b-"],
+.md-typeset h2[id^="c-"],
+.md-typeset h2[id^="d-"],
+.md-typeset h2[id^="e-"],
+.md-typeset h2[id^="f-"],
+.md-typeset h2[id^="g-"] {
+  padding: 0.45rem 0 0.45rem var(--oasis-space-4);
+  border-left: 0.35rem solid var(--oasis-color-primary-blue);
+  color: var(--oasis-color-primary-blue);
+}
+
+.md-typeset h1[id^="day-2"] ~ h2[id^="a-"],
+.md-typeset h1[id^="day-2"] ~ h2[id^="b-"],
+.md-typeset h1[id^="day-2"] ~ h2[id^="c-"],
+.md-typeset h1[id^="day-2"] ~ h2[id^="d-"],
+.md-typeset h1[id^="day-2"] ~ h2[id^="e-"],
+.md-typeset h1[id^="day-2"] ~ h2[id^="f-"],
+.md-typeset h1[id^="day-2"] ~ h2[id^="g-"] {
+  border-left-color: var(--oasis-color-accent-blue);
+  color: var(--oasis-color-primary-blue);
+}
+
+.md-typeset h1[id^="day-3"] ~ h2[id^="a-"],
+.md-typeset h1[id^="day-3"] ~ h2[id^="b-"],
+.md-typeset h1[id^="day-3"] ~ h2[id^="c-"],
+.md-typeset h1[id^="day-3"] ~ h2[id^="d-"],
+.md-typeset h1[id^="day-3"] ~ h2[id^="e-"],
+.md-typeset h1[id^="day-3"] ~ h2[id^="f-"] {
+  border-left-color: var(--oasis-color-accent-green);
+  color: var(--oasis-color-accent-green);
 }
 
 /* Sidebar and navigation surfaces */

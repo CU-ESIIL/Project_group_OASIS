@@ -782,3 +782,41 @@ Verification
 Open questions and follow-up
 
 * After deployment, inspect the live page visually and tune badge size or remove badges entirely if the page still feels too busy.
+
+2026-04-24
+
+Prompt
+
+User reported that stickers were working better but People panels were not. User also asked for direction pages to use matching sticker files and better day/sticker color coding.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/people/
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/stylesheets/extra.css
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Converted People profile snippets into Markdown blockquote panels and styled those panels as cards.
+* Added separators between included People profiles so each profile renders as its own panel.
+* Updated homepage section badges to use the shared `docs/assets/stickers/*.png` files via CSS background images.
+* Added the same sticker image files to Day 1, Day 2, and Day 3 tasks with the `task-sticker` class.
+* Improved direction-page color coding by styling task headings with day colors.
+* Fixed Markdown spacing in day pages so lists render as lists instead of paragraph text.
+* Updated regression checks to require shared sticker assets in day pages and CSS-backed homepage landmark badges.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed built direction pages render sticker images from `assets/stickers/` and lists render as real `<ul>` elements.
+* Confirmed built homepage renders People profiles as separate blockquote panels.
+
+Open questions and follow-up
+
+* Preview in browser after deployment to confirm the blockquote-card styling is visually strong enough for the People section.

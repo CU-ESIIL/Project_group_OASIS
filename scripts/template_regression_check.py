@@ -71,6 +71,11 @@ def main() -> int:
             "Markdown-safe editing guidance is missing.", errors)
     require("docs/references.bib" in instructions_text, "Instructions should explain BibTeX references.", errors)
 
+    for day in ["day1", "day2", "day3"]:
+        day_text = (ROOT / "docs" / "instructions" / f"{day}.md").read_text(encoding="utf-8")
+        require("../assets/stickers/" in day_text and "{ .task-sticker }" in day_text,
+                f"{day}.md should show task stickers from the shared sticker assets.", errors)
+
     for folder in ["hero", "whiteboards", "explorations", "figures", "team", "files", "stickers"]:
         require((ROOT / "docs" / "assets" / folder).is_dir(), f"docs/assets/{folder}/ is missing.", errors)
 
@@ -132,8 +137,10 @@ def main() -> int:
             "Dynamic section title should be hidden so the header keeps the project/group name.", errors)
     require(".md-typeset h1" in css_text and "var(--oasis-color-primary-blue)" in css_text,
             "Main page title should use ESIIL brand blue.", errors)
-    require(".md-typeset h2#people::before" in css_text and 'content: "PPL"' in css_text,
-            "CSS landmark badges are missing.", errors)
+    require(".md-typeset h2#people::before" in css_text and "assets/stickers/people.png" in css_text,
+            "CSS landmark badges should use shared sticker image assets.", errors)
+    require("blockquote:has(> h3)" in css_text, "People profile panel styles are missing.", errors)
+    require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
     require('h1[id^="day-1"]' in css_text and 'h1[id^="day-2"]' in css_text and 'h1[id^="day-3"]' in css_text,
             "Day color styling is missing.", errors)
     require('[data-md-color-scheme="slate"]' in tokens_text,
