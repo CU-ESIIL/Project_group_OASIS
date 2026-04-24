@@ -1,17 +1,16 @@
-<div class="person-card" markdown>
+# Jane Doe
 
-### Jane Doe
+## Role or affiliation
+Project lead, example institution.
 
-**Role / affiliation:** Project lead, example institution
+## What I am excited to explore
+I am excited to turn rough fire-perimeter data into visuals that help people compare spread speed quickly.
 
-**Excited to work on:** Turning rough fire-perimeter data into visuals that help people compare spread speed quickly.
+## Skills, data, or perspectives I bring
+Spatial analysis, facilitation, uncertainty framing, and experience turning early ideas into a clear public story.
 
-**Background:** Jane works at the boundary between environmental data science and public decision support. She likes projects where a simple figure can make a hard question easier to discuss.
+## Something human
+I love a whiteboard full of arrows and one good sentence that makes the whole room nod.
 
-**Skills / data:** Spatial analysis, facilitation, uncertainty framing.
-
-**Human detail:** Loves a whiteboard full of arrows and one good sentence that makes the whole room nod.
-
-**Profile:** [Example profile](https://example.org)
-
-</div>
+## Optional link
+[Example profile](https://example.org)

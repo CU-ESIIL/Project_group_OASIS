@@ -2,103 +2,103 @@
 
 ![Forest landscape with fire-speed contours](assets/hero/hero.jpg)
 
-**Purpose:** This example front page shows how a project group can turn a 3-day sprint into a clear public story: a focused question, a visible team, early artifacts, method choices, uncertainty, and polished share-out figures.
+Replace this paragraph with your group’s purpose statement. In 1–2 sentences, say what your group is trying to understand, why it matters, and what kind of evidence or product you hope to share by the end of the summit.
 
-## People
+## How to use this page
+This page is your group’s working project record. Over the summit, you will update it to show the question you chose, the people in your group, the data and methods you explored, and the results or products you want to share.
+The stickers are landmarks. They help you match the directions to the place on this page where that work belongs.
+- **People** — who is in the group and what each person brings
+- **Project Question** — what your group decided to explore
+- **Specialty Tracks and Strategy** — how your group is using the summit trainings
+- **Data Exploration** — datasets, maps, plots, and first observations
+- **Methods and Code** — workflows, notebooks, scripts, and reproducible steps
+- **Results** — patterns, findings, and interpretations
+- **Polished Outputs** — final figures, PDFs, slides, or other shareable products
 
-<div class="people-grid" markdown>
+## ![People landmark](assets/stickers/people.png){ .section-sticker } People { #people }
+
+Replace the example profiles with your group’s profiles. Each person should edit only their own file in `docs/people/`.
 
 --8<-- "people/jane-doe.md"
 
 --8<-- "people/john-smith.md"
 
-</div>
+## ![Project Question landmark](assets/stickers/question.png){ .section-sticker } Project Question { #project-question }
 
-## Idea Generation & Collaboration
+Replace this text with your group’s project question. It is okay if the question changes during the summit.
 
-The group began with a practical question: how can fire perimeter data be translated into visuals that make spread speed easier to compare across events, places, and time windows? That framing borrows from earlier fire-spread modeling work [@finney1998].
+Helpful prompts:
 
-![Whiteboard notes from early framing](assets/whiteboards/day1_whiteboard.jpg)
-*Early notes captured the core comparison problem: speed is not just where fire moved, but how quickly the boundary changed and where uncertainty enters the story.*
+- What are we trying to understand?
+- Why does this question matter?
+- What would count as a useful answer by Day 3?
+- What are we still unsure about?
 
-Useful starting points included perimeter datasets, prior fire-spread literature, and lightweight visualization tools that could produce interpretable figures quickly.
+## ![Specialty Tracks landmark](assets/stickers/tracks.png){ .section-sticker } Specialty Tracks and Strategy { #specialty-tracks-and-strategy }
 
-- **Fire perimeter records** — used to derive spatial change through time.
-- **Time-step comparison workflows** — used to test whether spread could be summarized consistently.
-- **Small-multiple figures** — used to compare events without requiring an interactive dashboard.
+Replace this text with notes about how your group is using the summit specialty tracks.
 
-## Methods Development & Early Results
+Use this section to capture:
 
-The first pass focused on producing quick visual artifacts rather than a perfect model. The group tested data joins, time-window choices, and figure layouts to see which outputs made the main pattern easiest to inspect.
+- which tracks people attended or plan to attend
+- what each person brought back from a track
+- how the training changed your project strategy
+- what skills your group still needs
+
+## ![Data Exploration landmark](assets/stickers/data.png){ .section-sticker } Data Exploration { #data-exploration }
+
+Replace this text with the datasets, maps, plots, screenshots, tables, or first observations your group is using to understand the question.
 
 ![Early exploration plot](assets/explorations/explore_data_plot.png)
-*First-pass output showing whether the available data can support a visible comparison. This kind of rough figure is useful even when it exposes gaps or confusing assumptions.*
+*Replace this caption with what the figure shows, what surprised you, and what still does not make sense.*
 
-<p><a class="md-button" href="data.md">Open data notes</a></p>
+[Open the ESIIL Data Library](https://cu-esiil.github.io/data-library/innovation-summit-2025/){ .md-button }
+[Document your group data notes](data.md){ .md-button }
 
-Early method notes:
+## ![Methods landmark](assets/stickers/methods.png){ .section-sticker } Methods and Code { #methods-and-code }
 
-- Convert perimeter change into comparable time intervals.
-- Flag gaps where time stamps or geometry quality limit interpretation.
-- Use static figures first, then decide whether an interactive view is worth the extra effort.
+Replace this text with the tools, notebooks, scripts, workflows, or repeatable steps your group tried.
 
-<p><a class="md-button" href="https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code">View shared code</a></p>
+Include:
 
-## Refinement
+- what you tried
+- what worked
+- what did not work
+- where the code or notebook lives
+- what someone else would need to reproduce or extend the work
 
-Refinement should turn rough artifacts into claims. For this example, the most useful shift is from “we mapped fire perimeters” to “we can compare where and when perimeter change was fastest, with caveats about data timing.”
+[View shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code){ .md-button }
 
-![Static fire-speed figure](assets/figures/figure1.png)
-*Figure 1. A refined static figure should identify the key pattern and explain what decision or scientific question it supports.*
+## ![Results landmark](assets/stickers/results.png){ .section-sticker } Results { #results }
 
-![Animated perimeter-change concept](assets/figures/change.gif)
-*Figure 2. A short animation can show change through time, but the caption should still name the uncertainty that remains.*
+Replace this text with emerging results, patterns, findings, surprises, or honest limits. A strong result makes a claim, points to evidence, and names uncertainty.
 
-## Polished Results & Figures
+Useful result statements can sound like:
 
-The final share-out should make a small number of evidence-backed claims. Keep each claim tied to a figure, notebook, data product, or other artifact.
-
-### Headline Takeaway
-
-Fire-spread comparison becomes more reusable when perimeter change is summarized as a small set of time-aware visual products rather than a long activity log.
-
-### Core Insights
-
-- **Comparable time steps matter:** Fire-speed visuals are only as interpretable as the time windows behind them.
-  **Evidence:** [Lead conclusion visual](assets/figures/fire_hull.png)
-  **Confidence:** Medium — the workflow is useful, but source-data timing still limits precision.
-
-- **Panel figures help reveal where the method works:** Small multiples make it easier to compare events and notice outliers.
-  **Evidence:** [Supporting panel figure](assets/figures/hull_panels.png)
-  **Confidence:** Medium — the visual pattern is clear, but the layout still needs testing with more events.
-
-- **A reusable output beats a one-time map:** The strongest product is a workflow that another group can rerun with new perimeter data.
-  **Evidence:** [Shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code)
-  **Confidence:** Low to Medium — the template exists, but each new dataset needs validation.
+- We are starting to see...
+- One pattern that surprised us was...
+- This result is still uncertain because...
+- The data do not yet support...
 
 ![Lead conclusion visual](assets/figures/fire_hull.png)
-*Primary result. This figure should carry the main claim for the public share-out.*
+*Replace this caption with the result this figure supports and the caveat a reader should remember.*
 
 ![Supporting panel figure](assets/figures/hull_panels.png)
-*Supporting result. This panel should show comparison, uncertainty, or a useful failed attempt.*
+*Replace this caption with what the panels compare or reveal.*
+
+## ![Polished Outputs landmark](assets/stickers/outputs.png){ .section-sticker } Polished Outputs { #polished-outputs }
+
+Replace this text with the final things you want people to find after the summit: polished figures, a PDF, slides, a notebook, a data product, or a short handoff note.
 
 ![Complementary result figure](assets/figures/main_result.png)
-*Complementary result. This figure should point toward the next version of the workflow.*
+*Replace this caption with why this output is useful to someone outside your group.*
 
-<p><a class="md-button md-button--primary" href="assets/files/project_brief.pdf">Read the project brief PDF</a></p>
-
-## Next Steps
-
-- Test the workflow on additional fire events.
-- Add a confidence field to each figure or data product.
-- Turn the most reusable steps into a short notebook.
-- Share the outputs with groups comparing disturbance speed, recovery, or monitoring workflows.
-
-<p><a class="md-button" href="https://what-uses-more.com">Compare computing costs</a></p>
+[Read the project brief PDF](assets/files/project_brief.pdf){ .md-button .md-button--primary }
+[Compare computing costs](https://what-uses-more.com){ .md-button }
 
 ## Cite & Reuse
 
-This site is a reusable project-group template [@oasisProjectTemplate]. Replace this example citation with the sources, datasets, and software your group actually used.
+Replace this text with the sources, datasets, and software your group actually used. Add sources to `docs/references.bib`, then cite them here with citation keys such as [@oasisProjectTemplate].
 
 License: MIT unless noted. See dataset licenses on the **[Data](data.md)** page.
 

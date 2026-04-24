@@ -21,8 +21,10 @@ def main() -> int:
     hooks = ROOT / "hooks.py"
     references = ROOT / "docs" / "references.bib"
     people_dir = ROOT / "docs" / "people"
+    stickers_dir = ROOT / "docs" / "assets" / "stickers"
     logo = ROOT / "docs" / "assets" / "oasis_logo.png"
     group_logo = ROOT / "docs" / "assets" / "esiil_content" / "group_logo.svg"
+    event_group_logo = ROOT / "docs" / "assets" / "esiil_content" / "event_group_logo.png"
     logo_override = ROOT / "docs" / "overrides" / "partials" / "logo.html"
     ai_dir = ROOT / "docs" / "ai-for-sustainability"
 
@@ -35,34 +37,54 @@ def main() -> int:
     references_text = references.read_text(encoding="utf-8") if references.exists() else ""
 
     require(index.exists(), "docs/index.md is missing.", errors)
-    require("## People" in index_text, "Public Front Page people section is missing.", errors)
+    require("## How to use this page" in index_text, "Front page sticker legend is missing.", errors)
+    for section in [
+        "People",
+        "Project Question",
+        "Specialty Tracks and Strategy",
+        "Data Exploration",
+        "Methods and Code",
+        "Results",
+        "Polished Outputs",
+    ]:
+        require(section in index_text, f"Front page section '{section}' is missing.", errors)
+    require("assets/stickers/people.png" in index_text, "People sticker is missing from front page.", errors)
+    require("assets/stickers/question.png" in index_text, "Project Question sticker is missing from front page.", errors)
+    require("assets/stickers/tracks.png" in index_text, "Tracks sticker is missing from front page.", errors)
+    require("assets/stickers/data.png" in index_text, "Data sticker is missing from front page.", errors)
+    require("assets/stickers/methods.png" in index_text, "Methods sticker is missing from front page.", errors)
+    require("assets/stickers/results.png" in index_text, "Results sticker is missing from front page.", errors)
+    require("assets/stickers/outputs.png" in index_text, "Outputs sticker is missing from front page.", errors)
+    require("<div" not in index_text and "<table" not in index_text,
+            "Public Front Page should avoid participant-facing raw HTML layout.", errors)
     require('--8<-- "people/' in index_text, "Public Front Page should include per-person files.", errors)
-    require("## Idea Generation & Collaboration" in index_text, "Public Front Page process section is missing.", errors)
-    require("## Polished Results & Figures" in index_text, "Public Front Page polished results section is missing.", errors)
     require("## Featured Outputs" not in index_text, "Featured Outputs section should be removed.", errors)
     require("https://what-uses-more.com" in index_text, "What Uses More button/link is missing.", errors)
-    require("assets/files/project_brief.pdf" in index_text and "Polished Results & Figures" in index_text,
+    require("assets/files/project_brief.pdf" in index_text and "Polished Outputs" in index_text,
             "Project brief PDF should be linked near polished outputs.", errors)
-    require("View shared code" in index_text and "Methods Development & Early Results" in index_text,
+    require("View shared code" in index_text and "Methods and Code" in index_text,
             "Code button should be placed in the methods section.", errors)
-    require("Open data notes" in index_text and "data.md" in index_text,
-            "Data button should point to data notes in context.", errors)
+    require("Open the ESIIL Data Library" in index_text and "https://cu-esiil.github.io/data-library/innovation-summit-2025/" in index_text,
+            "Data button should point to the ESIIL Data Library in context.", errors)
     require("[@" in index_text, "Public Front Page should use BibTeX citation keys.", errors)
     require("{{ references }}" in index_text, "Public Front Page should include references marker.", errors)
     require("## How to edit the Public Front Page" in instructions_text,
             "Instructions edit guide section is missing.", errors)
     require("## Where files go" in instructions_text, "Instructions file map is missing.", errors)
     require("docs/people/" in instructions_text, "Instructions should explain per-person profile files.", errors)
+    require("Most summit participants should only edit Markdown files." in instructions_text,
+            "Markdown-safe editing guidance is missing.", errors)
     require("docs/references.bib" in instructions_text, "Instructions should explain BibTeX references.", errors)
 
-    for folder in ["hero", "whiteboards", "explorations", "figures", "team", "files"]:
+    for folder in ["hero", "whiteboards", "explorations", "figures", "team", "files", "stickers"]:
         require((ROOT / "docs" / "assets" / folder).is_dir(), f"docs/assets/{folder}/ is missing.", errors)
 
     require("toc.integrate" not in mkdocs_text, "toc.integrate should not be enabled.", errors)
     require("content.action.edit" in mkdocs_text, "MkDocs edit action should remain enabled.", errors)
     require("site_name: \"OASIS Project Group Template\"" in mkdocs_text,
             "Header site title should remain visible and persistent.", errors)
-    require("md_in_html" in mkdocs_text, "md_in_html should be enabled for editable card includes.", errors)
+    require("Day 1 — Meet Your Team and Define Your Project" in mkdocs_text,
+            "Day 1 nav title should match the orientation page.", errors)
     require("AI for Sustainability" in mkdocs_text, "AI for Sustainability nav section is missing.", errors)
     require("Defining AI: ai-for-sustainability/defining-ai.md" in mkdocs_text,
             "Defining AI nav item is missing.", errors)
@@ -81,10 +103,18 @@ def main() -> int:
     require("home-brand-link.js" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be referenced.", errors)
     require(logo.exists(), "docs/assets/oasis_logo.png is missing.", errors)
     require(group_logo.exists(), "docs/assets/esiil_content/group_logo.svg is missing.", errors)
+    require(event_group_logo.exists(), "docs/assets/esiil_content/event_group_logo.png is missing.", errors)
     require(references.exists(), "docs/references.bib is missing.", errors)
     require("@misc{oasisProjectTemplate" in references_text, "Template reference BibTeX entry is missing.", errors)
     require((people_dir / "jane-doe.md").exists(), "Example person file jane-doe.md is missing.", errors)
     require((people_dir / "john-smith.md").exists(), "Example person file john-smith.md is missing.", errors)
+    require((people_dir / "README.md").exists(), "People README is missing.", errors)
+    require((people_dir / "template.md").exists(), "People template is missing.", errors)
+    template_text = (people_dir / "template.md").read_text(encoding="utf-8") if (people_dir / "template.md").exists() else ""
+    require("# Your Name" in template_text and "Do not add both a raw email address and a GitHub username here." in template_text,
+            "People template should use the required profile guidance.", errors)
+    for sticker in ["people", "question", "tracks", "data", "methods", "results", "outputs"]:
+        require((stickers_dir / f"{sticker}.png").exists(), f"Sticker asset {sticker}.png is missing.", errors)
     require((ai_dir / "defining-ai.md").exists(), "Defining AI page is missing.", errors)
     require((ai_dir / "defining-sustainability.md").exists(), "Defining Sustainability page is missing.", errors)
     require((ai_dir / "what-does-it-cost.md").exists(), "What Does It Cost page is missing.", errors)
@@ -97,8 +127,8 @@ def main() -> int:
             "Sidebar title text node should be hidden while keeping the logo visible.", errors)
     require(".md-sidebar--primary .md-nav__title::before" in css_text,
             "Sidebar group logo should render from the title pseudo-element.", errors)
-    require("group_logo.svg" in css_text,
-            "Sidebar branding area should use the group logo asset.", errors)
+    require("event_group_logo.png" in css_text,
+            "Sidebar branding area should use the event group logo asset.", errors)
     require(".md-sidebar--primary .md-nav__title .md-ellipsis" in css_text and "display: none" in css_text,
             "Sidebar title text should be hidden while keeping the logo visible.", errors)
     require(".md-header__title {\n  display: none;" not in css_text,
@@ -107,8 +137,9 @@ def main() -> int:
             "Dynamic section title should be hidden so the header keeps the project/group name.", errors)
     require(".md-typeset h1" in css_text and "var(--oasis-color-primary-blue)" in css_text,
             "Main page title should use ESIIL brand blue.", errors)
-    require(".people-grid" in css_text and ".person-card" in css_text,
-            "People card/grid styles are missing.", errors)
+    require(".section-sticker" in css_text, "Sticker image styling is missing.", errors)
+    require('h1[id^="day-1"]' in css_text and 'h1[id^="day-2"]' in css_text and 'h1[id^="day-3"]' in css_text,
+            "Day color styling is missing.", errors)
     require('[data-md-color-scheme="slate"]' in tokens_text,
             "Dark mode token overrides are missing.", errors)
     require('[data-md-color-scheme="slate"] body' in css_text,

@@ -33,9 +33,9 @@ Each person has their own file in `docs/people/`. Edit one profile at a time and
 
 Add BibTeX entries to `docs/references.bib`, then cite them in Markdown with `[@citationKey]`. The site build renders the References section automatically.
 
-## Completing the Final Share Out
+## Completing the Results and Polished Outputs
 
-Use the homepage Final Share Out as a synthesis checklist, not an activity log. Add 3-5 specific insights, link each one to a figure, notebook, PDF, dashboard, data product, or other artifact, and mark confidence as High, Medium, or Low with a short reason.
+Use the homepage **Results** and **Polished Outputs** sections as a synthesis checklist, not an activity log. Add specific insights, link each one to a figure, notebook, PDF, dashboard, data product, or other artifact, and mark confidence as High, Medium, or Low with a short reason.
 
 Strong entries state what changed, why it matters, what evidence supports it, what remains uncertain, and what another group can reuse. Keep the text short enough to present in a 2-minute walkthrough.
 

@@ -11,7 +11,7 @@ Guidelines for agents:
 * Preserve existing project content and historical context.
 * Prefer improving shared systems over one-off fixes.
 * Keep documentation and site content in sync.
-* Do not introduce complex HTML into markdown pages; small semantic wrappers for reusable cards or embeds are acceptable when they keep editing simple.
+* Do not introduce complex HTML into markdown pages. Keep participant-facing content Markdown-first, and hide layout or reusable behavior in CSS, hooks, includes, or templates.
 * Keep everything editable by non-experts in GitHub.
 * Do not add blocking tests for template completeness. Use the site health report for user-facing warnings instead.
 * When adding new features, ensure they do not increase user complexity.

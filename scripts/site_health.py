@@ -11,9 +11,10 @@ MKDOCS = ROOT / "mkdocs.yml"
 REQUIRED = ["docs/index.md", "mkdocs.yml", "README.md", "AGENTS.md", "PROMPT_ACTION_LOG.md",
             "docs/stylesheets/tokens.css", "docs/stylesheets/extra.css",
             "docs/instructions/day1.md", "docs/instructions/day2.md", "docs/instructions/day3.md",
-            "docs/references.bib"]
+            "docs/people/template.md", "docs/references.bib"]
 ASSET_DIRS = ["docs/assets/hero", "docs/assets/whiteboards", "docs/assets/explorations",
-              "docs/assets/figures", "docs/assets/team", "docs/assets/files"]
+              "docs/assets/figures", "docs/assets/team", "docs/assets/files",
+              "docs/assets/stickers"]
 PLACEHOLDERS = ["[link]", "TODO", "TBD", "CHANGE_ME", "REPLACE_ME"]
 NAV_ITEMS = ["Public Front Page", "Instructions", "AI for Sustainability", "Specialty Tracks", "Manuals", "Storage", "Orientation"]
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")

@@ -666,3 +666,84 @@ Verification
 Open questions and follow-up
 
 * Preview the rendered people cards in a browser after deploy and adjust card copy/spacing if the real team entries run much longer than the examples.
+
+2026-04-24
+
+Prompt
+
+User asked: "Implement Day Directions, Landmark Stickers, and Markdown-Safe Editing for Project Group OASIS. Add a parking-garage-style landmark system with sticker assets, rewrite the Day 1/2/3 instructions with lettered tasks and anchor links, keep participant editing Markdown-only, add People profile templates, move buttons into context, verify MIT license/citation workflow, and run quality checks."
+
+Files and folders inspected
+
+* docs/index.md
+* docs/instructions.md
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/people/
+* docs/data.md
+* docs/stylesheets/extra.css
+* docs/stylesheets/tokens.css
+* mkdocs.yml
+* scripts/site_health.py
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Added seven square landmark sticker PNG assets in `docs/assets/stickers/`.
+* Added `scripts/generate_stickers.py` so the sticker assets can be regenerated from repo-native code.
+* Reworked `docs/index.md` around the required landmark sections: People, Project Question, Specialty Tracks and Strategy, Data Exploration, Methods and Code, Results, and Polished Outputs.
+* Added the required "How to use this page" legend text and sticker images on each editable section heading.
+* Replaced participant-facing homepage HTML with Markdown headings, images, links, snippet includes, and Markdown attributes.
+* Replaced Day 1, Day 2, and Day 3 instruction pages with the requested lettered task directions and fixed the section links to real `docs/index.md` anchors.
+* Updated People profiles to plain Markdown, added `docs/people/template.md`, and added `docs/people/README.md`.
+* Updated data guidance to point to the ESIIL Data Library instead of a placeholder-only data page.
+* Added sticker and day-color CSS while keeping ESIIL brand colors aligned with the requested values.
+* Updated site health and regression checks to protect the sticker assets, landmark sections, People template, and Markdown-safe front page.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `git diff --check`; passed after restoring generated build output.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed with the standard Material for MkDocs 2.0 warning and expected git-revision-date warnings for new uncommitted People pages.
+* Confirmed the built homepage includes sticker image assets and the expected section anchors.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the rendered homepage and day pages in a browser to tune sticker size or spacing if the landmark icons feel too large or too subtle in presentation mode.
+
+2026-04-24
+
+Prompt
+
+User provided a new project group logo image and clarified it should replace the logo at the top of the sidebar, not the header.
+
+Files and folders inspected
+
+* docs/stylesheets/extra.css
+* docs/assets/esiil_content/
+* mkdocs.yml
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Added the provided PNG as `docs/assets/esiil_content/event_group_logo.png`.
+* Updated the sidebar branding CSS to use `event_group_logo.png`.
+* Left the header logo configuration unchanged at `assets/oasis_logo.png`.
+* Left the prior `group_logo.svg` asset in place for possible future use.
+* Updated the template regression check to protect the new sidebar-logo asset reference.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `git diff --check`; passed.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed with the standard Material for MkDocs 2.0 warning and expected git-revision-date warnings for new uncommitted People pages.
+* Confirmed built CSS references `event_group_logo.png` while the built header still references `assets/oasis_logo.png`.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the sidebar after deployment to confirm the new square logo crops and scales the way you want in the existing sidebar logo block.

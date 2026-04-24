@@ -123,6 +123,30 @@ body {
   color: var(--oasis-color-accent-blue);
 }
 
+.md-typeset h1[id^="day-1"] {
+  padding-left: var(--oasis-space-4);
+  border-left: 0.45rem solid var(--oasis-color-primary-blue);
+}
+
+.md-typeset h1[id^="day-2"] {
+  padding-left: var(--oasis-space-4);
+  border-left: 0.45rem solid var(--oasis-color-accent-blue);
+}
+
+.md-typeset h1[id^="day-3"] {
+  padding-left: var(--oasis-space-4);
+  border-left: 0.45rem solid var(--oasis-color-accent-green);
+}
+
+.section-sticker {
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-right: 0.45rem;
+  vertical-align: -0.48rem;
+  border: 1px solid var(--oasis-color-border);
+  box-shadow: var(--oasis-shadow-sm);
+}
+
 /* Sidebar and navigation surfaces */
 .md-sidebar__scrollwrap {
   scrollbar-color: var(--oasis-color-border-strong) transparent;
@@ -178,7 +202,7 @@ body {
   width: 17.6rem;
   height: 12.8rem;
   margin-top: -1.15rem;
-  background: url("../assets/esiil_content/group_logo.svg") center / contain no-repeat;
+  background: url("../assets/esiil_content/event_group_logo.png") center / contain no-repeat;
 }
 
 .md-sidebar--primary .md-nav__title .md-logo {

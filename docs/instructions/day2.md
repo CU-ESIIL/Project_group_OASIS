@@ -1,106 +1,103 @@
+# Day 2 — Build, Explore, and Apply New Skills
+## What today is about
+Today is about **going deeper**.
+You now have:
+- a team
+- a project direction
+- a first look at the data
+- an initial sense of which specialty skills might help
+Today, you will use the specialty tracks to strengthen the project. Some groups may split up across tracks. Some groups may decide to focus together on one track. Some people may choose individually. Any of those choices can work if the group talks about it.
+By the end of the day, your page should show:
+- clearer methods
+- deeper data exploration
+- at least one emerging result, pattern, or problem
+- how your thinking changed after learning something new
 ---
-layout: page
-title: Day 2 — Data & Methods
-permalink: /instructions/day2/
+## A — Reconnect with your question
+**Landmark:** Project Question
+**Where this shows up on the main page:** [Project Question](../index.md#project-question)
+Start by rereading your question and yesterday’s notes.
+Ask:
+- Does the question still make sense?
+- Did yesterday’s data exploration change what we care about?
+- Do we need to narrow, sharpen, or redirect the question?
+Update the Project Question section if needed.
+Your question is allowed to evolve. That is part of the work.
 ---
-
-# Day 2 — Data & Methods
-**Focus:** try a few datasets and analyses. Keep it visual, keep it simple. Update the site to reflect what you test.
-
-## 1) Explore the Data Library & Analytics Library
-- Browse your [**Data Library**](https://cu-esiil.github.io/data-library/innovation-summit-2025/) for candidate datasets (portals, STAC catalogs, archives). Capture links and notes.
-- Browse your [**Analytics Library**](https://cu-esiil.github.io/analytics-library/innovation-summit-2025/) for example workflows (scripts, notebooks).
-- Make edits on **Public Front Page** → `docs/index.md` under:
-  - **Data sources we’re exploring**: Add 2-4 promising data sources (links + 1-line notes)
-  - **Methods / technologies we’re testing**: Add 2-4 methods/technologies you're testing (stats, models, viz)
-
-## 2) Transfer or access data via gocmd (if needed)
-> Use when moving files to/from institutional storage (e.g., CyVerse Data Store).
-
-**Install & initialize gocmd (Linux):**
-```bash
-# Download latest gocmd and extract
-GOCMD_VER=$(curl -L -s https://raw.githubusercontent.com/cyverse/gocommands/main/VERSION.txt); \
-curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/gocmd-${GOCMD_VER}-linux-amd64.tar.gz | tar zxvf -
-
-# Configure iRODS (accept defaults for Host/Port/Zone; use your CyVerse username)
-./gocmd init
-
-# Quick sanity check: can you list your home?
-./gocmd ls i:/iplant/home/YOUR_USER
-```
-
-> `i:` indicates an iRODS remote path. Omit `i:` for local filesystem paths.
-
-**Example transfers:**
-
-```bash
-# Single file download (shared path → local ./data/)
-./gocmd get --progress -K --icat \
-  i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024/Buffalo_creek-BC1-06_20_24/Buffalo_creek-BC1-06_20_24_1_all_layers.tif \
-  ./data/
-
-# Folder download (entire collection)
-./gocmd get --progress -K --icat -r \
-  i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024/Buffalo_creek-BC3-06_20_24 \
-  ./data/
-
-# Upload a results folder to your home
-./gocmd put --progress -K --icat -r \
-  ./outputs/run_01 \
-  i:/iplant/home/YOUR_USER/projects/myproj/outputs/run_01
-
-# Optional sync-like upload to skip unchanged files
-./gocmd put --progress -K --icat --diff -r \
-  ./outputs/run_01 \
-  i:/iplant/home/YOUR_USER/projects/myproj/outputs/run_01
-```
-
-> **Troubleshooting:**
-```bash
-# If a path "is not found", list upward, then drill down to confirm exact names
-./gocmd ls i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024
-./gocmd ls i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024/Buffalo*
-
-# Inspect type and permissions if a collection exists but transfers fail
-./gocmd stat i:/iplant/home/shared/earthlab/nfs_career/outputs/SUMMER_2024/<EXACT_NAME>
-```
-
-> Keep large data out of GitHub. Store externally, link from the **Data** page.
-
-## 3) Show early results (visual-first)
-
-* Add **Visuals** on **Public Front Page** → `docs/index.md`:
-
-  * A static figure (PNG)
-  * A small GIF for change over time (if you have one)
-  * An iframe map or relevant portal view
-* Add brief captions: what it shows and why it matters.
-
-## 4) Link runnable code
-
-* Run at least one workflow and capture a shareable output — a plot, table, map, or other scientific product. Save static outputs (PNG, GIF, JPG) to the site, or embed live results (for example, an iframe for an HTML widget or interactive table).
-* Save all of your scripts and notebooks in the [code/](https://github.com/cu-esiil/Project_group_OASIS/tree/main/code) folder. This keeps everyone’s work in one place and makes it easy to find later. Don’t worry if your code isn’t perfect—the important thing is to make it runnable and shareable.
-* After you’ve run your code, take a screenshot or save the result as a file. Then add it to the **Code** page (`docs/code.md`) so others can see what your code does. Even a quick plot or table is great!
-* On **Code** (`docs/code.md`), add a short entry for each workflow: what it does, required inputs, how to run it, and where to view the output (linked image, iframe, or hosted artifact). Use the template below to get started:
-
-````markdown
-### Fire perimeter analysis
-**What this code does:** Shows how fire perimeters grow each day using FIRED polygons.  
-**Inputs needed:** `data/fired_perimeters.geojson`  
-**How to run it:**
-```bash
-python code/fire_perimeter_analysis.py
-```
-**What to look for:** The script makes a plot of fire spread over time.  
-**Results:** [spread_plot.png](results/spread_plot.png)
-````
-
-## 5) Day 2 checklist
-
-* [ ] 2–4 data sources listed with links on **Public Front Page**.
-* [ ] 1–2 methods listed on **Public Front Page**.
-* [ ] At least one prototype visual added.
-* [ ] Code linked from **Code** page.
-* [ ] Large files moved via gocmd (or linked externally).
-
+## B — Choose how to use the specialty tracks
+**Landmark:** Specialty Tracks and Strategy
+**Where this shows up on the main page:** [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy)
+Before the training session, decide how your group wants to use the specialty tracks.
+Options include:
+- everyone chooses the track that interests them most
+- the group splits up to cover multiple skills
+- the group focuses on one shared track that seems most useful for the project
+Add a short note to the Specialty Tracks and Strategy section explaining what you decided and why.
+This does not need to be permanent. It is a working strategy.
+---
+## C — Attend a specialty training and bring something back
+**Landmark:** Specialty Tracks and Strategy
+**Where this shows up on the main page:** [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy)
+During or after the training, each person should capture one or two useful takeaways.
+Write down:
+- what you learned
+- what might apply to your project
+- what you want to try with the group
+After the training, regroup and share what each person learned.
+The goal is not just to attend a session. The goal is to bring new capability back into the project.
+---
+## D — Apply what you learned
+**Landmark:** Methods and Code
+**Where this shows up on the main page:** [Methods and Code](../index.md#methods-and-code)
+Try something new based on the specialty training.
+This might mean:
+- updating your workflow
+- trying a new analysis
+- using a new visualization
+- improving a notebook or script
+- changing how you organize the data
+Document what changed in the Methods and Code section.
+Learning matters most when it changes what you do.
+---
+## E — Push the data exploration further
+**Landmark:** Data Exploration
+**Where this shows up on the main page:** [Data Exploration](../index.md#data-exploration)
+Go beyond your first look at the data.
+Try to create at least one clearer plot, map, table, or summary that helps answer your question.
+Helpful prompts:
+- What pattern are we looking for?
+- What comparison would help?
+- What variable, place, time period, or group matters most?
+- What would make this figure easier for someone else to understand?
+Add updated figures or notes to the Data Exploration section.
+---
+## F — Start forming results
+**Landmark:** Results
+**Where this shows up on the main page:** [Results](../index.md#results)
+Add early findings, patterns, surprises, or problems.
+You do not need a final answer yet.
+Useful result statements can sound like:
+- “We are starting to see...”
+- “One pattern that surprised us was...”
+- “This result is still uncertain because...”
+- “The data do not yet support...”
+This is where exploration starts becoming explanation.
+---
+## G — Set up Day 3
+**Landmark:** Polished Outputs
+**Where this shows up on the main page:** [Polished Outputs](../index.md#polished-outputs)
+Before you leave for the day, decide what you want to finish tomorrow.
+Add a short note somewhere useful on the page that says:
+- what seems strongest so far
+- what still needs cleanup
+- what figure, result, or output you want to present
+Day 3 will move quickly. A short plan now will make tomorrow easier.
+---
+## What a strong Day 2 page looks like
+By the end of Day 2, your project page should have:
+- an updated or reaffirmed question
+- a note about how the group used the specialty tracks
+- evidence that new skills changed the work
+- clearer data exploration
+- at least one emerging result or pattern
+- a short plan for what to polish on Day 3
