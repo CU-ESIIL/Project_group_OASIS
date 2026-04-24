@@ -138,13 +138,75 @@ body {
   border-left: 0.45rem solid var(--oasis-color-accent-green);
 }
 
-.section-sticker {
-  width: 2.15rem;
-  height: 2.15rem;
-  margin-right: 0.45rem;
-  vertical-align: -0.48rem;
-  border: 1px solid var(--oasis-color-border);
-  box-shadow: var(--oasis-shadow-sm);
+.md-typeset h2#people,
+.md-typeset h2#project-question,
+.md-typeset h2#specialty-tracks-and-strategy,
+.md-typeset h2#data-exploration,
+.md-typeset h2#methods-and-code,
+.md-typeset h2#results,
+.md-typeset h2#polished-outputs {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.md-typeset h2#people::before,
+.md-typeset h2#project-question::before,
+.md-typeset h2#specialty-tracks-and-strategy::before,
+.md-typeset h2#data-exploration::before,
+.md-typeset h2#methods-and-code::before,
+.md-typeset h2#results::before,
+.md-typeset h2#polished-outputs::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 2rem;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--oasis-color-body-text);
+  background: var(--oasis-color-surface);
+  color: var(--oasis-color-body-text);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  box-shadow: 0.18rem 0.18rem 0 var(--oasis-color-gray-relief);
+}
+
+.md-typeset h2#people::before {
+  content: "PPL";
+  border-color: var(--oasis-color-primary-blue);
+}
+
+.md-typeset h2#project-question::before {
+  content: "Q";
+  border-color: var(--oasis-color-primary-blue);
+}
+
+.md-typeset h2#specialty-tracks-and-strategy::before {
+  content: "TRK";
+  border-color: var(--oasis-color-primary-blue);
+}
+
+.md-typeset h2#data-exploration::before {
+  content: "DAT";
+  border-color: var(--oasis-color-accent-blue);
+}
+
+.md-typeset h2#methods-and-code::before {
+  content: "MTH";
+  border-color: var(--oasis-color-accent-blue);
+}
+
+.md-typeset h2#results::before {
+  content: "RES";
+  border-color: var(--oasis-color-accent-green);
+}
+
+.md-typeset h2#polished-outputs::before {
+  content: "OUT";
+  border-color: var(--oasis-color-accent-green);
+  box-shadow: 0.18rem 0.18rem 0 var(--oasis-color-light-green);
 }
 
 /* Sidebar and navigation surfaces */

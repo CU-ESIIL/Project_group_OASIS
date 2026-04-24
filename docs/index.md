@@ -5,8 +5,10 @@
 Replace this paragraph with your group’s purpose statement. In 1–2 sentences, say what your group is trying to understand, why it matters, and what kind of evidence or product you hope to share by the end of the summit.
 
 ## How to use this page
-This page is your group’s working project record. Over the summit, you will update it to show the question you chose, the people in your group, the data and methods you explored, and the results or products you want to share.
-The stickers are landmarks. They help you match the directions to the place on this page where that work belongs.
+This page is your group’s working project record. Over the summit, replace the example text with your question, people, data, methods, results, and final products.
+
+The section badges are landmarks. They help you match the day-by-day directions to the place on this page where that work belongs.
+
 - **People** — who is in the group and what each person brings
 - **Project Question** — what your group decided to explore
 - **Specialty Tracks and Strategy** — how your group is using the summit trainings
@@ -15,7 +17,7 @@ The stickers are landmarks. They help you match the directions to the place on t
 - **Results** — patterns, findings, and interpretations
 - **Polished Outputs** — final figures, PDFs, slides, or other shareable products
 
-## ![People landmark](assets/stickers/people.png){ .section-sticker } People { #people }
+## People { #people }
 
 Replace the example profiles with your group’s profiles. Each person should edit only their own file in `docs/people/`.
 
@@ -23,7 +25,7 @@ Replace the example profiles with your group’s profiles. Each person should ed
 
 --8<-- "people/john-smith.md"
 
-## ![Project Question landmark](assets/stickers/question.png){ .section-sticker } Project Question { #project-question }
+## Project Question { #project-question }
 
 Replace this text with your group’s project question. It is okay if the question changes during the summit.
 
@@ -34,7 +36,7 @@ Helpful prompts:
 - What would count as a useful answer by Day 3?
 - What are we still unsure about?
 
-## ![Specialty Tracks landmark](assets/stickers/tracks.png){ .section-sticker } Specialty Tracks and Strategy { #specialty-tracks-and-strategy }
+## Specialty Tracks and Strategy { #specialty-tracks-and-strategy }
 
 Replace this text with notes about how your group is using the summit specialty tracks.
 
@@ -45,7 +47,7 @@ Use this section to capture:
 - how the training changed your project strategy
 - what skills your group still needs
 
-## ![Data Exploration landmark](assets/stickers/data.png){ .section-sticker } Data Exploration { #data-exploration }
+## Data Exploration { #data-exploration }
 
 Replace this text with the datasets, maps, plots, screenshots, tables, or first observations your group is using to understand the question.
 
@@ -55,7 +57,7 @@ Replace this text with the datasets, maps, plots, screenshots, tables, or first 
 [Open the ESIIL Data Library](https://cu-esiil.github.io/data-library/innovation-summit-2025/){ .md-button }
 [Document your group data notes](data.md){ .md-button }
 
-## ![Methods landmark](assets/stickers/methods.png){ .section-sticker } Methods and Code { #methods-and-code }
+## Methods and Code { #methods-and-code }
 
 Replace this text with the tools, notebooks, scripts, workflows, or repeatable steps your group tried.
 
@@ -69,7 +71,7 @@ Include:
 
 [View shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code){ .md-button }
 
-## ![Results landmark](assets/stickers/results.png){ .section-sticker } Results { #results }
+## Results { #results }
 
 Replace this text with emerging results, patterns, findings, surprises, or honest limits. A strong result makes a claim, points to evidence, and names uncertainty.
 
@@ -86,7 +88,7 @@ Useful result statements can sound like:
 ![Supporting panel figure](assets/figures/hull_panels.png)
 *Replace this caption with what the panels compare or reveal.*
 
-## ![Polished Outputs landmark](assets/stickers/outputs.png){ .section-sticker } Polished Outputs { #polished-outputs }
+## Polished Outputs { #polished-outputs }
 
 Replace this text with the final things you want people to find after the summit: polished figures, a PDF, slides, a notebook, a data product, or a short handoff note.
 

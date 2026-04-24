@@ -87,21 +87,26 @@ Data source:
 People profile:
 
 ```markdown
-# Jane Doe
+### Jane Doe
 
-## Role or affiliation
+**Role or affiliation**
+
 Data lead, example institution.
 
-## What I am excited to explore
+**What I am excited to explore**
+
 One or two sentences on what you are curious about in this project.
 
-## Skills, data, or perspectives I bring
+**Skills, data, or perspectives I bring**
+
 Skills, datasets, tools, field experience, design skills, or facilitation skills.
 
-## Something human
+**Something human**
+
 A small detail that helps others connect with you.
 
-## Optional link
+**Optional link**
+
 [Profile link](https://example.org)
 ```
 

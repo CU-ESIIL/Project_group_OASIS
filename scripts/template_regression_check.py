@@ -48,13 +48,8 @@ def main() -> int:
         "Polished Outputs",
     ]:
         require(section in index_text, f"Front page section '{section}' is missing.", errors)
-    require("assets/stickers/people.png" in index_text, "People sticker is missing from front page.", errors)
-    require("assets/stickers/question.png" in index_text, "Project Question sticker is missing from front page.", errors)
-    require("assets/stickers/tracks.png" in index_text, "Tracks sticker is missing from front page.", errors)
-    require("assets/stickers/data.png" in index_text, "Data sticker is missing from front page.", errors)
-    require("assets/stickers/methods.png" in index_text, "Methods sticker is missing from front page.", errors)
-    require("assets/stickers/results.png" in index_text, "Results sticker is missing from front page.", errors)
-    require("assets/stickers/outputs.png" in index_text, "Outputs sticker is missing from front page.", errors)
+    require("section-sticker" not in index_text and "assets/stickers/" not in index_text,
+            "Public Front Page should not put sticker images directly in headings.", errors)
     require("<div" not in index_text and "<table" not in index_text,
             "Public Front Page should avoid participant-facing raw HTML layout.", errors)
     require('--8<-- "people/' in index_text, "Public Front Page should include per-person files.", errors)
@@ -111,7 +106,7 @@ def main() -> int:
     require((people_dir / "README.md").exists(), "People README is missing.", errors)
     require((people_dir / "template.md").exists(), "People template is missing.", errors)
     template_text = (people_dir / "template.md").read_text(encoding="utf-8") if (people_dir / "template.md").exists() else ""
-    require("# Your Name" in template_text and "Do not add both a raw email address and a GitHub username here." in template_text,
+    require("### Your Name" in template_text and "Do not add both a raw email address and a GitHub username here." in template_text,
             "People template should use the required profile guidance.", errors)
     for sticker in ["people", "question", "tracks", "data", "methods", "results", "outputs"]:
         require((stickers_dir / f"{sticker}.png").exists(), f"Sticker asset {sticker}.png is missing.", errors)
@@ -137,7 +132,8 @@ def main() -> int:
             "Dynamic section title should be hidden so the header keeps the project/group name.", errors)
     require(".md-typeset h1" in css_text and "var(--oasis-color-primary-blue)" in css_text,
             "Main page title should use ESIIL brand blue.", errors)
-    require(".section-sticker" in css_text, "Sticker image styling is missing.", errors)
+    require(".md-typeset h2#people::before" in css_text and 'content: "PPL"' in css_text,
+            "CSS landmark badges are missing.", errors)
     require('h1[id^="day-1"]' in css_text and 'h1[id^="day-2"]' in css_text and 'h1[id^="day-3"]' in css_text,
             "Day color styling is missing.", errors)
     require('[data-md-color-scheme="slate"]' in tokens_text,

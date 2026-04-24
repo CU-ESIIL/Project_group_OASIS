@@ -747,3 +747,38 @@ Verification
 Open questions and follow-up
 
 * Preview the sidebar after deployment to confirm the new square logo crops and scales the way you want in the existing sidebar logo block.
+
+2026-04-24
+
+Prompt
+
+User reported that the sticker attempt made the page look broken: tiny button-like sticker artifacts, odd paragraph text, and poor overall page quality on the live Project Group OASIS site.
+
+Files and folders inspected
+
+* Live site at https://cu-esiil.github.io/Project_group_OASIS/
+* docs/index.md
+* docs/people/
+* docs/stylesheets/extra.css
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Removed sticker image Markdown from homepage section headings.
+* Kept normal Markdown headings with stable anchors for People, Project Question, Specialty Tracks and Strategy, Data Exploration, Methods and Code, Results, and Polished Outputs.
+* Replaced direct image-heading stickers with CSS-generated landmark badges so participants do not edit image attributes or layout syntax.
+* Converted included People profile files from oversized heading structures to smaller Markdown snippets that render more cleanly inside the homepage.
+* Updated the regression check so future edits do not put sticker image syntax back into front-page headings.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `git diff --check`; passed.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed built homepage headings render as plain `<h2>` anchors and built CSS supplies the visual landmark badges.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* After deployment, inspect the live page visually and tune badge size or remove badges entirely if the page still feels too busy.
