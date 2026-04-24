@@ -492,3 +492,35 @@ Verification
 Open questions and follow-up
 
 * Preview the deployed sidebar; if the logo feels too small after rebuild, bump only the pseudo-element size without increasing the block height.
+
+2026-04-24
+
+Prompt
+
+User asked: "That made the white space smaller but the logo got smaller as well. I think you can make the white space even smaller, but you need to then make the logo fill the space. While we're editing, can you also move the specialty tracks above the manuals in the side bar menu? We also don't need the RStudio Proxy Workaround anymore."
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/stylesheets/extra.css
+* scripts/site_health.py
+
+Actions taken
+
+* Reduced the sidebar group-logo block height to `3.9rem` with no vertical padding.
+* Increased the group-logo pseudo-element to `8.8rem` by `6.4rem` and nudged it upward with negative top margin so it fills the compact block.
+* Moved Specialty Tracks above Manuals in the sidebar navigation.
+* Removed the RStudio Proxy Workaround link from Manuals.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed.
+* Confirmed built HTML places Specialty Tracks before Manuals and no longer includes the RStudio nav item.
+* Confirmed built CSS contains the updated compact group-logo dimensions.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the deployed sidebar to confirm the larger logo does not overlap the Public Front Page nav label.
