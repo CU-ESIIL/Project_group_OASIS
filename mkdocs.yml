@@ -12,7 +12,7 @@ copyright: 'Copyright &copy; 2024 University of Colorado Boulder'
 
 # Page tree
 nav:
-  - Home: index.md
+  - Public Front Page: index.md
   - Instructions:
       - Day 1 — Define & Explore: instructions/day1.md
       - Day 2 — Data & Methods: instructions/day2.md

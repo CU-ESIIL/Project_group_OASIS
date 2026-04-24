@@ -10,7 +10,7 @@ permalink: /instructions/day2/
 ## 1) Explore the Data Library & Analytics Library
 - Browse your [**Data Library**](https://cu-esiil.github.io/data-library/innovation-summit-2025/) for candidate datasets (portals, STAC catalogs, archives). Capture links and notes.
 - Browse your [**Analytics Library**](https://cu-esiil.github.io/analytics-library/innovation-summit-2025/) for example workflows (scripts, notebooks).
-- Make edits on **Home** → `docs/index.md` under:
+- Make edits on **Public Front Page** → `docs/index.md` under:
   - **Data sources we’re exploring**: Add 2-4 promising data sources (links + 1-line notes)
   - **Methods / technologies we’re testing**: Add 2-4 methods/technologies you're testing (stats, models, viz)
 
@@ -70,7 +70,7 @@ curl -L -s https://github.com/cyverse/gocommands/releases/download/${GOCMD_VER}/
 
 ## 3) Show early results (visual-first)
 
-* Add **Visuals** on **Home** → `docs/index.md`:
+* Add **Visuals** on **Public Front Page** → `docs/index.md`:
 
   * A static figure (PNG)
   * A small GIF for change over time (if you have one)
@@ -98,8 +98,8 @@ python code/fire_perimeter_analysis.py
 
 ## 5) Day 2 checklist
 
-* [ ] 2–4 data sources listed with links on **Home**.
-* [ ] 1–2 methods listed on **Home**.
+* [ ] 2–4 data sources listed with links on **Public Front Page**.
+* [ ] 1–2 methods listed on **Public Front Page**.
 * [ ] At least one prototype visual added.
 * [ ] Code linked from **Code** page.
 * [ ] Large files moved via gocmd (or linked externally).

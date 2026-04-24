@@ -132,16 +132,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 6.5rem;
-  padding: var(--oasis-space-4) 0;
+  min-height: 4.75rem;
+  padding: var(--oasis-space-2) 0 var(--oasis-space-1);
   font-size: 0;
 }
 
 .md-sidebar--primary .md-nav__title::before {
   content: "";
   display: block;
-  width: 10rem;
-  height: 8rem;
+  width: 7rem;
+  height: 5.25rem;
   background: url("../assets/esiil_content/group_logo.svg") center / contain no-repeat;
 }
 

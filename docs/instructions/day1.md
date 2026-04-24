@@ -12,7 +12,7 @@ permalink: /instructions/day1/
 - Add your names to **[Team](https://cu-esiil.github.io/Project_group_OASIS/#team)** (top nav → Team). Edit the table, keep it simple.
 
 ## 2) Define your product, question(s) and hypotheses
-Open **Home** → edit `docs/index.md` → fill in:
+Open **Public Front Page** → edit `docs/index.md` → fill in:
 - **Our product**: describe the desired, tangible outcomes for your group
 - **Our question(s)**: 2–4 bullets; invite divergent framings.
 - **Hypotheses / intentions**: short, plain-language "we think…" statements.
@@ -68,7 +68,7 @@ git pull origin main
 ## 5) Day 1 checklist
 
 * [ ] Team added to **Team** page.
-* [ ] Questions, hypotheses, and upshot filled in on **Home**.
+* [ ] Questions, hypotheses, and upshot filled in on **Public Front Page**.
 * [ ] One visual added (whiteboard/notes photo).
 * [ ] (Optional) CyVerse: cloned repo and pushed a small change.
 

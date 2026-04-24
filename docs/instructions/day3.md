@@ -8,11 +8,11 @@ permalink: /instructions/day3/
 **Focus:** synthesize what you learned into a small number of clear, evidence-backed insights. Make a short, public-facing story that names uncertainty and points to reusable outputs.
 
 ## 1) One-sentence takeaway
-- On **Home** → `docs/index.md`, write one sentence that states the core result, product, or lesson.
+- On **Public Front Page** → `docs/index.md`, write one sentence that states the core result, product, or lesson.
 - Make it specific enough that someone outside the group can tell what changed.
 
 ## 2) Core insights
-- Add **3-5 insights** on **Home**.
+- Add **3-5 insights** on **Public Front Page**.
 - For each insight, fill in:
   - **What we found:** 1-2 specific sentences. Avoid “we discussed” or “we explored.”
   - **Why it matters:** What decision, workflow, assumption, or scientific question it affects.
@@ -20,7 +20,7 @@ permalink: /instructions/day3/
   - **Confidence:** High / Medium / Low, with a short reason.
 
 ## 3) Visuals that tell the story
-- Choose **2–3 strongest visuals**: maps/plots/GIFs. Replace placeholders in **Home**.
+- Choose **2–3 strongest visuals**: maps/plots/GIFs. Replace placeholders in **Public Front Page**.
 - Ensure captions say: *what it shows*, *which claim it supports*, and any important caveat.
 
 ## 4) Name limits and reusable outputs
@@ -28,11 +28,11 @@ permalink: /instructions/day3/
 - Under **Reusable outputs**, link anything another group can directly reuse: code, notebooks, derived data, figures, slides, briefs, or workflows.
 
 ## 5) Produce a 1–2 page brief (optional but encouraged)
-- Export a short PDF (figures + bullets). Link it from the **Home** hero section.
+- Export a short PDF (figures + bullets). Link it from the **Public Front Page** hero section.
 - Keep it readable for non-experts.
 
 ## 6) Plan what’s next
-- In **Home → What’s next?** fill in:
+- In **Public Front Page → What’s next?** fill in:
   - Immediate follow-up
   - What you would do with one more week
   - What you would do with one more month
@@ -40,15 +40,15 @@ permalink: /instructions/day3/
 
 ## 7) Polish & acknowledge
 - Add team details to **Team** page.
-- Add any citations to **Cite & reuse** on **Home**.
+- Add any citations to **Cite & reuse** on **Public Front Page**.
 - Verify licenses (code and data) are stated.
 
 ## 8) Report-out prep
 - Practice a **2-minute walkthrough** of the homepage 📣: Why → Questions → Data/Methods → Insights → Limits → Next.
-- If you made a short video or recorded demo, embed with an iframe on **Home**.
+- If you made a short video or recorded demo, embed with an iframe on **Public Front Page**.
 
 ## Day 3 checklist
-- [ ] One-sentence takeaway posted on **Home**.
+- [ ] One-sentence takeaway posted on **Public Front Page**.
 - [ ] 3-5 insights include claims, evidence links, and confidence.
 - [ ] 2-3 polished visuals with claim-focused captions.
 - [ ] Surprises, failures, or limitations named.

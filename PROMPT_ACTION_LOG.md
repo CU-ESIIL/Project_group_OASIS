@@ -458,3 +458,37 @@ Verification
 Open questions and follow-up
 
 * Refresh the deployed page after GitHub Pages rebuilds to confirm the group logo appears in the white sidebar brand space.
+
+2026-04-24
+
+Prompt
+
+User asked: "The logo is there now but it has too much white space around it. Can we reduce the height of the block that the logo is in so everything moves up toward the header? Also, can we call 'home' something more descriptive and alluring like display page or public facing or front page... the front of house."
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/stylesheets/extra.css
+* scripts/site_health.py
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+
+Actions taken
+
+* Reduced the sidebar group-logo block height and padding.
+* Reduced the group-logo pseudo-element from `10rem` by `8rem` to `7rem` by `5.25rem`.
+* Renamed the main nav item from `Home` to `Public Front Page`.
+* Updated instruction pages and the site health nav check to use `Public Front Page`.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean`; passed.
+* Confirmed the built HTML contains `Public Front Page` and built CSS contains the smaller sidebar group-logo dimensions.
+* Restored generated `site/` build output so the working tree contains source changes only.
+
+Open questions and follow-up
+
+* Preview the deployed sidebar; if the logo feels too small after rebuild, bump only the pseudo-element size without increasing the block height.

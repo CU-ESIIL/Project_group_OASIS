@@ -14,7 +14,7 @@ REQUIRED = ["docs/index.md", "mkdocs.yml", "README.md", "AGENTS.md", "PROMPT_ACT
 ASSET_DIRS = ["docs/assets/hero", "docs/assets/whiteboards", "docs/assets/explorations",
               "docs/assets/figures", "docs/assets/team", "docs/assets/files"]
 PLACEHOLDERS = ["[link]", "TODO", "TBD", "CHANGE_ME", "REPLACE_ME"]
-NAV_ITEMS = ["Home", "Instructions", "Manuals", "Specialty Tracks", "Storage", "Orientation"]
+NAV_ITEMS = ["Public Front Page", "Instructions", "Manuals", "Specialty Tracks", "Storage", "Orientation"]
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 
 
