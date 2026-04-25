@@ -820,3 +820,58 @@ Verification
 Open questions and follow-up
 
 * Preview in browser after deployment to confirm the blockquote-card styling is visually strong enough for the People section.
+
+2026-04-24
+
+Prompt
+
+User asked to implement the approved content cleanup plan: replace broken People panels with a simple Markdown list linking to existing Innovation Summit learner profile files, replace the Defining AI and Defining Sustainability pages with supplied Markdown-safe content, add citations, and make the main content title blue while preserving white header text.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/instructions.md
+* docs/instructions/day1.md
+* docs/ai-for-sustainability/defining-ai.md
+* docs/ai-for-sustainability/defining-sustainability.md
+* docs/people/
+* docs/stylesheets/extra.css
+* docs/references.bib
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Replaced local People profile snippet includes on the homepage with a plain Markdown learner-link list.
+* Updated People editing guidance to point participants to the Innovation Summit 2026 learner files.
+* Replaced the Defining AI and Defining Sustainability pages with Markdown-safe concept content and image/file replacement instructions.
+* Added BibTeX entries for the AI and sustainability references cited from those pages.
+* Fixed the later homepage `h1` style so public page titles use ESIIL Primary Blue while header text remains white.
+* Updated the regression check to protect the external learner-link People pattern instead of the old local snippet pattern.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict`; passed with the standard Material for MkDocs 2.0 warning.
+
+2026-04-24
+
+Prompt
+
+User noticed that the whiteboard image was no longer visible on the front page and asked to add it back.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/assets/whiteboards/
+
+Actions taken
+
+* Added the existing `assets/whiteboards/day1_whiteboard.jpg` image back to the Project Question section on the public front page.
+* Added a replacement caption prompt that asks groups to say what the whiteboard shows, what decision it supported, and what question remains open.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.

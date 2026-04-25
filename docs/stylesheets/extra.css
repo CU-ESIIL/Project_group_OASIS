@@ -380,7 +380,7 @@ body {
 }
 
 .md-typeset h1 {
-  color: var(--oasis-color-body-text);
+  color: var(--oasis-color-primary-blue);
   margin: 0 0 var(--oasis-space-5);
   font-size: var(--oasis-font-size-5);
   line-height: 1.05;

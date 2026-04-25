@@ -19,13 +19,16 @@ The section badges are landmarks. They help you match the day-by-day directions 
 
 ## People { #people }
 
-Replace the example profiles with your group’s profiles. Each person should edit only their own file in `docs/people/`.
+Replace this list with the people in your group. Link each name to that person’s existing learner file in the Innovation Summit learner folder.
 
---8<-- "people/jane-doe.md"
+[Find learner files in the Innovation Summit 2026 repository](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
 
----
+Example format:
 
---8<-- "people/john-smith.md"
+- [Ty Tuff](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/ty-tuff.md)
+- [Aakriti Joshi](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/aakriti-joshi.md)
+
+Keep this as a simple Markdown list so each group can add or remove names quickly.
 
 ## Project Question { #project-question }
 
@@ -37,6 +40,9 @@ Helpful prompts:
 - Why does this question matter?
 - What would count as a useful answer by Day 3?
 - What are we still unsure about?
+
+![Day 1 whiteboard notes](assets/whiteboards/day1_whiteboard.jpg)
+*Replace this caption with what the whiteboard shows, what decision it helped your group make, and what question remains open.*
 
 ## Specialty Tracks and Strategy { #specialty-tracks-and-strategy }
 

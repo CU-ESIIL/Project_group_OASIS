@@ -29,15 +29,19 @@ For example, “Day 2C, Specialty Tracks and Strategy” means Day 2, task C, in
 ## Editing this project site
 Most summit participants should only edit Markdown files.
 You can safely edit:
+
 - the main project page content
-- your own People profile file
+- the People list on the main page
 - notes, figures, links, and project updates
 - references in `references.bib`
+
 You should avoid editing:
+
 - HTML templates
 - CSS files
 - theme overrides
 - site configuration
+
 Those files control layout and styling. They are intentionally separated from the content so the project page is easier to edit without breaking the site.
 
 ## How to edit the Public Front Page
@@ -64,7 +68,7 @@ Use this loop every time you update the public-facing page:
 | `docs/assets/team/` | Team photos or headshots |
 | `docs/assets/files/` | PDFs, briefs, slides, and downloadable materials |
 | `docs/assets/stickers/` | Landmark sticker images used by the front page and instructions |
-| `docs/people/` | One Markdown profile file per person |
+| Innovation Summit learner files | Existing participant profiles linked from the People section |
 | `docs/references.bib` | BibTeX references cited from Markdown |
 | `code/` | Scripts, notebooks, and reusable analysis code |
 | `documentation/` | Longer notes that should not clutter the public homepage |
@@ -84,33 +88,15 @@ Data source:
 - **Dataset name** — one sentence on what it contains and why we need it. [Link](https://example.org)
 ```
 
-People profile:
+People list:
+
+[Find learner files in the Innovation Summit 2026 repository](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
 
 ```markdown
-> ### Jane Doe
->
-> **Role or affiliation**
->
-> Data lead, example institution.
->
-> **What I am excited to explore**
->
-> One or two sentences on what you are curious about in this project.
->
-> **Skills, data, or perspectives I bring**
->
-> Skills, datasets, tools, field experience, design skills, or facilitation skills.
->
-> **Something human**
->
-> A small detail that helps others connect with you.
->
-> **Optional link**
->
-> [Profile link](https://example.org)
+- [Ty Tuff](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/ty-tuff.md)
 ```
 
-Create one file per person in `docs/people/`, then include that file from `docs/index.md`. This helps teammates edit their own entry without creating merge conflicts. Prefer one profile link over raw contact details; do not publish email and GitHub handles together.
+Link to the existing learner profile file instead of recreating contact details on this site. Prefer profile links over raw contact details; do not publish email and GitHub handles together.
 
 Citation:
 
@@ -118,4 +104,4 @@ Citation:
 This sentence uses a source [@oasisProjectTemplate].
 ```
 
-Add BibTeX entries to `docs/references.bib`, then cite them with `[@citationKey]` on `docs/index.md`. Keep `{{ references }}` where the generated reference list should appear.
+Add BibTeX entries to `docs/references.bib`, then cite them with `[@citationKey]` on `docs/index.md`. Keep the existing references marker on pages where the generated reference list should appear.

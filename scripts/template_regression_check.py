@@ -52,7 +52,11 @@ def main() -> int:
             "Public Front Page should not put sticker images directly in headings.", errors)
     require("<div" not in index_text and "<table" not in index_text,
             "Public Front Page should avoid participant-facing raw HTML layout.", errors)
-    require('--8<-- "people/' in index_text, "Public Front Page should include per-person files.", errors)
+    require('--8<-- "people/' not in index_text, "Public Front Page should not include local People profile snippets.", errors)
+    require("Innovation-Summit-2026/tree/main/docs/learners" in index_text,
+            "People section should link to the Innovation Summit learner folder.", errors)
+    require("Innovation-Summit-2026/blob/main/docs/learners/" in index_text,
+            "People section should include example learner profile file links.", errors)
     require("## Featured Outputs" not in index_text, "Featured Outputs section should be removed.", errors)
     require("https://what-uses-more.com" in index_text, "What Uses More button/link is missing.", errors)
     require("assets/files/project_brief.pdf" in index_text and "Polished Outputs" in index_text,
@@ -66,7 +70,8 @@ def main() -> int:
     require("## How to edit the Public Front Page" in instructions_text,
             "Instructions edit guide section is missing.", errors)
     require("## Where files go" in instructions_text, "Instructions file map is missing.", errors)
-    require("docs/people/" in instructions_text, "Instructions should explain per-person profile files.", errors)
+    require("Innovation-Summit-2026/tree/main/docs/learners" in instructions_text,
+            "Instructions should explain linking to existing learner profile files.", errors)
     require("Most summit participants should only edit Markdown files." in instructions_text,
             "Markdown-safe editing guidance is missing.", errors)
     require("docs/references.bib" in instructions_text, "Instructions should explain BibTeX references.", errors)
@@ -106,13 +111,8 @@ def main() -> int:
     require(event_group_logo.exists(), "docs/assets/esiil_content/event_group_logo.png is missing.", errors)
     require(references.exists(), "docs/references.bib is missing.", errors)
     require("@misc{oasisProjectTemplate" in references_text, "Template reference BibTeX entry is missing.", errors)
-    require((people_dir / "jane-doe.md").exists(), "Example person file jane-doe.md is missing.", errors)
-    require((people_dir / "john-smith.md").exists(), "Example person file john-smith.md is missing.", errors)
     require((people_dir / "README.md").exists(), "People README is missing.", errors)
     require((people_dir / "template.md").exists(), "People template is missing.", errors)
-    template_text = (people_dir / "template.md").read_text(encoding="utf-8") if (people_dir / "template.md").exists() else ""
-    require("### Your Name" in template_text and "Do not add both a raw email address and a GitHub username here." in template_text,
-            "People template should use the required profile guidance.", errors)
     for sticker in ["people", "question", "tracks", "data", "methods", "results", "outputs"]:
         require((stickers_dir / f"{sticker}.png").exists(), f"Sticker asset {sticker}.png is missing.", errors)
     require((ai_dir / "defining-ai.md").exists(), "Defining AI page is missing.", errors)
@@ -139,7 +139,8 @@ def main() -> int:
             "Main page title should use ESIIL brand blue.", errors)
     require(".md-typeset h2#people::before" in css_text and "assets/stickers/people.png" in css_text,
             "CSS landmark badges should use shared sticker image assets.", errors)
-    require("blockquote:has(> h3)" in css_text, "People profile panel styles are missing.", errors)
+    require(".md-typeset h1" in css_text and "color: var(--oasis-color-primary-blue)" in css_text,
+            "Main content title should use ESIIL brand blue.", errors)
     require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
     require('h1[id^="day-1"]' in css_text and 'h1[id^="day-2"]' in css_text and 'h1[id^="day-3"]' in css_text,
             "Day color styling is missing.", errors)

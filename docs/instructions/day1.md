@@ -57,8 +57,19 @@ Helpful prompts:
 
 **Where this shows up on the main page:** [People](../index.md#people)
 
-Each person should add their own entry.
-Keep it short, but human. Include:
+Each person should add one Markdown list item that links to their existing learner file in the Innovation Summit 2026 repository.
+
+Use this format:
+
+```markdown
+- [Your Name](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/your-file-name.md)
+```
+
+If you do not know your file name, open the learner folder and search for your name:
+
+[Innovation Summit learner files](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
+
+Keep the People section short, but human. Make sure the linked profile says:
 
 - what you work on
 - what you are excited about in this project

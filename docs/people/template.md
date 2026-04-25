@@ -1,22 +1,11 @@
-> ### Your Name
->
-> **Role or affiliation**
->
-> Write one short line about where you are from or what role you are bringing to the group.
->
-> **What I am excited to explore**
->
-> Write 1–2 sentences about what you are curious about in this project.
->
-> **Skills, data, or perspectives I bring**
->
-> List a few things you can contribute. These can be technical skills, field experience, domain knowledge, design skills, facilitation skills, or lived experience with the topic.
->
-> **Something human**
->
-> Share one small detail that helps people connect with you. This could be a hobby, favorite place, field story, surprising fact, or something you enjoy outside work.
->
-> **Optional link**
->
-> Add one optional link, such as a personal website, ORCID, institutional profile, or GitHub profile.
-> Do not add both a raw email address and a GitHub username here.
+# People Link Template
+
+Use the public front page People section as a simple Markdown list. Replace the example file name with the participant's existing learner file from:
+
+<https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners>
+
+```markdown
+- [Your Name](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/your-file-name.md)
+```
+
+Do not duplicate raw contact information here. Link to the existing learner profile instead.
