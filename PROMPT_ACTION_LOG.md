@@ -880,6 +880,32 @@ Verification
 
 Prompt
 
+User supplied hero banner images for the AI and Sustainability pages.
+
+Files and folders inspected
+
+* docs/ai-for-sustainability/defining-ai.md
+* docs/ai-for-sustainability/defining-sustainability.md
+* docs/assets/hero/
+* /Users/tuff/Downloads/ai hero.png
+* /Users/tuff/Downloads/sustain.png
+
+Actions taken
+
+* Copied the supplied AI image to `docs/assets/hero/ai-hero.png`.
+* Copied the supplied sustainability image to `docs/assets/hero/sustainability-hero.png`.
+* Replaced the top image-placeholder text on both concept pages with Markdown hero banner images.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+
+2026-04-24
+
+Prompt
+
 User disliked the existing abstract section stickers and asked to replace them with coordinated task stickers like the supplied mockup. They wanted Day 1 direction headers in the Day 1 color, each task beside its sticker, and the same stickers on the front page where the corresponding work belongs.
 
 Files and folders inspected

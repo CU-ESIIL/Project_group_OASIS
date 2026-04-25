@@ -2,7 +2,7 @@
 
 AI in environmental science spans remote sensing, prediction, simulation, and scientific workflows.
 
-**Image placeholder:** Replace this note with an image that helps define AI in your project. Upload it to `docs/assets/figures/` or `docs/assets/explorations/`, then reference it here with Markdown.
+![Data to model to insight to impact workflow across an environmental landscape](../assets/hero/ai-hero.png)
 
 Artificial intelligence is increasingly embedded in how environmental science is conducted. In this working group, AI is not treated as a single technique but as a set of approaches for learning from data, representing complex processes, and supporting decisions under uncertainty. The aim is not to replace domain knowledge, but to extend what can be observed, modeled, and explored across space and time.
 

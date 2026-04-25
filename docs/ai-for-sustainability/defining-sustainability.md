@@ -2,7 +2,7 @@
 
 Environmental systems are coupled with human decisions across space and time.
 
-**Image placeholder:** Replace this note with an image that helps define sustainability in your project. Upload it to `docs/assets/figures/`, `docs/assets/whiteboards/`, or `docs/assets/explorations/`, then reference it here with Markdown.
+![Environment, society, economy, and future sustainability pathway across a landscape](../assets/hero/sustainability-hero.png)
 
 Sustainability science studies how environmental and human systems interact over time, with the goal of maintaining system function, resilience, and equity under changing conditions. It is a use-inspired, problem-driven field focused on real-world outcomes rather than abstract optimization [@kates2001].
 
