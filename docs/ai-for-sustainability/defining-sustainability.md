@@ -1,4 +1,4 @@
-# Defining Sustainability for AI Scientists
+# Defining Sustainability
 
 Environmental systems are coupled with human decisions across space and time.
 

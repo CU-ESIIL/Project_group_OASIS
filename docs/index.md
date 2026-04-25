@@ -1,4 +1,4 @@
-# OASIS Fire Speed Working Example
+# How Fast is a Fire?
 
 ![Fire spread progression over a mountain landscape](assets/hero/hero.png)
 
