@@ -1,4 +1,4 @@
-# OASIS Fire Speed Working Example
+# How Fast is a Fire?
 
 ![Forest landscape with fire-speed contours](assets/hero/hero.jpg)
 
