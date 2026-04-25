@@ -880,6 +880,35 @@ Verification
 
 Prompt
 
+User reported that neither logo link worked as intended. They clarified that the header logo should link to OASIS, while the sidebar event logo should link to the local front page.
+
+Files inspected
+
+* mkdocs.yml
+* docs/stylesheets/extra.css
+* scripts/template_regression_check.py
+* Material for MkDocs `partials/header.html` and `partials/nav.html`
+* built sidebar/header HTML in `/tmp/project_oasis_site_check/index.html`
+
+Actions taken
+
+* Set `extra.homepage` to the OASIS homepage so the header logo links to OASIS.
+* Added `docs/overrides/partials/nav.html` so the sidebar logo uses `nav.homepage.url` and links to the local Project Group front page.
+* Registered `docs/overrides` as the Material custom override directory.
+* Updated the regression check to protect the split-link behavior.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed built header logo href is `https://cu-esiil.github.io/home/`.
+* Confirmed built sidebar logo href is `.` on the front page, which resolves to the Project Group homepage.
+
+2026-04-24
+
+Prompt
+
 User asked for the ESIIL event logo at the top of the sidebar to link back to the front page.
 
 Files and folders inspected

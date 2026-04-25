@@ -26,6 +26,7 @@ def main() -> int:
     group_logo = ROOT / "docs" / "assets" / "esiil_content" / "group_logo.svg"
     event_group_logo = ROOT / "docs" / "assets" / "esiil_content" / "event_group_logo.png"
     logo_override = ROOT / "docs" / "overrides" / "partials" / "logo.html"
+    nav_override = ROOT / "docs" / "overrides" / "partials" / "nav.html"
     ai_dir = ROOT / "docs" / "ai-for-sustainability"
 
     index_text = index.read_text(encoding="utf-8") if index.exists() else ""
@@ -101,9 +102,10 @@ def main() -> int:
     require(mkdocs_text.find("AI for Sustainability") < mkdocs_text.find("Specialty Tracks"),
             "AI for Sustainability should appear before Specialty Tracks in nav.", errors)
     require("logo: 'assets/oasis_logo.png'" in mkdocs_text, "Header logo should use docs/assets/oasis_logo.png.", errors)
-    require("homepage: https://cu-esiil.github.io/Project_group_OASIS/" in mkdocs_text,
-            "Material homepage should point the logo to the Project_group_OASIS homepage.", errors)
-    require("custom_dir:" not in mkdocs_text, "custom_dir should not point to a missing overrides folder.", errors)
+    require("homepage: https://cu-esiil.github.io/home/" in mkdocs_text,
+            "Header logo should point to the OASIS homepage.", errors)
+    require("custom_dir: docs/overrides" in mkdocs_text and (ROOT / "docs" / "overrides").is_dir(),
+            "MkDocs should use the existing docs/overrides directory for the sidebar logo link override.", errors)
     require("extra_javascript:" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be registered.", errors)
     require("home-brand-link.js" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be referenced.", errors)
     require(logo.exists(), "docs/assets/oasis_logo.png is missing.", errors)
@@ -132,6 +134,10 @@ def main() -> int:
     require("https://what-uses-more.com" in (ai_dir / "what-does-it-cost.md").read_text(encoding="utf-8"),
             "What Does It Cost page should embed or link to the calculator.", errors)
     require(not logo_override.exists(), "Custom logo override should be removed so Material handles the homepage link.", errors)
+    require(nav_override.exists(), "Custom nav override should set the sidebar logo link to the local front page.", errors)
+    nav_override_text = nav_override.read_text(encoding="utf-8") if nav_override.exists() else ""
+    require("nav.homepage.url" in nav_override_text and "config.extra.homepage" not in nav_override_text,
+            "Sidebar nav override should use nav.homepage.url, not config.extra.homepage.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "display: flex" in css_text,
             "Sidebar branding area should be visible for the group logo.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "font-size: 0" in css_text,

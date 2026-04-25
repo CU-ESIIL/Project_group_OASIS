@@ -60,6 +60,7 @@ not_in_nav: |
 theme:
   highlightjs: true
   name: material
+  custom_dir: docs/overrides
   font: false
   logo: 'assets/oasis_logo.png'
   favicon: 'assets/esiil_content/favicon.ico'
@@ -94,7 +95,7 @@ theme:
 
 # Options
 extra:
-  homepage: https://cu-esiil.github.io/Project_group_OASIS/
+  homepage: https://cu-esiil.github.io/home/
   social:
     - icon: fontawesome/brands/github
     # link: https://github.com/cu-esiil/
