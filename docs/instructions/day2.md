@@ -1,4 +1,7 @@
 # Day 2 — Build, Explore, and Apply New Skills
+
+![Day 2 task pathway over a green mountain landscape](../assets/hero/day-2-hero.png)
+
 ## What today is about
 Today is about **going deeper**.
 You now have:

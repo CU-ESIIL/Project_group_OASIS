@@ -1,4 +1,7 @@
 # Day 1 — Meet Your Team and Define Your Project
+
+![Day 1 task pathway over a blue mountain landscape](../assets/hero/day-1-hero.png)
+
 ## What today is about
 Today is about **becoming a team and choosing a direction**.
 Before you write much, you should:

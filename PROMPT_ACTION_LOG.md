@@ -880,6 +880,35 @@ Verification
 
 Prompt
 
+User supplied hero images for the Day 1, Day 2, and Day 3 instruction pages.
+
+Files and folders inspected
+
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/assets/hero/
+* /Users/tuff/Downloads/day 1.png
+* /Users/tuff/Downloads/day 2.png
+* /Users/tuff/Downloads/day 3.png
+
+Actions taken
+
+* Copied the supplied Day 1 image to `docs/assets/hero/day-1-hero.png`.
+* Copied the supplied Day 2 image to `docs/assets/hero/day-2-hero.png`.
+* Copied the supplied Day 3 image to `docs/assets/hero/day-3-hero.png`.
+* Added each image directly below the matching instruction page title.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+
+2026-04-24
+
+Prompt
+
 User supplied hero banner images for the AI and Sustainability pages.
 
 Files and folders inspected

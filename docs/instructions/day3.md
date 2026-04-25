@@ -1,4 +1,7 @@
 # Day 3 — Synthesize, Polish, and Share
+
+![Day 3 task pathway over an orange mountain landscape](../assets/hero/day-3-hero.png)
+
 ## What today is about
 Today is about **turning your work into something others can understand and use**.
 You are not trying to make the project perfect. You are trying to make the project clear.
