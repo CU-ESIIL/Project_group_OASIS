@@ -1,4 +1,4 @@
-# Defining AI for Sustainability Scientists
+# Defining AI/ML
 
 AI in environmental science spans remote sensing, prediction, simulation, and scientific workflows.
 
