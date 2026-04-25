@@ -15,7 +15,7 @@ By the end of the day, your page should show:
 
 ---
 ## A — Meet your team before editing anything
-![People landmark](../assets/stickers/people.png){ .task-sticker }
+![D1-A Team sticker](../assets/stickers/tasks/d1-a.svg){ .task-sticker }
 
 **Landmark:** People
 
@@ -33,7 +33,7 @@ This project works best when it reflects the people in the group. The question y
 
 ---
 ## B — Choose your project and name it
-![Project Question landmark](../assets/stickers/question.png){ .task-sticker }
+![D1-B Question sticker](../assets/stickers/tasks/d1-b.svg){ .task-sticker }
 
 **Landmark:** Project Question
 
@@ -51,7 +51,7 @@ Helpful prompts:
 
 ---
 ## C — Add your team to the page
-![People landmark](../assets/stickers/people.png){ .task-sticker }
+![D1-C People sticker](../assets/stickers/tasks/d1-c.svg){ .task-sticker }
 
 **Landmark:** People
 
@@ -79,7 +79,7 @@ This turns your group from a list of names into a team. It also helps others und
 
 ---
 ## D — Talk about the specialty tracks
-![Specialty Tracks landmark](../assets/stickers/tracks.png){ .task-sticker }
+![D1-D Tracks sticker](../assets/stickers/tasks/d1-d.svg){ .task-sticker }
 
 **Landmark:** Specialty Tracks and Strategy
 
@@ -101,7 +101,7 @@ Tomorrow, you’ll choose a specialty training. Having this conversation now hel
 
 ---
 ## E — Take a first look at the data
-![Data Exploration landmark](../assets/stickers/data.png){ .task-sticker }
+![D1-E Data sticker](../assets/stickers/tasks/d1-e.svg){ .task-sticker }
 
 **Landmark:** Data Exploration
 
@@ -121,7 +121,7 @@ This is where your idea meets reality. Early observations often reshape the ques
 
 ---
 ## F — Capture what you tried and what comes next
-![Methods and Code landmark](../assets/stickers/methods.png){ .task-sticker }
+![D1-F Notes sticker](../assets/stickers/tasks/d1-f.svg){ .task-sticker }
 
 **Landmark:** Methods and Code
 

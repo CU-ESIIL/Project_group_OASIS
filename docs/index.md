@@ -1,13 +1,13 @@
 # OASIS Fire Speed Working Example
 
-![Forest landscape with fire-speed contours](assets/hero/hero.jpg)
+![Fire spread progression over a mountain landscape](assets/hero/hero.png)
 
 Replace this paragraph with your group’s purpose statement. In 1–2 sentences, say what your group is trying to understand, why it matters, and what kind of evidence or product you hope to share by the end of the summit.
 
 ## How to use this page
 This page is your group’s working project record. Over the summit, replace the example text with your question, people, data, methods, results, and final products.
 
-The section badges are landmarks. They help you match the day-by-day directions to the place on this page where that work belongs.
+The task stickers are landmarks. They help you match each day-by-day direction to the place on this page where that work belongs. The same sticker appears in the instructions and on the matching front-page section.
 
 - **People** — who is in the group and what each person brings
 - **Project Question** — what your group decided to explore
@@ -18,6 +18,9 @@ The section badges are landmarks. They help you match the day-by-day directions 
 - **Polished Outputs** — final figures, PDFs, slides, or other shareable products
 
 ## People { #people }
+
+![D1-A Team sticker](assets/stickers/tasks/d1-a.svg){ .task-sticker }
+![D1-C People sticker](assets/stickers/tasks/d1-c.svg){ .task-sticker }
 
 Replace this list with the people in your group. Link each name to that person’s existing learner file in the Innovation Summit learner folder.
 
@@ -31,6 +34,10 @@ Example format:
 Keep this as a simple Markdown list so each group can add or remove names quickly.
 
 ## Project Question { #project-question }
+
+![D1-B Question sticker](assets/stickers/tasks/d1-b.svg){ .task-sticker }
+![D2-A Question sticker](assets/stickers/tasks/d2-a.svg){ .task-sticker }
+![D3-A Story sticker](assets/stickers/tasks/d3-a.svg){ .task-sticker }
 
 Replace this text with your group’s project question. It is okay if the question changes during the summit.
 
@@ -46,6 +53,10 @@ Helpful prompts:
 
 ## Specialty Tracks and Strategy { #specialty-tracks-and-strategy }
 
+![D1-D Tracks sticker](assets/stickers/tasks/d1-d.svg){ .task-sticker }
+![D2-B Strategy sticker](assets/stickers/tasks/d2-b.svg){ .task-sticker }
+![D2-C Takeaways sticker](assets/stickers/tasks/d2-c.svg){ .task-sticker }
+
 Replace this text with notes about how your group is using the summit specialty tracks.
 
 Use this section to capture:
@@ -57,6 +68,10 @@ Use this section to capture:
 
 ## Data Exploration { #data-exploration }
 
+![D1-E Data sticker](assets/stickers/tasks/d1-e.svg){ .task-sticker }
+![D2-E Explore sticker](assets/stickers/tasks/d2-e.svg){ .task-sticker }
+![D3-C Clean Up sticker](assets/stickers/tasks/d3-c.svg){ .task-sticker }
+
 Replace this text with the datasets, maps, plots, screenshots, tables, or first observations your group is using to understand the question.
 
 ![Early exploration plot](assets/explorations/explore_data_plot.png)
@@ -66,6 +81,10 @@ Replace this text with the datasets, maps, plots, screenshots, tables, or first 
 [Document your group data notes](data.md){ .md-button }
 
 ## Methods and Code { #methods-and-code }
+
+![D1-F Notes sticker](assets/stickers/tasks/d1-f.svg){ .task-sticker }
+![D2-D Methods sticker](assets/stickers/tasks/d2-d.svg){ .task-sticker }
+![D3-C Clean Up sticker](assets/stickers/tasks/d3-c.svg){ .task-sticker }
 
 Replace this text with the tools, notebooks, scripts, workflows, or repeatable steps your group tried.
 
@@ -80,6 +99,10 @@ Include:
 [View shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code){ .md-button }
 
 ## Results { #results }
+
+![D2-F Results sticker](assets/stickers/tasks/d2-f.svg){ .task-sticker }
+![D3-B Results sticker](assets/stickers/tasks/d3-b.svg){ .task-sticker }
+![D3-E Present sticker](assets/stickers/tasks/d3-e.svg){ .task-sticker }
 
 Replace this text with emerging results, patterns, findings, surprises, or honest limits. A strong result makes a claim, points to evidence, and names uncertainty.
 
@@ -97,6 +120,11 @@ Useful result statements can sound like:
 *Replace this caption with what the panels compare or reveal.*
 
 ## Polished Outputs { #polished-outputs }
+
+![D2-G Plan sticker](assets/stickers/tasks/d2-g.svg){ .task-sticker }
+![D3-D Outputs sticker](assets/stickers/tasks/d3-d.svg){ .task-sticker }
+![D3-E Present sticker](assets/stickers/tasks/d3-e.svg){ .task-sticker }
+![D3-F Next Steps sticker](assets/stickers/tasks/d3-f.svg){ .task-sticker }
 
 Replace this text with the final things you want people to find after the summit: polished figures, a PDF, slides, a notebook, a data product, or a short handoff note.
 

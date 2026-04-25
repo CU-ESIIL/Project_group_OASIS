@@ -875,3 +875,60 @@ Verification
 * Ran `python3 scripts/template_regression_check.py`; passed.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+
+2026-04-24
+
+Prompt
+
+User disliked the existing abstract section stickers and asked to replace them with coordinated task stickers like the supplied mockup. They wanted Day 1 direction headers in the Day 1 color, each task beside its sticker, and the same stickers on the front page where the corresponding work belongs.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/instructions.md
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/stylesheets/extra.css
+* docs/assets/stickers/
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Added shared SVG task sticker assets under `docs/assets/stickers/tasks/` for Day 1, Day 2, and Day 3 tasks.
+* Updated Day 1, Day 2, and Day 3 instruction pages to use the task-specific sticker files instead of abstract section icon files.
+* Added the same task sticker files to the matching front-page sections so directions and homepage landmarks line up.
+* Removed CSS-injected homepage section badges so the visible homepage stickers now come from the same Markdown image paths as the directions.
+* Tuned task sticker styling and day color styling so Day 2 task headings use the Day 2 color.
+* Updated regression checks for the shared task-sticker system.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed built homepage and Day 1/2/3 pages reference the shared `assets/stickers/tasks/*.svg` files.
+
+2026-04-24
+
+Prompt
+
+User supplied a new hero image for the front page and asked for it to replace the current hero image.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/assets/hero/
+* /Users/tuff/Downloads/image.png
+
+Actions taken
+
+* Copied the supplied PNG into `docs/assets/hero/hero.png`.
+* Updated the front page hero image reference from `assets/hero/hero.jpg` to `assets/hero/hero.png`.
+* Updated the image alt text to describe the fire spread progression scene.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.

@@ -21,10 +21,11 @@ The final homepage should read like a compact evidence-backed synthesis: make cl
 Use the stickers like parking-garage landmarks:
 
 - day color tells you when the task happens
-- sticker design tells you where the work belongs on the main page
-- task letter tells you the sequence for that day
+- task code tells you the exact direction to follow
+- sticker title tells you the work to add or refine
+- the same sticker appears on the front page where that work belongs
 
-For example, “Day 2C, Specialty Tracks and Strategy” means Day 2, task C, in the section marked by the Specialty Tracks and Strategy sticker.
+For example, “D2-C Takeaways” means Day 2, task C. Find the same sticker on the front page to know where that work belongs.
 
 ## Editing this project site
 Most summit participants should only edit Markdown files.

@@ -138,74 +138,6 @@ body {
   border-left: 0.45rem solid var(--oasis-color-accent-green);
 }
 
-.md-typeset h2#people,
-.md-typeset h2#project-question,
-.md-typeset h2#specialty-tracks-and-strategy,
-.md-typeset h2#data-exploration,
-.md-typeset h2#methods-and-code,
-.md-typeset h2#results,
-.md-typeset h2#polished-outputs {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-
-.md-typeset h2#people::before,
-.md-typeset h2#project-question::before,
-.md-typeset h2#specialty-tracks-and-strategy::before,
-.md-typeset h2#data-exploration::before,
-.md-typeset h2#methods-and-code::before,
-.md-typeset h2#results::before,
-.md-typeset h2#polished-outputs::before {
-  content: "";
-  display: inline-block;
-  flex: 0 0 2rem;
-  width: 2rem;
-  height: 2rem;
-  border: 2px solid var(--oasis-color-body-text);
-  background: var(--oasis-color-surface);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0.18rem 0.18rem 0 var(--oasis-color-gray-relief);
-}
-
-.md-typeset h2#people::before {
-  background-image: url("../assets/stickers/people.png");
-  border-color: var(--oasis-color-primary-blue);
-}
-
-.md-typeset h2#project-question::before {
-  background-image: url("../assets/stickers/question.png");
-  border-color: var(--oasis-color-primary-blue);
-}
-
-.md-typeset h2#specialty-tracks-and-strategy::before {
-  background-image: url("../assets/stickers/tracks.png");
-  border-color: var(--oasis-color-primary-blue);
-}
-
-.md-typeset h2#data-exploration::before {
-  background-image: url("../assets/stickers/data.png");
-  border-color: var(--oasis-color-accent-blue);
-}
-
-.md-typeset h2#methods-and-code::before {
-  background-image: url("../assets/stickers/methods.png");
-  border-color: var(--oasis-color-accent-blue);
-}
-
-.md-typeset h2#results::before {
-  background-image: url("../assets/stickers/results.png");
-  border-color: var(--oasis-color-accent-green);
-}
-
-.md-typeset h2#polished-outputs::before {
-  background-image: url("../assets/stickers/outputs.png");
-  border-color: var(--oasis-color-accent-green);
-  box-shadow: 0.18rem 0.18rem 0 var(--oasis-color-light-green);
-}
-
 .md-typeset blockquote:has(> h3) {
   margin: var(--oasis-space-4) 0;
   padding: var(--oasis-space-5);
@@ -226,11 +158,14 @@ body {
 }
 
 .md-typeset img.task-sticker {
-  width: 2.4rem;
-  height: 2.4rem;
-  margin: 0 0 var(--oasis-space-2);
-  border: 2px solid var(--oasis-color-border);
-  box-shadow: 0.18rem 0.18rem 0 var(--oasis-color-gray-relief);
+  display: inline-block;
+  width: clamp(6.8rem, 24vw, 9.4rem);
+  height: auto;
+  margin: 0 var(--oasis-space-2) var(--oasis-space-3) 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0.45rem 1.2rem rgba(22, 26, 25, 0.12);
+  vertical-align: top;
 }
 
 .md-typeset h2[id^="a-"],
@@ -253,7 +188,7 @@ body {
 .md-typeset h1[id^="day-2"] ~ h2[id^="f-"],
 .md-typeset h1[id^="day-2"] ~ h2[id^="g-"] {
   border-left-color: var(--oasis-color-accent-blue);
-  color: var(--oasis-color-primary-blue);
+  color: var(--oasis-color-accent-blue);
 }
 
 .md-typeset h1[id^="day-3"] ~ h2[id^="a-"],

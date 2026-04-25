@@ -13,7 +13,7 @@ By the end of the day, your page should tell a coherent story:
 
 ---
 ## A — Revisit the whole story
-![Project Question landmark](../assets/stickers/question.png){ .task-sticker }
+![D3-A Story sticker](../assets/stickers/tasks/d3-a.svg){ .task-sticker }
 
 **Landmark:** Project Question
 
@@ -32,7 +32,7 @@ The story should match the work you actually did, not the plan you started with.
 
 ---
 ## B — Finalize the results
-![Results landmark](../assets/stickers/results.png){ .task-sticker }
+![D3-B Results sticker](../assets/stickers/tasks/d3-b.svg){ .task-sticker }
 
 **Landmark:** Results
 
@@ -57,8 +57,7 @@ A strong result does not need to be a perfect answer. It needs to be honest and 
 
 ---
 ## C — Clean the data and methods sections
-![Data Exploration landmark](../assets/stickers/data.png){ .task-sticker }
-![Methods and Code landmark](../assets/stickers/methods.png){ .task-sticker }
+![D3-C Clean Up sticker](../assets/stickers/tasks/d3-c.svg){ .task-sticker }
 
 **Landmark:** Data Exploration and Methods and Code
 
@@ -83,7 +82,7 @@ Clarity matters more than completeness.
 
 ---
 ## D — Add polished outputs
-![Polished Outputs landmark](../assets/stickers/outputs.png){ .task-sticker }
+![D3-D Outputs sticker](../assets/stickers/tasks/d3-d.svg){ .task-sticker }
 
 **Landmark:** Polished Outputs
 
@@ -104,8 +103,7 @@ This section is where someone goes after the summit to find the most useful take
 
 ---
 ## E — Prepare to present from the page
-![Results landmark](../assets/stickers/results.png){ .task-sticker }
-![Polished Outputs landmark](../assets/stickers/outputs.png){ .task-sticker }
+![D3-E Present sticker](../assets/stickers/tasks/d3-e.svg){ .task-sticker }
 
 **Landmark:** Results and Polished Outputs
 
@@ -124,7 +122,7 @@ Your page does not need to include every detail. It should help you tell the sto
 
 ---
 ## F — Leave the project useful for others
-![Polished Outputs landmark](../assets/stickers/outputs.png){ .task-sticker }
+![D3-F Next Steps sticker](../assets/stickers/tasks/d3-f.svg){ .task-sticker }
 
 **Landmark:** Polished Outputs
 

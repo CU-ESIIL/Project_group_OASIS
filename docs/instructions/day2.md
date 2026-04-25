@@ -18,7 +18,7 @@ By the end of the day, your page should show:
 
 ---
 ## A — Reconnect with your question
-![Project Question landmark](../assets/stickers/question.png){ .task-sticker }
+![D2-A Question sticker](../assets/stickers/tasks/d2-a.svg){ .task-sticker }
 
 **Landmark:** Project Question
 
@@ -37,7 +37,7 @@ Your question is allowed to evolve. That is part of the work.
 
 ---
 ## B — Choose how to use the specialty tracks
-![Specialty Tracks landmark](../assets/stickers/tracks.png){ .task-sticker }
+![D2-B Strategy sticker](../assets/stickers/tasks/d2-b.svg){ .task-sticker }
 
 **Landmark:** Specialty Tracks and Strategy
 
@@ -56,7 +56,7 @@ This does not need to be permanent. It is a working strategy.
 
 ---
 ## C — Attend a specialty training and bring something back
-![Specialty Tracks landmark](../assets/stickers/tracks.png){ .task-sticker }
+![D2-C Takeaways sticker](../assets/stickers/tasks/d2-c.svg){ .task-sticker }
 
 **Landmark:** Specialty Tracks and Strategy
 
@@ -75,7 +75,7 @@ The goal is not just to attend a session. The goal is to bring new capability ba
 
 ---
 ## D — Apply what you learned
-![Methods and Code landmark](../assets/stickers/methods.png){ .task-sticker }
+![D2-D Methods sticker](../assets/stickers/tasks/d2-d.svg){ .task-sticker }
 
 **Landmark:** Methods and Code
 
@@ -96,7 +96,7 @@ Learning matters most when it changes what you do.
 
 ---
 ## E — Push the data exploration further
-![Data Exploration landmark](../assets/stickers/data.png){ .task-sticker }
+![D2-E Explore sticker](../assets/stickers/tasks/d2-e.svg){ .task-sticker }
 
 **Landmark:** Data Exploration
 
@@ -116,7 +116,7 @@ Add updated figures or notes to the Data Exploration section.
 
 ---
 ## F — Start forming results
-![Results landmark](../assets/stickers/results.png){ .task-sticker }
+![D2-F Results sticker](../assets/stickers/tasks/d2-f.svg){ .task-sticker }
 
 **Landmark:** Results
 
@@ -135,7 +135,7 @@ This is where exploration starts becoming explanation.
 
 ---
 ## G — Set up Day 3
-![Polished Outputs landmark](../assets/stickers/outputs.png){ .task-sticker }
+![D2-G Plan sticker](../assets/stickers/tasks/d2-g.svg){ .task-sticker }
 
 **Landmark:** Polished Outputs
 

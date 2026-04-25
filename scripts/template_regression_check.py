@@ -48,8 +48,8 @@ def main() -> int:
         "Polished Outputs",
     ]:
         require(section in index_text, f"Front page section '{section}' is missing.", errors)
-    require("section-sticker" not in index_text and "assets/stickers/" not in index_text,
-            "Public Front Page should not put sticker images directly in headings.", errors)
+    require("section-sticker" not in index_text and "assets/stickers/tasks/" in index_text,
+            "Public Front Page should use shared task sticker images, not old section-sticker markup.", errors)
     require("<div" not in index_text and "<table" not in index_text,
             "Public Front Page should avoid participant-facing raw HTML layout.", errors)
     require('--8<-- "people/' not in index_text, "Public Front Page should not include local People profile snippets.", errors)
@@ -78,7 +78,7 @@ def main() -> int:
 
     for day in ["day1", "day2", "day3"]:
         day_text = (ROOT / "docs" / "instructions" / f"{day}.md").read_text(encoding="utf-8")
-        require("../assets/stickers/" in day_text and "{ .task-sticker }" in day_text,
+        require("../assets/stickers/tasks/" in day_text and "{ .task-sticker }" in day_text,
                 f"{day}.md should show task stickers from the shared sticker assets.", errors)
 
     for folder in ["hero", "whiteboards", "explorations", "figures", "team", "files", "stickers"]:
@@ -115,6 +115,17 @@ def main() -> int:
     require((people_dir / "template.md").exists(), "People template is missing.", errors)
     for sticker in ["people", "question", "tracks", "data", "methods", "results", "outputs"]:
         require((stickers_dir / f"{sticker}.png").exists(), f"Sticker asset {sticker}.png is missing.", errors)
+    task_stickers = [
+        "d1-a", "d1-b", "d1-c", "d1-d", "d1-e", "d1-f",
+        "d2-a", "d2-b", "d2-c", "d2-d", "d2-e", "d2-f", "d2-g",
+        "d3-a", "d3-b", "d3-c", "d3-d", "d3-e", "d3-f",
+    ]
+    for sticker in task_stickers:
+        sticker_path = f"assets/stickers/tasks/{sticker}.svg"
+        require((stickers_dir / "tasks" / f"{sticker}.svg").exists(),
+                f"Task sticker asset {sticker}.svg is missing.", errors)
+        require(sticker_path in index_text,
+                f"Public Front Page should show task sticker {sticker}.svg.", errors)
     require((ai_dir / "defining-ai.md").exists(), "Defining AI page is missing.", errors)
     require((ai_dir / "defining-sustainability.md").exists(), "Defining Sustainability page is missing.", errors)
     require((ai_dir / "what-does-it-cost.md").exists(), "What Does It Cost page is missing.", errors)
@@ -137,8 +148,8 @@ def main() -> int:
             "Dynamic section title should be hidden so the header keeps the project/group name.", errors)
     require(".md-typeset h1" in css_text and "var(--oasis-color-primary-blue)" in css_text,
             "Main page title should use ESIIL brand blue.", errors)
-    require(".md-typeset h2#people::before" in css_text and "assets/stickers/people.png" in css_text,
-            "CSS landmark badges should use shared sticker image assets.", errors)
+    require("assets/stickers/people.png" not in css_text and "tasks/d1-a.svg" not in css_text,
+            "Homepage should use shared task sticker files in Markdown, not CSS-injected section stickers.", errors)
     require(".md-typeset h1" in css_text and "color: var(--oasis-color-primary-blue)" in css_text,
             "Main content title should use ESIIL brand blue.", errors)
     require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
