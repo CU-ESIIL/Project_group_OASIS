@@ -136,8 +136,8 @@ def main() -> int:
             "Sidebar branding area should be visible for the group logo.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "font-size: 0" in css_text,
             "Sidebar title text node should be hidden while keeping the logo visible.", errors)
-    require(".md-sidebar--primary .md-nav__title::before" in css_text,
-            "Sidebar group logo should render from the title pseudo-element.", errors)
+    require(".md-sidebar--primary .md-nav__title .md-logo" in css_text and "display: block" in css_text,
+            "Sidebar group logo should render on the existing Material logo link.", errors)
     require("event_group_logo.png" in css_text,
             "Sidebar branding area should use the event group logo asset.", errors)
     require(".md-sidebar--primary .md-nav__title .md-ellipsis" in css_text and "display: none" in css_text,

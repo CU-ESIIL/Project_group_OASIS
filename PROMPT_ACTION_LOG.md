@@ -880,6 +880,55 @@ Verification
 
 Prompt
 
+User asked for the ESIIL event logo at the top of the sidebar to link back to the front page.
+
+Files and folders inspected
+
+* docs/stylesheets/extra.css
+* scripts/template_regression_check.py
+* mkdocs.yml
+* built sidebar HTML in `/tmp/project_oasis_site_check/index.html`
+
+Actions taken
+
+* Moved the sidebar event logo from a non-clickable CSS pseudo-element onto Material's existing sidebar logo anchor.
+* Hid the default logo image inside that anchor while using `event_group_logo.png` as the clickable background image.
+* Added focus styling for keyboard accessibility.
+* Updated the regression check to require the logo to render on the existing Material logo link.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built sidebar still contains Material's homepage logo anchor and the CSS now draws `event_group_logo.png` on that link.
+
+2026-04-24
+
+Prompt
+
+User asked to move the Day 1, Day 2, and Day 3 instruction banner images before the page titles.
+
+Files inspected
+
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+
+Actions taken
+
+* Moved each day hero image above its H1 title.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+
+2026-04-24
+
+Prompt
+
 User supplied hero images for the Day 1, Day 2, and Day 3 instruction pages.
 
 Files and folders inspected

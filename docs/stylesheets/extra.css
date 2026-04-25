@@ -251,18 +251,26 @@ body {
 }
 
 .md-sidebar--primary .md-nav__title::before {
-  content: "";
-  display: block;
-  width: 17.6rem;
-  height: 12.8rem;
-  margin-top: -1.15rem;
-  background: url("../assets/esiil_content/event_group_logo.png") center / contain no-repeat;
+  content: none;
 }
 
 .md-sidebar--primary .md-nav__title .md-logo {
-  display: none;
-  margin: 0;
+  display: block;
+  width: 17.6rem;
+  height: 12.8rem;
+  margin: -1.15rem 0 0;
   padding: 0;
+  background: url("../assets/esiil_content/event_group_logo.png") center / contain no-repeat;
+}
+
+.md-sidebar--primary .md-nav__title .md-logo img,
+.md-sidebar--primary .md-nav__title .md-logo svg {
+  display: none;
+}
+
+.md-sidebar--primary .md-nav__title .md-logo:focus-visible {
+  outline: 3px solid var(--oasis-color-accent-blue);
+  outline-offset: 0.25rem;
 }
 
 .md-sidebar--primary .md-nav__title .md-ellipsis {
