@@ -981,10 +981,9 @@ body.presentation-mode .oasis-presentation-toolbar {
   display: none !important;
 }
 
-/* Hide large navigation/action buttons during presentation mode */
-body.presentation-mode .md-typeset .md-button,
-body.presentation-mode .md-typeset p > strong > a,
-body.presentation-mode .md-typeset .oasis-launch-button {
+/* Hide homepage/instructions crosswalk sticker links in presentation mode */
+body.presentation-mode .md-typeset a:has(> img.task-sticker),
+body.presentation-mode .md-typeset img.task-sticker {
   display: none !important;
 }
 
