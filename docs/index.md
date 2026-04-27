@@ -130,7 +130,14 @@ The shared strategy is to keep the fire sequence constant and change only the de
 <span id="edit-D3-C"></span>
 [![D3-C: Clean Up](assets/stickers/tasks/d3-c.svg){ .task-sticker }](instructions/day3.md#guide-D3-C)
 
-<iframe src="/assets/figures/ndvi_1_year.html" title="Interactive NDVI cube (1 year)" loading="lazy" ></iframe>
+<iframe
+  src="assets/examples/cubedynamics_ndvi_1_year.html"
+  title="CubeDynamics NDVI one year example"
+  loading="lazy"
+  class="cube-example-frame">
+</iframe>
+
+[Open the NDVI cube example in a new tab](assets/examples/cubedynamics_ndvi_1_year.html) →
 
 The first data pass uses a ten-day synthetic fire sequence designed to be realistic but readable. The sequence grows directionally, develops irregular structure, and exhibits branching behavior. Starting with a controlled example allows the group to isolate geometric effects before moving to noisier satellite-derived perimeter products.
 
@@ -144,14 +151,7 @@ Useful data products for this example include daily perimeter polygons, derived 
 ![Early exploration plot](assets/explorations/explore_data_plot.png)
 *This early exploration checks how much the apparent velocity changes when the same evolving polygon is summarized by different geometric measurements.*
 
-<iframe
-  src="assets/examples/cubedynamics_ndvi_1_year.html"
-  title="CubeDynamics NDVI one year example"
-  loading="lazy"
-  class="cube-example-frame">
-</iframe>
 
-[Open the NDVI cube example in a new tab](assets/examples/cubedynamics_ndvi_1_year.html) →
 
 !!! note "How to replace the exploration figure"
     Upload rough plots, screenshots, maps, or GIFs to `docs/assets/explorations/`. Rewrite the caption so it says what the figure shows, what surprised you, and what still does not make sense.
