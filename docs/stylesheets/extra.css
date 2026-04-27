@@ -981,6 +981,13 @@ body.presentation-mode .oasis-presentation-toolbar {
   display: none !important;
 }
 
+/* Hide large navigation/action buttons during presentation mode */
+body.presentation-mode .md-typeset .md-button,
+body.presentation-mode .md-typeset p > strong > a,
+body.presentation-mode .md-typeset .oasis-launch-button {
+  display: none !important;
+}
+
 body.presentation-mode .oasis-present-exit,
 body.presentation-mode .oasis-present-identity {
   display: inline-flex;
