@@ -57,6 +57,24 @@ Use this loop every time you update the public-facing page:
 6. Wait for GitHub Pages to rebuild, then refresh the public site.
 7. If old text still appears, you edited the wrong file or the site has not rebuilt yet.
 
+## Edit Mode and Public Mode
+
+The Public Front Page has a small **Show template guidance** toggle near the top.
+
+- Leave it on while editing during the workshop.
+- Turn it off to preview the cleaner public-facing page.
+- The setting is saved in your browser.
+
+Write future editor guidance as collapsible Markdown notes, not as public paragraphs:
+
+```markdown
+??? note "D2-E: How to edit this section"
+    Replace this guidance with short instructions for editors.
+    Keep public-facing project text outside this note.
+```
+
+Guidance blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit`, or `Show template guidance` are hidden in Public Mode on the front page.
+
 ## Where files go
 
 | Put this here | Use it for |

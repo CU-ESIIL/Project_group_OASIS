@@ -105,6 +105,9 @@ extra_css:
   - stylesheets/tokens.css
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/mode-toggle.js
+
 hooks:
   - hooks.py
 
@@ -116,10 +119,12 @@ plugins:
           include_source: True
           ignore_h1_titles: True
 markdown_extensions:
+  - admonition
   - toc:
       toc_depth: 2
   - attr_list
   - md_in_html
+  - pymdownx.details
   - pymdownx.snippets:
       base_path:
         - docs

@@ -20,6 +20,7 @@ def main() -> int:
     mkdocs = ROOT / "mkdocs.yml"
     css = ROOT / "docs" / "stylesheets" / "extra.css"
     tokens = ROOT / "docs" / "stylesheets" / "tokens.css"
+    mode_toggle = ROOT / "docs" / "javascripts" / "mode-toggle.js"
     hooks = ROOT / "hooks.py"
     references = ROOT / "docs" / "references.bib"
     stickers_registry = ROOT / "docs" / "stickers.md"
@@ -38,12 +39,19 @@ def main() -> int:
     mkdocs_text = mkdocs.read_text(encoding="utf-8") if mkdocs.exists() else ""
     css_text = css.read_text(encoding="utf-8") if css.exists() else ""
     tokens_text = tokens.read_text(encoding="utf-8") if tokens.exists() else ""
+    mode_toggle_text = mode_toggle.read_text(encoding="utf-8") if mode_toggle.exists() else ""
     hooks_text = hooks.read_text(encoding="utf-8") if hooks.exists() else ""
     references_text = references.read_text(encoding="utf-8") if references.exists() else ""
     stickers_text = stickers_registry.read_text(encoding="utf-8") if stickers_registry.exists() else ""
     people_data_text = people_data.read_text(encoding="utf-8") if people_data.exists() else ""
 
     require(index.exists(), "docs/index.md is missing.", errors)
+    require("public_mode_toggle: true" in index_text,
+            "Public Front Page should opt into the Edit/Public mode toggle.", errors)
+    require("??? note" in index_text and "Show template guidance" in index_text,
+            "Public Front Page should use collapsible Markdown guidance blocks.", errors)
+    require("Replace this paragraph" not in index_text and "Replace this text" not in index_text,
+            "Inline replacement guidance should move into collapsible guidance blocks.", errors)
     require("## How to use this page" in index_text, "Front page sticker legend is missing.", errors)
     for section in [
         "People",
@@ -121,8 +129,11 @@ def main() -> int:
             "Header logo should point to the OASIS homepage.", errors)
     require("custom_dir: docs/overrides" in mkdocs_text and (ROOT / "docs" / "overrides").is_dir(),
             "MkDocs should use the existing docs/overrides directory for the sidebar logo link override.", errors)
-    require("extra_javascript:" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be registered.", errors)
+    require("extra_javascript:" in mkdocs_text and "javascripts/mode-toggle.js" in mkdocs_text,
+            "Edit/Public mode toggle JavaScript should be registered.", errors)
     require("home-brand-link.js" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be referenced.", errors)
+    require("- admonition" in mkdocs_text and "- pymdownx.details" in mkdocs_text,
+            "Collapsible Material guidance blocks should be enabled.", errors)
     require(logo.exists(), "docs/assets/oasis_logo.png is missing.", errors)
     require(group_logo.exists(), "docs/assets/esiil_content/group_logo.svg is missing.", errors)
     require(event_group_logo.exists(), "docs/assets/esiil_content/event_group_logo.png is missing.", errors)
@@ -178,6 +189,8 @@ def main() -> int:
     require(".md-typeset h1" in css_text and "color: var(--oasis-color-primary-blue)" in css_text,
             "Main content title should use ESIIL brand blue.", errors)
     require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
+    require(".oasis-mode-toggle" in css_text and "body.public-mode:has(.oasis-public-mode-marker)" in css_text,
+            "Edit/Public mode toggle styles are missing.", errors)
     require(".md-sidebar--secondary .md-nav__link" in css_text and "oasis-day-marker" in css_text,
             "Instruction pages should color the right table of contents by day.", errors)
     require("--oasis-day-1-color" in tokens_text and "--oasis-day-2-color" in tokens_text and "--oasis-day-3-color" in tokens_text,
@@ -196,6 +209,11 @@ def main() -> int:
             "People gallery hook should render cards from docs/_data/people.yml.", errors)
     require("DAY_MARKER_TEMPLATE" in hooks_text and "oasis_day" in hooks_text,
             "Instruction day marker hook should drive page-specific TOC color styling.", errors)
+    require("PUBLIC_MODE_MARKER" in hooks_text and "public_mode_toggle" in hooks_text,
+            "Front page should get a hook-generated public-mode marker.", errors)
+    require(mode_toggle.exists(), "Mode toggle JavaScript is missing.", errors)
+    require("localStorage" in mode_toggle_text and "oasis-scaffold" in mode_toggle_text,
+            "Mode toggle JavaScript should persist mode and identify scaffold guidance blocks.", errors)
 
     if errors:
         print("Template regression check failed:")

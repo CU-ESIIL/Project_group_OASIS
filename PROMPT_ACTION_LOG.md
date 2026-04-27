@@ -1169,3 +1169,37 @@ Verification
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Confirmed the built Day 1, Day 2, and Day 3 pages include the expected `oasis-day-marker` values.
+
+2026-04-27
+
+Prompt
+
+User asked to add an Edit Mode / Public Mode toggle to the public front page so workshop guidance remains available by default, while Public Mode hides scaffolding and shows a polished fire-spread example narrative.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/instructions.md
+* docs/stylesheets/extra.css
+* docs/javascripts/
+* hooks.py
+* mkdocs.yml
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Added front-page metadata and hook-generated marker support for the Edit/Public mode toggle.
+* Added `docs/javascripts/mode-toggle.js` to create the toggle, persist the setting in local storage, and mark scaffold admonitions.
+* Registered the JavaScript asset and enabled Material-style collapsible admonitions.
+* Reworked the public front page so visible text reads as a polished fire-spread example while editor instructions live in collapsible Markdown guidance blocks.
+* Added centralized CSS for the toggle and Public Mode hiding behavior.
+* Documented how future editors should write guidance blocks in Markdown.
+* Updated regression checks to protect the toggle, scaffolding pattern, and public-mode marker.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built homepage includes the public-mode marker, collapsible scaffold blocks, People gallery, registered mode-toggle script, and D1-A bidirectional sticker links.
