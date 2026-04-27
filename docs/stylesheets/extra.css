@@ -126,16 +126,19 @@ body {
 .md-typeset h1[id^="day-1"] {
   padding-left: var(--oasis-space-4);
   border-left: 0.45rem solid var(--oasis-color-primary-blue);
+  color: var(--oasis-day-1-color);
 }
 
 .md-typeset h1[id^="day-2"] {
   padding-left: var(--oasis-space-4);
   border-left: 0.45rem solid var(--oasis-color-accent-blue);
+  color: var(--oasis-day-2-color);
 }
 
 .md-typeset h1[id^="day-3"] {
   padding-left: var(--oasis-space-4);
   border-left: 0.45rem solid var(--oasis-color-accent-green);
+  color: var(--oasis-day-3-color);
 }
 
 .md-typeset blockquote:has(> h3) {
@@ -192,23 +195,27 @@ body {
   display: none;
 }
 
-.template-guidance-toggle {
-  margin: 0.35rem var(--oasis-space-3) var(--oasis-space-4);
-  padding: 0.55rem 0.65rem;
-  border: 1px solid var(--oasis-color-border);
-  border-radius: var(--oasis-radius-md);
-  background: var(--oasis-color-surface);
-  box-shadow: var(--oasis-shadow-sm);
+.md-nav__item.template-guidance-toggle {
+  margin: 0.25rem 0 var(--oasis-space-3);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .template-guidance-toggle__label {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  width: 100%;
+  gap: 0.42rem;
+  width: auto;
+  margin-left: 0.65rem;
+  padding: 0.34rem 0.48rem;
+  border: 1px solid var(--oasis-color-border);
+  border-radius: var(--oasis-radius-pill);
+  background: rgba(66, 188, 220, 0.08);
   color: var(--oasis-color-text);
   cursor: pointer;
-  font-size: 0.68rem;
+  font-size: 0.64rem;
   font-weight: 800;
   line-height: 1.25;
 }
@@ -226,8 +233,8 @@ body {
   flex: 0 0 auto;
   position: relative;
   display: inline-block;
-  width: 2rem;
-  height: 1.08rem;
+  width: 1.75rem;
+  height: 0.94rem;
   border-radius: var(--oasis-radius-pill);
   background: var(--oasis-color-border-strong);
   transition: background-color var(--oasis-transition-fast);
@@ -235,10 +242,10 @@ body {
 
 .template-guidance-toggle__control::after {
   position: absolute;
-  top: 0.13rem;
-  left: 0.14rem;
-  width: 0.82rem;
-  height: 0.82rem;
+  top: 0.12rem;
+  left: 0.13rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(22, 26, 25, 0.28);
@@ -251,7 +258,7 @@ body {
 }
 
 .template-guidance-toggle__label input:checked + .template-guidance-toggle__control::after {
-  transform: translateX(0.9rem);
+  transform: translateX(0.78rem);
 }
 
 .template-guidance-toggle__label:has(input:focus-visible) .template-guidance-toggle__control {
@@ -261,10 +268,6 @@ body {
 
 .template-guidance-toggle__text {
   color: var(--oasis-color-text-strong);
-}
-
-body:not(.has-template-guidance) .template-guidance-toggle {
-  display: none;
 }
 
 body.hide-template-guidance .md-typeset details.oasis-scaffold {
@@ -646,13 +649,14 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   font-weight: 600;
 }
 
+.md-typeset .md-button,
 .md-typeset p > strong > a {
   display: inline-flex;
   align-items: center;
   margin: 0.2rem 0.45rem 0.45rem 0;
-  padding: 0.5rem 2.5rem;
+  padding: 0.58rem 1.15rem;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: var(--oasis-radius-sm);
   background: linear-gradient(90deg, var(--oasis-color-accent-blue), var(--oasis-color-light-green));
   box-shadow: var(--oasis-shadow-sm);
   color: var(--oasis-color-body-text);
@@ -660,6 +664,7 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   text-transform: uppercase;
 }
 
+.md-typeset .md-button:is(:hover, :focus-visible),
 .md-typeset p > strong > a:is(:hover, :focus-visible) {
   color: var(--oasis-color-body-text);
   box-shadow: var(--oasis-shadow-md);
@@ -676,7 +681,7 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   padding: 0.9rem 1.25rem;
   border: 0;
   border-radius: var(--oasis-radius-md);
-  background: linear-gradient(90deg, var(--oasis-color-primary-blue), var(--oasis-color-accent-green));
+  background: linear-gradient(90deg, var(--oasis-color-accent-blue), var(--oasis-color-accent-green));
   box-shadow: var(--oasis-shadow-md);
   color: #ffffff;
   font-size: var(--oasis-font-size-2);

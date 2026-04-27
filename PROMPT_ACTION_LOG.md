@@ -1301,3 +1301,33 @@ Verification
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Confirmed built HTML places the toggle in the sidebar before the nav list and still includes Cloud Triangle navigation, the People gallery, and D1-A bidirectional sticker links.
+
+2026-04-27
+
+Prompt
+
+User asked for small visual tweaks after the sidebar guidance toggle: move the toggle under Instructions before AI for Sustainability, shorten the label, color-match Day 2/Day 3 instruction headers, make the fixed header show only the public page title, and align animated buttons with the ESIIL style guide.
+
+Files and folders inspected
+
+* docs/overrides/partials/nav.html
+* docs/javascripts/mode-toggle.js
+* docs/stylesheets/extra.css
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Moved the template guidance toggle into the nav list immediately after the Instructions section and before AI for Sustainability.
+* Shortened the visible label to `Guidance on`, with JavaScript updating it to `Guidance off` when disabled.
+* Added explicit Day 1, Day 2, and Day 3 H1 colors using the existing day color tokens.
+* Updated the shared JavaScript to set the fixed header title from the visible page H1 while keeping the dynamic section topic hidden.
+* Consolidated site button styling so `.md-button` and launch buttons use ESIIL-style gradients, compact padding, rounded corners, and subtle hover movement.
+* Updated regression checks for the new toggle placement, dynamic label, H1 color tokens, and header-title behavior.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed built HTML places the toggle after Instructions and before AI for Sustainability, includes compact `Guidance on` text, keeps Cloud Triangle navigation, and includes the updated button/header JavaScript assets.

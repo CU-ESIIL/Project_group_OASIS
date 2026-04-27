@@ -19,6 +19,18 @@
     document.querySelectorAll("[data-oasis-mode-toggle]").forEach((toggle) => {
       toggle.checked = showGuidance;
     });
+    document.querySelectorAll(".template-guidance-toggle__text").forEach((label) => {
+      label.textContent = showGuidance ? "Guidance on" : "Guidance off";
+    });
+  }
+
+  function updateHeaderTitle() {
+    const titleTarget = document.querySelector(".md-header__topic:first-child .md-ellipsis");
+    const pageHeading = document.querySelector(".md-typeset h1");
+    if (!titleTarget || !pageHeading) {
+      return;
+    }
+    titleTarget.textContent = pageHeading.textContent.trim();
   }
 
   function markScaffoldBlocks() {
@@ -52,6 +64,7 @@
     markScaffoldBlocks();
     bindToggles();
     applyGuidanceMode(readShowGuidance());
+    updateHeaderTitle();
 
     document.body.classList.toggle("has-template-guidance", pageHasTemplateGuidance());
   }

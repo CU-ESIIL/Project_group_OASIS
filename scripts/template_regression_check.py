@@ -175,8 +175,10 @@ def main() -> int:
     nav_override_text = nav_override.read_text(encoding="utf-8") if nav_override.exists() else ""
     require("nav.homepage.url" in nav_override_text and "config.extra.homepage" not in nav_override_text,
             "Sidebar nav override should use nav.homepage.url, not config.extra.homepage.", errors)
-    require("template-guidance-toggle" in nav_override_text and "Show template guidance" in nav_override_text,
+    require("template-guidance-toggle" in nav_override_text and "Guidance on" in nav_override_text,
             "Template guidance toggle should render in the sidebar nav override.", errors)
+    require('nav_item.title == "Instructions"' in nav_override_text,
+            "Template guidance toggle should render after the Instructions nav cluster.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "display: flex" in css_text,
             "Sidebar branding area should be visible for the group logo.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "font-size: 0" in css_text,
@@ -191,6 +193,8 @@ def main() -> int:
             "Header title text should not be hidden.", errors)
     require(".md-header__topic + .md-header__topic" in css_text and "display: none" in css_text,
             "Dynamic section title should be hidden so the header keeps the project/group name.", errors)
+    require("updateHeaderTitle" in mode_toggle_text and ".md-typeset h1" in mode_toggle_text,
+            "Header title should be set from the visible page H1.", errors)
     require(".md-typeset h1" in css_text and "var(--oasis-color-primary-blue)" in css_text,
             "Main page title should use ESIIL brand blue.", errors)
     require("assets/stickers/people.png" not in css_text and "tasks/d1-a.svg" not in css_text,
@@ -200,6 +204,8 @@ def main() -> int:
     require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
     require(".template-guidance-toggle" in css_text and "body.hide-template-guidance .md-typeset details.oasis-scaffold" in css_text,
             "Sidebar template guidance toggle styles are missing.", errors)
+    require("var(--oasis-day-2-color)" in css_text and "var(--oasis-day-3-color)" in css_text,
+            "Day 2 and Day 3 H1 colors should use day color tokens.", errors)
     require(".md-sidebar--secondary .md-nav__link" in css_text and "oasis-day-marker" in css_text,
             "Instruction pages should color the right table of contents by day.", errors)
     require("--oasis-day-1-color" in tokens_text and "--oasis-day-2-color" in tokens_text and "--oasis-day-3-color" in tokens_text,
@@ -223,6 +229,8 @@ def main() -> int:
     require(mode_toggle.exists(), "Mode toggle JavaScript is missing.", errors)
     require("localStorage" in mode_toggle_text and "oasis-scaffold" in mode_toggle_text and "oasis-template-guidance" in mode_toggle_text,
             "Mode toggle JavaScript should persist mode and identify scaffold guidance blocks.", errors)
+    require("Guidance on" in mode_toggle_text and "Guidance off" in mode_toggle_text,
+            "Mode toggle label should be compact and dynamic.", errors)
     require("insertAdjacentElement" not in mode_toggle_text,
             "Mode toggle JavaScript should not inject the toggle into the main page body.", errors)
 
