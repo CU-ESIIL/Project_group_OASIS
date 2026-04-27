@@ -1203,3 +1203,34 @@ Verification
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Confirmed the built homepage includes the public-mode marker, collapsible scaffold blocks, People gallery, registered mode-toggle script, and D1-A bidirectional sticker links.
+
+2026-04-27
+
+Prompt
+
+User asked to update `docs/instructions/link-to-github.md` so the main workflow uses GitHub web authentication through `startup/github_web_auth.ipynb`, HTTPS cloning from the JupyterLab Git sidebar, and timeout re-authentication. SSH should remain only as a backup.
+
+Files and folders inspected
+
+* docs/instructions/link-to-github.md
+* docs/instructions/push-to-github.md
+* docs/stylesheets/extra.css
+* docs/assets/cyverse_basics/
+
+Actions taken
+
+* Rewrote the Link JupyterLab to GitHub page around GitHub web authentication and the `startup/github_web_auth.ipynb` notebook.
+* Added a full-width launch button pointing to the requested CyVerse `/launch` URL and opening in a new tab.
+* Documented running the first cell, copying the one-time code, approving GitHub device login, and running the second cell to configure Git credentials.
+* Added first-commit name/email guidance, top-folder clone guidance, HTTPS clone-link instructions, push/pull expectations, and re-authentication steps for expired credentials.
+* Moved SSH into a short backup/advanced option section.
+* Updated the Git widget page intro so it points to GitHub web authentication instead of SSH.
+* Added centralized launch-button styling in `docs/stylesheets/extra.css`.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built Link JupyterLab to GitHub page includes the `/launch` button, `github_web_auth.ipynb`, HTTPS clone guidance, timeout recovery, and SSH backup section.

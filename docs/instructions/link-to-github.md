@@ -1,162 +1,151 @@
 ---
 layout: page
-title: Setting up SSH for GitHub in JupyterHub
+title: Link JupyterLab to GitHub
 permalink: /instructions/link/
 ---
 
-# Setting up SSH for GitHub in JupyterHub
+# Link JupyterLab to GitHub
 
-This page walks you through generating an SSH key inside JupyterHub and adding it to your GitHub account. This setup allows you to push and pull without typing a Personal Access Token each time.
+We now use GitHub web authentication as the main way to connect JupyterLab to GitHub. This is easier for most participants than SSH. You will run a small notebook, copy a one-time code, approve the login in GitHub, and then return to JupyterLab to finish setup.
 
-> **Prereq:** Open a **Jupyter Notebook**, paste the code below into a cell, and click the **Run/Play ▶️** button to execute it.
+Use this page when you need to authenticate GitHub, clone your project repository, or refresh your credentials after they time out.
 
-[![Launch in CyVerse DE](https://img.shields.io/badge/Launch-CyVerse%20DE-0b6efd?style=flat-square)](https://de.cyverse.org/apps/de/faf1d268-44cc-11ed-9715-008cfa5ae621/launch?saved-launch-id=dc65718e-1964-4d11-99ad-bf901cddda99)
+## Step 1 — Launch the OASIS JupyterLab app
 
----
+[Launch the OASIS JupyterLab app](https://de.cyverse.org/apps/de/c0956b30-3f32-11f0-9712-008cfa5ae621/launch){ .oasis-launch-button target="_blank" rel="noopener" }
 
-## 1) Run this one‑cell setup script in a Notebook
+Click the launch button and wait for the CyVerse/VICE JupyterLab instance to start. This can take a few minutes.
 
-Paste the entire block into a new cell and run it. It will:
+The container opens with a `startup` folder. Inside that folder is the notebook you will use for GitHub login:
 
-* prompt for your **GitHub username/email** (used for commit identity),
-* create an **Ed25519 SSH keypair** at `~/.ssh/github` and a matching SSH config entry for `github.com`,
-* start `ssh-agent`, add your key, and
-* add `github.com` to `~/.ssh/known_hosts` to avoid first‑connect prompts.
-
-```python
-import os, subprocess, textwrap
-
-def add_github_to_known_hosts():
-    ssh_dir = os.path.expanduser("~/.ssh")
-    known_hosts = os.path.join(ssh_dir, "known_hosts")
-    os.makedirs(ssh_dir, exist_ok=True)
-    out = subprocess.run(
-        ["ssh-keyscan", "-t", "rsa,ed25519", "github.com"],
-        capture_output=True, text=True, check=True
-    ).stdout.strip()
-    with open(known_hosts, "a") as fh:
-        if out:
-            fh.write(out + "\n")
-    print("github.com added to known_hosts")
-
-
-def configure():
-    username = input("GitHub username: ")
-    email = input("GitHub email: ")
-
-    subprocess.run(["git", "config", "--global", "user.name", username], check=True)
-    subprocess.run(["git", "config", "--global", "user.email", email], check=True)
-
-    ssh_dir = os.path.expanduser("~/.ssh")
-    os.makedirs(ssh_dir, exist_ok=True)
-    key_path = os.path.join(ssh_dir, "github")  # ~/.ssh/github and github.pub
-
-    # Create Ed25519 keypair (no passphrase for this ephemeral VM)
-    subprocess.run(["ssh-keygen", "-t", "ed25519", "-f", key_path, "-N", ""], check=True)
-
-    # Minimal SSH config entry
-    cfg_path = os.path.join(ssh_dir, "config")
-    block = textwrap.dedent(f"""\
-    Host github.com
-      HostName github.com
-      User git
-      IdentityFile {key_path}
-    """)
-    with open(cfg_path, "a") as fh:
-        fh.write(block)
-
-    # Start agent and add key
-    subprocess.run(f'eval "$(ssh-agent -s)" && ssh-add {key_path}', shell=True, check=True)
-
-    add_github_to_known_hosts()
-
-    with open(key_path + ".pub") as fh:
-        pub = fh.read().strip()
-    print("\nPublic key — copy to GitHub → Settings → SSH keys:\n")
-    print(pub, "\n")
-
-configure()
+```text
+startup/github_web_auth.ipynb
 ```
 
-When the cell finishes, the **last lines of output** show your **public key** (starts with `ssh-ed25519`). **Copy** that entire line.
+If you want to see the app page before launching, use the [non-launch app page](https://de.cyverse.org/apps/de/c0956b30-3f32-11f0-9712-008cfa5ae621){ target="_blank" rel="noopener" }.
 
----
+## Step 2 — Open the GitHub web auth notebook
 
-## 2) Add the key to GitHub
+In JupyterLab, use the file browser on the left to open:
 
-1. In a new browser tab, go to **GitHub**.
-2. Click your **profile picture (top‑right)** → **Settings**.
-3. In the left menu, click **SSH and GPG keys** → **New SSH key**.
-4. Title: *JupyterHub Key* (or similar).
-5. Paste the **public key** you copied from the Notebook into the **Key** box.
-6. Click **Add SSH key**.
-
----
-
-## 3) Test the connection
-
-Back in JupyterHub, open a **Terminal** and run:
-
-```bash
-ssh -T git@github.com
+```text
+startup/github_web_auth.ipynb
 ```
 
-You should see:
+This notebook handles GitHub web authentication for the running JupyterLab instance.
 
-```
-Hi <your-username>! You've successfully authenticated, but GitHub does not provide shell access.
-```
+## Step 3 — Run the first cell and approve GitHub login
 
----
+Run the first notebook cell.
 
-## 4) Ensure your repo uses SSH (not HTTPS)
+It starts GitHub CLI web authentication and prints two important things:
 
-When you clone or set your remote, **always copy the SSH link** from GitHub, not the HTTPS link.
+- a one-time code, such as `6C3C-5CE8`
+- a GitHub device login link, usually `https://github.com/login/device`
 
-### How to get the SSH link
+Then:
 
-1. Go to your repository page on GitHub.
+1. Copy the one-time code from the notebook output.
+2. Open the GitHub device login link in a browser.
+3. Paste the code when GitHub asks for it.
+4. Continue through the GitHub authorization screens.
+5. Approve the authentication.
+
+There may be several clicks and device authentication steps. That is normal.
+
+## Step 4 — Run the second cell to save the authentication
+
+After GitHub says authentication is complete, return to `startup/github_web_auth.ipynb`.
+
+Run the second notebook cell.
+
+This configures Git to use the GitHub web authentication you just approved. After this step, Git pushes and pulls should work through HTTPS in this JupyterLab instance.
+
+## Step 5 — Add Git identity on first commit or push
+
+Authentication proves that you have access to GitHub. Git may still need to know who should be credited for the commits you make.
+
+On your first commit or push, Git may ask for:
+
+- your GitHub name
+- your GitHub email
+
+This is normal. It tells Git who should be credited for changes made from this JupyterLab instance.
+
+## Step 6 — Clone your repository using HTTPS
+
+Before cloning, make sure the file browser is at the top folder level. You should see folders such as `data`, `home`, `Project_group_OASIS`, or `startup`.
+
+Do not clone from inside `data` or `home`; the Git sidebar works best when you start from the top level.
+
+Then clone the repository:
+
+1. Click the Git icon in the left sidebar.
+2. Use the blue Git action buttons.
+3. Click **Clone a Repository**.
+4. Paste the HTTPS repository link.
+5. Click **Clone**.
+6. Confirm that the repository appears in the left file browser.
+
+Use the HTTPS clone link for this workflow. This is different from the SSH clone link used in older instructions. SSH still works as a backup for advanced users, but HTTPS is the recommended path for the workshop.
+
+### How to copy the HTTPS clone link
+
+1. Open your project repository on GitHub.
 2. Click the green **Code** button.
-3. In the pop‑up, choose the **SSH** tab.
-4. Copy the URL (looks like `git@github.com:ORG/REPO.git`).
+3. Choose the **HTTPS** tab.
+4. Copy the URL. It should look like:
 
-   * ⚠️ Do **not** copy the HTTPS link (`https://github.com/...`), or GitHub will keep asking for a Personal Access Token.
-
-Example:
-
-```
-git@github.com:CU-ESIIL/home.git
+```text
+https://github.com/CU-ESIIL/Project_group_OASIS.git
 ```
 
-### Check your remote inside JupyterHub
+Use your group’s repository URL, not necessarily the example above.
 
-Open a Terminal in JupyterHub and run:
+## Step 7 — Push and pull changes
 
-```bash
-git remote -v
-```
+After the repository is cloned and web authentication is configured, you should be able to push and pull using the JupyterLab Git interface.
 
-If you see `https://...`, change it to SSH:
+For the usual editing workflow, use:
 
-```bash
-git remote set-url origin git@github.com:<org-or-user>/<repo>.git
-```
+1. **Pull** before you start editing.
+2. Edit files.
+3. Stage changed files.
+4. Commit with a short message.
+5. Push your commits to GitHub.
 
----
+See [Git/GitHub Widget in JupyterLab](push-to-github.md) for the day-to-day Git sidebar workflow.
 
-## 5) Notes & troubleshooting
+## If authentication stops working
 
-* The script adds an entry to `~/.ssh/config` so `github.com` will automatically use the new key at `~/.ssh/github`.
-* Some Hubs reset the agent between sessions. If you later see `Permission denied (publickey)`, re‑run:
+GitHub web authentication can expire, especially if the instance is left running for a few days.
 
-```bash
-eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github
-```
+Common symptoms:
 
-* If `ssh -T git@github.com` hangs on first use, ensure `github.com` is in `known_hosts` (the script already does this) or run:
+- pushing stops working
+- GitHub or Git asks for credentials again
+- the Git interface no longer has permission
 
-```bash
-ssh-keyscan -t rsa,ed25519 github.com >> ~/.ssh/known_hosts
-```
+Fix it by repeating the notebook authentication:
 
-You’re now ready to use the **Git widget** page to **Pull → Stage → Commit → Push** without PAT prompts.
+1. Reopen `startup/github_web_auth.ipynb`.
+2. Run the first cell.
+3. Copy the new one-time code.
+4. Approve the GitHub device login.
+5. Return to the notebook.
+6. Run the second cell again.
+
+You do not need to reclone the repository just because authentication expired.
+
+## SSH backup option
+
+SSH is no longer the main workflow for this workshop. Use GitHub web authentication and HTTPS cloning first.
+
+Advanced users can still use SSH as a backup if they already know how to manage keys in temporary JupyterLab environments:
+
+1. Create an SSH key inside the running JupyterLab instance.
+2. Add the public key to GitHub under **Settings → SSH and GPG keys**.
+3. Use the SSH clone link, which looks like `git@github.com:ORG/REPO.git`.
+4. Make sure the repository remote uses SSH instead of HTTPS.
+
+If you are unsure which path to use, use the web authentication notebook and the HTTPS clone link.

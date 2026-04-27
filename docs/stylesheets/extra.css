@@ -657,6 +657,42 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   transform: translateY(-2px);
 }
 
+.md-typeset .oasis-launch-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.4rem;
+  margin: var(--oasis-space-4) 0 var(--oasis-space-5);
+  padding: 0.9rem 1.25rem;
+  border: 0;
+  border-radius: var(--oasis-radius-md);
+  background: linear-gradient(90deg, var(--oasis-color-primary-blue), var(--oasis-color-accent-green));
+  box-shadow: var(--oasis-shadow-md);
+  color: #ffffff;
+  font-size: var(--oasis-font-size-2);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.md-typeset .oasis-launch-button::after {
+  margin-left: 0.55rem;
+  content: "->";
+  font-size: 1rem;
+  transition: transform var(--oasis-transition-fast);
+}
+
+.md-typeset .oasis-launch-button:is(:hover, :focus-visible) {
+  color: #ffffff;
+  box-shadow: var(--oasis-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.md-typeset .oasis-launch-button:is(:hover, :focus-visible)::after {
+  transform: translate(0.12rem, -0.12rem);
+}
+
 .md-typeset a[href$=".pdf"],
 .md-typeset a[href*="github.com/CU-ESIIL/Project_group_OASIS/tree/main"] {
   border-bottom: 1px solid rgba(66, 188, 220, 0.42);

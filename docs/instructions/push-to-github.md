@@ -6,7 +6,7 @@ permalink: /instructions/push/
 
 # Using the Git/GitHub Widget in JupyterLab (JupyterHub)
 
-This page assumes your repository **already exists** and has been cloned into JupyterHub. It also assumes you’ve already set up **SSH authentication** (see the [Link to GitHub](link-to-github.md) page before continuing).
+This page assumes your repository **already exists** and has been cloned into JupyterLab. It also assumes you’ve already completed the **GitHub web authentication** notebook and cloned with the HTTPS link (see the [Link JupyterLab to GitHub](link-to-github.md) page before continuing).
 
 [![Launch in CyVerse DE](https://img.shields.io/badge/Launch-CyVerse%20DE-0b6efd?style=flat-square)](https://de.cyverse.org/apps/de/faf1d268-44cc-11ed-9715-008cfa5ae621/launch?saved-launch-id=dc65718e-1964-4d11-99ad-bf901cddda99)
 
