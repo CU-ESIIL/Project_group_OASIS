@@ -66,9 +66,11 @@ Use this loop every time you update the public-facing page:
 | `docs/assets/whiteboards/` | Whiteboard photos and brainstorm sketches |
 | `docs/assets/explorations/` | Early plots, screenshots, rough maps, notebook screenshots |
 | `docs/assets/figures/` | Polished figures and final visuals |
+| `docs/assets/people/` | Profile images for the People gallery |
 | `docs/assets/team/` | Team photos or headshots |
 | `docs/assets/files/` | PDFs, briefs, slides, and downloadable materials |
 | `docs/assets/stickers/` | Landmark sticker images used by the front page and instructions |
+| `docs/_data/people.yml` | Plain-text entries for the People gallery |
 | Innovation Summit learner files | Existing participant profiles linked from the People section |
 | `docs/references.bib` | BibTeX references cited from Markdown |
 | `code/` | Scripts, notebooks, and reusable analysis code |
@@ -89,15 +91,23 @@ Data source:
 - **Dataset name** — one sentence on what it contains and why we need it. [Link](https://example.org)
 ```
 
-People list:
+People gallery entry:
 
 [Find learner files in the Innovation Summit 2026 repository](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
 
-```markdown
-- [Ty Tuff](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/ty-tuff.md)
+```yaml
+- name: Ty Tuff
+  role: Learner
+  image: assets/people/ty-tuff.jpg
+  focus: Fire modeling
+  skills:
+    - Python
+    - GIS
+  brings: Curiosity and data vibes
+  profile_url: https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/ty-tuff.md
 ```
 
-Link to the existing learner profile file instead of recreating contact details on this site. Prefer profile links over raw contact details; do not publish email and GitHub handles together.
+Edit `docs/_data/people.yml` to add or remove cards. Link to the existing learner profile file instead of recreating contact details on this site. Prefer profile links over raw contact details; do not publish email and GitHub handles together.
 
 Citation:
 

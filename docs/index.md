@@ -24,16 +24,13 @@ The task stickers are landmarks. They help you match each day-by-day direction t
 <span id="edit-D1-C"></span>
 [![D1-C: People](assets/stickers/tasks/d1-c.svg){ .task-sticker }](instructions/day1.md#guide-D1-C)
 
-Replace this list with the people in your group. Link each name to that person’s existing learner file in the Innovation Summit learner folder.
+Replace the example people below with the people in your group. To update the gallery, edit `docs/_data/people.yml`. Each entry is plain text plus a link to the person’s existing learner file in the Innovation Summit learner folder.
 
 [Find learner files in the Innovation Summit 2026 repository](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
 
-Example format:
+Put profile images in `docs/assets/people/`. If an image is missing, the card will show initials instead.
 
-- [Ty Tuff](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/ty-tuff.md)
-- [Aakriti Joshi](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/aakriti-joshi.md)
-
-Keep this as a simple Markdown list so each group can add or remove names quickly.
+{{ people_gallery }}
 
 ## Project Question { #project-question }
 

@@ -876,6 +876,39 @@ Verification
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 
+2026-04-27
+
+Prompt
+
+User asked to restore a polished People gallery while keeping participant editing Markdown-only. The gallery should preserve D1-A/D1-C sticker navigation, render people as responsive cards, use learner profile links, avoid participant-facing HTML, and handle missing fields gracefully.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/_data/people.yml
+* docs/people/
+* docs/stylesheets/extra.css
+* hooks.py
+* scripts/site_health.py
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Added `docs/_data/people.yml` as the plain-text source for People gallery cards.
+* Added generated People gallery rendering in `hooks.py` using the `{{ people_gallery }}` marker.
+* Updated the front page People section to keep D1-A/D1-C sticker anchors while rendering the gallery below the editing guidance.
+* Added centralized responsive People card styling with initials fallback avatars and dark-mode support.
+* Updated People documentation and copy-paste instructions for learner links and optional profile images.
+* Added people-gallery checks to site health and regression validation.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built homepage contains `people-gallery` cards and preserved `edit-D1-A` / `edit-D1-C` anchors.
+
 2026-04-24
 
 Prompt

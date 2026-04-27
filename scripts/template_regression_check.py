@@ -23,6 +23,7 @@ def main() -> int:
     hooks = ROOT / "hooks.py"
     references = ROOT / "docs" / "references.bib"
     stickers_registry = ROOT / "docs" / "stickers.md"
+    people_data = ROOT / "docs" / "_data" / "people.yml"
     people_dir = ROOT / "docs" / "people"
     stickers_dir = ROOT / "docs" / "assets" / "stickers"
     logo = ROOT / "docs" / "assets" / "oasis_logo.png"
@@ -40,6 +41,7 @@ def main() -> int:
     hooks_text = hooks.read_text(encoding="utf-8") if hooks.exists() else ""
     references_text = references.read_text(encoding="utf-8") if references.exists() else ""
     stickers_text = stickers_registry.read_text(encoding="utf-8") if stickers_registry.exists() else ""
+    people_data_text = people_data.read_text(encoding="utf-8") if people_data.exists() else ""
 
     require(index.exists(), "docs/index.md is missing.", errors)
     require("## How to use this page" in index_text, "Front page sticker legend is missing.", errors)
@@ -60,8 +62,11 @@ def main() -> int:
     require('--8<-- "people/' not in index_text, "Public Front Page should not include local People profile snippets.", errors)
     require("Innovation-Summit-2026/tree/main/docs/learners" in index_text,
             "People section should link to the Innovation Summit learner folder.", errors)
-    require("Innovation-Summit-2026/blob/main/docs/learners/" in index_text,
-            "People section should include example learner profile file links.", errors)
+    require("{{ people_gallery }}" in index_text,
+            "People section should render the generated people gallery marker.", errors)
+    require(people_data.exists(), "People gallery data file docs/_data/people.yml is missing.", errors)
+    require("Innovation-Summit-2026/blob/main/docs/learners/" in people_data_text,
+            "People gallery data should include example learner profile file links.", errors)
     require("## Featured Outputs" not in index_text, "Featured Outputs section should be removed.", errors)
     require("https://what-uses-more.com" in index_text, "What Uses More button/link is missing.", errors)
     require("assets/files/project_brief.pdf" in index_text and "Polished Outputs" in index_text,
@@ -89,7 +94,7 @@ def main() -> int:
         require("../assets/stickers/tasks/" in day_text and "{ .task-sticker }" in day_text,
                 f"{day}.md should show task stickers from the shared sticker assets.", errors)
 
-    for folder in ["hero", "whiteboards", "explorations", "figures", "team", "files", "stickers"]:
+    for folder in ["hero", "whiteboards", "explorations", "figures", "team", "files", "stickers", "people"]:
         require((ROOT / "docs" / "assets" / folder).is_dir(), f"docs/assets/{folder}/ is missing.", errors)
 
     require("toc.integrate" not in mkdocs_text, "toc.integrate should not be enabled.", errors)
@@ -122,6 +127,8 @@ def main() -> int:
     require("@misc{oasisProjectTemplate" in references_text, "Template reference BibTeX entry is missing.", errors)
     require((people_dir / "README.md").exists(), "People README is missing.", errors)
     require((people_dir / "template.md").exists(), "People template is missing.", errors)
+    require("docs/_data/people.yml" in (people_dir / "README.md").read_text(encoding="utf-8"),
+            "People README should explain editing docs/_data/people.yml.", errors)
     for sticker in ["people", "question", "tracks", "data", "methods", "results", "outputs"]:
         require((stickers_dir / f"{sticker}.png").exists(), f"Sticker asset {sticker}.png is missing.", errors)
     task_stickers = [
@@ -168,6 +175,8 @@ def main() -> int:
     require(".md-typeset h1" in css_text and "color: var(--oasis-color-primary-blue)" in css_text,
             "Main content title should use ESIIL brand blue.", errors)
     require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
+    require(".people-gallery" in css_text and ".people-card" in css_text,
+            "People gallery card styles are missing.", errors)
     require('h1[id^="day-1"]' in css_text and 'h1[id^="day-2"]' in css_text and 'h1[id^="day-3"]' in css_text,
             "Day color styling is missing.", errors)
     require('[data-md-color-scheme="slate"]' in tokens_text,
@@ -176,6 +185,8 @@ def main() -> int:
             "Dark mode page styling is missing.", errors)
     require("REFERENCE_MARKER" in hooks_text and "references.bib" in hooks_text,
             "Citation hook should render references from docs/references.bib.", errors)
+    require("PEOPLE_GALLERY_MARKER" in hooks_text and "people.yml" in hooks_text,
+            "People gallery hook should render cards from docs/_data/people.yml.", errors)
 
     if errors:
         print("Template regression check failed:")

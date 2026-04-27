@@ -4,19 +4,25 @@ import re
 from pathlib import Path
 from urllib.parse import unquote
 
+try:
+    import yaml
+except ModuleNotFoundError:  # Keep this script runnable with plain system Python.
+    yaml = None
+
 from check_stickers import sticker_issues
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 REPORT = DOCS / "_site_health.md"
 MKDOCS = ROOT / "mkdocs.yml"
+PEOPLE_DATA = DOCS / "_data" / "people.yml"
 REQUIRED = ["docs/index.md", "mkdocs.yml", "README.md", "AGENTS.md", "PROMPT_ACTION_LOG.md",
             "docs/stylesheets/tokens.css", "docs/stylesheets/extra.css",
             "docs/instructions/day1.md", "docs/instructions/day2.md", "docs/instructions/day3.md",
-            "docs/people/template.md", "docs/references.bib"]
+            "docs/people/template.md", "docs/references.bib", "docs/_data/people.yml"]
 ASSET_DIRS = ["docs/assets/hero", "docs/assets/whiteboards", "docs/assets/explorations",
               "docs/assets/figures", "docs/assets/team", "docs/assets/files",
-              "docs/assets/stickers"]
+              "docs/assets/stickers", "docs/assets/people"]
 PLACEHOLDERS = ["[link]", "TODO", "TBD", "CHANGE_ME", "REPLACE_ME"]
 NAV_ITEMS = ["Public Front Page", "Instructions", "AI for Sustainability", "Specialty Tracks", "Manuals", "Storage", "Orientation"]
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
@@ -73,6 +79,108 @@ def sticker_validation_issues() -> list[str]:
     ]
 
 
+def is_external_or_anchor(raw: str) -> bool:
+    return raw.startswith(("http://", "https://", "mailto:", "#"))
+
+
+def resolve_docs_target(raw: str) -> Path | None:
+    target = unquote(raw.strip().strip("<>").split("#", 1)[0].split("?", 1)[0])
+    if not target or is_external_or_anchor(target) or target.startswith("/"):
+        return None
+    if target.startswith("../"):
+        return (PEOPLE_DATA.parent / target).resolve()
+    return (DOCS / target).resolve()
+
+
+def parse_simple_people_yaml(text: str) -> list[dict[str, object]]:
+    people: list[dict[str, object]] = []
+    current: dict[str, object] | None = None
+    current_list_key: str | None = None
+    in_people = False
+
+    for line in text.splitlines():
+        raw = line.rstrip()
+        stripped = raw.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        if stripped == "people:":
+            in_people = True
+            continue
+        if not in_people:
+            continue
+        if raw.startswith("  - "):
+            current = {}
+            people.append(current)
+            current_list_key = None
+            remainder = raw[4:].strip()
+            if ":" in remainder:
+                key, value = remainder.split(":", 1)
+                current[key.strip()] = value.strip()
+            continue
+        if current is None:
+            continue
+        if raw.startswith("    - ") and current_list_key:
+            current.setdefault(current_list_key, [])
+            value = raw[6:].strip()
+            if isinstance(current[current_list_key], list) and value:
+                current[current_list_key].append(value)
+            continue
+        if raw.startswith("    ") and ":" in stripped:
+            key, value = stripped.split(":", 1)
+            key = key.strip()
+            value = value.strip()
+            if value:
+                current[key] = value
+                current_list_key = None
+            else:
+                current[key] = []
+                current_list_key = key
+
+    return people
+
+
+def people_gallery_issues() -> list[str]:
+    if not PEOPLE_DATA.exists():
+        return [f"⚠ People gallery issue: missing {PEOPLE_DATA.relative_to(ROOT)}"]
+
+    text = PEOPLE_DATA.read_text(encoding="utf-8")
+    if yaml is not None:
+        try:
+            data = yaml.safe_load(text) or {}
+        except yaml.YAMLError as exc:
+            return [f"⚠ People gallery issue: {PEOPLE_DATA.relative_to(ROOT)} is not valid YAML ({exc})"]
+    else:
+        data = {"people": parse_simple_people_yaml(text)}
+
+    people = data.get("people", [])
+    if not isinstance(people, list):
+        return [f"⚠ People gallery issue: {PEOPLE_DATA.relative_to(ROOT)} should contain a `people:` list"]
+
+    issues: list[str] = []
+    for index, person in enumerate(people, start=1):
+        if not isinstance(person, dict):
+            issues.append(f"⚠ People gallery issue: entry {index} should be a YAML mapping")
+            continue
+
+        name = str(person.get("name", "")).strip() or f"entry {index}"
+        if not str(person.get("name", "")).strip():
+            issues.append(f"⚠ People gallery issue: entry {index} is missing a name")
+
+        image = str(person.get("image", "") or "").strip()
+        if image:
+            image_path = resolve_docs_target(image)
+            if image_path is not None and not image_path.is_file():
+                issues.append(f"⚠ People gallery issue: image for {name} does not exist: {image}")
+
+        profile_url = str(person.get("profile_url", "") or "").strip()
+        if profile_url:
+            profile_path = resolve_docs_target(profile_url)
+            if profile_path is not None and not profile_path.is_file():
+                issues.append(f"⚠ People gallery issue: profile link for {name} does not exist: {profile_url}")
+
+    return issues
+
+
 def internal_link_issues() -> list[str]:
     issues = []
     for path in [p for p in sorted(DOCS.rglob("*.md")) if p.name != "_site_health.md"]:
@@ -108,6 +216,7 @@ def main() -> int:
         + navigation_issues()
         + internal_link_issues()
         + sticker_validation_issues()
+        + people_gallery_issues()
     )
     write_report(issues)
     print(f"Generated {REPORT.relative_to(ROOT)} with {len(issues)} warning(s).")
