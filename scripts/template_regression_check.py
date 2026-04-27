@@ -21,6 +21,7 @@ def main() -> int:
     css = ROOT / "docs" / "stylesheets" / "extra.css"
     tokens = ROOT / "docs" / "stylesheets" / "tokens.css"
     mode_toggle = ROOT / "docs" / "javascripts" / "mode-toggle.js"
+    presentation_mode = ROOT / "docs" / "javascripts" / "presentation-mode.js"
     hooks = ROOT / "hooks.py"
     references = ROOT / "docs" / "references.bib"
     stickers_registry = ROOT / "docs" / "stickers.md"
@@ -40,6 +41,7 @@ def main() -> int:
     css_text = css.read_text(encoding="utf-8") if css.exists() else ""
     tokens_text = tokens.read_text(encoding="utf-8") if tokens.exists() else ""
     mode_toggle_text = mode_toggle.read_text(encoding="utf-8") if mode_toggle.exists() else ""
+    presentation_mode_text = presentation_mode.read_text(encoding="utf-8") if presentation_mode.exists() else ""
     hooks_text = hooks.read_text(encoding="utf-8") if hooks.exists() else ""
     references_text = references.read_text(encoding="utf-8") if references.exists() else ""
     stickers_text = stickers_registry.read_text(encoding="utf-8") if stickers_registry.exists() else ""
@@ -48,10 +50,12 @@ def main() -> int:
     require(index.exists(), "docs/index.md is missing.", errors)
     require("public_mode_toggle: true" in index_text,
             "Public Front Page should opt into the Edit/Public mode toggle.", errors)
-    require("??? note" in index_text and "Show template guidance" in index_text,
-            "Public Front Page should use collapsible Markdown guidance blocks.", errors)
+    require("!!! note" in index_text and "Template instructions" in index_text,
+            "Public Front Page should use expanded Markdown instruction blocks.", errors)
+    require("??? note" not in index_text,
+            "Public Front Page instruction blocks should be expanded by default.", errors)
     require("Replace this paragraph" not in index_text and "Replace this text" not in index_text,
-            "Inline replacement guidance should move into collapsible guidance blocks.", errors)
+            "Inline replacement instructions should move into template instruction blocks.", errors)
     require("## How to use this page" in index_text, "Front page sticker legend is missing.", errors)
     for section in [
         "People",
@@ -73,8 +77,8 @@ def main() -> int:
     require("{{ people_gallery }}" in index_text,
             "People section should render the generated people gallery marker.", errors)
     require(people_data.exists(), "People gallery data file docs/_data/people.yml is missing.", errors)
-    require("Innovation-Summit-2026/blob/main/docs/learners/" in people_data_text,
-            "People gallery data should include example learner profile file links.", errors)
+    require("profile: people/" in people_data_text and "name:" not in people_data_text,
+            "People gallery data should be an index of Markdown profile files only.", errors)
     require("## Featured Outputs" not in index_text, "Featured Outputs section should be removed.", errors)
     require("https://what-uses-more.com" in index_text, "What Uses More button/link is missing.", errors)
     require("assets/files/project_brief.pdf" in index_text and "Polished Outputs" in index_text,
@@ -138,6 +142,8 @@ def main() -> int:
             "MkDocs should use the existing docs/overrides directory for the sidebar logo link override.", errors)
     require("extra_javascript:" in mkdocs_text and "javascripts/mode-toggle.js" in mkdocs_text,
             "Edit/Public mode toggle JavaScript should be registered.", errors)
+    require("javascripts/presentation-mode.js" in mkdocs_text,
+            "Presentation mode JavaScript should be registered.", errors)
     require("home-brand-link.js" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be referenced.", errors)
     require("- admonition" in mkdocs_text and "- pymdownx.details" in mkdocs_text,
             "Collapsible Material guidance blocks should be enabled.", errors)
@@ -150,6 +156,12 @@ def main() -> int:
     require((people_dir / "template.md").exists(), "People template is missing.", errors)
     require("docs/_data/people.yml" in (people_dir / "README.md").read_text(encoding="utf-8"),
             "People README should explain editing docs/_data/people.yml.", errors)
+    require("profile: people/" in (people_dir / "README.md").read_text(encoding="utf-8"),
+            "People README should explain index-only profile entries.", errors)
+    for profile in ["ty-tuff.md", "aakriti-joshi.md", "jane-example.md", "john-example.md"]:
+        profile_text = (people_dir / profile).read_text(encoding="utf-8") if (people_dir / profile).exists() else ""
+        require((people_dir / profile).exists() and profile_text.startswith("---\n") and "summary:" in profile_text,
+                f"People profile {profile} should exist with YAML front matter.", errors)
     for sticker in ["people", "question", "tracks", "data", "methods", "results", "outputs"]:
         require((stickers_dir / f"{sticker}.png").exists(), f"Sticker asset {sticker}.png is missing.", errors)
     task_stickers = [
@@ -175,10 +187,12 @@ def main() -> int:
     nav_override_text = nav_override.read_text(encoding="utf-8") if nav_override.exists() else ""
     require("nav.homepage.url" in nav_override_text and "config.extra.homepage" not in nav_override_text,
             "Sidebar nav override should use nav.homepage.url, not config.extra.homepage.", errors)
-    require("template-guidance-toggle" in nav_override_text and "Guidance on" in nav_override_text,
-            "Template guidance toggle should render in the sidebar nav override.", errors)
+    require("template-guidance-toggle" in nav_override_text and "Instructions on" in nav_override_text,
+            "Template instructions toggle should render in the sidebar nav override.", errors)
+    require("Show or hide template instructions" in nav_override_text,
+            "Template instructions toggle should have an instructions-focused accessible label.", errors)
     require('nav_item.title == "Instructions"' in nav_override_text,
-            "Template guidance toggle should render after the Instructions nav cluster.", errors)
+            "Template instructions toggle should render after the Instructions nav cluster.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "display: flex" in css_text,
             "Sidebar branding area should be visible for the group logo.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "font-size: 0" in css_text,
@@ -202,8 +216,8 @@ def main() -> int:
     require(".md-typeset h1" in css_text and "color: var(--oasis-color-primary-blue)" in css_text,
             "Main content title should use ESIIL brand blue.", errors)
     require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
-    require(".template-guidance-toggle" in css_text and "body.hide-template-guidance .md-typeset details.oasis-scaffold" in css_text,
-            "Sidebar template guidance toggle styles are missing.", errors)
+    require(".template-guidance-toggle" in css_text and "hide-template-instructions" in css_text and ".template-instructions-block" in css_text,
+            "Sidebar template instructions toggle styles are missing.", errors)
     require("var(--oasis-day-2-color)" in css_text and "var(--oasis-day-3-color)" in css_text,
             "Day 2 and Day 3 H1 colors should use day color tokens.", errors)
     require(".md-sidebar--secondary .md-nav__link" in css_text and "oasis-day-marker" in css_text,
@@ -212,6 +226,12 @@ def main() -> int:
             "Day color tokens are missing.", errors)
     require(".people-gallery" in css_text and ".people-card" in css_text,
             "People gallery card styles are missing.", errors)
+    require(".people-card__summary" in css_text and "-webkit-line-clamp" in css_text,
+            "People cards should clamp Markdown-derived summaries for stable layout.", errors)
+    require(".oasis-present-button" in css_text and "body.presentation-mode" in css_text,
+            "Presentation mode styles are missing.", errors)
+    require(".md-sidebar--primary .md-sidebar__scrollwrap" in css_text and ".md-sidebar--secondary .md-sidebar__scrollwrap" in css_text,
+            "Normal mode side panel polish is missing.", errors)
     require('h1[id^="day-1"]' in css_text and 'h1[id^="day-2"]' in css_text and 'h1[id^="day-3"]' in css_text,
             "Day color styling is missing.", errors)
     require('[data-md-color-scheme="slate"]' in tokens_text,
@@ -222,17 +242,26 @@ def main() -> int:
             "Citation hook should render references from docs/references.bib.", errors)
     require("PEOPLE_GALLERY_MARKER" in hooks_text and "people.yml" in hooks_text,
             "People gallery hook should render cards from docs/_data/people.yml.", errors)
+    require("split_profile_markdown" in hooks_text and "github.com/{escape(github)}.png" in hooks_text,
+            "People gallery hook should read Markdown profiles and support GitHub avatars.", errors)
     require("DAY_MARKER_TEMPLATE" in hooks_text and "oasis_day" in hooks_text,
             "Instruction day marker hook should drive page-specific TOC color styling.", errors)
     require("PUBLIC_MODE_MARKER" in hooks_text and "public_mode_toggle" in hooks_text,
             "Front page should get a hook-generated public-mode marker.", errors)
     require(mode_toggle.exists(), "Mode toggle JavaScript is missing.", errors)
-    require("localStorage" in mode_toggle_text and "oasis-scaffold" in mode_toggle_text and "oasis-template-guidance" in mode_toggle_text,
-            "Mode toggle JavaScript should persist mode and identify scaffold guidance blocks.", errors)
-    require("Guidance on" in mode_toggle_text and "Guidance off" in mode_toggle_text,
-            "Mode toggle label should be compact and dynamic.", errors)
+    require("localStorage" in mode_toggle_text and "template-instructions-block" in mode_toggle_text and "oasis-template-guidance" in mode_toggle_text,
+            "Mode toggle JavaScript should persist mode and identify template instruction blocks.", errors)
+    require("Instructions on" in mode_toggle_text and "Instructions off" in mode_toggle_text,
+            "Mode toggle label should use instructions language and update dynamically.", errors)
     require("insertAdjacentElement" not in mode_toggle_text,
             "Mode toggle JavaScript should not inject the toggle into the main page body.", errors)
+    require(presentation_mode.exists(), "Presentation mode JavaScript is missing.", errors)
+    require("presentation-mode" in presentation_mode_text and "data-oasis-present-toggle" in presentation_mode_text,
+            "Presentation mode JavaScript should toggle the presentation-mode class from a Present button.", errors)
+    require('event.key.toLowerCase() === "p"' in presentation_mode_text and 'event.key === "Escape"' in presentation_mode_text,
+            "Presentation mode JavaScript should support P and Esc shortcuts.", errors)
+    require("isTypingTarget" in presentation_mode_text,
+            "Presentation mode shortcuts should ignore typing fields.", errors)
 
     if errors:
         print("Template regression check failed:")

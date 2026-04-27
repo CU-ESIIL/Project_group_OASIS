@@ -28,11 +28,11 @@
       {% set path = "__nav_" ~ loop.index %}
       {{ item.render(nav_item, path, 1) }}
       {% if nav_item.title == "Instructions" %}
-        <li class="md-nav__item template-guidance-toggle" role="group" aria-label="Template guidance display setting">
+        <li class="md-nav__item template-guidance-toggle" role="group" aria-label="Template instructions display setting">
           <label class="template-guidance-toggle__label">
-            <input type="checkbox" data-oasis-mode-toggle aria-label="Show or hide template guidance" checked>
+            <input type="checkbox" data-oasis-mode-toggle aria-label="Show or hide template instructions" checked>
             <span class="template-guidance-toggle__control" aria-hidden="true"></span>
-            <span class="template-guidance-toggle__text">Guidance on</span>
+            <span class="template-guidance-toggle__text">Instructions on</span>
           </label>
         </li>
       {% endif %}

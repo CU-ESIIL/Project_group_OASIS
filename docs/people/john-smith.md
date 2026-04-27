@@ -1,21 +1,25 @@
-> ### John Smith
->
-> **Role or affiliation**
->
-> Analysis lead, example institution.
->
-> **What I am excited to explore**
->
-> I am excited to build a small, reusable workflow that another group could rerun with a different fire event.
->
-> **Skills, data, or perspectives I bring**
->
-> Python, notebooks, geospatial data cleaning, figure design, and calm debugging energy.
->
-> **Something human**
->
-> I bring snacks and strong opinions about readable axis labels.
->
-> **Optional link**
->
-> [Example profile](https://example.org)
+---
+name: John Smith
+slug: john-smith
+role: Learner
+affiliation: Example institution
+pronouns:
+github:
+photo:
+project_role: Example profile
+summary: John is a legacy example profile kept for template testing and documentation.
+interests:
+  - Reproducible workflows
+  - Spatial analysis
+  - Figure design
+skills:
+  - Python
+  - Notebooks
+  - Debugging
+group_role:
+links:
+  - label: Example profile
+    url: https://example.org
+---
+
+John is a legacy example profile. New groups should copy the profile template and add their selected people in `docs/_data/people.yml`.

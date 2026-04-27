@@ -1331,3 +1331,61 @@ Verification
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Confirmed built HTML places the toggle after Instructions and before AI for Sustainability, includes compact `Guidance on` text, keeps Cloud Triangle navigation, and includes the updated button/header JavaScript assets.
+
+2026-04-27
+
+Prompt
+
+User asked to fix the sidebar toggle so all public-front-page template instruction boxes hide when the toggle is off, expand by default when on, and use `Instructions on` / `Instructions off` instead of guidance language.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/instructions.md
+* docs/javascripts/mode-toggle.js
+* docs/overrides/partials/nav.html
+* docs/stylesheets/extra.css
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Renamed the visible sidebar toggle label to `Instructions on` / `Instructions off` and updated its accessible label.
+* Converted front-page template notes to expanded Markdown admonitions so instructions are open by default when enabled.
+* Updated the toggle script to mark both expanded admonitions and collapsible details as `.template-instructions-block`.
+* Added class-based CSS hiding with `.hide-template-instructions .template-instructions-block` while preserving the older guidance class for compatibility.
+* Updated participant instructions and regression checks to describe the instructions toggle and expanded instruction-note convention.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed built HTML includes the sidebar toggle with `Instructions on`, the accessible `Show or hide template instructions` label, expanded front-page instruction admonitions, and the class-based instruction hiding JavaScript/CSS.
+
+2026-04-27
+
+Prompt
+
+User provided `Example Public Front Page Fire Project.pdf` as updated homepage text.
+
+Files and folders inspected
+
+* /Users/tuff/Downloads/Example Public Front Page Fire Project.pdf
+* docs/index.md
+* docs/references.bib
+
+Actions taken
+
+* Extracted the PDF text and adapted it into the existing public front page structure.
+* Updated the homepage title and narrative to use the Fire Polygon Velocity Project example.
+* Replaced the older fire-speed example text with the supplied polygon-velocity overview, scientific gap, project question, approach, findings, interpretation, limitations, and next steps.
+* Preserved the reusable template systems: instruction blocks, task stickers, people gallery marker, contextual buttons, citations, and site health block.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built homepage includes `Fire Polygon Velocity Project`, the polygon-velocity project question, the updated findings, and the `Instructions on` sidebar toggle.

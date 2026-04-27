@@ -27,7 +27,7 @@ Use the edit icon on the website to open the corresponding markdown file in GitH
 
 ## Team Profiles
 
-Each person has their own file in `docs/people/`. Edit one profile at a time and include only a profile link or public contact route, not email and GitHub together.
+Each person has their own Markdown profile file in `docs/people/`. The homepage People gallery reads those files at build time. Use `docs/_data/people.yml` only as an index of profile paths, for example `profile: people/your-name.md`; do not duplicate profile text in YAML.
 
 ## Citations
 

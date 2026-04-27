@@ -18,8 +18,10 @@ MKDOCS = ROOT / "mkdocs.yml"
 PEOPLE_DATA = DOCS / "_data" / "people.yml"
 REQUIRED = ["docs/index.md", "mkdocs.yml", "README.md", "AGENTS.md", "PROMPT_ACTION_LOG.md",
             "docs/stylesheets/tokens.css", "docs/stylesheets/extra.css",
-            "docs/instructions/day1.md", "docs/instructions/day2.md", "docs/instructions/day3.md",
-            "docs/people/template.md", "docs/references.bib", "docs/_data/people.yml"]
+            "docs/javascripts/presentation-mode.js", "docs/instructions/day1.md",
+            "docs/instructions/day2.md", "docs/instructions/day3.md",
+            "docs/people/template.md", "docs/storage/add-your-profile.md",
+            "docs/references.bib", "docs/_data/people.yml"]
 ASSET_DIRS = ["docs/assets/hero", "docs/assets/whiteboards", "docs/assets/explorations",
               "docs/assets/figures", "docs/assets/team", "docs/assets/files",
               "docs/assets/stickers", "docs/assets/people"]
@@ -162,21 +164,23 @@ def people_gallery_issues() -> list[str]:
             issues.append(f"⚠ People gallery issue: entry {index} should be a YAML mapping")
             continue
 
-        name = str(person.get("name", "")).strip() or f"entry {index}"
-        if not str(person.get("name", "")).strip():
-            issues.append(f"⚠ People gallery issue: entry {index} is missing a name")
+        profile = str(person.get("profile", "") or "").strip()
+        if not profile:
+            issues.append(f"⚠ People gallery issue: entry {index} should use `profile: people/first-last.md`")
+            continue
 
-        image = str(person.get("image", "") or "").strip()
-        if image:
-            image_path = resolve_docs_target(image)
-            if image_path is not None and not image_path.is_file():
-                issues.append(f"⚠ People gallery issue: image for {name} does not exist: {image}")
+        if any(key in person for key in ["name", "summary", "skills", "interests", "focus", "brings", "profile_url"]):
+            issues.append(f"⚠ People gallery issue: entry {index} should keep profile text in Markdown, not people.yml")
 
-        profile_url = str(person.get("profile_url", "") or "").strip()
-        if profile_url:
-            profile_path = resolve_docs_target(profile_url)
-            if profile_path is not None and not profile_path.is_file():
-                issues.append(f"⚠ People gallery issue: profile link for {name} does not exist: {profile_url}")
+        profile_path = resolve_docs_target(profile)
+        if profile_path is not None and not profile_path.is_file():
+            issues.append(f"⚠ People gallery issue: profile file does not exist: {profile}")
+            continue
+
+        if profile_path is not None and profile_path.is_file():
+            profile_text = profile_path.read_text(encoding="utf-8")
+            if not profile_text.startswith("---\n"):
+                issues.append(f"⚠ People gallery issue: {profile} should start with YAML front matter")
 
     return issues
 

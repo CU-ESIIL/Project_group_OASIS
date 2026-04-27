@@ -18,7 +18,7 @@ Guidelines for agents:
 * Preserve the homepage as a polished, public-facing, replaceable example, not a long editing manual.
 * Keep instructions, file maps, and editing workflows in the instructions pages rather than cluttering the front page.
 * Keep final results structured around claims, evidence, confidence, limitations, reusable outputs, and next steps.
-* Preserve per-person profile files in `docs/people/` so contributors can edit independently.
+* Preserve per-person profile files in `docs/people/` so contributors can edit independently, and keep `docs/_data/people.yml` as an index of profile paths only.
 * Preserve BibTeX citation flow through `docs/references.bib` and `[@citationKey]` references.
 * Preserve artifact-first editing patterns: image placeholders, raw file replacement links, and clear captions that explain what claim each artifact supports.
 * Do not replace scaffold language with project-specific conclusions unless the user explicitly asks for a finished group report.

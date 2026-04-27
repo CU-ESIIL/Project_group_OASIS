@@ -31,6 +31,7 @@ nav:
       - Instance to/from GitHub: instructions/push-to-github.md
       - Instance to/from persistent storage: instructions/save-to-persistent-storage.md
   - Storage:
+      - Add your profile: storage/add-your-profile.md
       - Project code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
       - Project documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation
       - Shared persistent storage: "https://de.cyverse.org/data/ds/iplant/home/shared/esiil/Innovation_summit/Group_1?type=folder&resourceId=1993057e-8e90-11f0-b0fa-90e2ba675364"
@@ -56,6 +57,10 @@ not_in_nav: |
   people/template.md
   people/jane-doe.md
   people/john-smith.md
+  people/ty-tuff.md
+  people/aakriti-joshi.md
+  people/jane-example.md
+  people/john-example.md
 
 # Configuration
 theme:
@@ -107,6 +112,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/mode-toggle.js
+  - javascripts/presentation-mode.js
 
 hooks:
   - hooks.py

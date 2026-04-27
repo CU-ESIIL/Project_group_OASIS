@@ -1,0 +1,623 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: http://127.0.0.1:8765/#fire-polygon-velocity-project
+  - banner [ref=e3]:
+    - navigation "Header" [ref=e4]:
+      - img [ref=e6] [cursor=pointer]
+      - generic [ref=e11]: Fire Polygon Velocity Project
+      - generic [ref=e12]:
+        - radio "Switch to dark mode"
+        - generic "Switch to dark mode" [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+        - radio "Switch to light mode"
+      - dialog [ref=e16]:
+        - search [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Search" [ref=e19]
+            - generic:
+              - img
+            - navigation "Search":
+              - button "Clear":
+                - img
+          - generic [ref=e21]: Type to start searching
+      - link "Project_group_OASIS 0 0" [ref=e23] [cursor=pointer]:
+        - /url: https://github.com/CU-ESIIL/Project_group_OASIS
+        - img [ref=e25]
+        - generic [ref=e27]:
+          - text: Project_group_OASIS
+          - list:
+            - listitem: "0"
+            - listitem: "0"
+  - generic [ref=e28]:
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - navigation "Navigation" [ref=e33]:
+          - generic [ref=e34] [cursor=pointer]:
+            - link "OASIS Project Group Template" [ref=e35]:
+              - /url: http://127.0.0.1:8765/
+            - text: OASIS Project Group Template
+          - list [ref=e36]:
+            - listitem [ref=e37]:
+              - link "Public Front Page" [ref=e38] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/
+                - generic [ref=e39]: Public Front Page
+            - listitem [ref=e40]:
+              - generic [ref=e42]: Instructions
+              - navigation "Instructions" [ref=e44]:
+                - generic [ref=e45] [cursor=pointer]: Instructions
+                - list [ref=e47]:
+                  - listitem [ref=e48]:
+                    - link "Day 1 — Meet Your Team and Define Your Project" [ref=e49] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/instructions/day1/
+                      - generic [ref=e50]: Day 1 — Meet Your Team and Define Your Project
+                  - listitem [ref=e51]:
+                    - link "Day 2 — Build, Explore, and Apply New Skills" [ref=e52] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/instructions/day2/
+                      - generic [ref=e53]: Day 2 — Build, Explore, and Apply New Skills
+                  - listitem [ref=e54]:
+                    - link "Day 3 — Synthesize, Polish, and Share" [ref=e55] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/instructions/day3/
+                      - generic [ref=e56]: Day 3 — Synthesize, Polish, and Share
+            - group "Template instructions display setting" [ref=e57]:
+              - generic [ref=e58] [cursor=pointer]:
+                - checkbox "Show or hide template instructions" [checked] [ref=e59]
+                - generic [ref=e61]: Instructions on
+            - listitem [ref=e62]:
+              - generic [ref=e64]: AI for Sustainability
+              - navigation "AI for Sustainability" [ref=e66]:
+                - generic [ref=e67] [cursor=pointer]: AI for Sustainability
+                - list [ref=e69]:
+                  - listitem [ref=e70]:
+                    - link "Defining AI" [ref=e71] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/ai-for-sustainability/defining-ai/
+                      - generic [ref=e72]: Defining AI
+                  - listitem [ref=e73]:
+                    - link "Defining Sustainability" [ref=e74] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/ai-for-sustainability/defining-sustainability/
+                      - generic [ref=e75]: Defining Sustainability
+                  - listitem [ref=e76]:
+                    - link "What Does It Cost?" [ref=e77] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/ai-for-sustainability/what-does-it-cost/
+                      - generic [ref=e78]: What Does It Cost?
+            - listitem [ref=e79]:
+              - generic [ref=e81]: Specialty Tracks
+              - navigation "Specialty Tracks" [ref=e83]:
+                - generic [ref=e84] [cursor=pointer]: Specialty Tracks
+                - list [ref=e86]:
+                  - listitem [ref=e87]:
+                    - link "LLM" [ref=e88] [cursor=pointer]:
+                      - /url: https://cu-esiil.github.io/LLM_lesson_exemplar/
+                      - generic [ref=e89]: LLM
+                  - listitem [ref=e90]:
+                    - link "Digital Twins" [ref=e91] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/specialty-tracks/digital-twins/
+                      - generic [ref=e92]: Digital Twins
+                  - listitem [ref=e93]:
+                    - link "Earth Embeddings" [ref=e94] [cursor=pointer]:
+                      - /url: https://center-for-effective-global-action-cega.github.io/MOSAIKS-Training-Manual/en/index.html
+                      - generic [ref=e95]: Earth Embeddings
+                  - listitem [ref=e96]:
+                    - link "Causal Inference" [ref=e97] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/specialty-tracks/causal-inference/
+                      - generic [ref=e98]: Causal Inference
+            - listitem [ref=e99]:
+              - generic [ref=e101]: Cloud Triangle
+              - navigation "Cloud Triangle" [ref=e103]:
+                - generic [ref=e104] [cursor=pointer]: Cloud Triangle
+                - list [ref=e106]:
+                  - listitem [ref=e107]:
+                    - link "Connect instance to GitHub" [ref=e108] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/instructions/link-to-github/
+                      - generic [ref=e109]: Connect instance to GitHub
+                  - listitem [ref=e110]:
+                    - link "Instance to/from GitHub" [ref=e111] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/instructions/push-to-github/
+                      - generic [ref=e112]: Instance to/from GitHub
+                  - listitem [ref=e113]:
+                    - link "Instance to/from persistent storage" [ref=e114] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/instructions/save-to-persistent-storage/
+                      - generic [ref=e115]: Instance to/from persistent storage
+            - listitem [ref=e116]:
+              - generic [ref=e118]: Storage
+              - navigation "Storage" [ref=e120]:
+                - generic [ref=e121] [cursor=pointer]: Storage
+                - list [ref=e123]:
+                  - listitem [ref=e124]:
+                    - link "Add your profile" [ref=e125] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/storage/add-your-profile/
+                      - generic [ref=e126]: Add your profile
+                  - listitem [ref=e127]:
+                    - link "Project code" [ref=e128] [cursor=pointer]:
+                      - /url: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
+                      - generic [ref=e129]: Project code
+                  - listitem [ref=e130]:
+                    - link "Project documentation" [ref=e131] [cursor=pointer]:
+                      - /url: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation
+                      - generic [ref=e132]: Project documentation
+                  - listitem [ref=e133]:
+                    - link "Shared persistent storage" [ref=e134] [cursor=pointer]:
+                      - /url: https://de.cyverse.org/data/ds/iplant/home/shared/esiil/Innovation_summit/Group_1?type=folder&resourceId=1993057e-8e90-11f0-b0fa-90e2ba675364
+                      - generic [ref=e135]: Shared persistent storage
+            - listitem [ref=e136]:
+              - generic [ref=e138]: Orientation
+              - navigation "Orientation" [ref=e140]:
+                - generic [ref=e141] [cursor=pointer]: Orientation
+                - list [ref=e143]:
+                  - listitem [ref=e144]:
+                    - link "Summit slides" [ref=e145] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/orientation/slides/
+                      - generic [ref=e146]: Summit slides
+                  - listitem [ref=e147]:
+                    - link "ESIIL training" [ref=e148] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/orientation/esiil_training/
+                      - generic [ref=e149]: ESIIL training
+                  - listitem [ref=e150]:
+                    - link "Code of conduct" [ref=e151] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/orientation/code-of-conduct/
+                      - generic [ref=e152]: Code of conduct
+                  - listitem [ref=e153]:
+                    - link "Participant agreement" [ref=e154] [cursor=pointer]:
+                      - /url: http://127.0.0.1:8765/orientation/participant_agreement/
+                      - generic [ref=e155]: Participant agreement
+        - navigation "Table of contents" [ref=e159]:
+          - generic [ref=e160]: Table of contents
+          - list [ref=e161]:
+            - listitem [ref=e162]:
+              - link "How to use this page" [ref=e163] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#how-to-use-this-page
+                - generic [ref=e164]: How to use this page
+            - listitem [ref=e165]:
+              - link "People" [ref=e166] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#people
+                - generic [ref=e167]: People
+            - listitem [ref=e168]:
+              - link "Project Question" [ref=e169] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#project-question
+                - generic [ref=e170]: Project Question
+            - listitem [ref=e171]:
+              - link "Specialty Tracks and Strategy" [ref=e172] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#specialty-tracks-and-strategy
+                - generic [ref=e173]: Specialty Tracks and Strategy
+            - listitem [ref=e174]:
+              - link "Data Exploration" [ref=e175] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#data-exploration
+                - generic [ref=e176]: Data Exploration
+            - listitem [ref=e177]:
+              - link "Methods and Code" [ref=e178] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#methods-and-code
+                - generic [ref=e179]: Methods and Code
+            - listitem [ref=e180]:
+              - link "Results" [ref=e181] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#results
+                - generic [ref=e182]: Results
+            - listitem [ref=e183]:
+              - link "Polished Outputs" [ref=e184] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#polished-outputs
+                - generic [ref=e185]: Polished Outputs
+            - listitem [ref=e186]:
+              - link "Cite & Reuse" [ref=e187] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#cite-reuse
+                - generic [ref=e188]: Cite & Reuse
+            - listitem [ref=e189]:
+              - link "References" [ref=e190] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/#references
+                - generic [ref=e191]: References
+        - article [ref=e193]:
+          - generic [ref=e194]:
+            - button "Enter presentation mode" [ref=e195] [cursor=pointer]:
+              - generic [ref=e196]: ▶
+              - generic [ref=e197]: Present
+            - generic [ref=e198]: Press P to present
+          - link "Edit this page" [ref=e199] [cursor=pointer]:
+            - /url: https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md
+            - img [ref=e200]
+          - paragraph
+          - heading "Fire Polygon Velocity Project" [level=1] [ref=e202]
+          - paragraph [ref=e203]:
+            - img "Fire spread progression over a mountain landscape" [ref=e204]
+          - paragraph [ref=e205]: We often talk about how fast a wildfire moves. But once a fire is seen from space as a changing polygon rather than a line of flame, speed stops being a single, obvious thing.
+          - paragraph [ref=e206]: "A perimeter can push forward in one direction, expand everywhere at once, wrinkle and branch, or even rearrange internally without gaining much new area. Each of these changes is real. Each can be measured. And each can yield a different answer to the same question: how fast did the fire move?"
+          - paragraph [ref=e207]: This example project takes that ambiguity seriously. It develops a practical way to think about, and measure, fire polygon velocity by comparing several definitions on the same evolving fire. The aim is not to declare a single correct metric, but to show what each measure captures, what it leaves out, and how the choice of metric shapes the story we tell about fire.
+          - generic [ref=e208]:
+            - paragraph [ref=e209]: Template instructions
+            - paragraph [ref=e210]:
+              - text: Template instructions are on by default so workshop instructions are visible. Use the
+              - strong [ref=e211]: Instructions on/off
+              - text: toggle in the sidebar to preview a cleaner public-facing version.
+            - paragraph [ref=e212]: Replace the example fire-spread narrative with your group’s actual purpose statement. Keep the first public paragraph to 1–2 sentences that say what your group is trying to understand, why it matters, and what evidence or product you want to share.
+          - heading "How to use this page" [level=2] [ref=e213]
+          - paragraph [ref=e214]: This page is your group’s working project record. The visible narrative should read like a public project page; the instruction boxes tell editors what to replace during the summit.
+          - paragraph [ref=e215]: The task stickers are landmarks. They help you match each day-by-day direction to the place on this page where that work belongs. The same sticker appears in the instructions and on the matching front-page section.
+          - list [ref=e216]:
+            - listitem [ref=e217]:
+              - strong [ref=e218]: People
+              - text: — who is in the group and what each person brings
+            - listitem [ref=e219]:
+              - strong [ref=e220]: Project Question
+              - text: — what your group decided to explore
+            - listitem [ref=e221]:
+              - strong [ref=e222]: Specialty Tracks and Strategy
+              - text: — how your group is using the summit trainings
+            - listitem [ref=e223]:
+              - strong [ref=e224]: Data Exploration
+              - text: — datasets, maps, plots, and first observations
+            - listitem [ref=e225]:
+              - strong [ref=e226]: Methods and Code
+              - text: — workflows, notebooks, scripts, and reproducible steps
+            - listitem [ref=e227]:
+              - strong [ref=e228]: Results
+              - text: — patterns, findings, and interpretations
+            - listitem [ref=e229]:
+              - strong [ref=e230]: Polished Outputs
+              - text: — final figures, PDFs, slides, or other shareable products
+          - generic [ref=e231]:
+            - paragraph [ref=e232]: How to edit this section
+            - paragraph [ref=e233]: Keep this orientation short. It should help editors understand the page without becoming part of the project’s final public story.
+            - paragraph [ref=e234]: When instructions are off, these notes are hidden so readers see the project narrative, figures, people, outputs, and references.
+          - heading "People" [level=2] [ref=e235]
+          - paragraph [ref=e236]:
+            - 'link "D1-A: Team" [ref=e237] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day1/#guide-D1-A
+              - 'img "D1-A: Team" [ref=e238]'
+            - 'link "D1-C: People" [ref=e239] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day1/#guide-D1-C
+              - 'img "D1-C: People" [ref=e240]'
+          - paragraph [ref=e241]: "This project is meant to be shaped by the people in the room: their field experience, data skills, modeling instincts, design sense, and curiosity about how spatial fire records become scientific claims."
+          - generic [ref=e242]:
+            - paragraph [ref=e243]: "D1-A / D1-C: How to edit the people gallery"
+            - paragraph [ref=e244]: Replace the example people below with the people in your group. Each person edits their own Markdown profile file, and the homepage reads from those files.
+            - paragraph [ref=e245]:
+              - text: To update the gallery, edit
+              - code [ref=e246]: docs/_data/people.yml
+              - text: ". Keep that file as a short index only:"
+            - paragraph [ref=e247]:
+              - code [ref=e248]: "yaml people: - profile: people/your-file-name.md"
+            - paragraph [ref=e249]:
+              - text: Do not duplicate profile text in YAML. Copy learner files from the Innovation Summit learner folder into
+              - code [ref=e250]: docs/people/
+              - text: ", then add one"
+              - code [ref=e251]: "profile:"
+              - text: line per group member.
+            - paragraph [ref=e252]:
+              - link "Find learner files in the Innovation Summit 2026 repository" [ref=e253] [cursor=pointer]:
+                - /url: https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners
+            - paragraph [ref=e254]: Profile images are optional. A GitHub username in the profile front matter shows the GitHub avatar; otherwise the card shows initials.
+          - region "Project group people" [ref=e255]:
+            - article [ref=e256]:
+              - img "Ty Tuff GitHub avatar" [ref=e257]
+              - heading "Ty Tuff" [level=3] [ref=e258]
+              - paragraph [ref=e259]: Learner · ESIIL
+              - paragraph [ref=e260]: Fire polygon velocity framing
+              - paragraph [ref=e261]: Ty is interested in making spatial fire metrics easier to compare, explain, and reuse across project groups.
+              - generic "Interests" [ref=e262]:
+                - generic [ref=e263]: Fire modeling
+                - generic [ref=e264]: Open science
+                - generic [ref=e265]: Scientific storytelling
+              - generic "Skills" [ref=e266]:
+                - generic [ref=e267]: Python
+                - generic [ref=e268]: GIS
+                - generic [ref=e269]: Facilitation
+              - link "View learner file" [ref=e270] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/people/ty-tuff/
+            - article [ref=e271]:
+              - generic [ref=e272]: AJ
+              - heading "Aakriti Joshi" [level=3] [ref=e273]
+              - paragraph [ref=e274]: Learner · Example institution
+              - paragraph [ref=e275]: Remote sensing and perimeter interpretation
+              - paragraph [ref=e276]: Aakriti focuses on how remotely sensed fire perimeters can be turned into careful, interpretable spatial evidence.
+              - generic "Interests" [ref=e277]:
+                - generic [ref=e278]: Remote sensing
+                - generic [ref=e279]: Fire perimeters
+                - generic [ref=e280]: Earth observation
+              - generic "Skills" [ref=e281]:
+                - generic [ref=e282]: Python
+                - generic [ref=e283]: Earth Engine
+                - generic [ref=e284]: GIS
+              - link "View learner file" [ref=e285] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/people/aakriti-joshi/
+            - article [ref=e286]:
+              - generic [ref=e287]: JE
+              - heading "Jane Example" [level=3] [ref=e288]
+              - paragraph [ref=e289]: Learner · Example institution
+              - paragraph [ref=e290]: Data visualization and public story
+              - paragraph [ref=e291]: Jane works on turning early spatial analysis into compact visuals that help readers see what each metric supports.
+              - generic "Interests" [ref=e292]:
+                - generic [ref=e293]: Data visualization
+                - generic [ref=e294]: Uncertainty
+                - generic [ref=e295]: Public communication
+              - generic "Skills" [ref=e296]:
+                - generic [ref=e297]: Python
+                - generic [ref=e298]: Matplotlib
+                - generic [ref=e299]: Design
+              - link "View learner file" [ref=e300] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/people/jane-example/
+            - article [ref=e301]:
+              - generic [ref=e302]: JE
+              - heading "John Example" [level=3] [ref=e303]
+              - paragraph [ref=e304]: Learner · Example institution
+              - paragraph [ref=e305]: Methods and reproducible workflow
+              - paragraph [ref=e306]: John focuses on keeping the example workflow small, readable, and reproducible enough for another group to adapt.
+              - generic "Interests" [ref=e307]:
+                - generic [ref=e308]: AI and modeling
+                - generic [ref=e309]: Reproducible workflows
+                - generic [ref=e310]: Spatial analysis
+              - generic "Skills" [ref=e311]:
+                - generic [ref=e312]: Python
+                - generic [ref=e313]: PyTorch
+                - generic [ref=e314]: Notebooks
+              - link "View learner file" [ref=e315] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/people/john-example/
+          - heading "Project Question" [level=2] [ref=e316]
+          - paragraph [ref=e317]:
+            - 'link "D1-B: Question" [ref=e318] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day1/#guide-D1-B
+              - 'img "D1-B: Question" [ref=e319]'
+            - 'link "D2-A: Question" [ref=e320] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day2/#guide-D2-A
+              - 'img "D2-A: Question" [ref=e321]'
+            - 'link "D3-A: Story" [ref=e322] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day3/#guide-D3-A
+              - 'img "D3-A: Story" [ref=e323]'
+          - paragraph [ref=e324]: How should we measure the velocity of an evolving fire polygon, and how does the choice of metric change the story we tell about fire spread?
+          - paragraph [ref=e325]:
+            - text: "In fire behavior science, rate of spread has a clear meaning: how quickly a flame front advances through fuel under given conditions"
+            - link "Finney, 1998" [ref=e326] [cursor=pointer]:
+              - /url: http://127.0.0.1:8765/#ref-finney1998
+            - text: . That concept underpins both models and operational thinking.
+          - paragraph [ref=e327]: Satellite-era fire records are different. They often arrive as daily or near-daily outlines of burned area derived from products such as MODIS, VIIRS, Landsat, MTBS, or related fire-perimeter datasets. Those outlines are not simple lines moving forward. They are shapes that grow, stretch, fold, and sometimes reorganize.
+          - paragraph [ref=e328]: The translation from local spread to polygon change is therefore not straightforward. If a perimeter extends eastward, gains area, develops fine-scale structure, and shifts its center of mass, which of those changes counts as velocity? Different definitions answer that question in different ways.
+          - paragraph [ref=e329]: "The gap this project addresses is quiet but important: the same fire can appear fast or slow, stable or erratic, depending on how velocity is defined. Without a clear taxonomy, these differences can be mistaken for disagreement rather than recognized as different views of the same evolving system."
+          - generic [ref=e330]:
+            - paragraph [ref=e331]: "D1-B / D2-A / D3-A: How to edit the project question"
+            - paragraph [ref=e332]: Replace this section with your group’s project question. It is okay if the question changes during the summit.
+            - paragraph [ref=e333]: "Helpful prompts:"
+            - list [ref=e334]:
+              - listitem [ref=e335]: What are we trying to understand?
+              - listitem [ref=e336]: Why does this question matter?
+              - listitem [ref=e337]: What would count as a useful answer by Day 3?
+              - listitem [ref=e338]: What are we still unsure about?
+          - paragraph [ref=e339]:
+            - img "Day 1 whiteboard notes" [ref=e340]
+            - emphasis [ref=e341]: "This whiteboard captures the first version of the polygon-velocity question: define what counts as movement, compare several velocity metrics, and keep metric choice visible as part of the interpretation."
+          - generic [ref=e342]:
+            - paragraph [ref=e343]: How to replace the whiteboard image
+            - paragraph [ref=e344]:
+              - text: Upload a new whiteboard or notes photo to
+              - code [ref=e345]: docs/assets/whiteboards/
+              - text: ", update the image path above, and rewrite the caption so it says what decision the image supports."
+          - heading "Specialty Tracks and Strategy" [level=2] [ref=e346]
+          - paragraph [ref=e347]:
+            - 'link "D1-D: Tracks" [ref=e348] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day1/#guide-D1-D
+              - 'img "D1-D: Tracks" [ref=e349]'
+            - 'link "D2-B: Strategy" [ref=e350] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day2/#guide-D2-B
+              - 'img "D2-B: Strategy" [ref=e351]'
+            - 'link "D2-C: Takeaways" [ref=e352] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day2/#guide-D2-C
+              - 'img "D2-C: Takeaways" [ref=e353]'
+          - paragraph [ref=e354]: "The example group uses the summit tracks as a division of labor. One subgroup focuses on geospatial workflows for comparing evolving polygons. Another uses AI-assisted synthesis to organize fire-behavior concepts, metric definitions, and interpretation notes. A third focuses on visualization and communication: how to show that different velocity metrics are not competing answers, but different lenses on polygon change."
+          - paragraph [ref=e355]: The shared strategy is to keep the fire sequence constant and change only the definition of velocity. That makes the differences among metrics visible and interpretable before introducing the additional complexity of observational data.
+          - generic [ref=e356]:
+            - paragraph [ref=e357]: "D1-D / D2-B / D2-C: How to edit specialty track strategy"
+            - paragraph [ref=e358]: Replace this section with notes about how your group is using the summit specialty tracks.
+            - paragraph [ref=e359]: "Capture:"
+            - list [ref=e360]:
+              - listitem [ref=e361]: which tracks people attended or plan to attend
+              - listitem [ref=e362]: what each person brought back from a track
+              - listitem [ref=e363]: how the training changed your project strategy
+              - listitem [ref=e364]: what skills your group still needs
+          - heading "Data Exploration" [level=2] [ref=e365]
+          - paragraph [ref=e366]:
+            - 'link "D1-E: Data" [ref=e367] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day1/#guide-D1-E
+              - 'img "D1-E: Data" [ref=e368]'
+            - 'link "D2-E: Explore" [ref=e369] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day2/#guide-D2-E
+              - 'img "D2-E: Explore" [ref=e370]'
+            - 'link "D3-C: Clean Up" [ref=e371] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day3/#guide-D3-C
+              - 'img "D3-C: Clean Up" [ref=e372]'
+          - paragraph [ref=e373]: The first data pass uses a ten-day synthetic fire sequence designed to be realistic but readable. The sequence grows directionally, develops irregular structure, and exhibits branching behavior. Starting with a controlled example allows the group to isolate geometric effects before moving to noisier satellite-derived perimeter products.
+          - paragraph [ref=e374]: Useful data products for this example include daily perimeter polygons, derived boundary samples, area-change summaries, centroid positions, and distance-based comparisons between successive perimeters. In a real-data extension, the same workflow could be applied to MTBS, MODIS, VIIRS, Landsat, or related fire perimeter products.
+          - generic [ref=e375]:
+            - paragraph [ref=e376]: "D1-E / D2-E / D3-C: How to edit data exploration"
+            - paragraph [ref=e377]: Replace this section with the datasets, maps, plots, screenshots, tables, or first observations your group is using to understand the question.
+            - paragraph [ref=e378]: Strong data notes say what the dataset contains, why it matters, and what remains uncertain.
+          - paragraph [ref=e379]:
+            - img "Early exploration plot" [ref=e380]
+            - emphasis [ref=e381]: This early exploration checks how much the apparent velocity changes when the same evolving polygon is summarized by different geometric measurements.
+          - generic [ref=e382]:
+            - paragraph [ref=e383]: How to replace the exploration figure
+            - paragraph [ref=e384]:
+              - text: Upload rough plots, screenshots, maps, or GIFs to
+              - code [ref=e385]: docs/assets/explorations/
+              - text: . Rewrite the caption so it says what the figure shows, what surprised you, and what still does not make sense.
+          - paragraph [ref=e386]:
+            - link "Open the ESIIL Data Library" [ref=e387] [cursor=pointer]:
+              - /url: https://cu-esiil.github.io/data-library/innovation-summit-2025/
+            - link "Document your group data notes" [ref=e388] [cursor=pointer]:
+              - /url: http://127.0.0.1:8765/data/
+          - heading "Methods and Code" [level=2] [ref=e389]
+          - paragraph [ref=e390]:
+            - 'link "D1-F: Notes" [ref=e391] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day1/#guide-D1-F
+              - 'img "D1-F: Notes" [ref=e392]'
+            - 'link "D2-D: Methods" [ref=e393] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day2/#guide-D2-D
+              - 'img "D2-D: Methods" [ref=e394]'
+          - paragraph [ref=e395]: "The example workflow keeps the analysis intentionally small and inspectable: load the synthetic perimeter sequence, calculate seven velocity metrics for each time step, group those metrics by what they emphasize, and export figures that can be checked by someone outside the group."
+          - paragraph [ref=e396]: "The seven definitions are organized into functional groups:"
+          - list [ref=e397]:
+            - listitem [ref=e398]:
+              - strong [ref=e399]: "Core baselines:"
+              - text: optimal transport and area gain per perimeter length.
+            - listitem [ref=e400]:
+              - strong [ref=e401]: "Diagnostic surge detectors:"
+              - text: longest vector and P95 advance.
+            - listitem [ref=e402]:
+              - strong [ref=e403]: "Conservative proxies:"
+              - text: mean advance and equivalent radius growth.
+            - listitem [ref=e404]:
+              - strong [ref=e405]: "Niche translation measure:"
+              - text: centroid drift.
+          - paragraph [ref=e406]: "These categories are heuristic rather than exhaustive. Their purpose is to clarify how different definitions emphasize different aspects of change: growth, translation, deformation, rare advances, or stable summary behavior."
+          - generic [ref=e407]:
+            - paragraph [ref=e408]: "D1-F / D2-D: How to edit methods and code"
+            - paragraph [ref=e409]: Replace this section with the tools, notebooks, scripts, workflows, or repeatable steps your group tried.
+            - paragraph [ref=e410]: "Include:"
+            - list [ref=e411]:
+              - listitem [ref=e412]: what you tried
+              - listitem [ref=e413]: what worked
+              - listitem [ref=e414]: what did not work
+              - listitem [ref=e415]: where the code or notebook lives
+              - listitem [ref=e416]: what someone else would need to reproduce or extend the work
+          - paragraph [ref=e417]:
+            - link "View shared code" [ref=e418] [cursor=pointer]:
+              - /url: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
+          - heading "Results" [level=2] [ref=e419]
+          - paragraph [ref=e420]:
+            - 'link "D2-F: Results" [ref=e421] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day2/#guide-D2-F
+              - 'img "D2-F: Results" [ref=e422]'
+            - 'link "D3-B: Results" [ref=e423] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day3/#guide-D3-B
+              - 'img "D3-B: Results" [ref=e424]'
+            - 'link "D3-E: Present" [ref=e425] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day3/#guide-D3-E
+              - 'img "D3-E: Present" [ref=e426]'
+          - paragraph [ref=e427]: The central result is that polygon-derived velocity is not a single objective quantity. It depends on how change is defined and measured.
+          - paragraph [ref=e428]: "Three claims are worth carrying into a public share-out:"
+          - list [ref=e429]:
+            - listitem [ref=e430]:
+              - strong [ref=e431]: Velocity depends on definition.
+              - text: Across the synthetic sequence, all metrics detect growth, but they diverge in magnitude and interpretation. Some emphasize rare, rapid advances; others describe steady expansion; others capture whole-system rearrangement.
+            - listitem [ref=e432]:
+              - strong [ref=e433]: Growth and reorganization are different signals.
+              - text: Area gain per perimeter length reports velocity only when new area is added. Optimal transport, under the cost formulation used here, measures the displacement needed to transform one polygon into the next. That means a fire can show little new area gain while still undergoing substantial internal reorganization.
+            - listitem [ref=e434]:
+              - strong [ref=e435]: Extreme metrics are informative but selective.
+              - text: The longest-vector metric highlights the single largest advance between perimeters, making it sensitive to rare leaps such as spotting or branching runs. P95 advance offers a more stable upper-tail version. These measures are useful for head-fire or surge questions, but less appropriate for typical spread.
+            - listitem [ref=e436]:
+              - strong [ref=e437]: Stable summaries can hide structure.
+              - text: Mean advance and equivalent radius growth produce smooth, comparable time series. That stability is useful, but it can obscure anisotropy, directional runs, and boundary complexity. Centroid drift captures net migration, but misses expansion that occurs without large translation.
+          - paragraph [ref=e438]: The same fire can support multiple, internally consistent descriptions of its motion. That does not indicate a flaw in the metrics. It reflects the fact that each definition is a lens on a complex, evolving shape. Metric choice is therefore not just a technical detail; it shapes the scientific claim.
+          - generic [ref=e439]:
+            - paragraph [ref=e440]: "D2-F / D3-B / D3-E: How to edit results"
+            - paragraph [ref=e441]: Replace this section with emerging results, patterns, findings, surprises, or honest limits. A strong result makes a claim, points to evidence, and names uncertainty.
+            - paragraph [ref=e442]: "Useful result statements can sound like:"
+            - list [ref=e443]:
+              - listitem [ref=e444]: We are starting to see...
+              - listitem [ref=e445]: One pattern that surprised us was...
+              - listitem [ref=e446]: This result is still uncertain because...
+              - listitem [ref=e447]: The data do not yet support...
+          - paragraph [ref=e448]:
+            - img "Lead conclusion visual" [ref=e449]
+            - emphasis [ref=e450]: This supports the main result by showing how an evolving fire perimeter can produce different velocity interpretations depending on which geometric change is measured.
+          - paragraph [ref=e451]:
+            - img "Supporting panel figure" [ref=e452]
+            - emphasis [ref=e453]: These panels compare alternate summaries of the same polygon sequence, showing how stable metrics, tail metrics, and translation metrics emphasize different parts of the story.
+          - generic [ref=e454]:
+            - paragraph [ref=e455]: How to replace result figures
+            - paragraph [ref=e456]:
+              - text: Upload final or near-final figures to
+              - code [ref=e457]: docs/assets/figures/
+              - text: . Captions should say which claim each figure supports and what caveat a reader should remember.
+          - heading "Polished Outputs" [level=2] [ref=e458]
+          - paragraph [ref=e459]:
+            - 'link "D2-G: Plan" [ref=e460] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day2/#guide-D2-G
+              - 'img "D2-G: Plan" [ref=e461]'
+            - 'link "D3-D: Outputs" [ref=e462] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day3/#guide-D3-D
+              - 'img "D3-D: Outputs" [ref=e463]'
+            - 'link "D3-F: Next Steps" [ref=e464] [cursor=pointer]':
+              - /url: http://127.0.0.1:8765/instructions/day3/#guide-D3-F
+              - 'img "D3-F: Next Steps" [ref=e465]'
+          - paragraph [ref=e466]: The most reusable output from this example is a practical taxonomy and decision framework for fire polygon velocity.
+          - paragraph [ref=e467]: "Specifically, the project provides:"
+          - list [ref=e468]:
+            - listitem [ref=e469]: A side-by-side comparison of seven velocity metrics.
+            - listitem [ref=e470]: A controlled synthetic sequence for interpreting metric behavior.
+            - listitem [ref=e471]: A functional grouping of metrics by what they measure.
+            - listitem [ref=e472]: Guidance for selecting metrics based on the question at hand.
+          - paragraph [ref=e473]: "The work is intentionally focused on method and interpretation. The synthetic sequence isolates geometry, but real satellite-derived perimeters introduce additional complexities: pixel stair-steps, temporal compositing, truncated narrow runs, and sensor-specific biases. These factors can inflate or dampen distance-based measures. The framework does not remove those uncertainties; it makes them visible."
+          - paragraph [ref=e474]: "Next steps are to carry the framework into real data and models:"
+          - list [ref=e475]:
+            - listitem [ref=e476]: Apply the taxonomy to MTBS, MODIS, VIIRS, Landsat, and related products.
+            - listitem [ref=e477]: Evaluate how resolution and smoothing affect each metric.
+            - listitem [ref=e478]: Compare observed polygon velocities with model outputs.
+            - listitem [ref=e479]: Develop tools that help users select metrics for specific purposes.
+            - listitem [ref=e480]: Extend the framework toward a moment-based synthesis separating growth, translation, dilation, and deformation.
+          - generic [ref=e481]:
+            - paragraph [ref=e482]: "D2-G / D3-D / D3-F: How to edit polished outputs"
+            - paragraph [ref=e483]: "Replace this section with the final things you want people to find after the summit: polished figures, a PDF, slides, a notebook, a data product, or a short handoff note."
+          - paragraph [ref=e484]:
+            - img "Complementary result figure" [ref=e485]
+            - emphasis [ref=e486]: This public-facing figure summarizes the workflow from evolving perimeter observations to a cautious, metric-aware interpretation of fire polygon velocity.
+          - paragraph [ref=e487]:
+            - link "Read the project brief PDF" [ref=e488] [cursor=pointer]:
+              - /url: http://127.0.0.1:8765/assets/files/project_brief.pdf
+            - link "Compare computing costs" [ref=e489] [cursor=pointer]:
+              - /url: https://what-uses-more.com
+          - heading "Cite & Reuse" [level=2] [ref=e490]
+          - paragraph [ref=e491]:
+            - text: This example page cites the reusable OASIS template
+            - link "ESIIL Project Group Contributors, 2026" [ref=e492] [cursor=pointer]:
+              - /url: http://127.0.0.1:8765/#ref-oasisProjectTemplate
+            - text: and a classic fire spread modeling reference
+            - link "Finney, 1998" [ref=e493] [cursor=pointer]:
+              - /url: http://127.0.0.1:8765/#ref-finney1998
+            - text: . A completed group page should also cite the fire perimeter products, software, notebooks, and project outputs used to support its claims.
+          - paragraph [ref=e494]:
+            - text: "License: MIT unless noted. See dataset licenses on the"
+            - strong [ref=e495]:
+              - link "Data" [ref=e496] [cursor=pointer]:
+                - /url: http://127.0.0.1:8765/data/
+            - text: page.
+          - generic [ref=e497]:
+            - paragraph [ref=e498]: How to edit citations and site health
+            - paragraph [ref=e499]:
+              - text: Add sources to
+              - code [ref=e500]: docs/references.bib
+              - text: ", then cite them with citation keys such as"
+              - code [ref=e501]: "[ESIIL Project Group Contributors, 2026](#ref-oasisProjectTemplate)"
+              - text: .
+            - paragraph [ref=e502]: "Keep the generated Site Health report visible in Edit Mode while preparing the page:"
+            - paragraph [ref=e503]: Site Health
+            - paragraph [ref=e504]: ✓ No issues detected.
+            - paragraph [ref=e505]: This report is generated automatically during the site build. Fix these items in the repository to improve the site.
+          - heading "References" [level=2] [ref=e506]
+          - list [ref=e507]:
+            - listitem [ref=e508]:
+              - text: Finney, Mark A.. (1998).
+              - emphasis [ref=e509]: "FARSITE: Fire Area Simulator – Model Development and Evaluation"
+              - text: . USDA Forest Service Research Paper RMRS-RP-4.
+              - link "https://www.fs.usda.gov/research/treesearch/4617" [ref=e510] [cursor=pointer]:
+                - /url: https://www.fs.usda.gov/research/treesearch/4617
+              - text: .
+            - listitem [ref=e511]:
+              - text: ESIIL Project Group Contributors. (2026).
+              - emphasis [ref=e512]: OASIS Project Group Template
+              - text: . Reusable public-facing project group site template.
+              - link "https://cu-esiil.github.io/Project_group_OASIS/" [ref=e513] [cursor=pointer]:
+                - /url: https://cu-esiil.github.io/Project_group_OASIS/
+              - text: .
+          - complementary [ref=e514]:
+            - generic [ref=e515]:
+              - generic "Last update" [ref=e516]:
+                - img [ref=e517]
+              - text: 2026-04-27
+      - button "Back to top":
+        - img
+        - text: Back to top
+    - contentinfo [ref=e519]:
+      - generic [ref=e521]:
+        - generic [ref=e522]:
+          - generic [ref=e523]: Copyright © 2024 University of Colorado Boulder · MIT License
+          - text: Made with
+          - link "Material for MkDocs" [ref=e524] [cursor=pointer]:
+            - /url: https://squidfunk.github.io/mkdocs-material/
+        - link [ref=e526] [cursor=pointer]:
+          - /url: ""
+          - img [ref=e527]

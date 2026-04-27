@@ -1,39 +1,9 @@
-# Edit this file to update the People gallery on the public front page.
-# Each entry is plain text. All fields except name are optional.
-# Put profile images in docs/assets/people/ and reference them like:
-# image: assets/people/your-name.jpg
+# Edit this file to choose which learner profiles appear on the public front page.
+# Keep this file as an index only. Public profile text should live in the
+# referenced Markdown files, not here.
 
 people:
-  - name: Ty Tuff
-    role: Learner
-    focus: Fire modeling
-    skills:
-      - Python
-      - GIS
-    brings: Curiosity and data vibes
-    profile_url: https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/ty-tuff.md
-
-  - name: Aakriti Joshi
-    role: Learner
-    focus: Remote sensing
-    skills:
-      - Python
-      - Earth Engine
-    brings: Patterns and persistence
-    profile_url: https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/aakriti-joshi.md
-
-  - name: Jane Example
-    role: Learner
-    focus: Data visualization
-    skills:
-      - Python
-      - Matplotlib
-    brings: Clarity and design
-
-  - name: John Example
-    role: Learner
-    focus: AI and modeling
-    skills:
-      - Python
-      - PyTorch
-    brings: Big-picture thinking
+  - profile: people/ty-tuff.md
+  - profile: people/aakriti-joshi.md
+  - profile: people/jane-example.md
+  - profile: people/john-example.md

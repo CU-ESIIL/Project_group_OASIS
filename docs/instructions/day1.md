@@ -70,19 +70,27 @@ Helpful prompts:
 
 **Where this shows up on the main page:** [People](../index.md#people)
 
-Each person should add one Markdown list item that links to their existing learner file in the Innovation Summit 2026 repository.
+Each person should update their own Markdown profile file. The public People cards are built from those profile files.
 
-Use this format:
+Use this workflow:
 
-```markdown
-- [Your Name](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/your-file-name.md)
-```
+1. Find your learner file in the Innovation Summit 2026 repository.
+2. Copy it into this project under `docs/people/`.
+3. Update only your own profile file.
+4. Ask the group editor to add one line for your file in `docs/_data/people.yml`.
 
 If you do not know your file name, open the learner folder and search for your name:
 
 [Innovation Summit learner files](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
 
-Keep the People section short, but human. Make sure the linked profile says:
+The group editor only updates the index:
+
+```yaml
+people:
+  - profile: people/your-file-name.md
+```
+
+Keep each profile short, but human. Make sure it says:
 
 - what you work on
 - what you are excited about in this project

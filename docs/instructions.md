@@ -73,23 +73,23 @@ Use this loop every time you update the public-facing page:
 6. Wait for GitHub Pages to rebuild, then refresh the public site.
 7. If old text still appears, you edited the wrong file or the site has not rebuilt yet.
 
-## Template guidance toggle
+## Template instructions toggle
 
-The sidebar has a small **Show template guidance** toggle.
+The sidebar has a small **Instructions on/off** toggle.
 
-- Leave it on while editing during the workshop.
-- Turn it off to preview the cleaner public-facing page.
+- Leave instructions on while editing during the workshop.
+- Turn instructions off to preview the cleaner public-facing page.
 - The setting is saved in your browser.
 
-Write future editor guidance as collapsible Markdown notes, not as public paragraphs:
+Write future editor instructions as Markdown notes, not as public paragraphs:
 
 ```markdown
-??? note "D2-E: How to edit this section"
-    Replace this guidance with short instructions for editors.
+!!! note "D2-E: How to edit this section"
+    Replace this note with short instructions for editors.
     Keep public-facing project text outside this note.
 ```
 
-Guidance blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit`, or `Show template guidance` are hidden in Public Mode on the front page.
+Instruction blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit`, `Template instructions`, or `Replace this` are hidden when instructions are turned off on the front page.
 
 ## Where files go
 
@@ -104,8 +104,9 @@ Guidance blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit`, 
 | `docs/assets/team/` | Team photos or headshots |
 | `docs/assets/files/` | PDFs, briefs, slides, and downloadable materials |
 | `docs/assets/stickers/` | Landmark sticker images used by the front page and instructions |
-| `docs/_data/people.yml` | Plain-text entries for the People gallery |
-| Innovation Summit learner files | Existing participant profiles linked from the People section |
+| `docs/people/` | Markdown learner/profile files used to build People cards |
+| `docs/_data/people.yml` | Short index of profile files for the People gallery |
+| Innovation Summit learner files | Source profiles that can be copied into `docs/people/` |
 | `docs/references.bib` | BibTeX references cited from Markdown |
 | `code/` | Scripts, notebooks, and reusable analysis code |
 | `documentation/` | Longer notes that should not clutter the public homepage |
@@ -125,23 +126,17 @@ Data source:
 - **Dataset name** — one sentence on what it contains and why we need it. [Link](https://example.org)
 ```
 
-People gallery entry:
+People gallery index entry:
 
 [Find learner files in the Innovation Summit 2026 repository](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
 
 ```yaml
-- name: Ty Tuff
-  role: Learner
-  image: assets/people/ty-tuff.jpg
-  focus: Fire modeling
-  skills:
-    - Python
-    - GIS
-  brings: Curiosity and data vibes
-  profile_url: https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/ty-tuff.md
+people:
+  - profile: people/ty-tuff.md
+  - profile: people/aakriti-joshi.md
 ```
 
-Edit `docs/_data/people.yml` to add or remove cards. Link to the existing learner profile file instead of recreating contact details on this site. Prefer profile links over raw contact details; do not publish email and GitHub handles together.
+Edit `docs/_data/people.yml` to add or remove cards. Keep it as an index only. Each listed profile should be a Markdown file in `docs/people/`, usually copied from the Innovation Summit learner folder and lightly updated by that person. Do not duplicate profile text in YAML.
 
 Citation:
 
