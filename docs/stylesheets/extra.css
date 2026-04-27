@@ -1093,3 +1093,15 @@ body.presentation-mode .md-typeset > img {
     grid-template-columns: 1fr;
   }
 }
+
+/* Cube iframe styling */
+
+.cube-frame-wrapper {
+  width: 100%;
+  margin: var(--oasis-space-5) 0;
+  border-radius: var(--oasis-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--oasis-color-border);
+  background: var(--oasis-color-surface);
+  box-shadow: var(--oasis-shadow-sm);
+}
