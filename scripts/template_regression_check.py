@@ -93,6 +93,9 @@ def main() -> int:
         day_text = (ROOT / "docs" / "instructions" / f"{day}.md").read_text(encoding="utf-8")
         require("../assets/stickers/tasks/" in day_text and "{ .task-sticker }" in day_text,
                 f"{day}.md should show task stickers from the shared sticker assets.", errors)
+        day_number = day[-1]
+        require(f"oasis_day: {day_number}" in day_text and f"body_class: day-{day_number}" in day_text,
+                f"{day}.md should opt into the day-{day_number} instruction color system.", errors)
 
     for folder in ["hero", "whiteboards", "explorations", "figures", "team", "files", "stickers", "people"]:
         require((ROOT / "docs" / "assets" / folder).is_dir(), f"docs/assets/{folder}/ is missing.", errors)
@@ -175,6 +178,10 @@ def main() -> int:
     require(".md-typeset h1" in css_text and "color: var(--oasis-color-primary-blue)" in css_text,
             "Main content title should use ESIIL brand blue.", errors)
     require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
+    require(".md-sidebar--secondary .md-nav__link" in css_text and "oasis-day-marker" in css_text,
+            "Instruction pages should color the right table of contents by day.", errors)
+    require("--oasis-day-1-color" in tokens_text and "--oasis-day-2-color" in tokens_text and "--oasis-day-3-color" in tokens_text,
+            "Day color tokens are missing.", errors)
     require(".people-gallery" in css_text and ".people-card" in css_text,
             "People gallery card styles are missing.", errors)
     require('h1[id^="day-1"]' in css_text and 'h1[id^="day-2"]' in css_text and 'h1[id^="day-3"]' in css_text,
@@ -187,6 +194,8 @@ def main() -> int:
             "Citation hook should render references from docs/references.bib.", errors)
     require("PEOPLE_GALLERY_MARKER" in hooks_text and "people.yml" in hooks_text,
             "People gallery hook should render cards from docs/_data/people.yml.", errors)
+    require("DAY_MARKER_TEMPLATE" in hooks_text and "oasis_day" in hooks_text,
+            "Instruction day marker hook should drive page-specific TOC color styling.", errors)
 
     if errors:
         print("Template regression check failed:")

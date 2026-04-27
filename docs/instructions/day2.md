@@ -1,3 +1,10 @@
+---
+title: Day 2 — Build, Explore, and Apply New Skills
+oasis_day: 2
+extra:
+  body_class: day-2
+---
+
 ![Day 2 task pathway over a green mountain landscape](../assets/hero/day-2-hero.png)
 
 # Day 2 — Build, Explore, and Apply New Skills

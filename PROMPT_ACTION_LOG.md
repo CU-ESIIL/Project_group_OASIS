@@ -1137,3 +1137,35 @@ Verification
 * Ran `python3 scripts/template_regression_check.py`; passed.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+
+2026-04-27
+
+Prompt
+
+User asked for instruction page visual cleanup so the right-side table of contents on Day 1, Day 2, and Day 3 instruction pages matches each day color without putting styling into participant-editable Markdown.
+
+Files and folders inspected
+
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/stylesheets/tokens.css
+* docs/stylesheets/extra.css
+* hooks.py
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Added day metadata to the Day 1, Day 2, and Day 3 instruction pages.
+* Added shared day color tokens that reuse the ESIIL blue, light blue, and green palette.
+* Added a hook-generated hidden day marker so styling is driven by page metadata rather than hand-authored layout HTML.
+* Colored the right-side table of contents for each instruction day, including stronger active/hover colors in the same day color family.
+* Added regression checks to protect the day metadata, hook, tokens, and TOC color rules.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built Day 1, Day 2, and Day 3 pages include the expected `oasis-day-marker` values.

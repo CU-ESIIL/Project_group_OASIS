@@ -1,3 +1,10 @@
+---
+title: Day 3 — Synthesize, Polish, and Share
+oasis_day: 3
+extra:
+  body_class: day-3
+---
+
 ![Day 3 task pathway over an orange mountain landscape](../assets/hero/day-3-hero.png)
 
 # Day 3 — Synthesize, Polish, and Share

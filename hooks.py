@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parent
 DOCS = ROOT / "docs"
 REFERENCE_MARKER = "{{ references }}"
 PEOPLE_GALLERY_MARKER = "{{ people_gallery }}"
+DAY_MARKER_TEMPLATE = '<span class="oasis-day-marker" data-oasis-day="{day}" aria-hidden="true"></span>'
 CITATION_RE = re.compile(r"\[@([A-Za-z0-9_:\-]+)\]")
 ENTRY_RE = re.compile(r"@(\w+)\s*\{\s*([^,\s]+)\s*,(.*?)\n\}", re.S)
 FIELD_RE = re.compile(r"(\w+)\s*=\s*[\{\"](.+?)[\}\"]\s*,?", re.S)
@@ -188,6 +189,10 @@ def render_people_gallery() -> str:
 
 
 def on_page_markdown(markdown, page, config, files, **kwargs):
+    oasis_day = str((page.meta or {}).get("oasis_day", "")).strip()
+    if oasis_day in {"1", "2", "3"} and "oasis-day-marker" not in markdown:
+        markdown = f"{DAY_MARKER_TEMPLATE.format(day=oasis_day)}\n\n{markdown}"
+
     if PEOPLE_GALLERY_MARKER in markdown:
         markdown = markdown.replace(PEOPLE_GALLERY_MARKER, render_people_gallery())
 
