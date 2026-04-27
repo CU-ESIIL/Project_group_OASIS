@@ -905,6 +905,45 @@ Verification
 * Confirmed built header logo href is `https://cu-esiil.github.io/home/`.
 * Confirmed built sidebar logo href is `.` on the front page, which resolves to the Project Group homepage.
 
+2026-04-27
+
+Prompt
+
+User requested a bidirectional task sticker navigation system. Each task sticker should appear once on the public front page and once in the matching directions page, with explicit `edit-Dx-Y` and `guide-Dx-Y` anchors and links in both directions.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/assets/stickers/tasks/
+* docs/stylesheets/extra.css
+* scripts/site_health.py
+* scripts/template_regression_check.py
+* mkdocs.yml
+
+Actions taken
+
+* Added explicit `edit-Dx-Y` anchors to front-page sticker locations.
+* Added explicit `guide-Dx-Y` anchors to the matching directions tasks.
+* Converted task stickers into bidirectional links between the public front page and day directions.
+* Removed duplicate front-page placements for D3-C and D3-E so every task sticker appears exactly twice.
+* Added `docs/stickers.md` as the central task sticker registry.
+* Added `scripts/check_stickers.py` to validate sticker anchors, links, image paths, and ID casing.
+* Integrated sticker validation into the generated Site Health report.
+* Updated regression checks to run the sticker validation.
+* Added scroll/focus/hover styling for linked task stickers.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning and a git-revision warning for the new uncommitted `stickers.md` file.
+* Confirmed built front-page stickers link to directions anchors, including D1-A and D3-F.
+* Confirmed built directions stickers link back to front-page anchors, including D1-A and D3-F.
+
 2026-04-24
 
 Prompt

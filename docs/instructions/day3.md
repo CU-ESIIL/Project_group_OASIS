@@ -16,7 +16,8 @@ By the end of the day, your page should tell a coherent story:
 
 ---
 ## A — Revisit the whole story
-![D3-A Story sticker](../assets/stickers/tasks/d3-a.svg){ .task-sticker }
+<span id="guide-D3-A"></span>
+[![D3-A: Story](../assets/stickers/tasks/d3-a.svg){ .task-sticker }](../index.md#edit-D3-A)
 
 **Landmark:** Project Question
 
@@ -35,7 +36,8 @@ The story should match the work you actually did, not the plan you started with.
 
 ---
 ## B — Finalize the results
-![D3-B Results sticker](../assets/stickers/tasks/d3-b.svg){ .task-sticker }
+<span id="guide-D3-B"></span>
+[![D3-B: Results](../assets/stickers/tasks/d3-b.svg){ .task-sticker }](../index.md#edit-D3-B)
 
 **Landmark:** Results
 
@@ -60,7 +62,8 @@ A strong result does not need to be a perfect answer. It needs to be honest and 
 
 ---
 ## C — Clean the data and methods sections
-![D3-C Clean Up sticker](../assets/stickers/tasks/d3-c.svg){ .task-sticker }
+<span id="guide-D3-C"></span>
+[![D3-C: Clean Up](../assets/stickers/tasks/d3-c.svg){ .task-sticker }](../index.md#edit-D3-C)
 
 **Landmark:** Data Exploration and Methods and Code
 
@@ -85,7 +88,8 @@ Clarity matters more than completeness.
 
 ---
 ## D — Add polished outputs
-![D3-D Outputs sticker](../assets/stickers/tasks/d3-d.svg){ .task-sticker }
+<span id="guide-D3-D"></span>
+[![D3-D: Outputs](../assets/stickers/tasks/d3-d.svg){ .task-sticker }](../index.md#edit-D3-D)
 
 **Landmark:** Polished Outputs
 
@@ -106,7 +110,8 @@ This section is where someone goes after the summit to find the most useful take
 
 ---
 ## E — Prepare to present from the page
-![D3-E Present sticker](../assets/stickers/tasks/d3-e.svg){ .task-sticker }
+<span id="guide-D3-E"></span>
+[![D3-E: Present](../assets/stickers/tasks/d3-e.svg){ .task-sticker }](../index.md#edit-D3-E)
 
 **Landmark:** Results and Polished Outputs
 
@@ -125,7 +130,8 @@ Your page does not need to include every detail. It should help you tell the sto
 
 ---
 ## F — Leave the project useful for others
-![D3-F Next Steps sticker](../assets/stickers/tasks/d3-f.svg){ .task-sticker }
+<span id="guide-D3-F"></span>
+[![D3-F: Next Steps](../assets/stickers/tasks/d3-f.svg){ .task-sticker }](../index.md#edit-D3-F)
 
 **Landmark:** Polished Outputs
 

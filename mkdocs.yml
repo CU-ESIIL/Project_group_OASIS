@@ -42,6 +42,7 @@ nav:
 
 not_in_nav: |
   data.md
+  stickers.md
   instructions.md
   project_template.md
   assets/cyverse_basics/README.md

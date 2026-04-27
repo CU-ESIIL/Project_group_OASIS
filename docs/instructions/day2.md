@@ -21,7 +21,8 @@ By the end of the day, your page should show:
 
 ---
 ## A — Reconnect with your question
-![D2-A Question sticker](../assets/stickers/tasks/d2-a.svg){ .task-sticker }
+<span id="guide-D2-A"></span>
+[![D2-A: Question](../assets/stickers/tasks/d2-a.svg){ .task-sticker }](../index.md#edit-D2-A)
 
 **Landmark:** Project Question
 
@@ -40,7 +41,8 @@ Your question is allowed to evolve. That is part of the work.
 
 ---
 ## B — Choose how to use the specialty tracks
-![D2-B Strategy sticker](../assets/stickers/tasks/d2-b.svg){ .task-sticker }
+<span id="guide-D2-B"></span>
+[![D2-B: Strategy](../assets/stickers/tasks/d2-b.svg){ .task-sticker }](../index.md#edit-D2-B)
 
 **Landmark:** Specialty Tracks and Strategy
 
@@ -59,7 +61,8 @@ This does not need to be permanent. It is a working strategy.
 
 ---
 ## C — Attend a specialty training and bring something back
-![D2-C Takeaways sticker](../assets/stickers/tasks/d2-c.svg){ .task-sticker }
+<span id="guide-D2-C"></span>
+[![D2-C: Takeaways](../assets/stickers/tasks/d2-c.svg){ .task-sticker }](../index.md#edit-D2-C)
 
 **Landmark:** Specialty Tracks and Strategy
 
@@ -78,7 +81,8 @@ The goal is not just to attend a session. The goal is to bring new capability ba
 
 ---
 ## D — Apply what you learned
-![D2-D Methods sticker](../assets/stickers/tasks/d2-d.svg){ .task-sticker }
+<span id="guide-D2-D"></span>
+[![D2-D: Methods](../assets/stickers/tasks/d2-d.svg){ .task-sticker }](../index.md#edit-D2-D)
 
 **Landmark:** Methods and Code
 
@@ -99,7 +103,8 @@ Learning matters most when it changes what you do.
 
 ---
 ## E — Push the data exploration further
-![D2-E Explore sticker](../assets/stickers/tasks/d2-e.svg){ .task-sticker }
+<span id="guide-D2-E"></span>
+[![D2-E: Explore](../assets/stickers/tasks/d2-e.svg){ .task-sticker }](../index.md#edit-D2-E)
 
 **Landmark:** Data Exploration
 
@@ -119,7 +124,8 @@ Add updated figures or notes to the Data Exploration section.
 
 ---
 ## F — Start forming results
-![D2-F Results sticker](../assets/stickers/tasks/d2-f.svg){ .task-sticker }
+<span id="guide-D2-F"></span>
+[![D2-F: Results](../assets/stickers/tasks/d2-f.svg){ .task-sticker }](../index.md#edit-D2-F)
 
 **Landmark:** Results
 
@@ -138,7 +144,8 @@ This is where exploration starts becoming explanation.
 
 ---
 ## G — Set up Day 3
-![D2-G Plan sticker](../assets/stickers/tasks/d2-g.svg){ .task-sticker }
+<span id="guide-D2-G"></span>
+[![D2-G: Plan](../assets/stickers/tasks/d2-g.svg){ .task-sticker }](../index.md#edit-D2-G)
 
 **Landmark:** Polished Outputs
 

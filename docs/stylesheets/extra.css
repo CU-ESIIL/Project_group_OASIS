@@ -168,6 +168,22 @@ body {
   vertical-align: top;
 }
 
+.md-typeset a > img.task-sticker {
+  transition:
+    box-shadow var(--oasis-transition-fast),
+    transform var(--oasis-transition-fast);
+}
+
+.md-typeset a:is(:hover, :focus-visible) > img.task-sticker {
+  box-shadow: 0 0.65rem 1.45rem rgba(22, 26, 25, 0.18);
+  transform: translateY(-2px);
+}
+
+.md-typeset span[id^="edit-D"],
+.md-typeset span[id^="guide-D"] {
+  scroll-margin-top: 5.5rem;
+}
+
 .md-typeset h2[id^="a-"],
 .md-typeset h2[id^="b-"],
 .md-typeset h2[id^="c-"],

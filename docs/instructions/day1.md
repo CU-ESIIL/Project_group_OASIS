@@ -18,7 +18,8 @@ By the end of the day, your page should show:
 
 ---
 ## A — Meet your team before editing anything
-![D1-A Team sticker](../assets/stickers/tasks/d1-a.svg){ .task-sticker }
+<span id="guide-D1-A"></span>
+[![D1-A: Team](../assets/stickers/tasks/d1-a.svg){ .task-sticker }](../index.md#edit-D1-A)
 
 **Landmark:** People
 
@@ -36,7 +37,8 @@ This project works best when it reflects the people in the group. The question y
 
 ---
 ## B — Choose your project and name it
-![D1-B Question sticker](../assets/stickers/tasks/d1-b.svg){ .task-sticker }
+<span id="guide-D1-B"></span>
+[![D1-B: Question](../assets/stickers/tasks/d1-b.svg){ .task-sticker }](../index.md#edit-D1-B)
 
 **Landmark:** Project Question
 
@@ -54,7 +56,8 @@ Helpful prompts:
 
 ---
 ## C — Add your team to the page
-![D1-C People sticker](../assets/stickers/tasks/d1-c.svg){ .task-sticker }
+<span id="guide-D1-C"></span>
+[![D1-C: People](../assets/stickers/tasks/d1-c.svg){ .task-sticker }](../index.md#edit-D1-C)
 
 **Landmark:** People
 
@@ -82,7 +85,8 @@ This turns your group from a list of names into a team. It also helps others und
 
 ---
 ## D — Talk about the specialty tracks
-![D1-D Tracks sticker](../assets/stickers/tasks/d1-d.svg){ .task-sticker }
+<span id="guide-D1-D"></span>
+[![D1-D: Tracks](../assets/stickers/tasks/d1-d.svg){ .task-sticker }](../index.md#edit-D1-D)
 
 **Landmark:** Specialty Tracks and Strategy
 
@@ -104,7 +108,8 @@ Tomorrow, you’ll choose a specialty training. Having this conversation now hel
 
 ---
 ## E — Take a first look at the data
-![D1-E Data sticker](../assets/stickers/tasks/d1-e.svg){ .task-sticker }
+<span id="guide-D1-E"></span>
+[![D1-E: Data](../assets/stickers/tasks/d1-e.svg){ .task-sticker }](../index.md#edit-D1-E)
 
 **Landmark:** Data Exploration
 
@@ -124,7 +129,8 @@ This is where your idea meets reality. Early observations often reshape the ques
 
 ---
 ## F — Capture what you tried and what comes next
-![D1-F Notes sticker](../assets/stickers/tasks/d1-f.svg){ .task-sticker }
+<span id="guide-D1-F"></span>
+[![D1-F: Notes](../assets/stickers/tasks/d1-f.svg){ .task-sticker }](../index.md#edit-D1-F)
 
 **Landmark:** Methods and Code
 

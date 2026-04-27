@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from check_stickers import sticker_issues
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -20,6 +22,7 @@ def main() -> int:
     tokens = ROOT / "docs" / "stylesheets" / "tokens.css"
     hooks = ROOT / "hooks.py"
     references = ROOT / "docs" / "references.bib"
+    stickers_registry = ROOT / "docs" / "stickers.md"
     people_dir = ROOT / "docs" / "people"
     stickers_dir = ROOT / "docs" / "assets" / "stickers"
     logo = ROOT / "docs" / "assets" / "oasis_logo.png"
@@ -36,6 +39,7 @@ def main() -> int:
     tokens_text = tokens.read_text(encoding="utf-8") if tokens.exists() else ""
     hooks_text = hooks.read_text(encoding="utf-8") if hooks.exists() else ""
     references_text = references.read_text(encoding="utf-8") if references.exists() else ""
+    stickers_text = stickers_registry.read_text(encoding="utf-8") if stickers_registry.exists() else ""
 
     require(index.exists(), "docs/index.md is missing.", errors)
     require("## How to use this page" in index_text, "Front page sticker legend is missing.", errors)
@@ -76,6 +80,9 @@ def main() -> int:
     require("Most summit participants should only edit Markdown files." in instructions_text,
             "Markdown-safe editing guidance is missing.", errors)
     require("docs/references.bib" in instructions_text, "Instructions should explain BibTeX references.", errors)
+    require(stickers_registry.exists(), "Task sticker registry docs/stickers.md is missing.", errors)
+    require("edit-D1-A" in stickers_text and "guide-D1-A" in stickers_text,
+            "Task sticker registry should document edit/guide anchor pairs.", errors)
 
     for day in ["day1", "day2", "day3"]:
         day_text = (ROOT / "docs" / "instructions" / f"{day}.md").read_text(encoding="utf-8")
@@ -128,6 +135,8 @@ def main() -> int:
                 f"Task sticker asset {sticker}.svg is missing.", errors)
         require(sticker_path in index_text,
                 f"Public Front Page should show task sticker {sticker}.svg.", errors)
+    sticker_errors = sticker_issues()
+    require(not sticker_errors, "Task sticker bidirectional validation failed:\n" + "\n".join(sticker_errors), errors)
     require((ai_dir / "defining-ai.md").exists(), "Defining AI page is missing.", errors)
     require((ai_dir / "defining-sustainability.md").exists(), "Defining Sustainability page is missing.", errors)
     require((ai_dir / "what-does-it-cost.md").exists(), "What Does It Cost page is missing.", errors)

@@ -4,6 +4,8 @@ import re
 from pathlib import Path
 from urllib.parse import unquote
 
+from check_stickers import sticker_issues
+
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 REPORT = DOCS / "_site_health.md"
@@ -64,6 +66,13 @@ def navigation_issues() -> list[str]:
     return [f"⚠ Navigation issue: missing nav item '{item}' in mkdocs.yml" for item in NAV_ITEMS if item not in labels]
 
 
+def sticker_validation_issues() -> list[str]:
+    return [
+        f"⚠ Sticker navigation issue: {issue}"
+        for issue in sticker_issues()
+    ]
+
+
 def internal_link_issues() -> list[str]:
     issues = []
     for path in [p for p in sorted(DOCS.rglob("*.md")) if p.name != "_site_health.md"]:
@@ -92,7 +101,14 @@ def write_report(issues: list[str]) -> None:
 
 
 def main() -> int:
-    issues = missing_file_issues() + missing_asset_dir_issues() + placeholder_issues() + navigation_issues() + internal_link_issues()
+    issues = (
+        missing_file_issues()
+        + missing_asset_dir_issues()
+        + placeholder_issues()
+        + navigation_issues()
+        + internal_link_issues()
+        + sticker_validation_issues()
+    )
     write_report(issues)
     print(f"Generated {REPORT.relative_to(ROOT)} with {len(issues)} warning(s).")
     return 0

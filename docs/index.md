@@ -19,8 +19,10 @@ The task stickers are landmarks. They help you match each day-by-day direction t
 
 ## People { #people }
 
-![D1-A Team sticker](assets/stickers/tasks/d1-a.svg){ .task-sticker }
-![D1-C People sticker](assets/stickers/tasks/d1-c.svg){ .task-sticker }
+<span id="edit-D1-A"></span>
+[![D1-A: Team](assets/stickers/tasks/d1-a.svg){ .task-sticker }](instructions/day1.md#guide-D1-A)
+<span id="edit-D1-C"></span>
+[![D1-C: People](assets/stickers/tasks/d1-c.svg){ .task-sticker }](instructions/day1.md#guide-D1-C)
 
 Replace this list with the people in your group. Link each name to that person’s existing learner file in the Innovation Summit learner folder.
 
@@ -35,9 +37,12 @@ Keep this as a simple Markdown list so each group can add or remove names quickl
 
 ## Project Question { #project-question }
 
-![D1-B Question sticker](assets/stickers/tasks/d1-b.svg){ .task-sticker }
-![D2-A Question sticker](assets/stickers/tasks/d2-a.svg){ .task-sticker }
-![D3-A Story sticker](assets/stickers/tasks/d3-a.svg){ .task-sticker }
+<span id="edit-D1-B"></span>
+[![D1-B: Question](assets/stickers/tasks/d1-b.svg){ .task-sticker }](instructions/day1.md#guide-D1-B)
+<span id="edit-D2-A"></span>
+[![D2-A: Question](assets/stickers/tasks/d2-a.svg){ .task-sticker }](instructions/day2.md#guide-D2-A)
+<span id="edit-D3-A"></span>
+[![D3-A: Story](assets/stickers/tasks/d3-a.svg){ .task-sticker }](instructions/day3.md#guide-D3-A)
 
 Replace this text with your group’s project question. It is okay if the question changes during the summit.
 
@@ -53,9 +58,12 @@ Helpful prompts:
 
 ## Specialty Tracks and Strategy { #specialty-tracks-and-strategy }
 
-![D1-D Tracks sticker](assets/stickers/tasks/d1-d.svg){ .task-sticker }
-![D2-B Strategy sticker](assets/stickers/tasks/d2-b.svg){ .task-sticker }
-![D2-C Takeaways sticker](assets/stickers/tasks/d2-c.svg){ .task-sticker }
+<span id="edit-D1-D"></span>
+[![D1-D: Tracks](assets/stickers/tasks/d1-d.svg){ .task-sticker }](instructions/day1.md#guide-D1-D)
+<span id="edit-D2-B"></span>
+[![D2-B: Strategy](assets/stickers/tasks/d2-b.svg){ .task-sticker }](instructions/day2.md#guide-D2-B)
+<span id="edit-D2-C"></span>
+[![D2-C: Takeaways](assets/stickers/tasks/d2-c.svg){ .task-sticker }](instructions/day2.md#guide-D2-C)
 
 Replace this text with notes about how your group is using the summit specialty tracks.
 
@@ -68,9 +76,12 @@ Use this section to capture:
 
 ## Data Exploration { #data-exploration }
 
-![D1-E Data sticker](assets/stickers/tasks/d1-e.svg){ .task-sticker }
-![D2-E Explore sticker](assets/stickers/tasks/d2-e.svg){ .task-sticker }
-![D3-C Clean Up sticker](assets/stickers/tasks/d3-c.svg){ .task-sticker }
+<span id="edit-D1-E"></span>
+[![D1-E: Data](assets/stickers/tasks/d1-e.svg){ .task-sticker }](instructions/day1.md#guide-D1-E)
+<span id="edit-D2-E"></span>
+[![D2-E: Explore](assets/stickers/tasks/d2-e.svg){ .task-sticker }](instructions/day2.md#guide-D2-E)
+<span id="edit-D3-C"></span>
+[![D3-C: Clean Up](assets/stickers/tasks/d3-c.svg){ .task-sticker }](instructions/day3.md#guide-D3-C)
 
 Replace this text with the datasets, maps, plots, screenshots, tables, or first observations your group is using to understand the question.
 
@@ -82,9 +93,10 @@ Replace this text with the datasets, maps, plots, screenshots, tables, or first 
 
 ## Methods and Code { #methods-and-code }
 
-![D1-F Notes sticker](assets/stickers/tasks/d1-f.svg){ .task-sticker }
-![D2-D Methods sticker](assets/stickers/tasks/d2-d.svg){ .task-sticker }
-![D3-C Clean Up sticker](assets/stickers/tasks/d3-c.svg){ .task-sticker }
+<span id="edit-D1-F"></span>
+[![D1-F: Notes](assets/stickers/tasks/d1-f.svg){ .task-sticker }](instructions/day1.md#guide-D1-F)
+<span id="edit-D2-D"></span>
+[![D2-D: Methods](assets/stickers/tasks/d2-d.svg){ .task-sticker }](instructions/day2.md#guide-D2-D)
 
 Replace this text with the tools, notebooks, scripts, workflows, or repeatable steps your group tried.
 
@@ -100,9 +112,12 @@ Include:
 
 ## Results { #results }
 
-![D2-F Results sticker](assets/stickers/tasks/d2-f.svg){ .task-sticker }
-![D3-B Results sticker](assets/stickers/tasks/d3-b.svg){ .task-sticker }
-![D3-E Present sticker](assets/stickers/tasks/d3-e.svg){ .task-sticker }
+<span id="edit-D2-F"></span>
+[![D2-F: Results](assets/stickers/tasks/d2-f.svg){ .task-sticker }](instructions/day2.md#guide-D2-F)
+<span id="edit-D3-B"></span>
+[![D3-B: Results](assets/stickers/tasks/d3-b.svg){ .task-sticker }](instructions/day3.md#guide-D3-B)
+<span id="edit-D3-E"></span>
+[![D3-E: Present](assets/stickers/tasks/d3-e.svg){ .task-sticker }](instructions/day3.md#guide-D3-E)
 
 Replace this text with emerging results, patterns, findings, surprises, or honest limits. A strong result makes a claim, points to evidence, and names uncertainty.
 
@@ -121,10 +136,12 @@ Useful result statements can sound like:
 
 ## Polished Outputs { #polished-outputs }
 
-![D2-G Plan sticker](assets/stickers/tasks/d2-g.svg){ .task-sticker }
-![D3-D Outputs sticker](assets/stickers/tasks/d3-d.svg){ .task-sticker }
-![D3-E Present sticker](assets/stickers/tasks/d3-e.svg){ .task-sticker }
-![D3-F Next Steps sticker](assets/stickers/tasks/d3-f.svg){ .task-sticker }
+<span id="edit-D2-G"></span>
+[![D2-G: Plan](assets/stickers/tasks/d2-g.svg){ .task-sticker }](instructions/day2.md#guide-D2-G)
+<span id="edit-D3-D"></span>
+[![D3-D: Outputs](assets/stickers/tasks/d3-d.svg){ .task-sticker }](instructions/day3.md#guide-D3-D)
+<span id="edit-D3-F"></span>
+[![D3-F: Next Steps](assets/stickers/tasks/d3-f.svg){ .task-sticker }](instructions/day3.md#guide-D3-F)
 
 Replace this text with the final things you want people to find after the summit: polished figures, a PDF, slides, a notebook, a data product, or a short handoff note.
 
