@@ -130,6 +130,8 @@ The shared strategy is to keep the fire sequence constant and change only the de
 <span id="edit-D3-C"></span>
 [![D3-C: Clean Up](assets/stickers/tasks/d3-c.svg){ .task-sticker }](instructions/day3.md#guide-D3-C)
 
+<iframe src="/assets/figures/ndvi_1_year.html" title="Interactive NDVI cube (1 year)" loading="lazy" ></iframe>
+
 The first data pass uses a ten-day synthetic fire sequence designed to be realistic but readable. The sequence grows directionally, develops irregular structure, and exhibits branching behavior. Starting with a controlled example allows the group to isolate geometric effects before moving to noisier satellite-derived perimeter products.
 
 Useful data products for this example include daily perimeter polygons, derived boundary samples, area-change summaries, centroid positions, and distance-based comparisons between successive perimeters. In a real-data extension, the same workflow could be applied to MTBS, MODIS, VIIRS, Landsat, or related fire perimeter products.
