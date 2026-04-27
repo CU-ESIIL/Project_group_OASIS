@@ -130,12 +130,13 @@ The shared strategy is to keep the fire sequence constant and change only the de
 <span id="edit-D3-C"></span>
 [![D3-C: Clean Up](assets/stickers/tasks/d3-c.svg){ .task-sticker }](instructions/day3.md#guide-D3-C)
 
-<iframe
-  src="assets/examples/cubedynamics_ndvi_1_year.html"
-  title="CubeDynamics NDVI one year example"
-  loading="lazy"
-  class="cube-example-frame">
-</iframe>
+<div class="cube-frame-wrapper">
+  <iframe
+    src="assets/examples/cubedynamics_ndvi_1_year.html"
+    title="CubeDynamics NDVI one year example"
+    loading="lazy">
+  </iframe>
+</div>
 
 [Open the NDVI cube example in a new tab](assets/examples/cubedynamics_ndvi_1_year.html) →
 
