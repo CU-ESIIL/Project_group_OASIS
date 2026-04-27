@@ -23,6 +23,13 @@
       {% include "partials/source.html" %}
     </div>
   {% endif %}
+  <div class="template-guidance-toggle" role="group" aria-label="Template guidance display setting">
+    <label class="template-guidance-toggle__label" for="template-guidance-toggle">
+      <input type="checkbox" id="template-guidance-toggle" data-oasis-mode-toggle checked>
+      <span class="template-guidance-toggle__control" aria-hidden="true"></span>
+      <span class="template-guidance-toggle__text">Show template guidance</span>
+    </label>
+  </div>
   <ul class="md-nav__list" data-md-scrollfix>
     {% for nav_item in nav.items %}
       {% set path = "__nav_" ~ loop.index %}

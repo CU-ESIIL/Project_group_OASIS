@@ -124,6 +124,13 @@ def main() -> int:
     require("Specialty Tracks" in mkdocs_text, "Specialty Tracks nav section is missing.", errors)
     require(mkdocs_text.find("AI for Sustainability") < mkdocs_text.find("Specialty Tracks"),
             "AI for Sustainability should appear before Specialty Tracks in nav.", errors)
+    require("Cloud Triangle" in mkdocs_text, "Cloud Triangle nav section is missing.", errors)
+    require("Connect instance to GitHub: instructions/link-to-github.md" in mkdocs_text,
+            "Cloud Triangle should include Connect instance to GitHub.", errors)
+    require("Instance to/from GitHub: instructions/push-to-github.md" in mkdocs_text,
+            "Cloud Triangle should include Instance to/from GitHub.", errors)
+    require("Instance to/from persistent storage: instructions/save-to-persistent-storage.md" in mkdocs_text,
+            "Cloud Triangle should include Instance to/from persistent storage.", errors)
     require("logo: 'assets/oasis_logo.png'" in mkdocs_text, "Header logo should use docs/assets/oasis_logo.png.", errors)
     require("homepage: https://cu-esiil.github.io/home/" in mkdocs_text,
             "Header logo should point to the OASIS homepage.", errors)
@@ -168,6 +175,8 @@ def main() -> int:
     nav_override_text = nav_override.read_text(encoding="utf-8") if nav_override.exists() else ""
     require("nav.homepage.url" in nav_override_text and "config.extra.homepage" not in nav_override_text,
             "Sidebar nav override should use nav.homepage.url, not config.extra.homepage.", errors)
+    require("template-guidance-toggle" in nav_override_text and "Show template guidance" in nav_override_text,
+            "Template guidance toggle should render in the sidebar nav override.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "display: flex" in css_text,
             "Sidebar branding area should be visible for the group logo.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "font-size: 0" in css_text,
@@ -189,8 +198,8 @@ def main() -> int:
     require(".md-typeset h1" in css_text and "color: var(--oasis-color-primary-blue)" in css_text,
             "Main content title should use ESIIL brand blue.", errors)
     require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
-    require(".oasis-mode-toggle" in css_text and "body.public-mode:has(.oasis-public-mode-marker)" in css_text,
-            "Edit/Public mode toggle styles are missing.", errors)
+    require(".template-guidance-toggle" in css_text and "body.hide-template-guidance .md-typeset details.oasis-scaffold" in css_text,
+            "Sidebar template guidance toggle styles are missing.", errors)
     require(".md-sidebar--secondary .md-nav__link" in css_text and "oasis-day-marker" in css_text,
             "Instruction pages should color the right table of contents by day.", errors)
     require("--oasis-day-1-color" in tokens_text and "--oasis-day-2-color" in tokens_text and "--oasis-day-3-color" in tokens_text,
@@ -212,8 +221,10 @@ def main() -> int:
     require("PUBLIC_MODE_MARKER" in hooks_text and "public_mode_toggle" in hooks_text,
             "Front page should get a hook-generated public-mode marker.", errors)
     require(mode_toggle.exists(), "Mode toggle JavaScript is missing.", errors)
-    require("localStorage" in mode_toggle_text and "oasis-scaffold" in mode_toggle_text,
+    require("localStorage" in mode_toggle_text and "oasis-scaffold" in mode_toggle_text and "oasis-template-guidance" in mode_toggle_text,
             "Mode toggle JavaScript should persist mode and identify scaffold guidance blocks.", errors)
+    require("insertAdjacentElement" not in mode_toggle_text,
+            "Mode toggle JavaScript should not inject the toggle into the main page body.", errors)
 
     if errors:
         print("Template regression check failed:")

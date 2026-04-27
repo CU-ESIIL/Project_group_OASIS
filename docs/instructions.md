@@ -16,6 +16,22 @@ The final homepage should read like a compact evidence-backed synthesis: make cl
 
 > Tip: Edit any page in your browser: open the file → click the pencil (✎) → make changes → **Commit changes**.
 
+## CRT cloud workflow
+
+In this workflow, your work moves between three connected places:
+
+- **JupyterLab** is the temporary active workspace where you run notebooks, edit files, and test ideas.
+- **GitHub** is for code, Markdown, notebooks, small figures, collaboration, and the public site source.
+- **Persistent storage** is for large data, intermediate outputs, model results, and files that must survive beyond the running container.
+
+A simple rule: **work in JupyterLab, push code and text to GitHub, and save large data or outputs to persistent storage.**
+
+Use the Cloud Triangle pages when you need to move work between those places:
+
+1. [Connect instance to GitHub](instructions/link-to-github.md)
+2. [Instance to/from GitHub](instructions/push-to-github.md)
+3. [Instance to/from persistent storage](instructions/save-to-persistent-storage.md)
+
 ## Landmark stickers
 
 Use the stickers like parking-garage landmarks:
@@ -57,9 +73,9 @@ Use this loop every time you update the public-facing page:
 6. Wait for GitHub Pages to rebuild, then refresh the public site.
 7. If old text still appears, you edited the wrong file or the site has not rebuilt yet.
 
-## Edit Mode and Public Mode
+## Template guidance toggle
 
-The Public Front Page has a small **Show template guidance** toggle near the top.
+The sidebar has a small **Show template guidance** toggle.
 
 - Leave it on while editing during the workshop.
 - Turn it off to preview the cleaner public-facing page.

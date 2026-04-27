@@ -26,10 +26,10 @@ nav:
       - Digital Twins: specialty-tracks/digital-twins.md
       - Earth Embeddings: https://center-for-effective-global-action-cega.github.io/MOSAIKS-Training-Manual/en/index.html
       - Causal Inference: specialty-tracks/causal-inference.md
-  - Manuals:
-      - Link to GitHub: instructions/link-to-github.md
-      - Git/GitHub Widget in JupyterLab: instructions/push-to-github.md
-      - Save to persistent storage: instructions/save-to-persistent-storage.md
+  - Cloud Triangle:
+      - Connect instance to GitHub: instructions/link-to-github.md
+      - Instance to/from GitHub: instructions/push-to-github.md
+      - Instance to/from persistent storage: instructions/save-to-persistent-storage.md
   - Storage:
       - Project code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
       - Project documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation

@@ -1234,3 +1234,70 @@ Verification
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Confirmed the built Link JupyterLab to GitHub page includes the `/launch` button, `github_web_auth.ipynb`, HTTPS clone guidance, timeout recovery, and SSH backup section.
+
+2026-04-27
+
+Prompt
+
+User asked to unify the GitHub authentication page, Git widget push/pull page, and persistent storage/gocmd page as a coherent CRT Cloud Triangle workflow. The pages should explain JupyterLab as the temporary active workspace, GitHub as the place for code/text/small files, and persistent storage as the place for large data and durable outputs.
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/instructions.md
+* docs/instructions/link-to-github.md
+* docs/instructions/push-to-github.md
+* docs/instructions/save-to-persistent-storage.md
+* scripts/site_health.py
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Renamed the sidebar section to `Cloud Triangle` with three action-oriented instance links.
+* Added a CRT cloud workflow overview to `docs/instructions.md`.
+* Added shared Cloud Triangle mental-model text, cross-links, and a What should I use table to the GitHub auth, Git widget, and persistent storage pages.
+* Kept the GitHub auth page centered on HTTPS web authentication through `startup/github_web_auth.ipynb`.
+* Reworked the Git widget page to clarify pull/stage/commit/push, coordination, conflicts, credential timeout, and large-file boundaries.
+* Reworked the persistent storage page to keep non-interactive `gocmd` setup and transfer commands while explaining when to use persistent storage instead of GitHub.
+* Updated site health and regression checks for the Cloud Triangle navigation.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built instruction overview and all three Cloud Triangle pages contain the new nav labels, cross-links, and GitHub vs persistent storage distinction.
+
+2026-04-27
+
+Prompt
+
+User asked to move the Show template guidance toggle out of the main page and into the left sidebar as a compact global utility. The toggle should default on, persist its state, and hide clearly marked scaffold guidance without requiring participants to edit HTML, JS, CSS, or custom classes.
+
+Files and folders inspected
+
+* docs/overrides/partials/nav.html
+* docs/javascripts/mode-toggle.js
+* docs/stylesheets/extra.css
+* docs/index.md
+* docs/instructions.md
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Added the real checkbox toggle to the primary sidebar nav override, above the navigation list.
+* Updated `mode-toggle.js` to bind to the sidebar toggle instead of injecting a toggle into the main article body.
+* Changed local storage to use the `oasis-template-guidance` key with `show`/`hide` values.
+* Updated CSS so the sidebar toggle is compact and hides when a page has no marked template guidance.
+* Kept hiding scoped to scaffold-style admonitions marked by the script from titles such as `D1-`, `D2-`, `D3-`, `How to edit`, and `Show template guidance`.
+* Updated front-page and instruction wording so the toggle is described as a sidebar control.
+* Updated regression checks to require sidebar placement and prevent main-body toggle injection.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed built HTML places the toggle in the sidebar before the nav list and still includes Cloud Triangle navigation, the People gallery, and D1-A bidirectional sticker links.

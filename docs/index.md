@@ -10,7 +10,7 @@ public_mode_toggle: true
 Fire spread is not a simple outward expansion. It is shaped by wind, fuel continuity, terrain, and the geometry of the growing fire perimeter. This example project asks how quickly a fire front can accelerate when wind and fuels align, and how a group might document that question using maps, observations, and simple reproducible analysis.
 
 ??? note "Show template guidance"
-    Edit Mode is on by default so workshop guidance is visible. Turn Edit Mode off with the toggle near the top of the page to preview a cleaner public-facing version.
+    Template guidance is on by default so workshop instructions are visible. Turn **Show template guidance** off in the sidebar to preview a cleaner public-facing version.
 
     Replace the example fire-spread narrative with your group’s actual purpose statement. Keep the first public paragraph to 1–2 sentences that say what your group is trying to understand, why it matters, and what evidence or product you want to share.
 

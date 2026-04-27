@@ -6,9 +6,47 @@ permalink: /instructions/link/
 
 # Link JupyterLab to GitHub
 
-We now use GitHub web authentication as the main way to connect JupyterLab to GitHub. This is easier for most participants than SSH. You will run a small notebook, copy a one-time code, approve the login in GitHub, and then return to JupyterLab to finish setup.
+This page connects your running JupyterLab instance to GitHub so you can clone your project repository and use HTTPS push/pull from the Git sidebar.
 
-Use this page when you need to authenticate GitHub, clone your project repository, or refresh your credentials after they time out.
+## The CRT cloud workflow
+
+In this workflow, your work moves between three connected places.
+
+**JupyterLab** is where you actively work. It is fast and flexible, but the running container is temporary.
+
+**GitHub** is where your project website, Markdown pages, notebooks, scripts, and small figures live. Use GitHub for collaboration and for anything that should be versioned with the public project.
+
+**Persistent storage** is where larger files live. Use it for raw data, intermediate outputs, model results, large figures, and anything too large or too temporary for GitHub.
+
+A simple rule: **work in JupyterLab, push code and text to GitHub, and save large data or outputs to persistent storage.**
+
+!!! info "Cloud Triangle pages"
+    1. **Connect instance to GitHub:** this page
+    2. [Instance to/from GitHub](push-to-github.md)
+    3. [Instance to/from persistent storage](save-to-persistent-storage.md)
+
+!!! tip "The basic CRT workflow"
+    1. Launch JupyterLab.
+    2. Authenticate to GitHub.
+    3. Pull the latest code and text from GitHub.
+    4. Work in JupyterLab.
+    5. Save large files to persistent storage with `gocmd`.
+    6. Commit and push small project files back to GitHub.
+
+| Task | Best tool |
+|---|---|
+| Edit the website text | GitHub / Git widget |
+| Save a notebook or script | GitHub / Git widget |
+| Save a small figure used on the site | GitHub / Git widget |
+| Save a large dataset | Persistent storage / `gocmd` |
+| Save model outputs or large intermediate files | Persistent storage / `gocmd` |
+| Work interactively during a session | JupyterLab |
+| Share final public code | GitHub |
+| Share final public data | Persistent storage or approved data archive |
+
+This page covers the first connection: JupyterLab to GitHub. After this works, use the [Git widget page](push-to-github.md) to pull, commit, and push code and Markdown. Use the [persistent storage page](save-to-persistent-storage.md) for large data and outputs.
+
+We now use GitHub web authentication as the main way to connect JupyterLab to GitHub. This is easier for most participants than SSH. You will run a small notebook, copy a one-time code, approve the login in GitHub, and then return to JupyterLab to finish setup.
 
 ## Step 1 — Launch the OASIS JupyterLab app
 
@@ -105,6 +143,8 @@ Use your group’s repository URL, not necessarily the example above.
 ## Step 7 — Push and pull changes
 
 After the repository is cloned and web authentication is configured, you should be able to push and pull using the JupyterLab Git interface.
+
+Use GitHub for code, Markdown, notebooks, and small files that should be versioned with your public project. Do not use GitHub for large raw datasets, huge rasters, model outputs, or temporary working files. Put those in persistent storage and commit a small note, README, or metadata file to GitHub that explains where the data lives.
 
 For the usual editing workflow, use:
 
