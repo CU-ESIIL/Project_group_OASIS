@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = "oasis-template-guidance";
-  const scaffoldTitlePattern = /^(show template guidance|how to edit|d[1-3]-[a-g])/i;
+  const scaffoldTitlePattern = /(?:show template guidance|template guidance|how to edit|replace this|d[1-3]-[a-g]|image swap|whiteboard|first data plot|how to replace)/i;
 
   function pageHasTemplateGuidance() {
     return Boolean(document.querySelector(".oasis-public-mode-marker, .oasis-scaffold"));
@@ -22,6 +22,9 @@
     document.querySelectorAll(".template-guidance-toggle__text").forEach((label) => {
       label.textContent = showGuidance ? "Guidance on" : "Guidance off";
     });
+    if (showGuidance) {
+      expandTemplateGuidanceBlocks();
+    }
   }
 
   function updateHeaderTitle() {
@@ -34,15 +37,19 @@
   }
 
   function markScaffoldBlocks() {
-    document.querySelectorAll(".md-typeset details").forEach((block) => {
-      const summary = block.querySelector("summary");
-      if (!summary) {
-        return;
+    document.querySelectorAll(".md-typeset details, .md-typeset .admonition").forEach((block) => {
+      const titleNode = block.querySelector("summary, .admonition-title");
+      const title = titleNode ? titleNode.textContent.trim() : "";
+      const text = block.textContent.trim();
+      if (scaffoldTitlePattern.test(title) || scaffoldTitlePattern.test(text)) {
+        block.classList.add("template-guidance-block", "oasis-scaffold");
       }
-      const title = summary.textContent.trim();
-      if (scaffoldTitlePattern.test(title)) {
-        block.classList.add("oasis-scaffold");
-      }
+    });
+  }
+
+  function expandTemplateGuidanceBlocks() {
+    document.querySelectorAll("details.template-guidance-block").forEach((block) => {
+      block.setAttribute("open", "");
     });
   }
 

@@ -9,7 +9,7 @@ public_mode_toggle: true
 
 Fire spread is not a simple outward expansion. It is shaped by wind, fuel continuity, terrain, and the geometry of the growing fire perimeter. This example project asks how quickly a fire front can accelerate when wind and fuels align, and how a group might document that question using maps, observations, and simple reproducible analysis.
 
-??? note "Show template guidance"
+!!! note "Show template guidance"
     Template guidance is on by default so workshop instructions are visible. Turn **Show template guidance** off in the sidebar to preview a cleaner public-facing version.
 
     Replace the example fire-spread narrative with your group’s actual purpose statement. Keep the first public paragraph to 1–2 sentences that say what your group is trying to understand, why it matters, and what evidence or product you want to share.
@@ -27,7 +27,7 @@ The task stickers are landmarks. They help you match each day-by-day direction t
 - **Results** — patterns, findings, and interpretations
 - **Polished Outputs** — final figures, PDFs, slides, or other shareable products
 
-??? note "How to edit this section"
+!!! note "How to edit this section"
     Keep this orientation short. It should help editors understand the page without becoming part of the project’s final public story.
 
     In Public Mode, this guidance is hidden so readers see the project narrative, figures, people, outputs, and references.
@@ -41,7 +41,7 @@ The task stickers are landmarks. They help you match each day-by-day direction t
 
 This project is meant to be shaped by the people in the room: their field experience, data skills, modeling instincts, design sense, and curiosity about fire behavior.
 
-??? note "D1-A / D1-C: How to edit the people gallery"
+!!! note "D1-A / D1-C: How to edit the people gallery"
     Replace the example people below with the people in your group. To update the gallery, edit `docs/_data/people.yml`. Each entry is plain text plus a link to the person’s existing learner file in the Innovation Summit learner folder.
 
     [Find learner files in the Innovation Summit 2026 repository](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
@@ -63,7 +63,7 @@ How fast can a fire front move when wind direction, fuel continuity, and slope a
 
 For this example project, the group treats fire spread as a spatial process that changes through time. The public story focuses on how the perimeter grows, where the fastest advance appears, and which sources of uncertainty should keep readers from over-interpreting a single map.
 
-??? note "D1-B / D2-A / D3-A: How to edit the project question"
+!!! note "D1-B / D2-A / D3-A: How to edit the project question"
     Replace this section with your group’s project question. It is okay if the question changes during the summit.
 
     Helpful prompts:
@@ -76,7 +76,7 @@ For this example project, the group treats fire spread as a spatial process that
 ![Day 1 whiteboard notes](assets/whiteboards/day1_whiteboard.jpg)
 *This whiteboard captures the first version of the fire-speed question: define a simple spread metric, compare it across terrain and wind contexts, and keep uncertainty visible.*
 
-??? note "How to replace the whiteboard image"
+!!! note "How to replace the whiteboard image"
     Upload a new whiteboard or notes photo to `docs/assets/whiteboards/`, update the image path above, and rewrite the caption so it says what decision the image supports.
 
 ## Specialty Tracks and Strategy { #specialty-tracks-and-strategy }
@@ -90,7 +90,7 @@ For this example project, the group treats fire spread as a spatial process that
 
 The example group uses the summit tracks as a division of labor. One subgroup explores AI-assisted synthesis of fire reports and notes, another tests geospatial workflows for perimeter change, and a third focuses on how to communicate uncertainty without hiding the limits of a rapid workshop analysis.
 
-??? note "D1-D / D2-B / D2-C: How to edit specialty track strategy"
+!!! note "D1-D / D2-B / D2-C: How to edit specialty track strategy"
     Replace this section with notes about how your group is using the summit specialty tracks.
 
     Capture:
@@ -113,7 +113,7 @@ The first data pass compares fire perimeter snapshots with terrain, fuel, and wi
 
 Useful data products for this example include perimeter polygons, timestamped observations, elevation-derived slope, wind summaries, and a simple table of spread-distance estimates.
 
-??? note "D1-E / D2-E / D3-C: How to edit data exploration"
+!!! note "D1-E / D2-E / D3-C: How to edit data exploration"
     Replace this section with the datasets, maps, plots, screenshots, tables, or first observations your group is using to understand the question.
 
     Strong data notes say what the dataset contains, why it matters, and what remains uncertain.
@@ -121,7 +121,7 @@ Useful data products for this example include perimeter polygons, timestamped ob
 ![Early exploration plot](assets/explorations/explore_data_plot.png)
 *This early plot tests whether the apparent spread distance changes by observation interval. It is useful because it exposes both a possible acceleration signal and the sensitivity of that signal to timestamp quality.*
 
-??? note "How to replace the exploration figure"
+!!! note "How to replace the exploration figure"
     Upload rough plots, screenshots, maps, or GIFs to `docs/assets/explorations/`. Rewrite the caption so it says what the figure shows, what surprised you, and what still does not make sense.
 
 [Open the ESIIL Data Library](https://cu-esiil.github.io/data-library/innovation-summit-2025/){ .md-button }
@@ -136,7 +136,7 @@ Useful data products for this example include perimeter polygons, timestamped ob
 
 The example workflow keeps the analysis intentionally small: load perimeter and terrain layers, align timestamps, estimate distance moved between observations, summarize spread rates, and export figures that can be checked by someone outside the group. Code and notes should make the assumptions visible rather than hiding them inside a polished figure.
 
-??? note "D1-F / D2-D: How to edit methods and code"
+!!! note "D1-F / D2-D: How to edit methods and code"
     Replace this section with the tools, notebooks, scripts, workflows, or repeatable steps your group tried.
 
     Include:
@@ -166,7 +166,7 @@ Three claims are worth carrying into a public share-out:
 - **Simple figures can still be useful.** A transparent map plus a short rate table may be easier to reuse than a complex model that cannot be explained quickly.
 - **Uncertainty is part of the result.** The analysis should say where measurement limits could change the interpretation.
 
-??? note "D2-F / D3-B / D3-E: How to edit results"
+!!! note "D2-F / D3-B / D3-E: How to edit results"
     Replace this section with emerging results, patterns, findings, surprises, or honest limits. A strong result makes a claim, points to evidence, and names uncertainty.
 
     Useful result statements can sound like:
@@ -182,7 +182,7 @@ Three claims are worth carrying into a public share-out:
 ![Supporting panel figure](assets/figures/hull_panels.png)
 *These panels compare alternate ways of summarizing spread, showing that the conclusion is sensitive to how observation intervals are grouped.*
 
-??? note "How to replace result figures"
+!!! note "How to replace result figures"
     Upload final or near-final figures to `docs/assets/figures/`. Captions should say which claim each figure supports and what caveat a reader should remember.
 
 ## Polished Outputs { #polished-outputs }
@@ -198,7 +198,7 @@ The most reusable outputs from this example are a brief PDF, a small code workfl
 
 The next step would be to test the same workflow on a second fire event and compare whether the same simple spread metrics remain interpretable.
 
-??? note "D2-G / D3-D / D3-F: How to edit polished outputs"
+!!! note "D2-G / D3-D / D3-F: How to edit polished outputs"
     Replace this section with the final things you want people to find after the summit: polished figures, a PDF, slides, a notebook, a data product, or a short handoff note.
 
 ![Complementary result figure](assets/figures/main_result.png)
@@ -213,7 +213,7 @@ This example page cites the reusable OASIS template [@oasisProjectTemplate] and 
 
 License: MIT unless noted. See dataset licenses on the **[Data](data.md)** page.
 
-??? note "How to edit citations and site health"
+!!! note "How to edit citations and site health"
     Add sources to `docs/references.bib`, then cite them with citation keys such as `[@oasisProjectTemplate]`.
 
     Keep the generated Site Health report visible in Edit Mode while preparing the page:
