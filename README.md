@@ -1,6 +1,5 @@
 # Project Group Template
 
-Ty's edits
 
 This repository is a template for ESIIL Project Groups.
 
