@@ -7,14 +7,14 @@ pronouns: he/him/his
 github: fhyuancn
 photo:
 project_role: 
-summary: A ecosystem modeler
+summary: Ecosystem modeler
 interests:
   - Ecosystem modeling
   - AI approach learning
   - Biogeochemical Science
 skills:
   - Python/R/Matblab/Fortran/NCL
-  - Data visualization
+  - Data visualizations
 group_role:
 links:
   - label: Learner
