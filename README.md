@@ -1,5 +1,7 @@
 # Project Group Template
 
+Ty's edits
+
 This repository is a template for ESIIL Project Groups.
 
 The website is built from the docs/ folder using MkDocs.
