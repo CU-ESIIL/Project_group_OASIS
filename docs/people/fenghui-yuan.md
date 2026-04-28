@@ -1,32 +1,24 @@
-# Fenghui (Fong) Yuan
-
-Copy this file to `docs/people/first-last.md`, then fill in the front matter and short bio.
-
-```yaml
 ---
-name: Fenghui(Fong) Yuan
-slug: fhyuan
+name: Fenghui (Fong) Yuan
+slug: fenghui-yuan
 role: Learner
 affiliation: University of Minnesota
-pronouns: He/Him/His
+pronouns: he/him/his
 github: fhyuancn
 photo:
-project_role: Data exploration and visualization
-summary: Ecosystem modeler
+project_role: 
+summary: A ecosystem modeler
 interests:
-  - process-based modeling
-  - AI learning
-  - Biogeochemcial science
+  - Ecosystem modeling
+  - AI approach learning
+  - Biogeochemical Science
 skills:
   - Python/R/Matblab/Fortran/NCL
   - Data visualization
 group_role:
 links:
-  - label: Personal website
-    url: https://www.fenghuiyuan.org/
+  - label: Learner
+    Personal Bio: https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/fenghui-yuan.md
 ---
-```
 
-Write a short bio below the front matter. If `summary` is blank, the homepage card uses the first paragraph.
-
-Use a GitHub username for the easiest avatar. A separate `photo` is optional.
+Fong is a placeholder participant.
