@@ -17,8 +17,8 @@ skills:
   - Data visualizations
 group_role:
 links:
-  - label: Learner
-    Personal Bio: https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/fenghui-yuan.md
+  - Label: About me
+    Link: https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/fenghui-yuan.md
 ---
 
 Fong is a placeholder participant.
