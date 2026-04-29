@@ -1,94 +1,41 @@
 # Defining Sustainability
 
-Environmental systems are coupled with human decisions across space and time.
+## What do we mean by sustainability
 
-![Environment, society, economy, and future sustainability pathway across a landscape](../assets/hero/sustainability-hero.png)
+Sustainability is one of those words that feels settled until you try to use it for something real. It appears in mission statements as if everyone agrees on what it means, but the moment you ask a practical question, what should we do differently, here, now, it becomes less certain.
 
-Sustainability science studies how environmental and human systems interact over time, with the goal of maintaining system function, resilience, and equity under changing conditions. It is a use-inspired, problem-driven field focused on real-world outcomes rather than abstract optimization [@kates2001].
+Part of the problem is that sustainability is often treated as a goal, something to achieve and then maintain. The systems we care about do not sit still long enough for that to make sense. Forests burn, climate shifts, economies reorganize, infrastructure ages, and people adapt, resist, and rebuild. Sustainability, in this context, is not a fixed state. It is a capacity: the ability of a system to keep going, to absorb shocks, and to change without losing the relationships and functions that matter.
 
-Environmental systems are not isolated. They are coupled with human behavior, policy, and economic activity, forming integrated systems that evolve together [@liu2007]. These systems operate across multiple scales and are increasingly shaped by global change.
+## The quiet role of constraints
 
-## The questions that matter
+If there is a single idea that anchors sustainability, it is constraint. Energy is limited, water is unevenly distributed, and land can only do so many things at once. These limits are not always visible in everyday decisions, but they shape everything.
 
-Sustainability scientists focus on questions such as:
+At the same time, human systems determine how those limits are experienced: who has access, who bears risk, and which futures are prioritized. Questions of equity and power are not separate from sustainability; they are embedded within it. The same constraint can produce very different outcomes depending on how resources, risks, and decision-making authority are distributed.
 
-- How do systems respond to disturbance, such as fire, drought, or land use change?
-- Where are the limits of resilience and stability?
-- How do processes scale from local observations to regional or global dynamics?
-- How do we manage tradeoffs among competing outcomes?
-- How do systems behave under nonstationary conditions, such as climate change?
+Innovation can reshape constraints, sometimes dramatically, but it does not eliminate them. New technologies and institutions change how limits are experienced and negotiated rather than removing the need to confront them.
 
-These are not purely predictive problems. They involve interpretation, competing objectives, and decisions under uncertainty.
+This is where sustainability becomes uncomfortable. It is not just about protecting the environment. It is about navigating tradeoffs that do not have clean solutions. There is no version of sustainability that avoids difficult choices. There are only versions that make those choices more or less explicit.
 
-## How these systems behave
+## When scale breaks intuition
 
-### Interconnected systems and feedbacks
+Most of our intuition about systems comes from small scales, a field, a watershed, a city block. But sustainability problems rarely stay there. Local actions accumulate into regional patterns, regional systems feed into global dynamics, and global changes push back down into local decisions.
 
-Feedbacks, thresholds, and nonlinear interactions are common.
+The result is a system that is tightly connected, but not always in ways we can easily see. Many of the most serious sustainability challenges come from this mismatch. Decisions that make sense locally create problems elsewhere, short-term gains erode long-term stability, and feedbacks build quietly before appearing all at once.
 
-**Image placeholder:** Add a conceptual diagram, sketch, or example that shows feedbacks, thresholds, or nonlinear interactions.
+## The problem of thresholds
 
-Environmental systems exhibit feedback loops, thresholds, and tipping points. Small changes can produce large effects, and system behavior is often nonlinear.
+Not all change is gradual. Some systems hold together until they do not. A forest shifts, a fishery collapses, or a landscape crosses a threshold where recovery becomes difficult or impossible. We often recognize these thresholds only after they have been crossed.
 
-### Scale
+This creates a difficult tension. Sustainability requires acting before systems fail, but the signals are often uncertain, incomplete, or contested. The question becomes less about certainty and more about judgment: how much risk is acceptable, how much uncertainty we can tolerate, and which failures are reversible.
 
-Processes operate across spatial and temporal scales. A model that performs well at one scale may fail at another. Scaling is not only computational; it is ecological and physical.
+## A different way to think about sustainability
 
-### Nonstationarity
+Instead of asking whether something is sustainable, it can be more useful to ask what trajectories are available from here. Which ones remain within known limits, which ones push systems toward instability, and which ones close off future options.
 
-The assumption that the future resembles the past is often invalid. Climate change and other disturbances are shifting baseline conditions, making historical data an imperfect guide [@ipcc2023].
+This shifts the focus from defining a destination to understanding direction. Sustainability, in this sense, is not a label. It is a way of reasoning about change.
 
-### Coupled human-natural systems
+## Why this matters here
 
-Human actions are embedded in environmental systems. Land use, management, and policy decisions interact with ecological processes, meaning there is no clean separation between inputs and outcomes [@liu2007].
+This project does not start with a fixed definition of sustainability. It starts with questions: what are the constraints in a given system, how do they interact, where are the points of fragility, and what kinds of interventions actually change outcomes.
 
-### Limits and thresholds
-
-At planetary scales, systems exhibit boundaries and constraints that shape what is possible [@rockstrom2009].
-
-## Where AI needs to adapt
-
-When applied to sustainability problems, AI systems must:
-
-- treat data as partial and biased observations
-- handle changing distributions over time
-- respect scale-dependent behavior
-- align models with meaningful, often competing objectives
-- support interpretation and decision-making, not just prediction
-
-## Where sustainability needs AI
-
-AI can extend sustainability science by:
-
-- scaling analysis across large, heterogeneous datasets
-- detecting patterns that are difficult to observe directly
-- accelerating simulation and modeling
-- supporting scenario exploration and synthesis
-
-## Examples from this working group
-
-### Exploration and field context
-
-Add or replace concept sketches, field notes, and early framing of system behavior.
-
-- Upload whiteboard or context images to `docs/assets/whiteboards/`.
-- Link them here with Markdown image syntax.
-- Caption each image with what it clarifies about the system.
-
-### Deliverables and reports
-
-Add or replace reports, figures, and outputs used for communication and decision support.
-
-- Upload final reports, slides, or briefs to `docs/assets/files/`.
-- Upload final figures to `docs/assets/figures/`.
-- Link each item here with a short explanation of who should use it.
-
-## Working prompt
-
-As a group, define what counts as data, what the model represents, what success means, and where uncertainty enters.
-
-## Key references
-
-These references anchor the concepts above without requiring exhaustive reading.
-
-{{ references }}
+Answering those questions requires working across data, models, and theory, and it requires tools that can handle complexity without hiding it. That is where AI enters the picture.

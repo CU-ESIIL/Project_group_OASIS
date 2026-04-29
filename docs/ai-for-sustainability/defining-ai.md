@@ -1,87 +1,63 @@
-# Defining AI/ML
+# Defining AI
 
-AI in environmental science spans remote sensing, prediction, simulation, and scientific workflows.
+## What do we mean by AI
 
-![Data to model to insight to impact workflow across an environmental landscape](../assets/hero/ai-hero.png)
+Artificial intelligence is another term that feels more settled than it really is. Depending on who you ask, it refers to machines that think, systems that learn, or tools that automate tasks. All of these are true in some sense, but none of them are precise enough to be useful here.
 
-Artificial intelligence is increasingly embedded in how environmental science is conducted. In this working group, AI is not treated as a single technique but as a set of approaches for learning from data, representing complex processes, and supporting decisions under uncertainty. The aim is not to replace domain knowledge, but to extend what can be observed, modeled, and explored across space and time.
+For the purposes of this project, it helps to be more grounded. AI is a collection of methods for finding patterns in data, representing relationships, and making predictions. That includes everything from relatively simple statistical models to large neural networks trained on vast datasets. It is less a single technology than a way of working with information.
 
-Machine learning is now widely used to extract structure from large environmental datasets and to model Earth system processes [@reichstein2019]. At the same time, purely data-driven approaches often fail in scientific settings without guidance from physical understanding, leading to the rise of hybrid methods that integrate models and data [@karpatne2017].
+## What AI actually does
 
-## How AI shows up in environmental work
+There is a tendency to talk about AI as if it understands the world. It is more accurate to say that it primarily builds representations from data. It learns structure where it can find it and identifies patterns that are often too complex or subtle for humans to detect directly.
 
-### Perception: seeing structure in data
+This can be extraordinarily powerful, but it also comes with limits. AI systems are shaped by the data they are given, and by the institutions, incentives, and infrastructures that produce and curate that data. They reflect gaps, biases, and assumptions that are not always visible.
 
-Pattern detection in imagery and sensor data, such as land cover, fire, species, or sensor observations.
+When conditions change, those systems can fail in ways that are difficult to anticipate. In domains where the past is not a reliable guide to the future, this becomes a serious constraint.
 
-**Image placeholder:** Add a visual example of perception, classification, detection, or segmentation.
+## Why AI is useful anyway
 
-Perception systems classify, detect, and segment patterns in images and time series. In environmental science, this includes land cover mapping, wildfire detection, species identification, and extracting features from satellite imagery.
+Despite these limitations, AI has become central to many areas of science and decision-making for a simple reason. The systems we care about have become too complex to analyze using traditional approaches alone.
 
-### Prediction: forecasting system behavior
+Environmental data comes from satellites, sensors, models, and field observations. It spans scales from meters to continents and from minutes to decades. It is messy, incomplete, and often inconsistent. AI provides a way to work with that complexity by integrating different kinds of data, revealing patterns across space and time, and building models that approximate processes we do not fully understand.
 
-Forecasting change, risk, and fluxes across space and time.
+In this sense, AI is not replacing scientific reasoning. It is extending it.
 
-**Image placeholder:** Add a forecast, map, plot, or risk surface that shows predictive use of AI.
+## The costs we tend to ignore
 
-Predictive models estimate future states such as drought risk, fire growth, or carbon flux. These systems rely on historical data and assumptions about how processes evolve, and they often struggle when conditions shift beyond the range of past observations.
+There is another side to this story. AI systems require infrastructure: data centers, energy, water, and hardware supply chains. These are physical systems with real environmental and social impacts.
 
-### Generation: synthesizing outputs and scenarios
+At the same time, the outputs of AI systems can appear authoritative even when they are uncertain or poorly understood. This can shift how decisions are made, sometimes in ways that are hard to see. AI is not just a tool applied to sustainability problems. It is part of the system we are trying to understand.
 
-Producing summaries, scenarios, and structured outputs.
+## Where AI breaks down
 
-**Image placeholder:** Add an example of a generated summary, scenario, workflow aid, or structured output.
+The hardest problems in sustainability are not just about prediction. They involve causality, uncertainty, and values. They require understanding why systems behave the way they do, not just forecasting what might happen next.
 
-Generative systems create text, code, and sometimes synthetic data. In scientific contexts, they are most useful for documentation, exploration of scenarios, and accelerating workflows rather than as sources of ground truth.
+They also involve rare events and changing conditions, where historical data may not provide reliable guidance. These are areas where AI is still limited, and recognizing those limits is as important as recognizing its strengths.
 
-## Hybrid and physical AI
+## Why this matters here
 
-Hybrid approaches combine machine learning with process-based models. These are central in Earth system science, where physical constraints, conservation laws, and known mechanisms shape system behavior. Theory-guided data science explicitly formalizes this integration [@karpatne2017].
+In this project, AI is treated as a tool for exploration rather than an answer in itself. It is used to surface patterns, test ideas, and connect data across domains, but it is always situated within a broader process that includes theory, observation, and judgment.
 
-## Agentic systems and workflows
+The goal is not to build black boxes. It is to build workflows that can be understood, questioned, and improved.
 
-A newer development is the emergence of systems that can plan and execute tasks: running analyses, calling tools, and iterating toward goals. These systems are beginning to reshape how scientific workflows are organized, especially in repository-driven environments.
+## Connecting AI and Sustainability
 
-## What is changing right now
+Sustainability and AI are often discussed as if one is applied to the other, but the relationship is more complicated. Sustainability defines the kinds of problems we are dealing with: systems with limits, feedbacks, and uneven consequences. AI defines some of the tools we have for working with those problems: methods for handling complexity, extracting structure, and exploring possibilities.
 
-AI is shifting toward multimodal and geospatial-native models that integrate imagery, time series, and text into shared representations of the Earth system. Foundation-model approaches train once on large datasets and adapt to many downstream tasks [@bommasani2021]. These advances enable transfer across regions and problems, but also introduce risks of hidden bias and overconfidence in generalization.
+The interesting space is not where one simply uses AI to optimize a sustainability metric. It is where we ask how these tools interact with the systems themselves. Do they help us see constraints more clearly or obscure them? Do they expand our ability to act or narrow it? Do they reinforce existing patterns or reveal alternatives?
 
-## Where AI struggles in environmental contexts
+These are not technical questions alone. They are also scientific, social, and ethical. This project is an attempt to work in that space.
 
-AI systems often fail when:
+## A conversation to start
 
-- observational data are incomplete or biased
-- models are applied outside their training conditions
-- objectives, or loss functions, do not reflect real-world goals
-- spatial and temporal scales are mismatched
-- uncertainty is poorly quantified, especially for rare or extreme events
+If you are reading this, the goal is not to hand you a definition. It is to give you a set of questions worth arguing about.
 
-These limitations are well documented in Earth system applications [@reichstein2019].
+- What are the real constraints in the system you care about, and who feels them most strongly?
+- Where might thresholds exist, even if they are uncertain?
+- What does your analysis assume about the future, and when might those assumptions fail?
+- What is AI actually helping you see, and what might it be hiding?
+- When a model gives you an answer, what kind of judgment still remains?
 
-## What to take into the collaboration
+The purpose of this project is not just to apply AI to sustainability problems as they are usually framed. It is to ask whether those framings are adequate, and what changes when we take limits, uncertainty, and uneven consequences seriously.
 
-AI is most effective when it is aligned with system structure, informed by domain expertise, and evaluated in terms that matter for decisions. Treat models as approximations shaped by data and objectives, not as representations of full system understanding.
-
-## Examples from this working group
-
-### Early data exploration
-
-Add or replace initial plots, maps, and diagnostics that reveal structure and gaps in the data.
-
-- Upload exploration images to `docs/assets/explorations/`.
-- Link them here with Markdown image syntax.
-- Caption each image with what it shows and why it matters.
-
-### Outputs and synthesis
-
-Add or replace figures, maps, and summaries used to communicate results.
-
-- Upload final outputs to `docs/assets/figures/` or `docs/assets/files/`.
-- Link them here with Markdown image or button syntax.
-- Caption each output with the claim or decision it supports.
-
-## Working prompt
-
-As a group, define what counts as data, what the model represents, what success means, and where uncertainty enters.
-
-{{ references }}
+That is where the work begins.

@@ -1389,3 +1389,28 @@ Verification
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `/tmp/project_oasis_mkdocs_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Confirmed the built homepage includes `Fire Polygon Velocity Project`, the polygon-velocity project question, the updated findings, and the `Instructions on` sidebar toggle.
+2026-04-29
+
+Prompt
+
+User asked to rewrite `docs/ai-for-sustainability/defining-sustainability.md` and `docs/ai-for-sustainability/defining-ai.md` so they read like thoughtful conversation starters rather than textbook definitions or AI summaries.
+
+Files and folders inspected
+
+* docs/ai-for-sustainability/defining-sustainability.md
+* docs/ai-for-sustainability/defining-ai.md
+
+Actions taken
+
+* Replaced the Defining Sustainability page with essay-style Markdown focused on constraints, scale, thresholds, tradeoffs, and judgment.
+* Replaced the Defining AI page with essay-style Markdown focused on representation, data limits, infrastructure costs, uncertainty, and the relationship between AI and sustainability.
+* Removed old image-placeholder, gallery, and reference-scaffold content from those two pages.
+
+Verification
+
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Checked both rewritten pages for em dashes, old image placeholders, gallery macros, and reference hooks; none found.
+* Installed MkDocs requirements into `/tmp/project_oasis_mkdocs_pkgs` after the local MkDocs command was unavailable.
+* Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
