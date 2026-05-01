@@ -378,6 +378,12 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
       linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 250, 0.96));
   }
 
+  .md-sidebar--secondary .md-sidebar__inner {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 9rem);
+  }
+
   [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap,
   [data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__scrollwrap {
     background:
@@ -912,6 +918,21 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   margin-bottom: var(--oasis-space-3);
 }
 
+.oasis-presentation-toolbar--sidebar {
+  position: sticky;
+  bottom: var(--oasis-space-3);
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.42rem;
+  margin: auto var(--oasis-space-3) var(--oasis-space-6);
+  padding-top: var(--oasis-space-3);
+}
+
+.oasis-presentation-toolbar--content {
+  margin-bottom: var(--oasis-space-3);
+}
+
 .oasis-present-button,
 .oasis-present-exit {
   display: inline-flex;
@@ -943,6 +964,15 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
 .oasis-present-hint {
   color: var(--oasis-color-text-soft);
   font-size: 0.72rem;
+}
+
+.oasis-presentation-toolbar--sidebar .oasis-present-button {
+  justify-content: center;
+  width: 100%;
+}
+
+.oasis-presentation-toolbar--sidebar .oasis-present-hint {
+  text-align: center;
 }
 
 .oasis-present-exit,

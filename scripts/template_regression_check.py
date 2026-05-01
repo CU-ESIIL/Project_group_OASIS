@@ -221,6 +221,8 @@ def main() -> int:
             "Day color tokens are missing.", errors)
     require(".oasis-present-button" in css_text and "body.presentation-mode" in css_text,
             "Presentation mode styles are missing.", errors)
+    require("oasis-presentation-toolbar--sidebar" in css_text and ".md-sidebar--secondary .md-sidebar__inner" in css_text,
+            "Present button should be styled for the bottom of the right sidebar.", errors)
     require(".md-sidebar--primary .md-sidebar__scrollwrap" in css_text and ".md-sidebar--secondary .md-sidebar__scrollwrap" in css_text,
             "Normal mode side panel polish is missing.", errors)
     require('h1[id^="day-1"]' in css_text and 'h1[id^="day-2"]' in css_text and 'h1[id^="day-3"]' in css_text,
@@ -245,6 +247,8 @@ def main() -> int:
     require(presentation_mode.exists(), "Presentation mode JavaScript is missing.", errors)
     require("presentation-mode" in presentation_mode_text and "data-oasis-present-toggle" in presentation_mode_text,
             "Presentation mode JavaScript should toggle the presentation-mode class from a Present button.", errors)
+    require("getPresentationControlTarget" in presentation_mode_text and ".md-sidebar--secondary .md-sidebar__inner" in presentation_mode_text,
+            "Presentation mode control should attach to the right sidebar when available.", errors)
     require('event.key.toLowerCase() === "p"' in presentation_mode_text and 'event.key === "Escape"' in presentation_mode_text,
             "Presentation mode JavaScript should support P and Esc shortcuts.", errors)
     require("isTypingTarget" in presentation_mode_text,

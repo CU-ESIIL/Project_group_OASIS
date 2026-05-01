@@ -1518,3 +1518,32 @@ Verification
 * Confirmed the built homepage renders the simplified People table rows and no longer contains the generated people gallery marker.
 * Confirmed `Add your profile` no longer appears in the built homepage/sidebar output checked.
 * Ran `python3 scripts/template_regression_check.py`; it still fails because `docs/index.md` contains the existing raw HTML CubeDynamics iframe wrapper, unrelated to the People table or Storage nav changes.
+
+2026-05-01
+
+Prompt
+
+User asked to move the Present mode button to the bottom of the right sidebar.
+
+Files and folders inspected
+
+* docs/javascripts/presentation-mode.js
+* docs/stylesheets/extra.css
+* docs/overrides/partials/nav.html
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Updated the presentation-mode script so the Present control attaches to the secondary/right sidebar when that sidebar exists.
+* Kept the content-area placement as a fallback for layouts without a right sidebar.
+* Added sidebar-specific styling so the button sits at the bottom of the right table-of-contents panel.
+* Updated the template regression check to protect the sidebar placement.
+
+Verification
+
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Used a local browser check of `/instructions/day1/` at 1440 by 1000 and confirmed the Present button and hint render fully at the bottom of the right sidebar.
+* Ran `python3 scripts/template_regression_check.py`; it still fails because `docs/index.md` contains the existing raw HTML CubeDynamics iframe wrapper, unrelated to the Present button placement.

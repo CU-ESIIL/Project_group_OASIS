@@ -13,14 +13,36 @@
     });
   }
 
-  function ensurePresentationControls() {
+  function getPresentationControlTarget() {
+    const sidebar = document.querySelector(".md-sidebar--secondary .md-sidebar__inner");
+    if (sidebar) {
+      return { element: sidebar, inSidebar: true };
+    }
+
     const content = document.querySelector(".md-content__inner");
-    if (!content || content.querySelector("[data-oasis-present-toggle]")) {
+    return content ? { element: content, inSidebar: false } : null;
+  }
+
+  function ensurePresentationControls() {
+    const target = getPresentationControlTarget();
+    if (!target) {
+      return;
+    }
+
+    const existingToolbar = document.querySelector(".oasis-presentation-toolbar");
+    if (existingToolbar) {
+      if (existingToolbar.parentElement !== target.element) {
+        target.element.append(existingToolbar);
+      }
+      existingToolbar.classList.toggle("oasis-presentation-toolbar--sidebar", target.inSidebar);
+      existingToolbar.classList.toggle("oasis-presentation-toolbar--content", !target.inSidebar);
       return;
     }
 
     const toolbar = document.createElement("div");
     toolbar.className = "oasis-presentation-toolbar";
+    toolbar.classList.toggle("oasis-presentation-toolbar--sidebar", target.inSidebar);
+    toolbar.classList.toggle("oasis-presentation-toolbar--content", !target.inSidebar);
 
     const presentButton = document.createElement("button");
     presentButton.type = "button";
@@ -38,7 +60,7 @@
     hint.textContent = "Press P to present";
 
     toolbar.append(presentButton, hint);
-    content.prepend(toolbar);
+    target.element.append(toolbar);
   }
 
   function ensurePresentationChrome() {
