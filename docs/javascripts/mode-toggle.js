@@ -38,6 +38,17 @@
     titleTarget.textContent = pageHeading.textContent.trim();
   }
 
+  function openEditLinksInNewTabs() {
+    document.querySelectorAll('a[rel~="edit"], .md-content__button[title="Edit this page"]').forEach((link) => {
+      const relTokens = new Set((link.getAttribute("rel") || "").split(/\s+/).filter(Boolean));
+      relTokens.add("edit");
+      relTokens.add("noopener");
+      relTokens.add("noreferrer");
+      link.setAttribute("rel", Array.from(relTokens).join(" "));
+      link.setAttribute("target", "_blank");
+    });
+  }
+
   function markTemplateInstructionBlocks() {
     document.querySelectorAll(".md-typeset details, .md-typeset .admonition").forEach((block) => {
       const titleNode = block.querySelector("summary, .admonition-title");
@@ -74,6 +85,7 @@
     bindToggles();
     applyInstructionsMode(readShowInstructions());
     updateHeaderTitle();
+    openEditLinksInNewTabs();
 
     document.body.classList.toggle("has-template-guidance", pageHasTemplateInstructions());
     document.body.classList.toggle("has-template-instructions", pageHasTemplateInstructions());

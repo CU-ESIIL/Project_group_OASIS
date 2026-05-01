@@ -22,6 +22,30 @@ Open questions and follow-up
 
 * [item]
 
+2026-05-01
+
+Prompt
+
+User asked to add a new `Norms` tab under the AI for Sustainability section with a Markdown primer on group discussions about AI-use norms.
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/ai-for-sustainability/
+
+Actions taken
+
+* Added `docs/ai-for-sustainability/norms.md` as a plain-language discussion primer for setting group norms around AI use.
+* Added the new page to the AI for Sustainability navigation as `Norms`.
+
+Verification
+
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; failed because `docs/index.md` already contains raw HTML iframe markup from prior homepage work, unrelated to this Norms page change.
+* Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built site includes `/ai-for-sustainability/norms/` and the Norms nav link.
+
 2026-04-23
 
 Prompt
@@ -1414,3 +1438,29 @@ Verification
 * Checked both rewritten pages for em dashes, old image placeholders, gallery macros, and reference hooks; none found.
 * Installed MkDocs requirements into `/tmp/project_oasis_mkdocs_pkgs` after the local MkDocs command was unavailable.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+
+2026-05-01
+
+Prompt
+
+User asked to make the main page edit link open in a new tab so authors can move back and forth between the rendered site and GitHub edits.
+
+Files and folders inspected
+
+* docs/javascripts/mode-toggle.js
+* docs/overrides/partials/nav.html
+* mkdocs.yml
+
+Actions taken
+
+* Updated the centralized site JavaScript to add `target="_blank"` to MkDocs Material edit links.
+* Preserved safe `rel` attributes by adding `noopener` and `noreferrer` while keeping the edit relation.
+* Applied the behavior after page initialization and MkDocs instant-navigation content replacement.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning and one expected revision-date warning for the new Norms page.
+* Confirmed the built JavaScript contains the new edit-link new-tab behavior.
+* Ran `python3 scripts/template_regression_check.py`; it still fails because `docs/index.md` contains the existing raw HTML CubeDynamics iframe wrapper, unrelated to this edit-link change.
