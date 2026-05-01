@@ -1,24 +1,21 @@
 # People Profiles
 
-The public front page shows a people gallery generated from learner Markdown profile files.
+The public front page now uses a simple editable People table in `docs/index.md`.
 
 Most groups should:
 
 1. Find learner files in the Innovation Summit 2026 repository:
    <https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners>
-2. Copy the selected group members into `docs/people/`.
-3. Let each person edit only their own Markdown file.
-4. Add each profile file to `docs/_data/people.yml`.
+2. Add one row per person to the People table in `docs/index.md`.
+3. Link each person's name to their existing learner file when possible.
+4. Keep the role, project interest, and skills cells short enough to scan.
 
-Keep `docs/_data/people.yml` as an index only:
+Example table row:
 
-```yaml
-people:
-  - profile: people/your-name.md
+```markdown
+| [Jane Doe](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/jane-doe.md) | Learner / Example University | Fire spread visualization | GIS, Python, field context |
 ```
 
-Do not duplicate `summary`, `skills`, `interests`, or other profile text in YAML. The homepage card reads that information from the Markdown front matter.
-
-If `photo` is missing, the card tries a GitHub avatar from `github:`. If both are missing, the card shows initials.
+The profile files in this folder are kept as legacy examples and optional local copies. They are not required for the public front page table.
 
 Privacy rule: do not publicly expose both email and GitHub in the same visible profile block. Prefer one optional profile link rather than raw contact data.

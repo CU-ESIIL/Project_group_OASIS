@@ -100,13 +100,11 @@ Instruction blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit
 | `docs/assets/whiteboards/` | Whiteboard photos and brainstorm sketches |
 | `docs/assets/explorations/` | Early plots, screenshots, rough maps, notebook screenshots |
 | `docs/assets/figures/` | Polished figures and final visuals |
-| `docs/assets/people/` | Profile images for the People gallery |
+| `docs/assets/people/` | Optional team photos or profile images |
 | `docs/assets/team/` | Team photos or headshots |
 | `docs/assets/files/` | PDFs, briefs, slides, and downloadable materials |
 | `docs/assets/stickers/` | Landmark sticker images used by the front page and instructions |
-| `docs/people/` | Markdown learner/profile files used to build People cards |
-| `docs/_data/people.yml` | Short index of profile files for the People gallery |
-| Innovation Summit learner files | Source profiles that can be copied into `docs/people/` |
+| Innovation Summit learner files | Source profiles that can be linked from the People table |
 | `docs/references.bib` | BibTeX references cited from Markdown |
 | `code/` | Scripts, notebooks, and reusable analysis code |
 | `documentation/` | Longer notes that should not clutter the public homepage |
@@ -126,17 +124,15 @@ Data source:
 - **Dataset name** — one sentence on what it contains and why we need it. [Link](https://example.org)
 ```
 
-People gallery index entry:
+People table row:
 
 [Find learner files in the Innovation Summit 2026 repository](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
 
-```yaml
-people:
-  - profile: people/ty-tuff.md
-  - profile: people/aakriti-joshi.md
+```markdown
+| [Jane Doe](https://github.com/CU-ESIIL/Innovation-Summit-2026/blob/main/docs/learners/jane-doe.md) | Learner / Example University | Fire spread visualization | GIS, Python, field context |
 ```
 
-Edit `docs/_data/people.yml` to add or remove cards. Keep it as an index only. Each listed profile should be a Markdown file in `docs/people/`, usually copied from the Innovation Summit learner folder and lightly updated by that person. Do not duplicate profile text in YAML.
+Edit the People table on `docs/index.md` directly. Add one row per person and keep each cell short enough to read quickly.
 
 Citation:
 

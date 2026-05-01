@@ -70,31 +70,24 @@ Helpful prompts:
 
 **Where this shows up on the main page:** [People](../index.md#people)
 
-Each person should update their own Markdown profile file. The public People cards are built from those profile files.
+Add your group members to the People table on the public front page.
 
 Use this workflow:
 
 1. Find your learner file in the Innovation Summit 2026 repository.
-2. Copy it into this project under `docs/people/`.
-3. Update only your own profile file.
-4. Ask the group editor to add one line for your file in `docs/_data/people.yml`.
+2. Add one Markdown table row for each person in `docs/index.md`.
+3. Link each person's name to their learner file when possible.
+4. Keep each row short enough to scan during a presentation.
 
 If you do not know your file name, open the learner folder and search for your name:
 
 [Innovation Summit learner files](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
 
-The group editor only updates the index:
-
-```yaml
-people:
-  - profile: people/your-file-name.md
-```
-
-Keep each profile short, but human. Make sure it says:
+Keep each row short, but human. Make sure it says:
 
 - what you work on
 - what you are excited about in this project
-- one detail that helps others connect with you
+- what skills, data, or perspective you bring
 
 This turns your group from a list of names into a team. It also helps others understand the perspectives behind the work.
 

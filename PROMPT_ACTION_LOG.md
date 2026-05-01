@@ -1464,3 +1464,57 @@ Verification
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning and one expected revision-date warning for the new Norms page.
 * Confirmed the built JavaScript contains the new edit-link new-tab behavior.
 * Ran `python3 scripts/template_regression_check.py`; it still fails because `docs/index.md` contains the existing raw HTML CubeDynamics iframe wrapper, unrelated to this edit-link change.
+
+2026-05-01
+
+Prompt
+
+User asked to change the GitHub repository link label in the header from `Project_group_OASIS` to `link to repo`.
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/overrides/
+
+Actions taken
+
+* Updated `repo_name` in `mkdocs.yml` to `link to repo`.
+* Left `repo_url` unchanged so the header link still points to the Project_group_OASIS GitHub repository.
+
+Verification
+
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built homepage header source link still points to the GitHub repository and displays `link to repo`.
+
+2026-05-01
+
+Prompt
+
+User asked to remove the Storage sidebar item called `Add your profile` and simplify the homepage People section into an easy-to-fill Markdown table.
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/index.md
+* docs/instructions.md
+* docs/instructions/day1.md
+* docs/people/README.md
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Removed `Add your profile` from the Storage navigation in `mkdocs.yml`.
+* Replaced the generated People gallery marker on `docs/index.md` with a simple Markdown table.
+* Updated People editing instructions to tell groups to add one table row per person and link names to existing learner files when possible.
+* Updated the template regression check to expect the simpler People table instead of the older generated gallery marker.
+
+Verification
+
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built homepage renders the simplified People table rows and no longer contains the generated people gallery marker.
+* Confirmed `Add your profile` no longer appears in the built homepage/sidebar output checked.
+* Ran `python3 scripts/template_regression_check.py`; it still fails because `docs/index.md` contains the existing raw HTML CubeDynamics iframe wrapper, unrelated to the People table or Storage nav changes.

@@ -25,7 +25,6 @@ def main() -> int:
     hooks = ROOT / "hooks.py"
     references = ROOT / "docs" / "references.bib"
     stickers_registry = ROOT / "docs" / "stickers.md"
-    people_data = ROOT / "docs" / "_data" / "people.yml"
     people_dir = ROOT / "docs" / "people"
     stickers_dir = ROOT / "docs" / "assets" / "stickers"
     logo = ROOT / "docs" / "assets" / "oasis_logo.png"
@@ -45,7 +44,6 @@ def main() -> int:
     hooks_text = hooks.read_text(encoding="utf-8") if hooks.exists() else ""
     references_text = references.read_text(encoding="utf-8") if references.exists() else ""
     stickers_text = stickers_registry.read_text(encoding="utf-8") if stickers_registry.exists() else ""
-    people_data_text = people_data.read_text(encoding="utf-8") if people_data.exists() else ""
 
     require(index.exists(), "docs/index.md is missing.", errors)
     require("public_mode_toggle: true" in index_text,
@@ -74,11 +72,10 @@ def main() -> int:
     require('--8<-- "people/' not in index_text, "Public Front Page should not include local People profile snippets.", errors)
     require("Innovation-Summit-2026/tree/main/docs/learners" in index_text,
             "People section should link to the Innovation Summit learner folder.", errors)
-    require("{{ people_gallery }}" in index_text,
-            "People section should render the generated people gallery marker.", errors)
-    require(people_data.exists(), "People gallery data file docs/_data/people.yml is missing.", errors)
-    require("profile: people/" in people_data_text and "name:" not in people_data_text,
-            "People gallery data should be an index of Markdown profile files only.", errors)
+    require("{{ people_gallery }}" not in index_text,
+            "People section should use an editable Markdown table, not the generated gallery marker.", errors)
+    require("| Name | Role / affiliation |" in index_text,
+            "People section should include a simple editable Markdown table.", errors)
     require("## Featured Outputs" not in index_text, "Featured Outputs section should be removed.", errors)
     require("https://what-uses-more.com" in index_text, "What Uses More button/link is missing.", errors)
     require("assets/files/project_brief.pdf" in index_text and "Polished Outputs" in index_text,
@@ -154,10 +151,8 @@ def main() -> int:
     require("@misc{oasisProjectTemplate" in references_text, "Template reference BibTeX entry is missing.", errors)
     require((people_dir / "README.md").exists(), "People README is missing.", errors)
     require((people_dir / "template.md").exists(), "People template is missing.", errors)
-    require("docs/_data/people.yml" in (people_dir / "README.md").read_text(encoding="utf-8"),
-            "People README should explain editing docs/_data/people.yml.", errors)
-    require("profile: people/" in (people_dir / "README.md").read_text(encoding="utf-8"),
-            "People README should explain index-only profile entries.", errors)
+    require("Innovation Summit 2026 repository" in (people_dir / "README.md").read_text(encoding="utf-8"),
+            "People README should point editors to learner profiles.", errors)
     for profile in ["ty-tuff.md", "aakriti-joshi.md", "jane-example.md", "john-example.md"]:
         profile_text = (people_dir / profile).read_text(encoding="utf-8") if (people_dir / profile).exists() else ""
         require((people_dir / profile).exists() and profile_text.startswith("---\n") and "summary:" in profile_text,
@@ -224,10 +219,6 @@ def main() -> int:
             "Instruction pages should color the right table of contents by day.", errors)
     require("--oasis-day-1-color" in tokens_text and "--oasis-day-2-color" in tokens_text and "--oasis-day-3-color" in tokens_text,
             "Day color tokens are missing.", errors)
-    require(".people-gallery" in css_text and ".people-card" in css_text,
-            "People gallery card styles are missing.", errors)
-    require(".people-card__summary" in css_text and "-webkit-line-clamp" in css_text,
-            "People cards should clamp Markdown-derived summaries for stable layout.", errors)
     require(".oasis-present-button" in css_text and "body.presentation-mode" in css_text,
             "Presentation mode styles are missing.", errors)
     require(".md-sidebar--primary .md-sidebar__scrollwrap" in css_text and ".md-sidebar--secondary .md-sidebar__scrollwrap" in css_text,
@@ -240,10 +231,6 @@ def main() -> int:
             "Dark mode page styling is missing.", errors)
     require("REFERENCE_MARKER" in hooks_text and "references.bib" in hooks_text,
             "Citation hook should render references from docs/references.bib.", errors)
-    require("PEOPLE_GALLERY_MARKER" in hooks_text and "people.yml" in hooks_text,
-            "People gallery hook should render cards from docs/_data/people.yml.", errors)
-    require("split_profile_markdown" in hooks_text and "github.com/{escape(github)}.png" in hooks_text,
-            "People gallery hook should read Markdown profiles and support GitHub avatars.", errors)
     require("DAY_MARKER_TEMPLATE" in hooks_text and "oasis_day" in hooks_text,
             "Instruction day marker hook should drive page-specific TOC color styling.", errors)
     require("PUBLIC_MODE_MARKER" in hooks_text and "public_mode_toggle" in hooks_text,

@@ -45,23 +45,19 @@ The task stickers are landmarks. They help you match each day-by-day direction t
 
 This project is meant to be shaped by the people in the room: their field experience, data skills, modeling instincts, design sense, and curiosity about how spatial fire records become scientific claims.
 
-!!! note "D1-A / D1-C: How to edit the people gallery"
-    Replace the example people below with the people in your group. Each person edits their own Markdown profile file, and the homepage reads from those files.
+!!! note "D1-A / D1-C: How to edit the people table"
+    Replace the example rows below with the people in your group. Keep this as a simple Markdown table so everyone can understand and edit it in GitHub.
 
-    To update the gallery, edit `docs/_data/people.yml`. Keep that file as a short index only:
-
-    ```yaml
-    people:
-      - profile: people/your-file-name.md
-    ```
-
-    Do not duplicate profile text in YAML. Copy learner files from the Innovation Summit learner folder into `docs/people/`, then add one `profile:` line per group member.
+    Add one row per person. Link the person's name to their existing learner file when possible:
 
     [Find learner files in the Innovation Summit 2026 repository](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
 
-    Profile images are optional. A GitHub username in the profile front matter shows the GitHub avatar; otherwise the card shows initials.
-
-{{ people_gallery }}
+| Name | Role / affiliation | What they are excited to work on | Skills, data, or perspective they bring |
+|---|---|---|---|
+| [Ty Tuff](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners) | Learner / ESIIL | Fire polygon velocity framing | Fire modeling, open science, scientific storytelling |
+| [Aakriti Joshi](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners) | Learner | Remote sensing and perimeter interpretation | Earth observation, Python, GIS |
+| Jane Example | Learner | Data visualization and public story | Figure design, uncertainty, public communication |
+| John Example | Learner | Methods and reproducible workflow | Python, notebooks, spatial analysis |
 
 ## Project Question { #project-question }
 
