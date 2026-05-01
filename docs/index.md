@@ -3,7 +3,7 @@ title: Fire Polygon Velocity Project
 public_mode_toggle: true
 ---
 
-# Fire Polygon Velocity Project
+# Template change Fire Polygon Velocity Project
 
 ![Fire spread progression over a mountain landscape](assets/hero/hero.png)
 
