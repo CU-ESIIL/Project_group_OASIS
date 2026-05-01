@@ -36,11 +36,6 @@ nav:
       - Project code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
       - Project documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation
       - Shared persistent storage: "https://de.cyverse.org/data/ds/iplant/home/shared/esiil/Innovation_summit/Group_1?type=folder&resourceId=1993057e-8e90-11f0-b0fa-90e2ba675364"
-  - Orientation:
-      - Summit slides: orientation/slides.md
-      - ESIIL training: orientation/esiil_training.md
-      - Code of conduct: orientation/code-of-conduct.md
-      - Participant agreement: orientation/participant_agreement.md
 
 not_in_nav: |
   data.md
