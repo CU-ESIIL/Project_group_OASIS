@@ -19,6 +19,7 @@ You now have:
 - an initial sense of which specialty skills might help
 
 Today, you will use the specialty tracks to strengthen the project. Some groups may split up across tracks. Some groups may decide to focus together on one track. Some people may choose individually. Any of those choices can work if the group talks about it.
+Keep editing the Home page as your project record. Use the Example page only as a completed model.
 By the end of the day, your page should show:
 
 - clearer methods
@@ -33,7 +34,7 @@ By the end of the day, your page should show:
 
 **Landmark:** Project Question
 
-**Where this shows up on the main page:** [Project Question](../index.md#project-question)
+**Where this shows up on the Home page:** [Project Question](../index.md#project-question)
 
 Start by rereading your question and yesterday’s notes.
 
@@ -53,7 +54,7 @@ Your question is allowed to evolve. That is part of the work.
 
 **Landmark:** Specialty Tracks and Strategy
 
-**Where this shows up on the main page:** [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy)
+**Where this shows up on the Home page:** [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy)
 
 Before the training session, decide how your group wants to use the specialty tracks.
 
@@ -73,7 +74,7 @@ This does not need to be permanent. It is a working strategy.
 
 **Landmark:** Specialty Tracks and Strategy
 
-**Where this shows up on the main page:** [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy)
+**Where this shows up on the Home page:** [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy)
 
 During or after the training, each person should capture one or two useful takeaways.
 
@@ -93,7 +94,7 @@ The goal is not just to attend a session. The goal is to bring new capability ba
 
 **Landmark:** Methods and Code
 
-**Where this shows up on the main page:** [Methods and Code](../index.md#methods-and-code)
+**Where this shows up on the Home page:** [Methods and Code](../index.md#methods-and-code)
 
 Try something new based on the specialty training.
 
@@ -115,7 +116,7 @@ Learning matters most when it changes what you do.
 
 **Landmark:** Data Exploration
 
-**Where this shows up on the main page:** [Data Exploration](../index.md#data-exploration)
+**Where this shows up on the Home page:** [Data Exploration](../index.md#data-exploration)
 
 Go beyond your first look at the data.
 Try to create at least one clearer plot, map, table, or summary that helps answer your question.
@@ -136,7 +137,7 @@ Add updated figures or notes to the Data Exploration section.
 
 **Landmark:** Results
 
-**Where this shows up on the main page:** [Results](../index.md#results)
+**Where this shows up on the Home page:** [Results](../index.md#results)
 
 Add early findings, patterns, surprises, or problems.
 You do not need a final answer yet.
@@ -156,7 +157,7 @@ This is where exploration starts becoming explanation.
 
 **Landmark:** Polished Outputs
 
-**Where this shows up on the main page:** [Polished Outputs](../index.md#polished-outputs)
+**Where this shows up on the Home page:** [Polished Outputs](../index.md#polished-outputs)
 
 Before you leave for the day, decide what you want to finish tomorrow.
 Add a short note somewhere useful on the page that says:
