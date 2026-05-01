@@ -27,7 +27,7 @@ body {
 }
 
 .md-main__inner {
-  margin-top: var(--oasis-space-6);
+  margin-top: var(--oasis-space-2);
 }
 
 .md-content {
