@@ -20,7 +20,10 @@
       element.classList.remove("oasis-report-out-visible");
     });
 
-    ["report-out-day2", "report-out-day3"].forEach((id) => {
+    const title = document.querySelector(".md-typeset h1");
+    title?.classList.add("oasis-report-out-visible");
+
+    ["people", "report-out-day2", "report-out-day3"].forEach((id) => {
       const heading = document.getElementById(id);
       let element = heading;
       while (element) {

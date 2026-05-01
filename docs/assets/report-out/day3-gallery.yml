@@ -1,0 +1,9 @@
+# Day 3 final report-out gallery.
+# Point to images that already live under docs/assets/.
+
+- src: assets/figures/main_result.png
+  caption: Main result figure. Replace this path with the visual that supports your strongest claim.
+- src: assets/figures/fire_hull.png
+  caption: Supporting figure. Replace this path with a map, diagram, or result visual.
+- src: assets/figures/hull_panels.png
+  caption: Comparison figure. Replace this path with a second visual if your final story needs one.

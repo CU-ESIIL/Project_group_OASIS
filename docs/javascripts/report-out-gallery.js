@@ -1,6 +1,6 @@
 (function () {
   const ALLOWED_EXTENSIONS = /\.(png|jpe?g|webp|gif)$/i;
-  const EMPTY_MESSAGE = "No report-out images yet. Add images to docs/assets/report-out/ and list them in docs/assets/report-out/gallery.yml to start the gallery.";
+  const EMPTY_MESSAGE = "No report-out images yet. Add image paths to the matching gallery manifest in docs/assets/report-out/ to start the gallery.";
 
   function parseGalleryYaml(text) {
     const trimmed = text.trim();
@@ -31,7 +31,12 @@
       }
     });
 
-    return items.filter((item) => item.file && ALLOWED_EXTENSIONS.test(item.file));
+    return items
+      .map((item) => {
+        const src = item.src || (item.file ? `assets/report-out/${item.file}` : "");
+        return { ...item, src };
+      })
+      .filter((item) => item.src && ALLOWED_EXTENSIONS.test(item.src));
   }
 
   function showMessage(container, message) {
@@ -56,8 +61,8 @@
       figure.className = "oasis-report-out-gallery__item";
 
       const image = document.createElement("img");
-      image.src = `assets/report-out/${item.file}`;
-      image.alt = item.alt || item.caption || item.file;
+      image.src = item.src;
+      image.alt = item.alt || item.caption || item.src;
       image.loading = "lazy";
       figure.append(image);
 

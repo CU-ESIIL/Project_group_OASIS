@@ -90,7 +90,14 @@ You will use this page to present your work on Day 3. Keep it clean, clear, and 
 
     Good report outs are short, specific, and easy to say aloud in two minutes.
 
+    To choose Day 2 images, edit `docs/assets/report-out/day2-gallery.yml`. Use paths to images that already live in `docs/assets/`, such as `assets/hero/hero.png` or `assets/explorations/explore_data_plot.png`.
+
     [Edit Day 2 Report Out in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L78){ .md-button target="_blank" rel="noopener" }
+    [Edit Day 2 image list](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/assets/report-out/day2-gallery.yml){ .md-button target="_blank" rel="noopener" }
+
+### Day 2 report-out images
+
+--8<-- "_includes/day2_report_out_gallery.html"
 
 ## Final Report Out (Day 3 — 6 minutes) { #report-out-day3 }
 
@@ -111,25 +118,21 @@ You will use this page to present your work on Day 3. Keep it clean, clear, and 
 
     Add screenshots, diagrams, maps, figures, or photos that help explain what your group made.
 
-    To add images:
+    To choose Day 3 images, edit `docs/assets/report-out/day3-gallery.yml`. Use paths to images that already live in `docs/assets/`, such as `assets/figures/main_result.png`, `assets/figures/fire_hull.png`, or `assets/hero/hero.png`.
 
-    1. Put image files in `docs/assets/report-out/`.
-    2. Use clear file names such as `workflow-map.png`, `prototype-screenshot.png`, or `final-diagram.png`.
-    3. Add each filename to `docs/assets/report-out/gallery.yml`.
-    4. Refresh the site preview and check that the images appear in the gallery.
+    [Edit Final Report Out in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L102){ .md-button target="_blank" rel="noopener" }
+    [Edit Day 3 image list](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/assets/report-out/day3-gallery.yml){ .md-button target="_blank" rel="noopener" }
 
-    [Edit Final Report Out in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L95){ .md-button target="_blank" rel="noopener" }
+### Day 3 report-out images
 
-### Report-out images
-
---8<-- "_includes/report_out_gallery.html"
+--8<-- "_includes/day3_report_out_gallery.html"
 
 ## Polished Outputs { #polished-outputs }
 
 !!! note "How to edit Polished Outputs"
     Link the final things people should find after the summit: figures, notebooks, PDFs, briefs, data products, or handoff notes.
 
-    [Edit Polished Outputs in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L127){ .md-button target="_blank" rel="noopener" }
+    [Edit Polished Outputs in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L130){ .md-button target="_blank" rel="noopener" }
 
 [Read the project brief PDF](assets/files/project_brief.pdf){ .md-button .md-button--primary }
 
@@ -140,6 +143,6 @@ You will use this page to present your work on Day 3. Keep it clean, clear, and 
 !!! note "How to edit Cite & Reuse"
     Add citations, dataset credits, software acknowledgments, reuse notes, and license information. Add BibTeX entries to `docs/references.bib`, then cite them with keys like `[@oasisProjectTemplate]`.
 
-    [Edit Cite & Reuse in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L138){ .md-button target="_blank" rel="noopener" }
+    [Edit Cite & Reuse in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L141){ .md-button target="_blank" rel="noopener" }
 
 {{ references }}

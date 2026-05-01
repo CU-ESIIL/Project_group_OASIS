@@ -1097,6 +1097,12 @@ body.presentation-mode .md-typeset > .oasis-report-out-visible {
   display: revert !important;
 }
 
+body.presentation-mode .md-typeset > .oasis-report-out-visible.admonition,
+body.presentation-mode .md-typeset > .oasis-report-out-visible details,
+body.presentation-mode .md-typeset > details.oasis-report-out-visible {
+  display: none !important;
+}
+
 body.presentation-mode .oasis-present-exit,
 body.presentation-mode .oasis-present-identity {
   display: inline-flex;

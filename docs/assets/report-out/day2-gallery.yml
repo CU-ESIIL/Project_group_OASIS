@@ -1,0 +1,7 @@
+# Day 2 report-out gallery.
+# Point to images that already live under docs/assets/.
+
+- src: assets/hero/hero.png
+  caption: Project hero image. Replace this path with the image that introduces your group's work.
+- src: assets/explorations/explore_data_plot.png
+  caption: Exploration figure. Replace this path with an early plot, map, screenshot, or diagram.
