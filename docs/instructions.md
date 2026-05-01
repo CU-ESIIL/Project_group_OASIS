@@ -16,7 +16,21 @@ The Home page is the editable blank template your group fills out during the sum
 
 For a completed model, see the [Example Project Page](example.md).
 
+[Edit the Home page](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+
 By the end, the Home page should read like a compact evidence-backed synthesis: make claims, link artifacts, state confidence, name limitations, and show what others can reuse.
+
+## Summit Report Out workflow
+
+Your group page is both your workspace and your final report-out page. During the summit, use the edit buttons to update the sections for each day. On Day 3, use the **Summit Report Out** button to view the page in a clean Summit Report Out layout.
+
+For the final report out, focus on:
+
+- What question or challenge your group worked on
+- What you built, tested, mapped, wrote, or designed
+- What changed in your thinking
+- What someone else could do next
+- Images that make the work easier to understand
 
 > Tip: Edit any page in your browser: open the file → click the pencil (✎) → make changes → **Commit changes**.
 

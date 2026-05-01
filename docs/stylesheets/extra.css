@@ -910,6 +910,49 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   background: rgba(66, 188, 220, 0.12);
 }
 
+.oasis-report-out-gallery {
+  margin: var(--oasis-space-4) 0 var(--oasis-space-6);
+}
+
+.oasis-report-out-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--oasis-space-4);
+}
+
+.oasis-report-out-gallery__item {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--oasis-color-border);
+  border-radius: var(--oasis-radius-md);
+  background: var(--oasis-color-surface);
+  box-shadow: var(--oasis-shadow-sm);
+}
+
+.oasis-report-out-gallery__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.oasis-report-out-gallery__item figcaption,
+.oasis-report-out-gallery__empty {
+  margin: 0;
+  padding: var(--oasis-space-3) var(--oasis-space-4);
+  color: var(--oasis-color-text-soft);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.oasis-report-out-gallery__empty {
+  border: 1px dashed var(--oasis-color-border-strong);
+  border-radius: var(--oasis-radius-md);
+  background: var(--oasis-color-surface-muted);
+}
+
 /* Presentation mode */
 .oasis-presentation-toolbar {
   display: flex;

@@ -114,6 +114,7 @@ extra_css:
 extra_javascript:
   - javascripts/mode-toggle.js
   - javascripts/presentation-mode.js
+  - javascripts/report-out-gallery.js
 
 hooks:
   - hooks.py

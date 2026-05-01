@@ -7,6 +7,12 @@ public_mode_toggle: true
 
 ![Project group hero image](assets/hero/hero.png)
 
+Use this page as your group’s working record during the summit and your final report-out page on Day 3.
+
+### This page becomes your Summit Report Out
+
+You will use this page to present your work on Day 3. Keep it clean, clear, and visual.
+
 [See a completed example](example.md){ .md-button }
 
 !!! note "Template instructions"
@@ -71,7 +77,7 @@ public_mode_toggle: true
 ## Final Report Out (Day 3 — 6 minutes) { #report-out-day3 }
 
 !!! note "How to edit the Day 3 Final Report Out"
-    Use this page as the presentation. Do not create separate slides.
+    Use this page as the Summit Report Out. Do not create separate slides.
 
     Tell a coherent story:
 
@@ -82,6 +88,19 @@ public_mode_toggle: true
     - Next steps
 
     Add the visuals, headlines, team photo, and next steps your group will use during the six-minute walkthrough.
+
+### Report-out images
+
+Add screenshots, diagrams, maps, figures, or photos that help explain what your group made.
+
+To add images:
+
+1. Put image files in `docs/assets/report-out/`.
+2. Use clear file names such as `workflow-map.png`, `prototype-screenshot.png`, or `final-diagram.png`.
+3. Add each filename to `docs/assets/report-out/gallery.yml`.
+4. Refresh the site preview and check that the images appear in the gallery.
+
+--8<-- "_includes/report_out_gallery.html"
 
 ## Polished Outputs { #polished-outputs }
 

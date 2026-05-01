@@ -15,6 +15,20 @@ Today is about turning a promising direction into a working analysis. Keep editi
 
 By the end of the day, the Home page should show a sharper question, a clearer workflow, at least one emerging result, and a two-minute report out.
 
+[Edit the Day 2 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+
+## Summit Report Out workflow
+
+Your group page is both your workspace and your final report-out page. During the summit, use the edit buttons to update the sections for each day. On Day 3, use the **Summit Report Out** button to view the page in a clean Summit Report Out layout.
+
+For the final report out, focus on:
+
+- What question or challenge your group worked on
+- What you built, tested, mapped, wrote, or designed
+- What changed in your thinking
+- What someone else could do next
+- Images that make the work easier to understand
+
 ## Reconnect with your question
 
 Start by rereading [Project Question](../index.md#project-question).

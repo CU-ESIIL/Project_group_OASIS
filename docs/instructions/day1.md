@@ -15,6 +15,20 @@ Today is about becoming a team and choosing a direction. Work on the [Home page]
 
 By the end of the day, the Home page should include your people, a first project question, a first interaction with data, and notes about what you tried.
 
+[Edit the Day 1 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+
+## Summit Report Out workflow
+
+Your group page is both your workspace and your final report-out page. During the summit, use the edit buttons to update the sections for each day. On Day 3, use the **Summit Report Out** button to view the page in a clean Summit Report Out layout.
+
+For the final report out, focus on:
+
+- What question or challenge your group worked on
+- What you built, tested, mapped, wrote, or designed
+- What changed in your thinking
+- What someone else could do next
+- Images that make the work easier to understand
+
 ## Meet your team
 
 Go around and introduce yourselves.

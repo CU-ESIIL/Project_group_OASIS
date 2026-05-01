@@ -94,16 +94,16 @@
     presentButton.type = "button";
     presentButton.className = "oasis-present-button";
     presentButton.setAttribute("data-oasis-present-toggle", "");
-    presentButton.setAttribute("aria-label", "Enter presentation mode");
+    presentButton.setAttribute("aria-label", "Open Summit Report Out layout");
     presentButton.setAttribute("aria-pressed", "false");
-    presentButton.innerHTML = '<span aria-hidden="true">▶</span><span>Present</span>';
+    presentButton.innerHTML = '<span aria-hidden="true">▶</span><span>Summit Report Out</span>';
     presentButton.addEventListener("click", () => {
       setPresentationMode(!document.body.classList.contains("presentation-mode"));
     });
 
     const hint = document.createElement("span");
     hint.className = "oasis-present-hint";
-    hint.textContent = "Press P to present";
+    hint.textContent = "Press P for Summit Report Out";
 
     toolbar.append(presentButton, hint);
     target.element.append(toolbar);
@@ -124,7 +124,7 @@
     exitButton.type = "button";
     exitButton.className = "oasis-present-exit";
     exitButton.textContent = "Exit";
-    exitButton.setAttribute("aria-label", "Exit presentation mode. Press Escape to exit.");
+    exitButton.setAttribute("aria-label", "Exit Summit Report Out layout. Press Escape to exit.");
     exitButton.addEventListener("click", () => setPresentationMode(false));
     document.body.append(exitButton);
 

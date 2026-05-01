@@ -15,6 +15,20 @@ Today is about turning your work into something others can understand and use. K
 
 By the end of the day, the Home page should tell a coherent story: why the question matters, what you tried, what you found, what you made, and what should happen next.
 
+[Edit the Day 3 section](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+
+## Summit Report Out workflow
+
+Your group page is both your workspace and your final report-out page. During the summit, use the edit buttons to update the sections for each day. On Day 3, use the **Summit Report Out** button to view the page in a clean Summit Report Out layout.
+
+For the final report out, focus on:
+
+- What question or challenge your group worked on
+- What you built, tested, mapped, wrote, or designed
+- What changed in your thinking
+- What someone else could do next
+- Images that make the work easier to understand
+
 ## Revisit the whole story
 
 Read the Home page from top to bottom.
@@ -60,7 +74,7 @@ Check that links work before the final report out.
 
 Focus: synthesis and clarity.
 
-Use your homepage as the presentation. Do not create separate slides. Add the final presentation structure to [Final Report Out (Day 3)](../index.md#report-out-day3).
+Use your homepage as the Summit Report Out. Do not create separate slides. Add the final report-out structure to [Final Report Out (Day 3)](../index.md#report-out-day3).
 
 Tell a coherent story:
 
