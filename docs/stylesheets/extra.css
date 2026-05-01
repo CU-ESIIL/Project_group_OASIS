@@ -897,6 +897,7 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
 }
 
 .md-typeset h2#report-out-day2,
+.md-typeset h2#report-out-day2,
 .md-typeset h2#report-out-day3 {
   padding: var(--oasis-space-3) var(--oasis-space-4);
   border-left: 0.45rem solid var(--oasis-color-accent-green);
@@ -912,6 +913,20 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
 
 .oasis-report-out-gallery {
   margin: var(--oasis-space-4) 0 var(--oasis-space-6);
+}
+
+.md-typeset img.oasis-report-out-banner {
+  display: block;
+  width: min(100%, 76rem);
+  margin: var(--oasis-space-4) auto var(--oasis-space-5);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.md-typeset img.oasis-report-out-banner:is(:hover, :focus-visible) {
+  transform: none;
+  box-shadow: none;
 }
 
 .oasis-report-out-gallery__grid {
@@ -1126,6 +1141,14 @@ body.presentation-mode .md-typeset > img {
   max-width: none;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+
+body.presentation-mode .md-typeset img.oasis-report-out-banner {
+  width: min(82rem, calc(100vw - 4rem));
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: var(--oasis-space-5);
+  transform: none;
 }
 
 /* Utility alignment for inline edit icon pattern in the homepage */
