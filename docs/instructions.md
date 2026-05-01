@@ -12,7 +12,11 @@ Welcome! These guides help your team use this site as a live, visual record of y
 - **Day 2 →** [Build, Explore, and Apply New Skills](instructions/day2.md)
 - **Day 3 →** [Synthesize, Polish, and Share](instructions/day3.md)
 
-The final homepage should read like a compact evidence-backed synthesis: make claims, link artifacts, state confidence, name limitations, and show what others can reuse.
+The Home page is the editable blank template your group fills out during the summit. The Example page is a completed model that shows how a filled-in project story can look. Edit Home, not Example.
+
+For a completed model, see the [Example Project Page](example.md).
+
+By the end, the Home page should read like a compact evidence-backed synthesis: make claims, link artifacts, state confidence, name limitations, and show what others can reuse.
 
 > Tip: Edit any page in your browser: open the file → click the pencil (✎) → make changes → **Commit changes**.
 
@@ -39,16 +43,16 @@ Use the stickers like parking-garage landmarks:
 - day color tells you when the task happens
 - task code tells you the exact direction to follow
 - sticker title tells you the work to add or refine
-- the same sticker appears on the front page where that work belongs
+- the same sticker appears on the Home page where that work belongs
 
-For example, “D2-C Takeaways” means Day 2, task C. Find the same sticker on the front page to know where that work belongs.
+For example, “D2-C Takeaways” means Day 2, task C. Find the same sticker on the Home page to know where that work belongs.
 
 ## Editing this project site
 Most summit participants should only edit Markdown files.
 You can safely edit:
 
-- the main project page content
-- the People list on the main page
+- the Home page project content
+- the People list on the Home page
 - notes, figures, links, and project updates
 - references in `references.bib`
 
@@ -61,12 +65,12 @@ You should avoid editing:
 
 Those files control layout and styling. They are intentionally separated from the content so the project page is easier to edit without breaking the site.
 
-## How to edit the Public Front Page
+## How to edit the Home page
 
-Use this loop every time you update the public-facing page:
+Use this loop every time you update the editable Home page:
 
-1. Open the public page and click **✏️ Edit this page**, or open `docs/index.md` in GitHub.
-2. Replace the example text directly in the Markdown.
+1. Open the Home page and click **✏️ Edit this page**, or open `docs/index.md` in GitHub.
+2. Replace the blank template text directly in the Markdown.
 3. Upload images and files to the matching folder under `docs/assets/`.
 4. Reference images with relative paths, such as `assets/figures/main_result.png`.
 5. Scroll to **Commit changes** in GitHub and commit before moving on.
@@ -89,13 +93,14 @@ Write future editor instructions as Markdown notes, not as public paragraphs:
     Keep public-facing project text outside this note.
 ```
 
-Instruction blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit`, `Template instructions`, or `Replace this` are hidden when instructions are turned off on the front page.
+Instruction blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit`, `Template instructions`, or `Replace this` are hidden when instructions are turned off on the Home page.
 
 ## Where files go
 
 | Put this here | Use it for |
 |---|---|
-| `docs/index.md` | Main public project page |
+| `docs/index.md` | Editable Home project page |
+| `docs/example.md` | Completed model project page |
 | `docs/assets/hero/` | Main banner or project identity image |
 | `docs/assets/whiteboards/` | Whiteboard photos and brainstorm sketches |
 | `docs/assets/explorations/` | Early plots, screenshots, rough maps, notebook screenshots |
@@ -103,11 +108,11 @@ Instruction blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit
 | `docs/assets/people/` | Optional team photos or profile images |
 | `docs/assets/team/` | Team photos or headshots |
 | `docs/assets/files/` | PDFs, briefs, slides, and downloadable materials |
-| `docs/assets/stickers/` | Landmark sticker images used by the front page and instructions |
+| `docs/assets/stickers/` | Landmark sticker images used by the Home page and instructions |
 | Innovation Summit learner files | Source profiles that can be linked from the People table |
 | `docs/references.bib` | BibTeX references cited from Markdown |
 | `code/` | Scripts, notebooks, and reusable analysis code |
-| `documentation/` | Longer notes that should not clutter the public homepage |
+| `documentation/` | Longer notes that should not clutter the public Home page |
 
 ## Copy-paste patterns
 

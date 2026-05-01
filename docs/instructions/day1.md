@@ -17,6 +17,8 @@ Before you write much, you should:
 - understand what people care about
 - decide what question you want to explore together
 
+Edit the Home page as your working project record. Use the Example page only as a completed model.
+
 By the end of the day, your page should show:
 
 - who you are
@@ -30,7 +32,7 @@ By the end of the day, your page should show:
 
 **Landmark:** People
 
-**Where this shows up on the main page:** [People](../index.md#people)
+**Where this shows up on the Home page:** [People](../index.md#people)
 
 Go around and introduce yourselves.
 
@@ -51,7 +53,7 @@ After introductions, spend 10 minutes creating team norms and choosing a decisio
 
 **Landmark:** Project Question
 
-**Where this shows up on the main page:** [Project Question](../index.md#project-question)
+**Where this shows up on the Home page:** [Project Question](../index.md#project-question)
 
 Agree on a scientific question or direction.
 Then choose a short, descriptive project title and update the title at the top of the project page.
@@ -70,9 +72,9 @@ Helpful prompts:
 
 **Landmark:** People
 
-**Where this shows up on the main page:** [People](../index.md#people)
+**Where this shows up on the Home page:** [People](../index.md#people)
 
-Add your group members to the People table on the public front page.
+Add your group members to the People table on the editable Home page.
 
 Use this workflow:
 
@@ -100,7 +102,7 @@ This turns your group from a list of names into a team. It also helps others und
 
 **Landmark:** Specialty Tracks and Strategy
 
-**Where this shows up on the main page:** [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy)
+**Where this shows up on the Home page:** [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy)
 
 Briefly discuss the available specialty tracks as a group.
 Talk about:
@@ -123,7 +125,7 @@ Tomorrow, you’ll choose a specialty training. Having this conversation now hel
 
 **Landmark:** Data Exploration
 
-**Where this shows up on the main page:** [Data Exploration](../index.md#data-exploration)
+**Where this shows up on the Home page:** [Data Exploration](../index.md#data-exploration)
 
 Look at relevant datasets and make a simple plot, map, table, or summary.
 Add notes about what you see.
@@ -144,7 +146,7 @@ This is where your idea meets reality. Early observations often reshape the ques
 
 **Landmark:** Methods and Code
 
-**Where this shows up on the main page:** [Methods and Code](../index.md#methods-and-code)
+**Where this shows up on the Home page:** [Methods and Code](../index.md#methods-and-code)
 
 Write down what you did today.
 

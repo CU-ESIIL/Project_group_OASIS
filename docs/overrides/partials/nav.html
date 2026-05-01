@@ -27,6 +27,15 @@
     {% for nav_item in nav.items %}
       {% set path = "__nav_" ~ loop.index %}
       {{ item.render(nav_item, path, 1) }}
+      {% if nav_item.title == "Instructions" and page and page.meta.public_mode_toggle %}
+        <li class="md-nav__item template-guidance-toggle" role="group" aria-label="Template instructions display setting">
+          <label class="template-guidance-toggle__label">
+            <input type="checkbox" data-oasis-mode-toggle aria-label="Show or hide template instructions" checked>
+            <span class="template-guidance-toggle__control" aria-hidden="true"></span>
+            <span class="template-guidance-toggle__text">Instructions on</span>
+          </label>
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </nav>

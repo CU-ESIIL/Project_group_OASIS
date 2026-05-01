@@ -12,7 +12,8 @@ copyright: 'Copyright &copy; 2024 University of Colorado Boulder · MIT License'
 
 # Page tree
 nav:
-  - Public Front Page: index.md
+  - Home: index.md
+  - Example: example.md
   - Instructions:
       - Day 1 — Meet Your Team and Define Your Project: instructions/day1.md
       - Day 2 — Build, Explore, and Apply New Skills: instructions/day2.md

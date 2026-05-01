@@ -12,6 +12,7 @@ extra:
 ## What today is about
 Today is about **turning your work into something others can understand and use**.
 You are not trying to make the project perfect. You are trying to make the project clear.
+Keep polishing the Home page. The Example page is there as a model, not as the page your group edits.
 By the end of the day, your page should tell a coherent story:
 
 - who you are
@@ -28,7 +29,7 @@ By the end of the day, your page should tell a coherent story:
 
 **Landmark:** Project Question
 
-**Where this shows up on the main page:** [Project Question](../index.md#project-question)
+**Where this shows up on the Home page:** [Project Question](../index.md#project-question)
 
 Read the page from top to bottom.
 
@@ -48,7 +49,7 @@ The story should match the work you actually did, not the plan you started with.
 
 **Landmark:** Results
 
-**Where this shows up on the main page:** [Results](../index.md#results)
+**Where this shows up on the Home page:** [Results](../index.md#results)
 
 Clean up the Results section.
 
@@ -74,7 +75,7 @@ A strong result does not need to be a perfect answer. It needs to be honest and 
 
 **Landmark:** Data Exploration and Methods and Code
 
-**Where this shows up on the main page:** [Data Exploration](../index.md#data-exploration) and [Methods and Code](../index.md#methods-and-code)
+**Where this shows up on the Home page:** [Data Exploration](../index.md#data-exploration) and [Methods and Code](../index.md#methods-and-code)
 
 Make the Data Exploration and Methods and Code sections readable for someone who was not in the room.
 
@@ -100,7 +101,7 @@ Clarity matters more than completeness.
 
 **Landmark:** Polished Outputs
 
-**Where this shows up on the main page:** [Polished Outputs](../index.md#polished-outputs)
+**Where this shows up on the Home page:** [Polished Outputs](../index.md#polished-outputs)
 
 Add or link the final things you want people to see.
 These might include:
@@ -122,7 +123,7 @@ This section is where someone goes after the summit to find the most useful take
 
 **Landmark:** Results and Polished Outputs
 
-**Where this shows up on the main page:** [Results](../index.md#results) and [Polished Outputs](../index.md#polished-outputs)
+**Where this shows up on the Home page:** [Results](../index.md#results) and [Polished Outputs](../index.md#polished-outputs)
 
 Use the page as your presentation guide.
 
@@ -142,7 +143,7 @@ Your page does not need to include every detail. It should help you tell the sto
 
 **Landmark:** Polished Outputs
 
-**Where this shows up on the main page:** [Polished Outputs](../index.md#polished-outputs)
+**Where this shows up on the Home page:** [Polished Outputs](../index.md#polished-outputs)
 
 Before you finish, add a short “next steps” note.
 
