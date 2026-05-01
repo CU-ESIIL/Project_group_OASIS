@@ -448,7 +448,7 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   display: block;
   width: 17.6rem;
   height: 8.8rem;
-  margin: -1.15rem 0 0;
+  margin: -1.15rem 0.5rem 0 0;
   padding: 0;
   background: url("../assets/esiil_content/event_group_logo.png") center / contain no-repeat;
 }
