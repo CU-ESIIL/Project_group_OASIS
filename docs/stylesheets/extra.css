@@ -195,8 +195,8 @@ body {
   display: none;
 }
 
-.md-nav__item.template-guidance-toggle {
-  margin: 0.25rem 0 var(--oasis-space-3);
+.template-guidance-toggle {
+  margin: 0;
   padding: 0;
   border: 0;
   background: transparent;
@@ -207,8 +207,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.42rem;
-  width: auto;
-  margin-left: 0.65rem;
+  justify-content: center;
+  width: 100%;
   padding: 0.34rem 0.48rem;
   border: 1px solid var(--oasis-color-border);
   border-radius: var(--oasis-radius-pill);
@@ -382,6 +382,10 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 9rem);
+  }
+
+  .md-sidebar--secondary .oasis-sidebar-utilities {
+    margin: auto var(--oasis-space-3) var(--oasis-space-6);
   }
 
   [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap,
@@ -925,8 +929,14 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.42rem;
-  margin: auto var(--oasis-space-3) var(--oasis-space-6);
+  margin: 0;
   padding-top: var(--oasis-space-3);
+}
+
+.oasis-sidebar-utilities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
 }
 
 .oasis-presentation-toolbar--content {

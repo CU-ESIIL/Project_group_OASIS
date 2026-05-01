@@ -33,6 +33,8 @@ def main() -> int:
     logo_override = ROOT / "docs" / "overrides" / "partials" / "logo.html"
     nav_override = ROOT / "docs" / "overrides" / "partials" / "nav.html"
     ai_dir = ROOT / "docs" / "ai-for-sustainability"
+    norms_page = ai_dir / "norms.md"
+    norms_hero = ROOT / "docs" / "assets" / "hero" / "norms.png"
 
     index_text = index.read_text(encoding="utf-8") if index.exists() else ""
     instructions_text = instructions.read_text(encoding="utf-8") if instructions.exists() else ""
@@ -120,6 +122,8 @@ def main() -> int:
             "Defining AI nav item is missing.", errors)
     require("Defining Sustainability: ai-for-sustainability/defining-sustainability.md" in mkdocs_text,
             "Defining Sustainability nav item is missing.", errors)
+    require("Norms: ai-for-sustainability/norms.md" in mkdocs_text,
+            "Norms nav item should point to ai-for-sustainability/norms.md.", errors)
     require("What Does It Cost?: ai-for-sustainability/what-does-it-cost.md" in mkdocs_text,
             "What Does It Cost nav item is missing.", errors)
     require("Specialty Tracks" in mkdocs_text, "Specialty Tracks nav section is missing.", errors)
@@ -174,6 +178,15 @@ def main() -> int:
     require(not sticker_errors, "Task sticker bidirectional validation failed:\n" + "\n".join(sticker_errors), errors)
     require((ai_dir / "defining-ai.md").exists(), "Defining AI page is missing.", errors)
     require((ai_dir / "defining-sustainability.md").exists(), "Defining Sustainability page is missing.", errors)
+    norms_text = norms_page.read_text(encoding="utf-8") if norms_page.exists() else ""
+    require(norms_page.exists(), "Team Norms page is missing.", errors)
+    require(norms_hero.exists(), "Team Norms hero image is missing.", errors)
+    require("title: Team Norms" in norms_text and "# Team Norms" in norms_text,
+            "Team Norms page should use the Team Norms title.", errors)
+    require("**Time: 10 minutes**" in norms_text and "Create team norms" in norms_text and "Decide to decide" in norms_text,
+            "Team Norms page should include the 10-minute norms and decision-making activities.", errors)
+    require("```markdown" in norms_text and "**Decision-making norm:**" in norms_text,
+            "Team Norms page should include a GitHub website template block.", errors)
     require((ai_dir / "what-does-it-cost.md").exists(), "What Does It Cost page is missing.", errors)
     require("https://what-uses-more.com" in (ai_dir / "what-does-it-cost.md").read_text(encoding="utf-8"),
             "What Does It Cost page should embed or link to the calculator.", errors)
@@ -182,12 +195,8 @@ def main() -> int:
     nav_override_text = nav_override.read_text(encoding="utf-8") if nav_override.exists() else ""
     require("nav.homepage.url" in nav_override_text and "config.extra.homepage" not in nav_override_text,
             "Sidebar nav override should use nav.homepage.url, not config.extra.homepage.", errors)
-    require("template-guidance-toggle" in nav_override_text and "Instructions on" in nav_override_text,
-            "Template instructions toggle should render in the sidebar nav override.", errors)
-    require("Show or hide template instructions" in nav_override_text,
-            "Template instructions toggle should have an instructions-focused accessible label.", errors)
-    require('nav_item.title == "Instructions"' in nav_override_text,
-            "Template instructions toggle should render after the Instructions nav cluster.", errors)
+    require("template-guidance-toggle" not in nav_override_text and "data-oasis-mode-toggle" not in nav_override_text,
+            "Template instructions toggle should not render in the left sidebar nav override.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "display: flex" in css_text,
             "Sidebar branding area should be visible for the group logo.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "font-size: 0" in css_text,
@@ -212,7 +221,9 @@ def main() -> int:
             "Main content title should use ESIIL brand blue.", errors)
     require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
     require(".template-guidance-toggle" in css_text and "hide-template-instructions" in css_text and ".template-instructions-block" in css_text,
-            "Sidebar template instructions toggle styles are missing.", errors)
+            "Template instructions toggle styles are missing.", errors)
+    require(".oasis-sidebar-utilities" in css_text,
+            "Right sidebar utility container styles are missing.", errors)
     require("var(--oasis-day-2-color)" in css_text and "var(--oasis-day-3-color)" in css_text,
             "Day 2 and Day 3 H1 colors should use day color tokens.", errors)
     require(".md-sidebar--secondary .md-nav__link" in css_text and "oasis-day-marker" in css_text,
@@ -242,6 +253,8 @@ def main() -> int:
             "Mode toggle JavaScript should persist mode and identify template instruction blocks.", errors)
     require("Instructions on" in mode_toggle_text and "Instructions off" in mode_toggle_text,
             "Mode toggle label should use instructions language and update dynamically.", errors)
+    require("ensureInstructionsToggle" in mode_toggle_text and ".md-sidebar--secondary .md-sidebar__inner" in mode_toggle_text,
+            "Mode toggle JavaScript should place the instructions toggle in the right sidebar.", errors)
     require("insertAdjacentElement" not in mode_toggle_text,
             "Mode toggle JavaScript should not inject the toggle into the main page body.", errors)
     require(presentation_mode.exists(), "Presentation mode JavaScript is missing.", errors)

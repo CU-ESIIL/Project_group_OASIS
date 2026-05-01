@@ -16,7 +16,13 @@
   function getPresentationControlTarget() {
     const sidebar = document.querySelector(".md-sidebar--secondary .md-sidebar__inner");
     if (sidebar) {
-      return { element: sidebar, inSidebar: true };
+      let utilities = sidebar.querySelector(".oasis-sidebar-utilities");
+      if (!utilities) {
+        utilities = document.createElement("div");
+        utilities.className = "oasis-sidebar-utilities";
+        sidebar.append(utilities);
+      }
+      return { element: utilities, inSidebar: true };
     }
 
     const content = document.querySelector(".md-content__inner");

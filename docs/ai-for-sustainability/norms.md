@@ -1,67 +1,113 @@
-# Norms for AI Use in the Group
+---
+title: Team Norms
+---
 
-AI can be useful in a working group, but it can also quietly change how a group thinks. It can make some work faster, some assumptions less visible, and some voices easier to overlook. Before using AI heavily, it is worth having a short, explicit conversation about how the group wants to use it.
+# Team Norms
 
-The point is not to write a long policy. The point is to make a shared agreement that helps the group work with care.
+![Team norms hero image](../assets/hero/norms.png)
+
+Good teams do not happen by accident. They happen when people make a few shared commitments early, name how they want to work together, and return to those commitments when the work gets busy.
+
+During the summit, your team will be moving quickly. You will be learning new tools, making choices under uncertainty, working across different backgrounds, and deciding what is good enough to share. Team norms help make that work more dependable, more generous, and more useful.
 
 ## Why norms matter
 
-Groups often adopt AI unevenly. One person may use it constantly for coding, another may use it for summarizing papers, and another may avoid it because they do not trust the outputs or do not want their ideas fed into a tool. If those differences are not discussed, AI can become a hidden collaborator in the room, shaping decisions without being named.
+Research on effective teams highlights several conditions that help groups work well together: dependability, clear roles and structure, psychological safety, meaning, and impact. For this summit, we are adding two more: even turn-taking and shared expectations for AI use.
 
-Norms make that collaboration visible. They help the group decide when AI is welcome, when it should be avoided, when outputs need to be checked, and how to acknowledge its role in the final project.
+Use these ideas as prompts, not as a script. Your team does not need a long constitution. You need a short set of norms that people can remember, use, and revise.
 
-## Start with the work, not the tool
+## Create team norms
 
-A useful first question is not “Can we use AI?” but “What kind of work are we doing right now?”
+**Time: 10 minutes**
 
-Some tasks are low risk and well suited to AI support: drafting an outline, cleaning up a caption, generating starter code, translating a messy list into a table, or brainstorming alternate ways to explain a result. Other tasks require more caution: interpreting scientific evidence, making claims about causality, summarizing a paper no one has read, or deciding what the group believes.
+Use this quick self-facilitation process with your team.
 
-AI can help with the first kind of work. It should not silently replace the second.
+1. **Round robin**: Everyone shares one norm they think will be important for the team during the summit. Keep this fast. Aim for one idea per person.
+2. **Collect ideas in GitHub**: Make a list with as many possible norms as you can. Do not edit too much yet.
+3. **Vote on your top three**: Each person gets three votes. You can put all three votes on one idea or spread them across several ideas.
+4. **Move the voted norms to the top**: In GitHub, move all team norms with votes to the top of the list.
 
-## Questions to discuss as a group
+Add your selected norms to your project website so the team can return to them during the summit.
 
-Use these questions to make a quick group agreement. You do not need perfect answers. You just need enough shared understanding to avoid confusion later.
+## Norms to consider
 
-- What kinds of tasks are we comfortable using AI for?
-- What kinds of tasks should remain human-led?
-- Are there datasets, notes, draft ideas, or participant information we should not put into AI tools?
-- When AI gives us code, text, summaries, or interpretations, who is responsible for checking them?
-- How will we tell each other when AI was used?
-- How will we describe AI use on the final project page?
-- What would make someone in the group uncomfortable, and how should we handle that?
+Your group may want norms around:
 
-## A practical agreement
+- **Dependability**: How will we follow through on what we say we will do?
+- **Roles and structure**: How will we divide work, keep track of tasks, and know who is doing what?
+- **Psychological safety**: How will we make it safe to ask questions, disagree, try unfinished ideas, and admit when something is not working?
+- **Meaning**: Why does this project matter to the people in the group?
+- **Impact**: Who could use this work, and what would make it valuable beyond the summit?
+- **Even turn-taking**: How will we make sure everyone has space to contribute?
+- **AI use**: When is it helpful to use AI, when should we slow down, and how will we keep human judgment in the loop?
 
-By the end of the conversation, try to write a short agreement in plain language. It might look like this:
+## Example norms
 
-> We will use AI for brainstorming, code drafting, summarizing our own notes, and improving explanations. We will not use AI outputs as evidence unless someone checks them against data, papers, or domain knowledge. We will not paste private participant information or sensitive data into external tools. If AI contributes to code, text, or interpretation, we will say so in our methods or acknowledgments.
+These examples are here to help you get started. Edit them, shorten them, or replace them with your own.
 
-The exact wording should fit the group. What matters is that the agreement is specific enough to guide behavior.
+- Be aware that everyone has multiple pressures: personal, professional, financial, and more.
+- Communicate clearly with the team, especially when expectations, assumptions, or plans shift.
+- Prioritize regular check-ins.
+- Listen to and respect everyone's opinion so the team can create knowledge together and find the best path forward.
+- Trust the process, even when it is slow.
+- Watch tone, avoid judgment, and help create a safe environment.
+- Have fun.
+- Accept constructive criticism. The goal is to find the best idea, not to defend the first idea.
+- Signal when the team is in divergent-thinking mode so people know it is okay to throw out rough, strange, or unfinished ideas.
+- Focus on the impact, including translating science, elevating students, empowering collaborators, and creating something useful.
+- Contribute to an immersive experience.
+- Pick up a pipe cleaner instead of your phone.
+- Visit with someone instead of checking email.
+- Build community.
+- Practice active listening.
+- Learn from others.
+- Treat teaching and research as forms of learning.
+- Grow the network.
+- Meet people, participate, and sit with new friends at lunch.
 
-## Keep responsibility human
+## Pro tips
 
-AI can generate plausible text and working code, but plausibility is not the same as truth. If an output becomes part of the group’s analysis, someone in the group is responsible for checking it. If an output becomes part of the group’s public claim, the group is responsible for standing behind it.
+Keep your norms short and sweet. The best norms are easy to remember.
 
-This is especially important in sustainability work, where errors can hide inside confident language. A model may produce a clean explanation while missing local context, uncertainty, power, equity, or scale. Human judgment is not an optional final step. It is part of the method.
+Revisit your norms regularly. If a norm is not working for everyone, change it.
 
-## Make uncertainty visible
+Put your norms at the top of meeting agendas or working notes so they stay visible.
 
-One useful norm is to ask AI to show uncertainty rather than smooth it away. If a tool drafts an explanation, ask what assumptions it made. If it suggests a method, ask when that method fails. If it writes code, ask what inputs could break it. If it summarizes results, ask what evidence would weaken the claim.
+Talk about what the norms mean in practice. For example, what does "respect" look like in this group? What should happen if someone breaks a team norm? How should the team reset if the work starts to feel uneven or rushed?
 
-The goal is not to make AI cautious for its own sake. The goal is to keep the group from mistaking fluent output for settled understanding.
+## Decide to decide
 
-## Credit and disclosure
+**Time: 10 minutes**
 
-Groups do not need to document every small interaction with AI. But if AI materially shaped code, figures, synthesis, writing, or interpretation, say so. A short note is enough:
+Your team also needs a decision-making norm. How will you decide when there is disagreement, limited time, or more than one reasonable path?
 
-> We used AI tools to help draft code, organize notes, and revise explanatory text. All scientific claims, figures, and interpretations were reviewed by the group.
+Choose one decision-making technique and add it to your team norms.
 
-If a tool was used to analyze data or generate a result, be more specific. Name the tool, describe what it did, and explain how the group checked the output.
+Possible approaches include:
 
-## A closing prompt
+- **Consensus**: Keep talking until everyone can actively support the decision.
+- **Consent**: Move forward unless someone has a serious objection.
+- **Majority vote**: Vote and choose the option with the most support.
+- **Advice process**: One person owns the decision, but they must seek advice from people affected by it and people with relevant expertise.
+- **Decider protocol**: One person proposes a decision, the group gives quick support or objections, and the team resolves objections before moving forward.
+- **Default experiment**: Choose a reasonable next step, try it for a fixed period, then revisit.
 
-Before the group starts working, take five minutes and finish this sentence:
+For summit work, consent or a default experiment often works well because teams need to keep moving while still making space for concerns.
 
-> In this project, AI should help us _______, but it should not replace _______.
+## Add norms to your team website
 
-The answer will not settle every question. It will, however, give the group a shared place to begin.
+Add your selected norms to your project group homepage. Keep them short enough that someone can read them during a meeting or share-out.
+
+Suggested format:
+
+```markdown
+## Team Norms
+
+- We will ...
+- We will ...
+- We will ...
+
+**Decision-making norm:** We will use [chosen method] when the group needs to make a decision.
+```
+
+If your group changes its norms during the summit, update the website. That is a sign the norms are alive, not that the first version failed.

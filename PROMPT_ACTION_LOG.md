@@ -1547,3 +1547,35 @@ Verification
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Used a local browser check of `/instructions/day1/` at 1440 by 1000 and confirmed the Present button and hint render fully at the bottom of the right sidebar.
 * Ran `python3 scripts/template_regression_check.py`; it still fails because `docs/index.md` contains the existing raw HTML CubeDynamics iframe wrapper, unrelated to the Present button placement.
+
+2026-05-01
+
+Prompt
+
+User asked to move the Instructions on/off button from the left sidebar to the right sidebar, just above the Present button.
+
+Files and folders inspected
+
+* docs/overrides/partials/nav.html
+* docs/javascripts/mode-toggle.js
+* docs/javascripts/presentation-mode.js
+* docs/stylesheets/extra.css
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Removed the static Instructions toggle from the left sidebar navigation override.
+* Updated the mode toggle script to create the Instructions on/off control in the right sidebar only on pages with template instructions.
+* Added a shared right-sidebar utility container so the Instructions toggle sits directly above the Present button.
+* Updated sidebar styling so the stacked controls remain at the bottom of the right sidebar.
+* Updated the template regression check to expect the Instructions toggle in the right sidebar behavior rather than the left navigation override.
+
+Verification
+
+* Ran `node --check docs/javascripts/mode-toggle.js`; passed.
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built assets include the right-sidebar utility container, the JavaScript-created Instructions toggle, and the Present toolbar sharing that container.
+* Ran `python3 scripts/template_regression_check.py`; it still fails because `docs/index.md` contains the existing raw HTML CubeDynamics iframe wrapper, unrelated to the sidebar control placement.

@@ -42,6 +42,8 @@ Share:
 
 This project works best when it reflects the people in the group. The question you choose should come out of this conversation.
 
+After introductions, spend 10 minutes creating team norms and choosing a decision-making method: [Team Norms](../ai-for-sustainability/norms.md).
+
 ---
 ## B — Choose your project and name it
 <span id="guide-D1-B"></span>

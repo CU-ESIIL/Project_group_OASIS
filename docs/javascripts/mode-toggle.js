@@ -6,6 +6,55 @@
     return Boolean(document.querySelector(".oasis-public-mode-marker, .template-instructions-block"));
   }
 
+  function getRightSidebarUtilities() {
+    const sidebar = document.querySelector(".md-sidebar--secondary .md-sidebar__inner");
+    if (!sidebar) {
+      return null;
+    }
+
+    let utilities = sidebar.querySelector(".oasis-sidebar-utilities");
+    if (!utilities) {
+      utilities = document.createElement("div");
+      utilities.className = "oasis-sidebar-utilities";
+      sidebar.append(utilities);
+    }
+    return utilities;
+  }
+
+  function ensureInstructionsToggle() {
+    const shouldShowToggle = pageHasTemplateInstructions();
+    const existingToggle = document.querySelector(".template-guidance-toggle");
+    if (!shouldShowToggle) {
+      existingToggle?.remove();
+      return;
+    }
+
+    const utilities = getRightSidebarUtilities();
+    if (!utilities) {
+      return;
+    }
+
+    if (existingToggle) {
+      if (existingToggle.parentElement !== utilities) {
+        utilities.prepend(existingToggle);
+      }
+      return;
+    }
+
+    const toggleWrapper = document.createElement("div");
+    toggleWrapper.className = "template-guidance-toggle";
+    toggleWrapper.setAttribute("role", "group");
+    toggleWrapper.setAttribute("aria-label", "Template instructions display setting");
+    toggleWrapper.innerHTML = [
+      '<label class="template-guidance-toggle__label">',
+      '<input type="checkbox" data-oasis-mode-toggle aria-label="Show or hide template instructions" checked>',
+      '<span class="template-guidance-toggle__control" aria-hidden="true"></span>',
+      '<span class="template-guidance-toggle__text">Instructions on</span>',
+      "</label>",
+    ].join("");
+    utilities.prepend(toggleWrapper);
+  }
+
   function readShowInstructions() {
     const stored = window.localStorage.getItem(STORAGE_KEY);
     return stored === null ? true : stored === "show";
@@ -82,6 +131,7 @@
 
   function init() {
     markTemplateInstructionBlocks();
+    ensureInstructionsToggle();
     bindToggles();
     applyInstructionsMode(readShowInstructions());
     updateHeaderTitle();
