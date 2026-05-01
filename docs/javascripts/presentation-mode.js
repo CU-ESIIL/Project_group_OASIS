@@ -5,7 +5,41 @@
     return tag === "input" || tag === "textarea" || tag === "select" || target.isContentEditable;
   }
 
+  function isHomePage() {
+    const path = window.location.pathname.replace(/\/+$/, "");
+    return (
+      path === "" ||
+      path.endsWith("/index") ||
+      path.endsWith("/index.html") ||
+      Boolean(document.querySelector(".oasis-public-mode-marker"))
+    );
+  }
+
+  function markReportOutBlocks() {
+    document.querySelectorAll(".oasis-report-out-visible").forEach((element) => {
+      element.classList.remove("oasis-report-out-visible");
+    });
+
+    ["report-out-day2", "report-out-day3"].forEach((id) => {
+      const heading = document.getElementById(id);
+      let element = heading;
+      while (element) {
+        element.classList.add("oasis-report-out-visible");
+        element = element.nextElementSibling;
+        if (element?.tagName?.toLowerCase() === "h2") {
+          break;
+        }
+      }
+    });
+  }
+
   function setPresentationMode(enabled) {
+    if (enabled && !isHomePage()) {
+      return;
+    }
+    if (enabled) {
+      markReportOutBlocks();
+    }
     document.body.classList.toggle("presentation-mode", enabled);
     document.documentElement.classList.toggle("presentation-mode", enabled);
     document.querySelectorAll("[data-oasis-present-toggle]").forEach((button) => {
@@ -30,6 +64,12 @@
   }
 
   function ensurePresentationControls() {
+    if (!isHomePage()) {
+      document.querySelector(".oasis-presentation-toolbar")?.remove();
+      setPresentationMode(false);
+      return;
+    }
+
     const target = getPresentationControlTarget();
     if (!target) {
       return;
@@ -70,6 +110,12 @@
   }
 
   function ensurePresentationChrome() {
+    if (!isHomePage()) {
+      document.querySelector(".oasis-present-exit")?.remove();
+      document.querySelector(".oasis-present-identity")?.remove();
+      return;
+    }
+
     if (document.querySelector(".oasis-present-exit")) {
       return;
     }
@@ -100,6 +146,9 @@
       }
       if (event.key === "Escape") {
         setPresentationMode(false);
+        return;
+      }
+      if (!isHomePage()) {
         return;
       }
       if (event.key.toLowerCase() === "p" && !event.metaKey && !event.ctrlKey && !event.altKey) {

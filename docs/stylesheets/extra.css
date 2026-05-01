@@ -160,33 +160,6 @@ body {
   display: none;
 }
 
-.md-typeset img.task-sticker {
-  display: inline-block;
-  width: clamp(6.8rem, 24vw, 9.4rem);
-  height: auto;
-  margin: 0 var(--oasis-space-2) var(--oasis-space-3) 0;
-  border: 0;
-  border-radius: 0;
-  box-shadow: 0 0.45rem 1.2rem rgba(22, 26, 25, 0.12);
-  vertical-align: top;
-}
-
-.md-typeset a > img.task-sticker {
-  transition:
-    box-shadow var(--oasis-transition-fast),
-    transform var(--oasis-transition-fast);
-}
-
-.md-typeset a:is(:hover, :focus-visible) > img.task-sticker {
-  box-shadow: 0 0.65rem 1.45rem rgba(22, 26, 25, 0.18);
-  transform: translateY(-2px);
-}
-
-.md-typeset span[id^="edit-D"],
-.md-typeset span[id^="guide-D"] {
-  scroll-margin-top: 5.5rem;
-}
-
 .oasis-day-marker {
   display: none;
 }
@@ -372,6 +345,7 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   }
 
   .md-sidebar--secondary .md-sidebar__scrollwrap {
+    padding-top: var(--oasis-space-3);
     background:
       radial-gradient(circle at 90% 92%, rgba(0, 113, 53, 0.08), transparent 8rem),
       repeating-linear-gradient(164deg, transparent 0 0.85rem, rgba(0, 113, 53, 0.035) 0.9rem 0.94rem),
@@ -386,6 +360,10 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
 
   .md-sidebar--secondary .oasis-sidebar-utilities {
     margin: auto var(--oasis-space-3) var(--oasis-space-6);
+  }
+
+  .md-sidebar--secondary .md-nav__title {
+    margin-top: var(--oasis-space-2);
   }
 
   [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap,
@@ -420,9 +398,14 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   font-weight: 700;
 }
 
+.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list {
+  margin-top: -0.5rem;
+}
+
 .md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link {
   color: var(--oasis-color-accent-green);
-  font-weight: 700;
+  font-size: 1.02rem;
+  font-weight: 800;
 }
 
 .md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link:is(:hover, :focus-visible),
@@ -913,6 +896,20 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   border-radius: var(--oasis-radius-md);
 }
 
+.md-typeset h2#report-out-day2,
+.md-typeset h2#report-out-day3 {
+  padding: var(--oasis-space-3) var(--oasis-space-4);
+  border-left: 0.45rem solid var(--oasis-color-accent-green);
+  border-radius: var(--oasis-radius-sm);
+  background: rgba(0, 113, 53, 0.08);
+  color: var(--oasis-color-primary-blue);
+}
+
+.md-typeset h2#report-out-day3 {
+  border-left-color: var(--oasis-color-accent-blue);
+  background: rgba(66, 188, 220, 0.12);
+}
+
 /* Presentation mode */
 .oasis-presentation-toolbar {
   display: flex;
@@ -937,6 +934,19 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
+  text-align: center;
+}
+
+.oasis-sidebar-utilities ul {
+  padding-left: 0;
+}
+
+.oasis-sidebar-utilities li {
+  list-style: none;
+}
+
+.oasis-sidebar-utilities li::marker {
+  content: "";
 }
 
 .oasis-presentation-toolbar--content {
@@ -1021,10 +1031,12 @@ body.presentation-mode .oasis-presentation-toolbar {
   display: none !important;
 }
 
-/* Hide homepage/instructions crosswalk sticker links in presentation mode */
-body.presentation-mode .md-typeset a:has(> img.task-sticker),
-body.presentation-mode .md-typeset img.task-sticker {
+body.presentation-mode .md-typeset > * {
   display: none !important;
+}
+
+body.presentation-mode .md-typeset > .oasis-report-out-visible {
+  display: revert !important;
 }
 
 body.presentation-mode .oasis-present-exit,

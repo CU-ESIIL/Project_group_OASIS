@@ -1579,3 +1579,44 @@ Verification
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Confirmed the built assets include the right-sidebar utility container, the JavaScript-created Instructions toggle, and the Present toolbar sharing that container.
 * Ran `python3 scripts/template_regression_check.py`; it still fails because `docs/index.md` contains the existing raw HTML CubeDynamics iframe wrapper, unrelated to the sidebar control placement.
+
+2026-05-01
+
+Prompt
+
+User provided PDF prompts asking for targeted sidebar UI fixes and a clean separation between the editable Home template and the completed Example page.
+
+Files and folders inspected
+
+* docs/index.md
+* docs/example.md
+* docs/instructions.md
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/stylesheets/extra.css
+* docs/javascripts/presentation-mode.js
+* scripts/check_stickers.py
+* scripts/template_regression_check.py
+* scripts/site_health.py
+* mkdocs.yml
+
+Actions taken
+
+* Kept the top-level navigation split as Home and Example.
+* Replaced the Home page with a sparse editable worksheet that keeps the Instructions toggle, hides guidance in note blocks, removes example narrative prose, and adds Day 2 and Day 3 report-out sections.
+* Added a completed Example page with public-facing project-report prose, figures, interpretation, limits, outputs, and next steps.
+* Retired the sticker/button navigation workflow from Home and the day-by-day instruction pages.
+* Updated Day 1, Day 2, and Day 3 instructions to point groups to Home as the working page and Example as the reference page.
+* Added detailed Day 2 and Day 3 report-out guidance to the instructions.
+* Updated Present mode so the Present button only appears on Home and presentation mode isolates the two report-out sections.
+* Applied sidebar fixes for primary nav spacing and weight, right table-of-contents padding, and stray sidebar utility marker removal.
+* Updated local regression checks for the retired sticker workflow, Home/Example split, report-out sections, and sidebar fixes.
+
+Verification
+
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `python3 scripts/check_stickers.py`; passed with the retired sticker workflow check.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.

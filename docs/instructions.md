@@ -36,17 +36,6 @@ Use the Cloud Triangle pages when you need to move work between those places:
 2. [Instance to/from GitHub](instructions/push-to-github.md)
 3. [Instance to/from persistent storage](instructions/save-to-persistent-storage.md)
 
-## Landmark stickers
-
-Use the stickers like parking-garage landmarks:
-
-- day color tells you when the task happens
-- task code tells you the exact direction to follow
-- sticker title tells you the work to add or refine
-- the same sticker appears on the Home page where that work belongs
-
-For example, “D2-C Takeaways” means Day 2, task C. Find the same sticker on the Home page to know where that work belongs.
-
 ## Editing this project site
 Most summit participants should only edit Markdown files.
 You can safely edit:
@@ -108,7 +97,6 @@ Instruction blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit
 | `docs/assets/people/` | Optional team photos or profile images |
 | `docs/assets/team/` | Team photos or headshots |
 | `docs/assets/files/` | PDFs, briefs, slides, and downloadable materials |
-| `docs/assets/stickers/` | Landmark sticker images used by the Home page and instructions |
 | Innovation Summit learner files | Source profiles that can be linked from the People table |
 | `docs/references.bib` | BibTeX references cited from Markdown |
 | `code/` | Scripts, notebooks, and reusable analysis code |

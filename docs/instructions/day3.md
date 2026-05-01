@@ -10,48 +10,27 @@ extra:
 # Day 3 — Synthesize, Polish, and Share
 
 ## What today is about
-Today is about **turning your work into something others can understand and use**.
-You are not trying to make the project perfect. You are trying to make the project clear.
-Keep polishing the Home page. The Example page is there as a model, not as the page your group edits.
-By the end of the day, your page should tell a coherent story:
 
-- who you are
-- what question you explored
-- what data and methods you used
-- what you found
-- what you made
-- what someone else could do next
+Today is about turning your work into something others can understand and use. Keep polishing the [Home page](../index.md). Use the [Example page](../example.md) only as a completed model.
 
----
-## A — Revisit the whole story
-<span id="guide-D3-A"></span>
-[![D3-A: Story](../assets/stickers/tasks/d3-a.svg){ .task-sticker }](../index.md#edit-D3-A)
+By the end of the day, the Home page should tell a coherent story: why the question matters, what you tried, what you found, what you made, and what should happen next.
 
-**Landmark:** Project Question
+## Revisit the whole story
 
-**Where this shows up on the Home page:** [Project Question](../index.md#project-question)
-
-Read the page from top to bottom.
+Read the Home page from top to bottom.
 
 Ask:
 
-- Does the title still match the project?
+- Does the title match the project?
 - Does the question match what we actually explored?
 - Can someone outside the group understand why this matters?
+- Does each section support the final report out?
 
-Update the title or Project Question section if needed.
-The story should match the work you actually did, not the plan you started with.
+Update [Project Question](../index.md#project-question), [Data Exploration](../index.md#data-exploration), and [Methods and Code](../index.md#methods-and-code) so the story matches the work you actually did.
 
----
-## B — Finalize the results
-<span id="guide-D3-B"></span>
-[![D3-B: Results](../assets/stickers/tasks/d3-b.svg){ .task-sticker }](../index.md#edit-D3-B)
+## Finalize the results
 
-**Landmark:** Results
-
-**Where this shows up on the Home page:** [Results](../index.md#results)
-
-Clean up the Results section.
+Use [Results](../index.md#results) to make a clear claim and point to evidence.
 
 Add or revise:
 
@@ -60,108 +39,86 @@ Add or revise:
 - short interpretations
 - uncertainty, limits, or open questions
 
-Helpful prompts:
-
-- What is the main thing we learned?
-- What evidence supports it?
-- What are we still unsure about?
-
 A strong result does not need to be a perfect answer. It needs to be honest and understandable.
 
----
-## C — Clean the data and methods sections
-<span id="guide-D3-C"></span>
-[![D3-C: Clean Up](../assets/stickers/tasks/d3-c.svg){ .task-sticker }](../index.md#edit-D3-C)
+## Add polished outputs
 
-**Landmark:** Data Exploration and Methods and Code
+Use [Polished Outputs](../index.md#polished-outputs) to link the final things people should find after the summit.
 
-**Where this shows up on the Home page:** [Data Exploration](../index.md#data-exploration) and [Methods and Code](../index.md#methods-and-code)
-
-Make the Data Exploration and Methods and Code sections readable for someone who was not in the room.
-
-For data, make sure readers can tell:
-
-- what datasets you used
-- why those datasets were useful
-- what plots, maps, or summaries show
-
-For methods, make sure readers can tell:
-
-- what tools or workflows you used
-- where the code lives
-- what someone would need to reproduce or extend the work
-
-Remove clutter if it makes the story harder to follow.
-Clarity matters more than completeness.
-
----
-## D — Add polished outputs
-<span id="guide-D3-D"></span>
-[![D3-D: Outputs](../assets/stickers/tasks/d3-d.svg){ .task-sticker }](../index.md#edit-D3-D)
-
-**Landmark:** Polished Outputs
-
-**Where this shows up on the Home page:** [Polished Outputs](../index.md#polished-outputs)
-
-Add or link the final things you want people to see.
 These might include:
 
-- a PDF
-- slides
-- final figures
+- a final figure
 - a notebook
+- a PDF or brief
 - a repository link
 - a dataset or data-access note
+- a short handoff note
 
-Check that links work.
-This section is where someone goes after the summit to find the most useful takeaways.
+Check that links work before the final report out.
 
----
-## E — Prepare to present from the page
-<span id="guide-D3-E"></span>
-[![D3-E: Present](../assets/stickers/tasks/d3-e.svg){ .task-sticker }](../index.md#edit-D3-E)
+## Final Report Out (6 minutes)
 
-**Landmark:** Results and Polished Outputs
+Focus: synthesis and clarity.
 
-**Where this shows up on the Home page:** [Results](../index.md#results) and [Polished Outputs](../index.md#polished-outputs)
+Use your homepage as the presentation. Do not create separate slides. Add the final presentation structure to [Final Report Out (Day 3)](../index.md#report-out-day3).
 
-Use the page as your presentation guide.
+Tell a coherent story:
 
-Decide:
+Why -> Question -> Data/Methods -> Findings -> Next
 
-- who will introduce the project
-- which figure or result matters most
-- what you want the audience to remember
-- what you would do next with more time
+### Team Photo
 
-Your page does not need to include every detail. It should help you tell the story clearly.
+Add a team photo to your homepage.
 
----
-## F — Leave the project useful for others
-<span id="guide-D3-F"></span>
-[![D3-F: Next Steps](../assets/stickers/tasks/d3-f.svg){ .task-sticker }](../index.md#edit-D3-F)
+### Findings at a glance
 
-**Landmark:** Polished Outputs
+Write 2–3 short headlines:
 
-**Where this shows up on the Home page:** [Polished Outputs](../index.md#polished-outputs)
+- Headline 1 — what, where, how much
+- Headline 2 — change, trend, or contrast
+- Headline 3 — implication for practice or policy
 
-Before you finish, add a short “next steps” note.
+Good headlines are specific and quantitative when possible.
 
-Include:
+### Visuals that tell the story
 
-- what worked
-- what still needs work
-- what someone else could pick up later
+Select 2–3 visuals only.
 
-A good final page is not just a record of what happened. It is a handoff to future work.
+Each visual should:
 
----
-## What a strong Day 3 page looks like
-By the end of Day 3, your project page should have:
+- support one claim
+- be readable quickly
+- be referenced in your narrative
 
-- a clear title and question
+### What's next?
+
+Write 2–3 short bullets:
+
+- immediate follow-ups
+- what you would do with one more week or month
+- who should see this next
+
+### Practice guidance
+
+Practice a six-minute walkthrough of your homepage.
+
+Time breakdown:
+
+- 1 minute: Why and question
+- 2 minutes: Data and methods
+- 2 minutes: Findings with visuals
+- 1 minute: Next steps
+
+Keep text crisp and speak to the visuals.
+
+## End-of-day check
+
+Before the final share-out, make sure the Home page has:
+
+- a clear question
 - readable team information
 - understandable data and methods
 - clean results or honest early findings
 - working links to outputs
+- a six-minute final report out
 - a short sense of what should happen next

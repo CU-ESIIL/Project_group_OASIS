@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from check_stickers import sticker_issues
@@ -13,259 +14,128 @@ def require(condition: bool, message: str, errors: list[str]) -> None:
         errors.append(message)
 
 
+def paragraphs(text: str) -> list[str]:
+    clean = re.sub(r"```.*?```", "", text, flags=re.S)
+    clean = re.sub(r"!!! note.*?(?=\n## |\Z)", "", clean, flags=re.S)
+    return [
+        block.strip()
+        for block in re.split(r"\n\s*\n", clean)
+        if block.strip() and not block.lstrip().startswith(("#", "|", "!", "[", "{{", "-", "---"))
+    ]
+
+
 def main() -> int:
     errors: list[str] = []
     index = ROOT / "docs" / "index.md"
+    example = ROOT / "docs" / "example.md"
     instructions = ROOT / "docs" / "instructions.md"
+    day1 = ROOT / "docs" / "instructions" / "day1.md"
+    day2 = ROOT / "docs" / "instructions" / "day2.md"
+    day3 = ROOT / "docs" / "instructions" / "day3.md"
     mkdocs = ROOT / "mkdocs.yml"
     css = ROOT / "docs" / "stylesheets" / "extra.css"
-    tokens = ROOT / "docs" / "stylesheets" / "tokens.css"
     mode_toggle = ROOT / "docs" / "javascripts" / "mode-toggle.js"
     presentation_mode = ROOT / "docs" / "javascripts" / "presentation-mode.js"
-    hooks = ROOT / "hooks.py"
-    references = ROOT / "docs" / "references.bib"
-    stickers_registry = ROOT / "docs" / "stickers.md"
-    people_dir = ROOT / "docs" / "people"
-    stickers_dir = ROOT / "docs" / "assets" / "stickers"
-    logo = ROOT / "docs" / "assets" / "oasis_logo.png"
-    group_logo = ROOT / "docs" / "assets" / "esiil_content" / "group_logo.svg"
-    event_group_logo = ROOT / "docs" / "assets" / "esiil_content" / "event_group_logo.png"
-    logo_override = ROOT / "docs" / "overrides" / "partials" / "logo.html"
-    nav_override = ROOT / "docs" / "overrides" / "partials" / "nav.html"
-    ai_dir = ROOT / "docs" / "ai-for-sustainability"
-    norms_page = ai_dir / "norms.md"
-    norms_hero = ROOT / "docs" / "assets" / "hero" / "norms.png"
 
     index_text = index.read_text(encoding="utf-8") if index.exists() else ""
+    example_text = example.read_text(encoding="utf-8") if example.exists() else ""
     instructions_text = instructions.read_text(encoding="utf-8") if instructions.exists() else ""
+    day_texts = {
+        "day1": day1.read_text(encoding="utf-8") if day1.exists() else "",
+        "day2": day2.read_text(encoding="utf-8") if day2.exists() else "",
+        "day3": day3.read_text(encoding="utf-8") if day3.exists() else "",
+    }
     mkdocs_text = mkdocs.read_text(encoding="utf-8") if mkdocs.exists() else ""
     css_text = css.read_text(encoding="utf-8") if css.exists() else ""
-    tokens_text = tokens.read_text(encoding="utf-8") if tokens.exists() else ""
     mode_toggle_text = mode_toggle.read_text(encoding="utf-8") if mode_toggle.exists() else ""
     presentation_mode_text = presentation_mode.read_text(encoding="utf-8") if presentation_mode.exists() else ""
-    hooks_text = hooks.read_text(encoding="utf-8") if hooks.exists() else ""
-    references_text = references.read_text(encoding="utf-8") if references.exists() else ""
-    stickers_text = stickers_registry.read_text(encoding="utf-8") if stickers_registry.exists() else ""
 
     require(index.exists(), "docs/index.md is missing.", errors)
-    require("public_mode_toggle: true" in index_text,
-            "Public Front Page should opt into the Edit/Public mode toggle.", errors)
-    require("!!! note" in index_text and "Template instructions" in index_text,
-            "Public Front Page should use expanded Markdown instruction blocks.", errors)
-    require("??? note" not in index_text,
-            "Public Front Page instruction blocks should be expanded by default.", errors)
-    require("Replace this paragraph" not in index_text and "Replace this text" not in index_text,
-            "Inline replacement instructions should move into template instruction blocks.", errors)
-    require("## How to use this page" in index_text, "Front page sticker legend is missing.", errors)
-    for section in [
-        "People",
-        "Project Question",
-        "Specialty Tracks and Strategy",
-        "Data Exploration",
-        "Methods and Code",
-        "Results",
-        "Polished Outputs",
-    ]:
-        require(section in index_text, f"Front page section '{section}' is missing.", errors)
-    require("section-sticker" not in index_text and "assets/stickers/tasks/" in index_text,
-            "Public Front Page should use shared task sticker images, not old section-sticker markup.", errors)
+    require(example.exists(), "docs/example.md is missing.", errors)
+    require("public_mode_toggle: true" in index_text, "Home should keep public_mode_toggle: true.", errors)
+    require("# Project Group Home" in index_text, "Home should be titled Project Group Home.", errors)
+    require("[See a completed example](example.md){ .md-button }" in index_text,
+            "Home should link to the completed Example page.", errors)
+    require("| Name | Role / affiliation | Focus | Skills |" in index_text and "| | | | |" in index_text,
+            "Home should contain an empty editable people table.", errors)
+    require("## Report Out (Day 2 — 2 minutes) { #report-out-day2 }" in index_text,
+            "Home should include the Day 2 report-out section.", errors)
+    require("## Final Report Out (Day 3 — 6 minutes) { #report-out-day3 }" in index_text,
+            "Home should include the Day 3 final report-out section.", errors)
+    require("{{ references }}" in index_text, "Home should keep the references marker.", errors)
+    require(".task-sticker" not in index_text and "edit-D" not in index_text,
+            "Home should not use retired sticker markup or edit anchors.", errors)
     require("<div" not in index_text and "<table" not in index_text,
-            "Public Front Page should avoid participant-facing raw HTML layout.", errors)
-    require('--8<-- "people/' not in index_text, "Public Front Page should not include local People profile snippets.", errors)
-    require("Innovation-Summit-2026/tree/main/docs/learners" in index_text,
-            "People section should link to the Innovation Summit learner folder.", errors)
-    require("{{ people_gallery }}" not in index_text,
-            "People section should use an editable Markdown table, not the generated gallery marker.", errors)
-    require("| Name | Role / affiliation |" in index_text,
-            "People section should include a simple editable Markdown table.", errors)
-    require("## Featured Outputs" not in index_text, "Featured Outputs section should be removed.", errors)
-    require("https://what-uses-more.com" in index_text, "What Uses More button/link is missing.", errors)
-    require("assets/files/project_brief.pdf" in index_text and "Polished Outputs" in index_text,
-            "Project brief PDF should be linked near polished outputs.", errors)
-    require("View shared code" in index_text and "Methods and Code" in index_text,
-            "Code button should be placed in the methods section.", errors)
-    require("Open the ESIIL Data Library" in index_text and "https://cu-esiil.github.io/data-library/innovation-summit-2025/" in index_text,
-            "Data button should point to the ESIIL Data Library in context.", errors)
-    require("[@" in index_text, "Public Front Page should use BibTeX citation keys.", errors)
-    require("{{ references }}" in index_text, "Public Front Page should include references marker.", errors)
-    require("## How to edit the Public Front Page" in instructions_text,
-            "Instructions edit guide section is missing.", errors)
-    require("## Where files go" in instructions_text, "Instructions file map is missing.", errors)
-    require("Innovation-Summit-2026/tree/main/docs/learners" in instructions_text,
-            "Instructions should explain linking to existing learner profile files.", errors)
-    require("Most summit participants should only edit Markdown files." in instructions_text,
-            "Markdown-safe editing guidance is missing.", errors)
-    require("docs/references.bib" in instructions_text, "Instructions should explain BibTeX references.", errors)
-    require(stickers_registry.exists(), "Task sticker registry docs/stickers.md is missing.", errors)
-    require("edit-D1-A" in stickers_text and "guide-D1-A" in stickers_text,
-            "Task sticker registry should document edit/guide anchor pairs.", errors)
+            "Home should stay Markdown-first without raw layout HTML.", errors)
+    require(all(len(paragraph.split()) <= 24 for paragraph in paragraphs(index_text)),
+            "Home visible text should stay sparse; guidance belongs in notes.", errors)
 
-    for day in ["day1", "day2", "day3"]:
-        day_text = (ROOT / "docs" / "instructions" / f"{day}.md").read_text(encoding="utf-8")
-        require("../assets/stickers/tasks/" in day_text and "{ .task-sticker }" in day_text,
-                f"{day}.md should show task stickers from the shared sticker assets.", errors)
-        day_number = day[-1]
-        require(f"oasis_day: {day_number}" in day_text and f"body_class: day-{day_number}" in day_text,
-                f"{day}.md should opt into the day-{day_number} instruction color system.", errors)
+    require("title: Example Project Page" in example_text and "# Example Project Page" in example_text,
+            "Example should have the Example Project Page title.", errors)
+    require("This page shows what a completed group project can look like." in example_text,
+            "Example should link users back to editing Home.", errors)
+    require("!!! note" not in example_text and "public_mode_toggle: true" not in example_text,
+            "Example should be clean public-facing prose without instruction toggles.", errors)
+    require("report-out-day2" not in example_text and "report-out-day3" not in example_text,
+            "Example should not include Home report-out scaffold anchors.", errors)
+    require("![Early exploration plot]" in example_text and "![Lead result visual]" in example_text,
+            "Example should include figure references.", errors)
+    for section in [
+        "## People",
+        "## Project Question",
+        "## Specialty Tracks and Strategy",
+        "## Data Exploration",
+        "## Methods and Code",
+        "## Results",
+        "## Polished Outputs",
+        "## Cite & Reuse",
+        "## Next Steps",
+    ]:
+        require(section in example_text, f"Example section missing: {section}.", errors)
+    require(len([p for p in paragraphs(example_text) if len(p.split()) >= 35]) >= 10,
+            "Example should contain complete report-style paragraphs.", errors)
 
-    for folder in ["hero", "whiteboards", "explorations", "figures", "team", "files", "stickers", "people"]:
-        require((ROOT / "docs" / "assets" / folder).is_dir(), f"docs/assets/{folder}/ is missing.", errors)
+    require("nav:\n  - Home: index.md\n  - Example: example.md" in mkdocs_text,
+            "MkDocs nav should start with Home and Example.", errors)
+    require("javascripts/mode-toggle.js" in mkdocs_text and "javascripts/presentation-mode.js" in mkdocs_text,
+            "Mode toggle and presentation scripts should be registered.", errors)
 
-    require("toc.integrate" not in mkdocs_text, "toc.integrate should not be enabled.", errors)
-    require("content.action.edit" in mkdocs_text, "MkDocs edit action should remain enabled.", errors)
-    require("site_name: \"OASIS Project Group Template\"" in mkdocs_text,
-            "Header site title should remain visible and persistent.", errors)
-    require("Day 1 — Meet Your Team and Define Your Project" in mkdocs_text,
-            "Day 1 nav title should match the orientation page.", errors)
-    require("AI for Sustainability" in mkdocs_text, "AI for Sustainability nav section is missing.", errors)
-    require("Defining AI: ai-for-sustainability/defining-ai.md" in mkdocs_text,
-            "Defining AI nav item is missing.", errors)
-    require("Defining Sustainability: ai-for-sustainability/defining-sustainability.md" in mkdocs_text,
-            "Defining Sustainability nav item is missing.", errors)
-    require("Norms: ai-for-sustainability/norms.md" in mkdocs_text,
-            "Norms nav item should point to ai-for-sustainability/norms.md.", errors)
-    require("What Does It Cost?: ai-for-sustainability/what-does-it-cost.md" in mkdocs_text,
-            "What Does It Cost nav item is missing.", errors)
-    require("Specialty Tracks" in mkdocs_text, "Specialty Tracks nav section is missing.", errors)
-    require(mkdocs_text.find("AI for Sustainability") < mkdocs_text.find("Specialty Tracks"),
-            "AI for Sustainability should appear before Specialty Tracks in nav.", errors)
-    require("Cloud Triangle" in mkdocs_text, "Cloud Triangle nav section is missing.", errors)
-    require("Connect instance to GitHub: instructions/link-to-github.md" in mkdocs_text,
-            "Cloud Triangle should include Connect instance to GitHub.", errors)
-    require("Instance to/from GitHub: instructions/push-to-github.md" in mkdocs_text,
-            "Cloud Triangle should include Instance to/from GitHub.", errors)
-    require("Instance to/from persistent storage: instructions/save-to-persistent-storage.md" in mkdocs_text,
-            "Cloud Triangle should include Instance to/from persistent storage.", errors)
-    require("logo: 'assets/oasis_logo.png'" in mkdocs_text, "Header logo should use docs/assets/oasis_logo.png.", errors)
-    require("homepage: https://cu-esiil.github.io/home/" in mkdocs_text,
-            "Header logo should point to the OASIS homepage.", errors)
-    require("custom_dir: docs/overrides" in mkdocs_text and (ROOT / "docs" / "overrides").is_dir(),
-            "MkDocs should use the existing docs/overrides directory for the sidebar logo link override.", errors)
-    require("extra_javascript:" in mkdocs_text and "javascripts/mode-toggle.js" in mkdocs_text,
-            "Edit/Public mode toggle JavaScript should be registered.", errors)
-    require("javascripts/presentation-mode.js" in mkdocs_text,
-            "Presentation mode JavaScript should be registered.", errors)
-    require("home-brand-link.js" not in mkdocs_text, "Sidebar logo JavaScript workaround should not be referenced.", errors)
-    require("- admonition" in mkdocs_text and "- pymdownx.details" in mkdocs_text,
-            "Collapsible Material guidance blocks should be enabled.", errors)
-    require(logo.exists(), "docs/assets/oasis_logo.png is missing.", errors)
-    require(group_logo.exists(), "docs/assets/esiil_content/group_logo.svg is missing.", errors)
-    require(event_group_logo.exists(), "docs/assets/esiil_content/event_group_logo.png is missing.", errors)
-    require(references.exists(), "docs/references.bib is missing.", errors)
-    require("@misc{oasisProjectTemplate" in references_text, "Template reference BibTeX entry is missing.", errors)
-    require((people_dir / "README.md").exists(), "People README is missing.", errors)
-    require((people_dir / "template.md").exists(), "People template is missing.", errors)
-    require("Innovation Summit 2026 repository" in (people_dir / "README.md").read_text(encoding="utf-8"),
-            "People README should point editors to learner profiles.", errors)
-    for profile in ["ty-tuff.md", "aakriti-joshi.md", "jane-example.md", "john-example.md"]:
-        profile_text = (people_dir / profile).read_text(encoding="utf-8") if (people_dir / profile).exists() else ""
-        require((people_dir / profile).exists() and profile_text.startswith("---\n") and "summary:" in profile_text,
-                f"People profile {profile} should exist with YAML front matter.", errors)
-    for sticker in ["people", "question", "tracks", "data", "methods", "results", "outputs"]:
-        require((stickers_dir / f"{sticker}.png").exists(), f"Sticker asset {sticker}.png is missing.", errors)
-    task_stickers = [
-        "d1-a", "d1-b", "d1-c", "d1-d", "d1-e", "d1-f",
-        "d2-a", "d2-b", "d2-c", "d2-d", "d2-e", "d2-f", "d2-g",
-        "d3-a", "d3-b", "d3-c", "d3-d", "d3-e", "d3-f",
-    ]
-    for sticker in task_stickers:
-        sticker_path = f"assets/stickers/tasks/{sticker}.svg"
-        require((stickers_dir / "tasks" / f"{sticker}.svg").exists(),
-                f"Task sticker asset {sticker}.svg is missing.", errors)
-        require(sticker_path in index_text,
-                f"Public Front Page should show task sticker {sticker}.svg.", errors)
-    sticker_errors = sticker_issues()
-    require(not sticker_errors, "Task sticker bidirectional validation failed:\n" + "\n".join(sticker_errors), errors)
-    require((ai_dir / "defining-ai.md").exists(), "Defining AI page is missing.", errors)
-    require((ai_dir / "defining-sustainability.md").exists(), "Defining Sustainability page is missing.", errors)
-    norms_text = norms_page.read_text(encoding="utf-8") if norms_page.exists() else ""
-    require(norms_page.exists(), "Team Norms page is missing.", errors)
-    require(norms_hero.exists(), "Team Norms hero image is missing.", errors)
-    require("title: Team Norms" in norms_text and "# Team Norms" in norms_text,
-            "Team Norms page should use the Team Norms title.", errors)
-    require("**Time: 10 minutes**" in norms_text and "Create team norms" in norms_text and "Decide to decide" in norms_text,
-            "Team Norms page should include the 10-minute norms and decision-making activities.", errors)
-    require("```markdown" in norms_text and "**Decision-making norm:**" in norms_text,
-            "Team Norms page should include a GitHub website template block.", errors)
-    require((ai_dir / "what-does-it-cost.md").exists(), "What Does It Cost page is missing.", errors)
-    require("https://what-uses-more.com" in (ai_dir / "what-does-it-cost.md").read_text(encoding="utf-8"),
-            "What Does It Cost page should embed or link to the calculator.", errors)
-    require(not logo_override.exists(), "Custom logo override should be removed so Material handles the homepage link.", errors)
-    require(nav_override.exists(), "Custom nav override should set the sidebar logo link to the local front page.", errors)
-    nav_override_text = nav_override.read_text(encoding="utf-8") if nav_override.exists() else ""
-    require("nav.homepage.url" in nav_override_text and "config.extra.homepage" not in nav_override_text,
-            "Sidebar nav override should use nav.homepage.url, not config.extra.homepage.", errors)
-    require("template-guidance-toggle" not in nav_override_text and "data-oasis-mode-toggle" not in nav_override_text,
-            "Template instructions toggle should not render in the left sidebar nav override.", errors)
-    require(".md-sidebar--primary .md-nav__title" in css_text and "display: flex" in css_text,
-            "Sidebar branding area should be visible for the group logo.", errors)
-    require(".md-sidebar--primary .md-nav__title" in css_text and "font-size: 0" in css_text,
-            "Sidebar title text node should be hidden while keeping the logo visible.", errors)
-    require(".md-sidebar--primary .md-nav__title .md-logo" in css_text and "display: block" in css_text,
-            "Sidebar group logo should render on the existing Material logo link.", errors)
-    require("event_group_logo.png" in css_text,
-            "Sidebar branding area should use the event group logo asset.", errors)
-    require(".md-sidebar--primary .md-nav__title .md-ellipsis" in css_text and "display: none" in css_text,
-            "Sidebar title text should be hidden while keeping the logo visible.", errors)
-    require(".md-header__title {\n  display: none;" not in css_text,
-            "Header title text should not be hidden.", errors)
-    require(".md-header__topic + .md-header__topic" in css_text and "display: none" in css_text,
-            "Dynamic section title should be hidden so the header keeps the project/group name.", errors)
-    require("updateHeaderTitle" in mode_toggle_text and ".md-typeset h1" in mode_toggle_text,
-            "Header title should be set from the visible page H1.", errors)
-    require(".md-typeset h1" in css_text and "var(--oasis-color-primary-blue)" in css_text,
-            "Main page title should use ESIIL brand blue.", errors)
-    require("assets/stickers/people.png" not in css_text and "tasks/d1-a.svg" not in css_text,
-            "Homepage should use shared task sticker files in Markdown, not CSS-injected section stickers.", errors)
-    require(".md-typeset h1" in css_text and "color: var(--oasis-color-primary-blue)" in css_text,
-            "Main content title should use ESIIL brand blue.", errors)
-    require(".task-sticker" in css_text, "Instruction task sticker styles are missing.", errors)
-    require(".template-guidance-toggle" in css_text and "hide-template-instructions" in css_text and ".template-instructions-block" in css_text,
-            "Template instructions toggle styles are missing.", errors)
-    require(".oasis-sidebar-utilities" in css_text,
-            "Right sidebar utility container styles are missing.", errors)
-    require("var(--oasis-day-2-color)" in css_text and "var(--oasis-day-3-color)" in css_text,
-            "Day 2 and Day 3 H1 colors should use day color tokens.", errors)
-    require(".md-sidebar--secondary .md-nav__link" in css_text and "oasis-day-marker" in css_text,
-            "Instruction pages should color the right table of contents by day.", errors)
-    require("--oasis-day-1-color" in tokens_text and "--oasis-day-2-color" in tokens_text and "--oasis-day-3-color" in tokens_text,
-            "Day color tokens are missing.", errors)
-    require(".oasis-present-button" in css_text and "body.presentation-mode" in css_text,
-            "Presentation mode styles are missing.", errors)
-    require("oasis-presentation-toolbar--sidebar" in css_text and ".md-sidebar--secondary .md-sidebar__inner" in css_text,
-            "Present button should be styled for the bottom of the right sidebar.", errors)
-    require(".md-sidebar--primary .md-sidebar__scrollwrap" in css_text and ".md-sidebar--secondary .md-sidebar__scrollwrap" in css_text,
-            "Normal mode side panel polish is missing.", errors)
-    require('h1[id^="day-1"]' in css_text and 'h1[id^="day-2"]' in css_text and 'h1[id^="day-3"]' in css_text,
-            "Day color styling is missing.", errors)
-    require('[data-md-color-scheme="slate"]' in tokens_text,
-            "Dark mode token overrides are missing.", errors)
-    require('[data-md-color-scheme="slate"] body' in css_text,
-            "Dark mode page styling is missing.", errors)
-    require("REFERENCE_MARKER" in hooks_text and "references.bib" in hooks_text,
-            "Citation hook should render references from docs/references.bib.", errors)
-    require("DAY_MARKER_TEMPLATE" in hooks_text and "oasis_day" in hooks_text,
-            "Instruction day marker hook should drive page-specific TOC color styling.", errors)
-    require("PUBLIC_MODE_MARKER" in hooks_text and "public_mode_toggle" in hooks_text,
-            "Front page should get a hook-generated public-mode marker.", errors)
-    require(mode_toggle.exists(), "Mode toggle JavaScript is missing.", errors)
-    require("localStorage" in mode_toggle_text and "template-instructions-block" in mode_toggle_text and "oasis-template-guidance" in mode_toggle_text,
-            "Mode toggle JavaScript should persist mode and identify template instruction blocks.", errors)
-    require("Instructions on" in mode_toggle_text and "Instructions off" in mode_toggle_text,
-            "Mode toggle label should use instructions language and update dynamically.", errors)
+    require("template-guidance-toggle" in mode_toggle_text and "Instructions on" in mode_toggle_text,
+            "Instructions on/off toggle behavior is missing.", errors)
     require("ensureInstructionsToggle" in mode_toggle_text and ".md-sidebar--secondary .md-sidebar__inner" in mode_toggle_text,
-            "Mode toggle JavaScript should place the instructions toggle in the right sidebar.", errors)
-    require("insertAdjacentElement" not in mode_toggle_text,
-            "Mode toggle JavaScript should not inject the toggle into the main page body.", errors)
-    require(presentation_mode.exists(), "Presentation mode JavaScript is missing.", errors)
-    require("presentation-mode" in presentation_mode_text and "data-oasis-present-toggle" in presentation_mode_text,
-            "Presentation mode JavaScript should toggle the presentation-mode class from a Present button.", errors)
-    require("getPresentationControlTarget" in presentation_mode_text and ".md-sidebar--secondary .md-sidebar__inner" in presentation_mode_text,
-            "Presentation mode control should attach to the right sidebar when available.", errors)
-    require('event.key.toLowerCase() === "p"' in presentation_mode_text and 'event.key === "Escape"' in presentation_mode_text,
-            "Presentation mode JavaScript should support P and Esc shortcuts.", errors)
-    require("isTypingTarget" in presentation_mode_text,
-            "Presentation mode shortcuts should ignore typing fields.", errors)
+            "Instructions toggle should be created in the right sidebar.", errors)
+    require("isHomePage" in presentation_mode_text and "report-out-day2" in presentation_mode_text,
+            "Presentation mode should be scoped to Home and report-out sections.", errors)
+    require("oasis-report-out-visible" in presentation_mode_text,
+            "Presentation mode should mark report-out content before hiding other sections.", errors)
+
+    require("margin-top: -0.5rem" in css_text and "font-size: 1.02rem" in css_text and "font-weight: 800" in css_text,
+            "Primary sidebar Home spacing and typography fixes are missing.", errors)
+    require(".md-sidebar--secondary .md-sidebar__scrollwrap" in css_text and "padding-top: var(--oasis-space-3)" in css_text,
+            "Right sidebar top padding fix is missing.", errors)
+    require(".oasis-sidebar-utilities li::marker" in css_text and 'content: ""' in css_text,
+            "Sidebar utility marker cleanup is missing.", errors)
+    require("h2#report-out-day2" in css_text and "h2#report-out-day3" in css_text,
+            "Report-out section emphasis styles are missing.", errors)
+    require("body.presentation-mode .md-typeset > *" in css_text and "oasis-report-out-visible" in css_text,
+            "Presentation mode should hide non-report-out Home content.", errors)
+    require(".task-sticker" not in css_text,
+            "Retired task-sticker CSS should be removed.", errors)
+
+    require("Landmark stickers" not in instructions_text and ".task-sticker" not in instructions_text,
+            "Instructions overview should not describe the retired sticker workflow.", errors)
+    for day, text in day_texts.items():
+        require(".task-sticker" not in text and "guide-D" not in text,
+                f"{day} should not use retired sticker buttons or anchors.", errors)
+        require("../index.md" in text and "../example.md" in text,
+                f"{day} should point groups to Home and Example appropriately.", errors)
+    require("Report Out (2 minutes)" in day_texts["day2"],
+            "Day 2 instructions should include report-out guidance.", errors)
+    require("Final Report Out (6 minutes)" in day_texts["day3"],
+            "Day 3 instructions should include final report-out guidance.", errors)
+
+    sticker_errors = sticker_issues()
+    require(not sticker_errors, "Retired sticker cleanup failed:\n" + "\n".join(sticker_errors), errors)
 
     if errors:
         print("Template regression check failed:")

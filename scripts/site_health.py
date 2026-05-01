@@ -26,7 +26,7 @@ ASSET_DIRS = ["docs/assets/hero", "docs/assets/whiteboards", "docs/assets/explor
               "docs/assets/figures", "docs/assets/team", "docs/assets/files",
               "docs/assets/stickers", "docs/assets/people"]
 PLACEHOLDERS = ["[link]", "TODO", "TBD", "CHANGE_ME", "REPLACE_ME"]
-NAV_ITEMS = ["Home", "Example", "Instructions", "AI for Sustainability", "Specialty Tracks", "Cloud Triangle", "Storage", "Orientation"]
+NAV_ITEMS = ["Home", "Example", "Instructions", "AI for Sustainability", "Specialty Tracks", "Cloud Triangle", "Links", "Orientation"]
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 
 

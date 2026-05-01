@@ -10,163 +10,77 @@ extra:
 # Day 1 — Meet Your Team and Define Your Project
 
 ## What today is about
-Today is about **becoming a team and choosing a direction**.
-Before you write much, you should:
 
-- meet each other
-- understand what people care about
-- decide what question you want to explore together
+Today is about becoming a team and choosing a direction. Work on the [Home page](../index.md). Use the [Example page](../example.md) only as a completed model.
 
-Edit the Home page as your working project record. Use the Example page only as a completed model.
+By the end of the day, the Home page should include your people, a first project question, a first interaction with data, and notes about what you tried.
 
-By the end of the day, your page should show:
-
-- who you are
-- what you chose to work on
-- your first interaction with data
-
----
-## A — Meet your team before editing anything
-<span id="guide-D1-A"></span>
-[![D1-A: Team](../assets/stickers/tasks/d1-a.svg){ .task-sticker }](../index.md#edit-D1-A)
-
-**Landmark:** People
-
-**Where this shows up on the Home page:** [People](../index.md#people)
+## Meet your team
 
 Go around and introduce yourselves.
 
-Share:
-
-- what you work on
-- what you are curious about
-- what you hope to get out of the summit
-
-This project works best when it reflects the people in the group. The question you choose should come out of this conversation.
+- What do you work on?
+- What are you curious about?
+- What do you hope to get out of the summit?
+- What skills, data, or perspectives might you bring?
 
 After introductions, spend 10 minutes creating team norms and choosing a decision-making method: [Team Norms](../ai-for-sustainability/norms.md).
 
----
-## B — Choose your project and name it
-<span id="guide-D1-B"></span>
-[![D1-B: Question](../assets/stickers/tasks/d1-b.svg){ .task-sticker }](../index.md#edit-D1-B)
+Add the team to the [People](../index.md#people) table on the Home page. Keep each row short enough to scan during a report out.
 
-**Landmark:** Project Question
+## Choose your project question
 
-**Where this shows up on the Home page:** [Project Question](../index.md#project-question)
-
-Agree on a scientific question or direction.
-Then choose a short, descriptive project title and update the title at the top of the project page.
-A good title should be clear, specific, and meaningful. It does not need to be perfect yet.
+Agree on a scientific question or direction and add it to [Project Question](../index.md#project-question).
 
 Helpful prompts:
 
 - What are we trying to understand?
-- What makes this question interesting?
-- What kind of answer would feel useful or satisfying?
+- Why does it matter?
+- What would count as a useful answer by Day 3?
+- What are we still unsure about?
 
----
-## C — Add your team to the page
-<span id="guide-D1-C"></span>
-[![D1-C: People](../assets/stickers/tasks/d1-c.svg){ .task-sticker }](../index.md#edit-D1-C)
+Your question can change. The first version is a starting point, not a contract.
 
-**Landmark:** People
+## Plan your specialty-track strategy
 
-**Where this shows up on the Home page:** [People](../index.md#people)
+Use [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy) to record how your group wants to use summit trainings.
 
-Add your group members to the People table on the editable Home page.
-
-Use this workflow:
-
-1. Find your learner file in the Innovation Summit 2026 repository.
-2. Add one Markdown table row for each person in `docs/index.md`.
-3. Link each person's name to their learner file when possible.
-4. Keep each row short enough to scan during a presentation.
-
-If you do not know your file name, open the learner folder and search for your name:
-
-[Innovation Summit learner files](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners)
-
-Keep each row short, but human. Make sure it says:
-
-- what you work on
-- what you are excited about in this project
-- what skills, data, or perspective you bring
-
-This turns your group from a list of names into a team. It also helps others understand the perspectives behind the work.
-
----
-## D — Talk about the specialty tracks
-<span id="guide-D1-D"></span>
-[![D1-D: Tracks](../assets/stickers/tasks/d1-d.svg){ .task-sticker }](../index.md#edit-D1-D)
-
-**Landmark:** Specialty Tracks and Strategy
-
-**Where this shows up on the Home page:** [Specialty Tracks and Strategy](../index.md#specialty-tracks-and-strategy)
-
-Briefly discuss the available specialty tracks as a group.
-Talk about:
+Discuss:
 
 - which tracks people are interested in
-- whether your project might benefit from certain skills
-- whether you want to split up, stay together, or decide individually tomorrow
+- whether your project needs a specific skill
+- whether the group should split up, stay together, or decide individually
+- what each person should bring back to the group
 
-You do not need to make a final decision yet.
-Helpful prompt:
+## Take a first look at data
 
-- Is there anything about your question that suggests certain skills might be especially useful?
-
-Tomorrow, you’ll choose a specialty training. Having this conversation now helps you make a more intentional choice as a group.
-
----
-## E — Take a first look at the data
-<span id="guide-D1-E"></span>
-[![D1-E: Data](../assets/stickers/tasks/d1-e.svg){ .task-sticker }](../index.md#edit-D1-E)
-
-**Landmark:** Data Exploration
-
-**Where this shows up on the Home page:** [Data Exploration](../index.md#data-exploration)
-
-Look at relevant datasets and make a simple plot, map, table, or summary.
-Add notes about what you see.
-Include rough outputs if needed. This does not need to be polished.
+Use [Data Exploration](../index.md#data-exploration) for your first plot, map, table, screenshot, or observation. This does not need to be polished.
 
 Helpful prompts:
 
 - What did you expect to see?
 - What did you actually see?
 - What does not make sense yet?
+- What should you check next?
 
-This is where your idea meets reality. Early observations often reshape the question itself.
+## Capture what you tried
 
----
-## F — Capture what you tried and what comes next
-<span id="guide-D1-F"></span>
-[![D1-F: Notes](../assets/stickers/tasks/d1-f.svg){ .task-sticker }](../index.md#edit-D1-F)
-
-**Landmark:** Methods and Code
-
-**Where this shows up on the Home page:** [Methods and Code](../index.md#methods-and-code)
-
-Write down what you did today.
+Use [Methods and Code](../index.md#methods-and-code) to record the tools, workflows, notebooks, or scripts you tried.
 
 Include:
 
-- tools, workflows, or code you used
+- what you did
 - what worked
 - what did not work
+- where the code or notes live
 - what you want to try tomorrow
 
-It is okay if this is incomplete or uncertain. This is just your current thinking.
-You will forget details quickly. Capturing them now makes your work easier to continue tomorrow.
+## End-of-day check
 
----
-## What a strong Day 1 page looks like
-By the end of Day 1, your project page should have:
+Before leaving Day 1, make sure the Home page has:
 
-- a clear project title, even if it is still rough
-- everyone represented in the People section
-- a first version of the project question
-- at least one real interaction with data
-- notes about what you tried
-- early awareness of how specialty tracks might support the work
+- a team table
+- a first project question
+- a short specialty-track strategy
+- at least one data note or early visual
+- a short methods note
