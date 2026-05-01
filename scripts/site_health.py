@@ -16,7 +16,7 @@ DOCS = ROOT / "docs"
 REPORT = DOCS / "_site_health.md"
 MKDOCS = ROOT / "mkdocs.yml"
 PEOPLE_DATA = DOCS / "_data" / "people.yml"
-REQUIRED = ["docs/index.md", "mkdocs.yml", "README.md", "AGENTS.md", "PROMPT_ACTION_LOG.md",
+REQUIRED = ["docs/index.md", "docs/example.md", "mkdocs.yml", "README.md", "AGENTS.md", "PROMPT_ACTION_LOG.md",
             "docs/stylesheets/tokens.css", "docs/stylesheets/extra.css",
             "docs/javascripts/presentation-mode.js", "docs/instructions/day1.md",
             "docs/instructions/day2.md", "docs/instructions/day3.md",
@@ -26,7 +26,7 @@ ASSET_DIRS = ["docs/assets/hero", "docs/assets/whiteboards", "docs/assets/explor
               "docs/assets/figures", "docs/assets/team", "docs/assets/files",
               "docs/assets/stickers", "docs/assets/people"]
 PLACEHOLDERS = ["[link]", "TODO", "TBD", "CHANGE_ME", "REPLACE_ME"]
-NAV_ITEMS = ["Public Front Page", "Instructions", "AI for Sustainability", "Specialty Tracks", "Cloud Triangle", "Storage", "Orientation"]
+NAV_ITEMS = ["Home", "Example", "Instructions", "AI for Sustainability", "Specialty Tracks", "Cloud Triangle", "Storage", "Orientation"]
 LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 
 

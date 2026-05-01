@@ -1,27 +1,22 @@
 ---
-title: Fire Polygon Velocity Project
+title: Project Group Home
 public_mode_toggle: true
 ---
 
-# Template change Fire Polygon Velocity Project
+# Project Group Home
 
-![Fire spread progression over a mountain landscape](assets/hero/hero.png)
+![Project group hero image](assets/hero/hero.png)
 
-We often talk about how fast a wildfire moves. But once a fire is seen from space as a changing polygon rather than a line of flame, speed stops being a single, obvious thing.
-
-A perimeter can push forward in one direction, expand everywhere at once, wrinkle and branch, or even rearrange internally without gaining much new area. Each of these changes is real. Each can be measured. And each can yield a different answer to the same question: how fast did the fire move?
-
-This example project takes that ambiguity seriously. It develops a practical way to think about, and measure, fire polygon velocity by comparing several definitions on the same evolving fire. The aim is not to declare a single correct metric, but to show what each measure captures, what it leaves out, and how the choice of metric shapes the story we tell about fire.
+Write one or two plain-language sentences that explain what your group is trying to understand, why it matters, and what you hope to share by the end of the summit.
 
 !!! note "Template instructions"
-    Template instructions are on by default so workshop instructions are visible. Use the **Instructions on/off** toggle in the sidebar to preview a cleaner public-facing version.
+    This page is the editable home for your project group. Use the **Instructions on/off** toggle in the sidebar to show or hide these workshop notes.
 
-    Replace the example fire-spread narrative with your group’s actual purpose statement. Keep the first public paragraph to 1–2 sentences that say what your group is trying to understand, why it matters, and what evidence or product you want to share.
+    Keep the public-facing text short, clear, and specific. The finished page should eventually read like the [Example](example.md), but it does not need to start that way.
 
 ## How to use this page
-This page is your group’s working project record. The visible narrative should read like a public project page; the instruction boxes tell editors what to replace during the summit.
 
-The task stickers are landmarks. They help you match each day-by-day direction to the place on this page where that work belongs. The same sticker appears in the instructions and on the matching front-page section.
+This page is your group’s working project record. Fill it in during the summit. The instruction boxes explain what to replace. The task stickers connect each section of this page to the matching day-by-day instructions.
 
 - **People** — who is in the group and what each person brings
 - **Project Question** — what your group decided to explore
@@ -29,7 +24,7 @@ The task stickers are landmarks. They help you match each day-by-day direction t
 - **Data Exploration** — datasets, maps, plots, and first observations
 - **Methods and Code** — workflows, notebooks, scripts, and reproducible steps
 - **Results** — patterns, findings, and interpretations
-- **Polished Outputs** — final figures, PDFs, slides, or other shareable products
+- **Polished Outputs** — final figures, PDFs, slides, notebooks, or other shareable products
 
 !!! note "How to edit this section"
     Keep this orientation short. It should help editors understand the page without becoming part of the project’s final public story.
@@ -43,7 +38,7 @@ The task stickers are landmarks. They help you match each day-by-day direction t
 <span id="edit-D1-C"></span>
 [![D1-C: People](assets/stickers/tasks/d1-c.svg){ .task-sticker }](instructions/day1.md#guide-D1-C)
 
-This project is meant to be shaped by the people in the room: their field experience, data skills, modeling instincts, design sense, and curiosity about how spatial fire records become scientific claims.
+Add a short sentence about your team and the perspectives people bring to the project.
 
 !!! note "D1-A / D1-C: How to edit the people table"
     Replace the example rows below with the people in your group. Keep this as a simple Markdown table so everyone can understand and edit it in GitHub.
@@ -54,10 +49,9 @@ This project is meant to be shaped by the people in the room: their field experi
 
 | Name | Role / affiliation | What they are excited to work on | Skills, data, or perspective they bring |
 |---|---|---|---|
-| [Ty Tuff](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners) | Learner / ESIIL | Fire polygon velocity framing | Fire modeling, open science, scientific storytelling |
-| [Aakriti Joshi](https://github.com/CU-ESIIL/Innovation-Summit-2026/tree/main/docs/learners) | Learner | Remote sensing and perimeter interpretation | Earth observation, Python, GIS |
-| Jane Example | Learner | Data visualization and public story | Figure design, uncertainty, public communication |
-| John Example | Learner | Methods and reproducible workflow | Python, notebooks, spatial analysis |
+| Person One | Learner | Short project interest | Skill, dataset, method, or perspective |
+| Person Two | Learner | Short project interest | Skill, dataset, method, or perspective |
+| Person Three | Learner | Short project interest | Skill, dataset, method, or perspective |
 
 ## Project Question { #project-question }
 
@@ -68,15 +62,9 @@ This project is meant to be shaped by the people in the room: their field experi
 <span id="edit-D3-A"></span>
 [![D3-A: Story](assets/stickers/tasks/d3-a.svg){ .task-sticker }](instructions/day3.md#guide-D3-A)
 
-How should we measure the velocity of an evolving fire polygon, and how does the choice of metric change the story we tell about fire spread?
+Write your group’s central question here.
 
-In fire behavior science, rate of spread has a clear meaning: how quickly a flame front advances through fuel under given conditions [@finney1998]. That concept underpins both models and operational thinking.
-
-Satellite-era fire records are different. They often arrive as daily or near-daily outlines of burned area derived from products such as MODIS, VIIRS, Landsat, MTBS, or related fire-perimeter datasets. Those outlines are not simple lines moving forward. They are shapes that grow, stretch, fold, and sometimes reorganize.
-
-The translation from local spread to polygon change is therefore not straightforward. If a perimeter extends eastward, gains area, develops fine-scale structure, and shifts its center of mass, which of those changes counts as velocity? Different definitions answer that question in different ways.
-
-The gap this project addresses is quiet but important: the same fire can appear fast or slow, stable or erratic, depending on how velocity is defined. Without a clear taxonomy, these differences can be mistaken for disagreement rather than recognized as different views of the same evolving system.
+Add one short paragraph explaining why the question matters and what would count as a useful answer.
 
 !!! note "D1-B / D2-A / D3-A: How to edit the project question"
     Replace this section with your group’s project question. It is okay if the question changes during the summit.
@@ -88,8 +76,8 @@ The gap this project addresses is quiet but important: the same fire can appear 
     - What would count as a useful answer by Day 3?
     - What are we still unsure about?
 
-![Day 1 whiteboard notes](assets/whiteboards/day1_whiteboard.jpg)
-*This whiteboard captures the first version of the polygon-velocity question: define what counts as movement, compare several velocity metrics, and keep metric choice visible as part of the interpretation.*
+![Whiteboard or early notes](assets/whiteboards/day1_whiteboard.jpg)
+*Replace this caption with one sentence explaining what this image shows and what decision it helped your group make.*
 
 !!! note "How to replace the whiteboard image"
     Upload a new whiteboard or notes photo to `docs/assets/whiteboards/`, update the image path above, and rewrite the caption so it says what decision the image supports.
@@ -103,9 +91,7 @@ The gap this project addresses is quiet but important: the same fire can appear 
 <span id="edit-D2-C"></span>
 [![D2-C: Takeaways](assets/stickers/tasks/d2-c.svg){ .task-sticker }](instructions/day2.md#guide-D2-C)
 
-The example group uses the summit tracks as a division of labor. One subgroup focuses on geospatial workflows for comparing evolving polygons. Another uses AI-assisted synthesis to organize fire-behavior concepts, metric definitions, and interpretation notes. A third focuses on visualization and communication: how to show that different velocity metrics are not competing answers, but different lenses on polygon change.
-
-The shared strategy is to keep the fire sequence constant and change only the definition of velocity. That makes the differences among metrics visible and interpretable before introducing the additional complexity of observational data.
+Write a short paragraph describing how your group is using the summit tracks, trainings, or breakout sessions.
 
 !!! note "D1-D / D2-B / D2-C: How to edit specialty track strategy"
     Replace this section with notes about how your group is using the summit specialty tracks.
@@ -126,19 +112,7 @@ The shared strategy is to keep the fire sequence constant and change only the de
 <span id="edit-D3-C"></span>
 [![D3-C: Clean Up](assets/stickers/tasks/d3-c.svg){ .task-sticker }](instructions/day3.md#guide-D3-C)
 
-<div class="cube-frame-wrapper">
-  <iframe
-    src="assets/examples/cubedynamics_ndvi_1_year.html"
-    title="CubeDynamics NDVI one year example"
-    loading="lazy">
-  </iframe>
-</div>
-
-[Open the NDVI cube example in a new tab](assets/examples/cubedynamics_ndvi_1_year.html) →
-
-The first data pass uses a ten-day synthetic fire sequence designed to be realistic but readable. The sequence grows directionally, develops irregular structure, and exhibits branching behavior. Starting with a controlled example allows the group to isolate geometric effects before moving to noisier satellite-derived perimeter products.
-
-Useful data products for this example include daily perimeter polygons, derived boundary samples, area-change summaries, centroid positions, and distance-based comparisons between successive perimeters. In a real-data extension, the same workflow could be applied to MTBS, MODIS, VIIRS, Landsat, or related fire perimeter products.
+Describe the datasets, maps, plots, observations, or examples your group is using.
 
 !!! note "D1-E / D2-E / D3-C: How to edit data exploration"
     Replace this section with the datasets, maps, plots, screenshots, tables, or first observations your group is using to understand the question.
@@ -146,9 +120,7 @@ Useful data products for this example include daily perimeter polygons, derived 
     Strong data notes say what the dataset contains, why it matters, and what remains uncertain.
 
 ![Early exploration plot](assets/explorations/explore_data_plot.png)
-*This early exploration checks how much the apparent velocity changes when the same evolving polygon is summarized by different geometric measurements.*
-
-
+*Replace this caption with one sentence explaining what the figure shows and what still needs checking.*
 
 !!! note "How to replace the exploration figure"
     Upload rough plots, screenshots, maps, or GIFs to `docs/assets/explorations/`. Rewrite the caption so it says what the figure shows, what surprised you, and what still does not make sense.
@@ -163,16 +135,7 @@ Useful data products for this example include daily perimeter polygons, derived 
 <span id="edit-D2-D"></span>
 [![D2-D: Methods](assets/stickers/tasks/d2-d.svg){ .task-sticker }](instructions/day2.md#guide-D2-D)
 
-The example workflow keeps the analysis intentionally small and inspectable: load the synthetic perimeter sequence, calculate seven velocity metrics for each time step, group those metrics by what they emphasize, and export figures that can be checked by someone outside the group.
-
-The seven definitions are organized into functional groups:
-
-- **Core baselines:** optimal transport and area gain per perimeter length.
-- **Diagnostic surge detectors:** longest vector and P95 advance.
-- **Conservative proxies:** mean advance and equivalent radius growth.
-- **Niche translation measure:** centroid drift.
-
-These categories are heuristic rather than exhaustive. Their purpose is to clarify how different definitions emphasize different aspects of change: growth, translation, deformation, rare advances, or stable summary behavior.
+Describe the workflow, notebook, script, or method your group tried.
 
 !!! note "D1-F / D2-D: How to edit methods and code"
     Replace this section with the tools, notebooks, scripts, workflows, or repeatable steps your group tried.
@@ -196,16 +159,7 @@ These categories are heuristic rather than exhaustive. Their purpose is to clari
 <span id="edit-D3-E"></span>
 [![D3-E: Present](assets/stickers/tasks/d3-e.svg){ .task-sticker }](instructions/day3.md#guide-D3-E)
 
-The central result is that polygon-derived velocity is not a single objective quantity. It depends on how change is defined and measured.
-
-Three claims are worth carrying into a public share-out:
-
-- **Velocity depends on definition.** Across the synthetic sequence, all metrics detect growth, but they diverge in magnitude and interpretation. Some emphasize rare, rapid advances; others describe steady expansion; others capture whole-system rearrangement.
-- **Growth and reorganization are different signals.** Area gain per perimeter length reports velocity only when new area is added. Optimal transport, under the cost formulation used here, measures the displacement needed to transform one polygon into the next. That means a fire can show little new area gain while still undergoing substantial internal reorganization.
-- **Extreme metrics are informative but selective.** The longest-vector metric highlights the single largest advance between perimeters, making it sensitive to rare leaps such as spotting or branching runs. P95 advance offers a more stable upper-tail version. These measures are useful for head-fire or surge questions, but less appropriate for typical spread.
-- **Stable summaries can hide structure.** Mean advance and equivalent radius growth produce smooth, comparable time series. That stability is useful, but it can obscure anisotropy, directional runs, and boundary complexity. Centroid drift captures net migration, but misses expansion that occurs without large translation.
-
-The same fire can support multiple, internally consistent descriptions of its motion. That does not indicate a flaw in the metrics. It reflects the fact that each definition is a lens on a complex, evolving shape. Metric choice is therefore not just a technical detail; it shapes the scientific claim.
+Write one or more early findings here. It is okay for this section to be incomplete during the summit.
 
 !!! note "D2-F / D3-B / D3-E: How to edit results"
     Replace this section with emerging results, patterns, findings, surprises, or honest limits. A strong result makes a claim, points to evidence, and names uncertainty.
@@ -217,11 +171,8 @@ The same fire can support multiple, internally consistent descriptions of its mo
     - This result is still uncertain because...
     - The data do not yet support...
 
-![Lead conclusion visual](assets/figures/fire_hull.png)
-*This supports the main result by showing how an evolving fire perimeter can produce different velocity interpretations depending on which geometric change is measured.*
-
-![Supporting panel figure](assets/figures/hull_panels.png)
-*These panels compare alternate summaries of the same polygon sequence, showing how stable metrics, tail metrics, and translation metrics emphasize different parts of the story.*
+![Lead result visual](assets/figures/main_result.png)
+*Replace this caption with one sentence explaining the claim this figure supports.*
 
 !!! note "How to replace result figures"
     Upload final or near-final figures to `docs/assets/figures/`. Captions should say which claim each figure supports and what caveat a reader should remember.
@@ -235,37 +186,17 @@ The same fire can support multiple, internally consistent descriptions of its mo
 <span id="edit-D3-F"></span>
 [![D3-F: Next Steps](assets/stickers/tasks/d3-f.svg){ .task-sticker }](instructions/day3.md#guide-D3-F)
 
-The most reusable output from this example is a practical taxonomy and decision framework for fire polygon velocity.
-
-Specifically, the project provides:
-
-- A side-by-side comparison of seven velocity metrics.
-- A controlled synthetic sequence for interpreting metric behavior.
-- A functional grouping of metrics by what they measure.
-- Guidance for selecting metrics based on the question at hand.
-
-The work is intentionally focused on method and interpretation. The synthetic sequence isolates geometry, but real satellite-derived perimeters introduce additional complexities: pixel stair-steps, temporal compositing, truncated narrow runs, and sensor-specific biases. These factors can inflate or dampen distance-based measures. The framework does not remove those uncertainties; it makes them visible.
-
-Next steps are to carry the framework into real data and models:
-
-- Apply the taxonomy to MTBS, MODIS, VIIRS, Landsat, and related products.
-- Evaluate how resolution and smoothing affect each metric.
-- Compare observed polygon velocities with model outputs.
-- Develop tools that help users select metrics for specific purposes.
-- Extend the framework toward a moment-based synthesis separating growth, translation, dilation, and deformation.
+Add links to the final things your group wants people to find: figures, slides, notebooks, PDFs, data products, or handoff notes.
 
 !!! note "D2-G / D3-D / D3-F: How to edit polished outputs"
     Replace this section with the final things you want people to find after the summit: polished figures, a PDF, slides, a notebook, a data product, or a short handoff note.
 
-![Complementary result figure](assets/figures/main_result.png)
-*This public-facing figure summarizes the workflow from evolving perimeter observations to a cautious, metric-aware interpretation of fire polygon velocity.*
-
 [Read the project brief PDF](assets/files/project_brief.pdf){ .md-button .md-button--primary }
-[Compare computing costs](https://what-uses-more.com){ .md-button }
+[See a completed example page](example.md){ .md-button }
 
 ## Cite & Reuse
 
-This example page cites the reusable OASIS template [@oasisProjectTemplate] and a classic fire spread modeling reference [@finney1998]. A completed group page should also cite the fire perimeter products, software, notebooks, and project outputs used to support its claims.
+Add citations, dataset credits, software acknowledgments, reuse notes, and license information here.
 
 License: MIT unless noted. See dataset licenses on the **[Data](data.md)** page.
 

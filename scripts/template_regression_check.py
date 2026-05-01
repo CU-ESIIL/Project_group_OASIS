@@ -16,6 +16,7 @@ def require(condition: bool, message: str, errors: list[str]) -> None:
 def main() -> int:
     errors: list[str] = []
     index = ROOT / "docs" / "index.md"
+    example = ROOT / "docs" / "example.md"
     instructions = ROOT / "docs" / "instructions.md"
     mkdocs = ROOT / "mkdocs.yml"
     css = ROOT / "docs" / "stylesheets" / "extra.css"
@@ -35,6 +36,7 @@ def main() -> int:
     ai_dir = ROOT / "docs" / "ai-for-sustainability"
 
     index_text = index.read_text(encoding="utf-8") if index.exists() else ""
+    example_text = example.read_text(encoding="utf-8") if example.exists() else ""
     instructions_text = instructions.read_text(encoding="utf-8") if instructions.exists() else ""
     mkdocs_text = mkdocs.read_text(encoding="utf-8") if mkdocs.exists() else ""
     css_text = css.read_text(encoding="utf-8") if css.exists() else ""
@@ -46,15 +48,29 @@ def main() -> int:
     stickers_text = stickers_registry.read_text(encoding="utf-8") if stickers_registry.exists() else ""
 
     require(index.exists(), "docs/index.md is missing.", errors)
+    require(example.exists(), "docs/example.md is missing.", errors)
     require("public_mode_toggle: true" in index_text,
-            "Public Front Page should opt into the Edit/Public mode toggle.", errors)
+            "Home page should opt into the Instructions on/off toggle.", errors)
     require("!!! note" in index_text and "Template instructions" in index_text,
-            "Public Front Page should use expanded Markdown instruction blocks.", errors)
+            "Home page should use expanded Markdown instruction blocks.", errors)
     require("??? note" not in index_text,
-            "Public Front Page instruction blocks should be expanded by default.", errors)
+            "Home page instruction blocks should be expanded by default.", errors)
     require("Replace this paragraph" not in index_text and "Replace this text" not in index_text,
             "Inline replacement instructions should move into template instruction blocks.", errors)
-    require("## How to use this page" in index_text, "Front page sticker legend is missing.", errors)
+    require("## How to use this page" in index_text, "Home page sticker legend is missing.", errors)
+    require("example.md" in index_text, "Home page should link to the completed Example page.", errors)
+    require("title: Project Group Home" in index_text,
+            "Home page should use the Project Group Home title.", errors)
+    require("title: Example Project Page" in example_text,
+            "Example page should use the Example Project Page title.", errors)
+    require("public_mode_toggle: true" not in example_text,
+            "Example page should not opt into the Instructions on/off toggle.", errors)
+    require("!!! note" not in example_text,
+            "Example page should not contain workshop instruction boxes.", errors)
+    require(".task-sticker" not in example_text and "assets/stickers/tasks/" not in example_text,
+            "Example page should not contain task sticker markup.", errors)
+    require("<iframe" not in index_text and "<iframe" not in example_text,
+            "Home and Example pages should avoid raw iframe embeds.", errors)
     for section in [
         "People",
         "Project Question",
@@ -64,30 +80,41 @@ def main() -> int:
         "Results",
         "Polished Outputs",
     ]:
-        require(section in index_text, f"Front page section '{section}' is missing.", errors)
+        require(section in index_text, f"Home page section '{section}' is missing.", errors)
+        require(section in example_text, f"Example page section '{section}' is missing.", errors)
     require("section-sticker" not in index_text and "assets/stickers/tasks/" in index_text,
-            "Public Front Page should use shared task sticker images, not old section-sticker markup.", errors)
+            "Home page should use shared task sticker images, not old section-sticker markup.", errors)
     require("<div" not in index_text and "<table" not in index_text,
-            "Public Front Page should avoid participant-facing raw HTML layout.", errors)
-    require('--8<-- "people/' not in index_text, "Public Front Page should not include local People profile snippets.", errors)
+            "Home page should avoid participant-facing raw HTML layout.", errors)
+    require('--8<-- "people/' not in index_text, "Home page should not include local People profile snippets.", errors)
     require("Innovation-Summit-2026/tree/main/docs/learners" in index_text,
             "People section should link to the Innovation Summit learner folder.", errors)
     require("{{ people_gallery }}" not in index_text,
-            "People section should use an editable Markdown table, not the generated gallery marker.", errors)
+            "Home People section should use an editable Markdown table, not the generated gallery marker.", errors)
     require("| Name | Role / affiliation |" in index_text,
-            "People section should include a simple editable Markdown table.", errors)
+            "Home People section should include a simple editable Markdown table.", errors)
     require("## Featured Outputs" not in index_text, "Featured Outputs section should be removed.", errors)
-    require("https://what-uses-more.com" in index_text, "What Uses More button/link is missing.", errors)
+    require("https://what-uses-more.com" in example_text, "What Uses More button/link is missing from the Example page.", errors)
     require("assets/files/project_brief.pdf" in index_text and "Polished Outputs" in index_text,
-            "Project brief PDF should be linked near polished outputs.", errors)
+            "Project brief PDF should be linked near Home polished outputs.", errors)
+    require("assets/files/project_brief.pdf" in example_text and "Polished Outputs" in example_text,
+            "Project brief PDF should be linked near Example polished outputs.", errors)
     require("View shared code" in index_text and "Methods and Code" in index_text,
-            "Code button should be placed in the methods section.", errors)
+            "Code button should be placed in the Home methods section.", errors)
+    require("View shared code" in example_text and "Methods and Code" in example_text,
+            "Code button should be placed in the Example methods section.", errors)
     require("Open the ESIIL Data Library" in index_text and "https://cu-esiil.github.io/data-library/innovation-summit-2025/" in index_text,
-            "Data button should point to the ESIIL Data Library in context.", errors)
+            "Home data button should point to the ESIIL Data Library in context.", errors)
+    require("Open the ESIIL Data Library" in example_text and "https://cu-esiil.github.io/data-library/innovation-summit-2025/" in example_text,
+            "Example data button should point to the ESIIL Data Library in context.", errors)
     require("[@" in index_text, "Public Front Page should use BibTeX citation keys.", errors)
     require("{{ references }}" in index_text, "Public Front Page should include references marker.", errors)
-    require("## How to edit the Public Front Page" in instructions_text,
-            "Instructions edit guide section is missing.", errors)
+    require("[@" in example_text, "Example page should use BibTeX citation keys.", errors)
+    require("{{ references }}" in example_text, "Example page should include references marker.", errors)
+    require("## How to edit the Home page" in instructions_text,
+            "Instructions Home edit guide section is missing.", errors)
+    require("Example Project Page](example.md)" in instructions_text,
+            "Instructions overview should link to the completed Example page.", errors)
     require("## Where files go" in instructions_text, "Instructions file map is missing.", errors)
     require("Innovation-Summit-2026/tree/main/docs/learners" in instructions_text,
             "Instructions should explain linking to existing learner profile files.", errors)
@@ -111,6 +138,10 @@ def main() -> int:
 
     require("toc.integrate" not in mkdocs_text, "toc.integrate should not be enabled.", errors)
     require("content.action.edit" in mkdocs_text, "MkDocs edit action should remain enabled.", errors)
+    require("  - Home: index.md" in mkdocs_text and "  - Example: example.md" in mkdocs_text,
+            "MkDocs nav should include Home and Example as the first two top-level pages.", errors)
+    require(mkdocs_text.find("  - Home: index.md") < mkdocs_text.find("  - Example: example.md") < mkdocs_text.find("  - Instructions:"),
+            "Home and Example should appear before Instructions in the top-level nav.", errors)
     require("site_name: \"OASIS Project Group Template\"" in mkdocs_text,
             "Header site title should remain visible and persistent.", errors)
     require("Day 1 — Meet Your Team and Define Your Project" in mkdocs_text,
@@ -186,8 +217,8 @@ def main() -> int:
             "Template instructions toggle should render in the sidebar nav override.", errors)
     require("Show or hide template instructions" in nav_override_text,
             "Template instructions toggle should have an instructions-focused accessible label.", errors)
-    require('nav_item.title == "Instructions"' in nav_override_text,
-            "Template instructions toggle should render after the Instructions nav cluster.", errors)
+    require('nav_item.title == "Instructions"' in nav_override_text and "public_mode_toggle" in nav_override_text,
+            "Template instructions toggle should render after the Instructions nav cluster only on Home.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "display: flex" in css_text,
             "Sidebar branding area should be visible for the group logo.", errors)
     require(".md-sidebar--primary .md-nav__title" in css_text and "font-size: 0" in css_text,

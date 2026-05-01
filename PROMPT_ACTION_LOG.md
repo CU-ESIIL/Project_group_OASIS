@@ -1547,3 +1547,40 @@ Verification
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Used a local browser check of `/instructions/day1/` at 1440 by 1000 and confirmed the Present button and hint render fully at the bottom of the right sidebar.
 * Ran `python3 scripts/template_regression_check.py`; it still fails because `docs/index.md` contains the existing raw HTML CubeDynamics iframe wrapper, unrelated to the Present button placement.
+
+2026-05-01
+
+Prompt
+
+User asked to split the current homepage into a blank editable Home page and a completed Example page, then open a pull request.
+
+Files and folders inspected
+
+* mkdocs.yml
+* docs/index.md
+* docs/instructions.md
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* hooks.py
+* docs/javascripts/mode-toggle.js
+* scripts/site_health.py
+* scripts/template_regression_check.py
+
+Actions taken
+
+* Replaced `docs/index.md` with a sparse editable Home template that keeps the Instructions on/off toggle, instruction boxes, and task sticker landmarks.
+* Created `docs/example.md` as a clean public-facing completed fire polygon velocity example with no instruction toggle, no instruction boxes, no task stickers, and no raw iframe.
+* Updated top-level navigation so Home and Example are the first two items.
+* Updated the sidebar nav override so the Instructions on/off control renders only on pages that opt into `public_mode_toggle`.
+* Updated instruction overview and day pages so groups are told to edit Home and use Example only as a completed model.
+* Updated site health and template regression checks for the Home/Example split.
+
+Verification
+
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
+* Ran `python3 scripts/template_regression_check.py`; passed.
+* Ran `node --check docs/javascripts/mode-toggle.js`; passed.
+* Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning and the expected new-file revision-date warning for `example.md`.
+* Checked rendered HTML and browser snapshots to confirm Home and Example are top-level nav entries, Home shows the Instructions toggle and day stickers, Example does not show the Instructions toggle, and no raw iframe remains on Home or Example.
