@@ -1,5 +1,5 @@
 site_name: "OASIS Project Group Template"
-site_description: 'Central resource for ESIIL project groups'
+site_description: 'Central resource for ESIIL Summit teams'
 site_author: Ty Tuff
 site_url: "https://cu-esiil.github.io/Project_group_OASIS/"
 
@@ -15,9 +15,9 @@ nav:
   - Home: index.md
   - Example: example.md
   - Instructions:
-      - Day 1 — Meet Your Team and Define Your Project: instructions/day1.md
-      - Day 2 — Build, Explore, and Apply New Skills: instructions/day2.md
-      - Day 3 — Synthesize, Polish, and Share: instructions/day3.md
+      - Day 1 — Form Your Summit Team: instructions/day1.md
+      - Day 2 — Build and Report Back: instructions/day2.md
+      - Day 3 — Synthesize and Share: instructions/day3.md
   - AI for Sustainability:
       - Defining AI: ai-for-sustainability/defining-ai.md
       - Defining Sustainability: ai-for-sustainability/defining-sustainability.md

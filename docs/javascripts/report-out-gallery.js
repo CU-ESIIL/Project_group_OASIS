@@ -1,6 +1,6 @@
 (function () {
   const ALLOWED_EXTENSIONS = /\.(png|jpe?g|webp|gif)$/i;
-  const EMPTY_MESSAGE = "No report-out images yet. Add image paths to the matching gallery manifest in docs/assets/report-out/ to start the gallery.";
+  const EMPTY_MESSAGE = "No report-out images yet. Add image paths to the matching gallery manifest in docs/assets/report-out/. You can point to any image under docs/assets/.";
 
   function parseGalleryYaml(text) {
     const trimmed = text.trim();

@@ -1,38 +1,40 @@
 ---
 layout: page
-title: Instructions
+title: Directions
 permalink: /instructions/
 ---
 
-# Instructions: 3-Day Science Sprint
+# Directions: 3-Day Science Sprint
 
-Welcome! These guides help your team use this site as a live, visual record of your sprint. Each day has clear prompts and short, practical steps.
+Welcome! These guides help your team use this site as a live, visual record of your sprint. Each day has a different rhythm because the agenda gives teams different amounts of work time.
 
-- **Day 1 →** [Meet Your Team and Define Your Project](instructions/day1.md)
-- **Day 2 →** [Build, Explore, and Apply New Skills](instructions/day2.md)
-- **Day 3 →** [Synthesize, Polish, and Share](instructions/day3.md)
+- **Day 1 →** [Form Your Summit Team](instructions/day1.md)
+- **Day 2 →** [Build and Report Back](instructions/day2.md)
+- **Day 3 →** [Synthesize and Share](instructions/day3.md)
 
-The Home page is the editable blank template your group fills out during the summit. The Example page is a completed model that shows how a filled-in project story can look. Edit Home, not Example.
+The Home page is the editable blank template your team fills out during the summit. The Example page is a completed model that shows how a filled-in project story can look. Edit Home, not Example.
 
 For a completed model, see the [Example Project Page](example.md).
 
 [Edit the Home page](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
 
-By the end, the Home page should read like a compact evidence-backed synthesis: make claims, link artifacts, state confidence, name limitations, and show what others can reuse.
-
 ## Summit Report Out workflow
 
-Your group page is both your workspace and your final report-out page. During the summit, use the edit buttons to update the sections for each day. On Day 3, use the **Summit Report Out** button to view the page in a clean Summit Report Out layout.
+Your team page is both your workspace and your final report-out page. During the summit, use the edit buttons to update the sections for each day. On Day 3, use the **Summit Report Out** button to view the page in a clean Summit Report Out layout.
 
 For the final report out, focus on:
 
-- What question or challenge your group worked on
+- What question or challenge your team worked on
 - What you built, tested, mapped, wrote, or designed
 - What changed in your thinking
 - What someone else could do next
 - Images that make the work easier to understand
 
-> Tip: Edit any page in your browser: open the file → click the pencil (✎) → make changes → **Commit changes**.
+## Work rhythm
+
+- **Day 1:** about 30 minutes of actual team work time. Focus on alignment, not results.
+- **Day 2:** about 3.5 to 4 hours of total team work time. Build one useful thing.
+- **Day 3:** about 4 to 4.5 hours of team time. Synthesize, polish, and report out.
 
 ## CRT cloud workflow
 
@@ -51,12 +53,14 @@ Use the Cloud Triangle pages when you need to move work between those places:
 3. [Instance to/from persistent storage](instructions/save-to-persistent-storage.md)
 
 ## Editing this project site
+
 Most summit participants should only edit Markdown files.
+
 You can safely edit:
 
-- the Home page project content
+- the Home page content
 - the People list on the Home page
-- notes, figures, links, and project updates
+- notes, figures, links, and team updates
 - references in `references.bib`
 
 You should avoid editing:
@@ -66,13 +70,13 @@ You should avoid editing:
 - theme overrides
 - site configuration
 
-Those files control layout and styling. They are intentionally separated from the content so the project page is easier to edit without breaking the site.
+Those files control layout and styling. They are intentionally separated from the content so the team page is easier to edit without breaking the site.
 
 ## How to edit the Home page
 
 Use this loop every time you update the editable Home page:
 
-1. Open the Home page and click **✏️ Edit this page**, or open `docs/index.md` in GitHub.
+1. Open the Home page and click **Edit this page**, or open `docs/index.md` in GitHub.
 2. Replace the blank template text directly in the Markdown.
 3. Upload images and files to the matching folder under `docs/assets/`.
 4. Reference images with relative paths, such as `assets/figures/main_result.png`.
@@ -91,23 +95,24 @@ The sidebar has a small **Instructions on/off** toggle.
 Write future editor instructions as Markdown notes, not as public paragraphs:
 
 ```markdown
-!!! note "D2-E: How to edit this section"
+!!! note "Day 2 task"
     Replace this note with short instructions for editors.
     Keep public-facing project text outside this note.
 ```
 
-Instruction blocks with titles that start with `D1-`, `D2-`, `D3-`, `How to edit`, `Template instructions`, or `Replace this` are hidden when instructions are turned off on the Home page.
+Instruction blocks with task guidance are hidden when instructions are turned off on the Home page.
 
 ## Where files go
 
 | Put this here | Use it for |
 |---|---|
-| `docs/index.md` | Editable Home project page |
-| `docs/example.md` | Completed model project page |
-| `docs/assets/hero/` | Main banner or project identity image |
+| `docs/index.md` | Editable Home team page |
+| `docs/example.md` | Completed model team page |
+| `docs/assets/hero/` | Main banner or team identity image |
 | `docs/assets/whiteboards/` | Whiteboard photos and brainstorm sketches |
 | `docs/assets/explorations/` | Early plots, screenshots, rough maps, notebook screenshots |
 | `docs/assets/figures/` | Polished figures and final visuals |
+| `docs/assets/report-out/` | Report-out banners and image manifest files |
 | `docs/assets/people/` | Optional team photos or profile images |
 | `docs/assets/team/` | Team photos or headshots |
 | `docs/assets/files/` | PDFs, briefs, slides, and downloadable materials |
@@ -128,7 +133,7 @@ Image with caption:
 Data source:
 
 ```markdown
-- **Dataset name** — one sentence on what it contains and why we need it. [Link](https://example.org)
+- **Dataset name:** one sentence on what it contains and why we need it. [Link](https://example.org)
 ```
 
 People table row:

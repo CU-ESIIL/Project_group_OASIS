@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
-  <title id="title">Project Group logo</title>
-  <desc id="desc">Minimal ESIIL-style project group mark with mountain, sun, and subtle texture.</desc>
+  <title id="title">Summit Team logo</title>
+  <desc id="desc">Minimal ESIIL-style Summit team mark with mountain, sun, and subtle texture.</desc>
   <defs>
     <linearGradient id="sky" x1="110" y1="40" x2="420" y2="270" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#42BCDC"/>

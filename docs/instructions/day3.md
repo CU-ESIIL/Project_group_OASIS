@@ -1,138 +1,117 @@
 ---
-title: Day 3 — Synthesize, Polish, and Share
+title: Day 3 — Synthesize and Share
 oasis_day: 3
 extra:
   body_class: day-3
 ---
 
-![Day 3 task pathway over an orange mountain landscape](../assets/hero/day-3-hero.png)
+# Day 3 — Synthesize and Share
 
-# Day 3 — Synthesize, Polish, and Share
+Day 3 is your second major work block. Your team has about **4 to 4.5 hours of team time** to turn your work into a clear story.
 
-## What today is about
+This is not the day to start a new project. This is the day to refine, synthesize, and communicate what you made or learned.
 
-Today is about turning your work into something others can understand and use. Keep polishing the [Home page](../index.md). Use the [Example page](../example.md) only as a completed model.
+By the end of Day 3, your Summit team should have:
 
-By the end of the day, the Home page should tell a coherent story: why the question matters, what you tried, what you found, what you made, and what should happen next.
+- A clear story
+- 1–2 strong outputs
+- A clean final report page
+- A 6-minute Summit Report Out
 
-[Edit the Day 3 section](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+[Edit the Day 3 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+[Open Home](../index.md){ .md-button }
+[See the Example](../example.md){ .md-button }
 
-## Summit Report Out workflow
+## D3-A — Align the story
 
-Your group page is both your workspace and your final report-out page. During the summit, use the edit buttons to update the sections for each day. On Day 3, use the **Summit Report Out** button to view the page in a clean Summit Report Out layout.
+**Main pages:** Project Question, Product Direction, Results
 
-For the final report out, focus on:
-
-- What question or challenge your group worked on
-- What you built, tested, mapped, wrote, or designed
-- What changed in your thinking
-- What someone else could do next
-- Images that make the work easier to understand
-
-## Revisit the whole story
-
-Read the Home page from top to bottom.
+Spend **20–30 minutes** making sure your question, product, and results match.
 
 Ask:
 
-- Does the title match the project?
-- Does the question match what we actually explored?
-- Can someone outside the group understand why this matters?
-- Does each section support the final report out?
+- What did we actually make, test, design, or learn?
+- Does the question match what we can show?
+- Can someone outside our team understand why this matters?
+- What should we remove because it distracts from the story?
 
-Update [Project Question](../index.md#project-question), [Data Exploration](../index.md#data-exploration), and [Methods and Code](../index.md#methods-and-code) so the story matches the work you actually did.
+## D3-B — Clean the evidence
 
-## Finalize the results
+**Main pages:** Data Exploration, Methods and Code, Results
 
-Use [Results](../index.md#results) to make a clear claim and point to evidence.
+Make your work understandable. Remove anything confusing.
 
-Add or revise:
+For each important claim, make sure the page explains:
 
-- key findings
-- important figures, maps, or tables
-- short interpretations
-- uncertainty, limits, or open questions
+- What you used
+- What you tried
+- What you found
+- What remains uncertain
 
-A strong result does not need to be a perfect answer. It needs to be honest and understandable.
+Be honest about uncertainty.
 
-## Add polished outputs
+## D3-C — Choose 1–2 strong visuals or artifacts
 
-Use [Polished Outputs](../index.md#polished-outputs) to link the final things people should find after the summit.
+**Main pages:** Results, Polished Outputs, Final Summit Report Out
 
-These might include:
+Do not overload the page. Clarity is more important than volume.
 
-- a final figure
-- a notebook
-- a PDF or brief
-- a repository link
-- a dataset or data-access note
-- a short handoff note
+Choose **1–2 strong visuals or artifacts**.
 
-Check that links work before the final report out.
+Good options include:
 
-## Final Report Out (6 minutes)
+- A figure
+- A map
+- A workflow diagram
+- A prototype screenshot
+- A short table
+- A concept sketch
+- A notebook link
+- A brief or handoff document
 
-Focus: synthesis and clarity.
+## D3-D — Build the 6-minute Summit Report Out
 
-Use your homepage as the Summit Report Out. Do not create separate slides. Add the final report-out structure to [Final Report Out (Day 3)](../index.md#report-out-day3).
+**Main page:** Final Summit Report Out (Day 3, 6 minutes)
 
-Tell a coherent story:
+Spend **30–45 minutes max** preparing this.
 
-Why -> Question -> Data/Methods -> Findings -> Next
+Use this structure:
 
-### Team Photo
+- Why it matters
+- What you tried to make
+- What question guided the work
+- What you used or tried
+- What you found, built, or learned
+- What remains unfinished or uncertain
+- What should happen next
 
-Add a team photo to your homepage.
+Do not read everything. Use the page to guide the story.
 
-### Findings at a glance
+## D3-E — Make it reusable
 
-Write 2–3 short headlines:
+**Main pages:** Polished Outputs, Cite & Reuse
 
-- Headline 1 — what, where, how much
-- Headline 2 — change, trend, or contrast
-- Headline 3 — implication for practice or policy
+Add only what someone needs after the summit:
 
-Good headlines are specific and quantitative when possible.
+- links
+- data sources
+- code or notebooks
+- credits
+- citations
+- next steps
 
-### Visuals that tell the story
+This page should work after the summit.
 
-Select 2–3 visuals only.
+## D3-F — Final check
 
-Each visual should:
+Before presenting, make sure:
 
-- support one claim
-- be readable quickly
-- be referenced in your narrative
+- The page loads
+- Images and links work
+- Instructions are hidden or out of the way
+- The story is clear
+- You can present in 6 minutes
 
-### What's next?
+## Day 3 finish line
 
-Write 2–3 short bullets:
-
-- immediate follow-ups
-- what you would do with one more week or month
-- who should see this next
-
-### Practice guidance
-
-Practice a six-minute walkthrough of your homepage.
-
-Time breakdown:
-
-- 1 minute: Why and question
-- 2 minutes: Data and methods
-- 2 minutes: Findings with visuals
-- 1 minute: Next steps
-
-Keep text crisp and speak to the visuals.
-
-## End-of-day check
-
-Before the final share-out, make sure the Home page has:
-
-- a clear question
-- readable team information
-- understandable data and methods
-- clean results or honest early findings
-- working links to outputs
-- a six-minute final report out
-- a short sense of what should happen next
+You are done when someone outside your team can understand your work in under 6 minutes.

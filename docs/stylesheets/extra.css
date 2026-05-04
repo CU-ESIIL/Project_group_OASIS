@@ -968,7 +968,7 @@ body:has(.oasis-day-marker) .md-sidebar--secondary .md-nav__link--active {
   background: var(--oasis-color-surface-muted);
 }
 
-/* Presentation mode */
+/* Summit Report Out mode */
 .oasis-presentation-toolbar {
   display: flex;
   align-items: center;

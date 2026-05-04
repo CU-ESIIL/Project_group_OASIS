@@ -1,8 +1,8 @@
-# ESIIL Project Groups training sessions
+# ESIIL Summit Team training sessions
 
 ## Introduction to ESIIL Training
 - Brief overview of the training program.
-- Objectives and expected outcomes for the project groups.
+- Objectives and expected outcomes for Summit teams.
 
 ## Session 1: The Science of Team Science (2 Hours)
 ### Part 1: Creating Ethical and Innovative Work Spaces

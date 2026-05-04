@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = "oasis-template-guidance";
-  const instructionTitlePattern = /(?:show template instructions|template instructions|template guidance|how to edit|replace this|d[1-3]-[a-g]|image swap|whiteboard|data plot|first data plot|caption|site health|how to replace)/i;
+  const instructionTitlePattern = /(?:show template instructions|template instructions|template guidance|how to edit|replace this|day [1-3] task|day [1-3] checkpoint|day [1-3] final report|d[1-3]-[a-g]|image swap|whiteboard|data plot|first data plot|caption|site health|how to replace)/i;
 
   function pageHasTemplateInstructions() {
     return Boolean(document.querySelector(".oasis-public-mode-marker, .template-instructions-block"));

@@ -14,9 +14,9 @@ As such, our core values center people through inclusion, kindness, respect, col
 
 ### When and how to use these guidelines
 
-These guidelines outline behavior expectations for ESIIL community members. Your participation in the ESIIL network is contingent upon following these guidelines in all ESIIL activities, including, but not limited to, participating in meetings, webinars, hackathons, project groups, hosted or funded by ESIIL, as well as email lists and online forums such as GutHub, Slack, and Twitter. These guidelines have been adapted from those of the International Arctic Research Policy Committee, the Geological Society of America, the American Geophysical Union, the University Corporation for Atmospheric Research, The Carpentries, and others. We encourage other organizations to adapt these guidelines for use in their own meetings.
+These guidelines outline behavior expectations for ESIIL community members. Your participation in the ESIIL network is contingent upon following these guidelines in all ESIIL activities, including, but not limited to, participating in meetings, webinars, hackathons, Summit teams hosted or funded by ESIIL, as well as email lists and online forums such as GutHub, Slack, and Twitter. These guidelines have been adapted from those of the International Arctic Research Policy Committee, the Geological Society of America, the American Geophysical Union, the University Corporation for Atmospheric Research, The Carpentries, and others. We encourage other organizations to adapt these guidelines for use in their own meetings.
 
-**Note:** Project groups and hackathon/codefest teams are encouraged to discuss these guidelines and what they mean to them, and will have the opportunity to add to them to specifically support and empower their team. Collaborative and behavior commitments complement data use, management, authorship, and access plans that commit to CARE and FAIR principles.
+**Note:** Summit teams and hackathon/codefest teams are encouraged to discuss these guidelines and what they mean to them, and will have the opportunity to add to them to specifically support and empower their team. Collaborative and behavior commitments complement data use, management, authorship, and access plans that commit to CARE and FAIR principles.
 
 # Behavior Agreements
 
@@ -196,4 +196,3 @@ supportive, inclusive, respectful and collaborative community. If you feel we co
 Acknowledgment
 By participating in this event, you agree to abide by this code of conduct and understand the consequences of violating it. We believe that a respectful and inclusive environment benefits all participants and leads to more creative and successful outcomes.
 Thank you for your cooperation in making the this event a welcoming event for all. Have fun!
-

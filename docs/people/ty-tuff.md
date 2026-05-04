@@ -7,7 +7,7 @@ pronouns:
 github: tuff
 photo:
 project_role: Fire polygon velocity framing
-summary: Ty is interested in making spatial fire metrics easier to compare, explain, and reuse across project groups.
+summary: Ty is interested in making spatial fire metrics easier to compare, explain, and reuse across Summit teams.
 interests:
   - Fire modeling
   - Open science

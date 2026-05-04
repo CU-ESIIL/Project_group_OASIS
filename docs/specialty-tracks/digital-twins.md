@@ -11,7 +11,7 @@ Replace this page with the final lesson link, workshop notes, or lightweight ins
 - Best used on:
 - Contact or facilitator:
 
-## Notes for Project Groups
+## Notes for Teams
 
 - What this track helps teams do:
 - Inputs or setup needed:

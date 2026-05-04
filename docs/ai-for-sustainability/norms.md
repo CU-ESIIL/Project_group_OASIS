@@ -31,7 +31,7 @@ Add your selected norms to your project website so the team can return to them d
 
 ## Norms to consider
 
-Your group may want norms around:
+Your team may want norms around:
 
 - **Dependability**: How will we follow through on what we say we will do?
 - **Roles and structure**: How will we divide work, keep track of tasks, and know who is doing what?
@@ -96,7 +96,7 @@ For summit work, consent or a default experiment often works well because teams 
 
 ## Add norms to your team website
 
-Add your selected norms to your project group homepage. Keep them short enough that someone can read them during a meeting or share-out.
+Add your selected norms to your team Home page. Keep them short enough that someone can read them during a meeting or share-out.
 
 Suggested format:
 
