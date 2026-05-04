@@ -1,9 +1,9 @@
 ---
 title: Team Home
-public_mode_toggle: true
+public_mode_toggle: false
 ---
 
-# Team Home Make Me Your Own
+# Team Home: Make Me Your Own
 
 ![Team hero image](assets/hero/hero.png)
 
