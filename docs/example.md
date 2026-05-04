@@ -1,8 +1,8 @@
 ---
-title: Example Project Page
+title: How Fast is a Fire?
 ---
 
-# Example Project Page
+# How Fast is a Fire? Example Project Page
 
 This page shows what a completed group project can look like. Edit the [Home page](index.md) to build your own.
 
