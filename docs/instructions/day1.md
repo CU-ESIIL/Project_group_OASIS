@@ -45,6 +45,10 @@ Write **2–3 norms only**. Keep them simple and actionable.
 
 Good norms sound like working agreements, not generic values.
 
+Use the [Team Norms activity](../ai-for-sustainability/norms.md) if your team wants a worksheet for recording decisions and checking agreement.
+
+![Summit team norms worksheet](../assets/hero/norms-panel.png)
+
 Examples:
 
 - We will pause when someone says they are lost.

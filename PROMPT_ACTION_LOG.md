@@ -44,6 +44,32 @@ Verification
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/template_regression_check.py`; failed because `docs/index.md` already contains raw HTML iframe markup from prior homepage work, unrelated to this Norms page change.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+
+2026-05-04
+
+Prompt
+
+User provided two Norms images and asked to add the simple norms image to the Norms page and add the norms decision panel to both the Norms page and the directions for adding norms to the website.
+
+Files and folders inspected
+
+* docs/ai-for-sustainability/norms.md
+* docs/instructions/day1.md
+* docs/assets/hero/
+
+Actions taken
+
+* Replaced `docs/assets/hero/norms.png` with the provided Gradients of Agreement image for the Norms page.
+* Added `docs/assets/hero/norms-panel.png` from the provided Summit Team Norms panel.
+* Added the norms panel image and a short worksheet sentence to the Norms page.
+* Added the norms panel image and a link to the Team Norms activity in the Day 1 norms directions.
+
+Verification
+
+* Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built Norms page and Day 1 directions reference `norms.png` and `norms-panel.png`.
 * Confirmed the built site includes `/ai-for-sustainability/norms/` and the Norms nav link.
 
 2026-04-23

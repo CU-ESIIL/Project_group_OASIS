@@ -29,6 +29,10 @@ Use this quick self-facilitation process with your team.
 
 Add your selected norms to your project website so the team can return to them during the summit.
 
+![Summit team norms worksheet](../assets/hero/norms-panel.png)
+
+Use this worksheet to record the norms your team chooses and to check how aligned people feel about each decision.
+
 ## Norms to consider
 
 Your team may want norms around:
