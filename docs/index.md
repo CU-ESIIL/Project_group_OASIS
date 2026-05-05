@@ -1,6 +1,6 @@
 ---
 title: Team Home
-public_mode_toggle: false
+public_mode_toggle: true
 ---
 
 # Team Home: Make Me Your Own
