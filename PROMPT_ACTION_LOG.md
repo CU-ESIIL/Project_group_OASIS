@@ -1646,3 +1646,27 @@ Verification
 * Ran `python3 scripts/check_stickers.py`; passed with the retired sticker workflow check.
 * Ran `python3 scripts/template_regression_check.py`; passed.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+
+2026-05-08
+
+Prompt
+
+User asked to replace the Home page hero with a blue placeholder image that says "replace me with your own image," add figure guidance for swapping the hero, and update the LLM specialty track sidebar link.
+
+Files inspected
+
+* docs/index.md
+* docs/assets/hero/hero.png
+* mkdocs.yml
+
+Actions taken
+
+* Replaced `docs/assets/hero/hero.png` with a blue placeholder PNG reading "REPLACE ME WITH YOUR OWN IMAGE."
+* Added a short hero-image caption and an instruction note on Home with a link to the GitHub hero image folder.
+* Updated the LLM specialty track link to `https://cu-esiil.github.io/LLM_lesson_exemplar/cyverse/`.
+
+Verification
+
+* Ran `python3 scripts/site_health.py`; it reported one pre-existing Orientation nav warning, so `docs/_site_health.md` was restored to avoid committing unrelated generated noise.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.

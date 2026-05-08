@@ -7,7 +7,13 @@ public_mode_toggle: true
 Breakout Room #: (To be assigned by ESIIL Staff)
 
 ![Team hero image](assets/hero/hero.png)
-Add images: upload to docs/assets/ and reference like assets/your_file.png
+
+*Replace this hero image with your team’s own image. Keep the file path `docs/assets/hero/hero.png` if you want the Markdown above to keep working.*
+
+!!! note "How to replace the hero image"
+    Upload your own image to `docs/assets/hero/` and replace the file named `hero.png`. Use a wide image if you can, then refresh the site preview to check how it looks.
+
+    [Open the hero image folder](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/hero){ .md-button target="_blank" rel="noopener" }
 
 Use this page as your team’s working record during the summit and your final report-out page on Day 3.
 
