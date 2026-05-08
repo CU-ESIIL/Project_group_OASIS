@@ -1779,6 +1779,54 @@ Verification
 
 Prompt
 
+User clarified that the Gradients of Agreement image should be on the Home page, not the directions or Norms page.
+
+Files inspected
+
+* docs/index.md
+* docs/instructions/day1.md
+
+Actions taken
+
+* Moved the side-by-side Gradients of Agreement and norms worksheet image pair into the Home page Team Norms instruction box.
+* Restored the Day 1 directions page to show only the norms worksheet image.
+* Kept the image pair inside the Home page instruction box so it hides when instructions are off.
+
+Verification
+
+* Confirmed the Gradients of Agreement image appears in `docs/index.md` inside the Team Norms instruction box.
+* Confirmed `docs/instructions/day1.md` no longer includes the side-by-side Gradients image pair.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User asked to put the Gradients of Agreement image in the directions with a hover animation like the name cards.
+
+Files inspected
+
+* docs/instructions/day1.md
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Added the Gradients of Agreement image to the Day 1 team norms directions.
+* Placed the Gradients image and the norms worksheet side by side in the same Markdown-table pattern used for the name cards.
+* Reused the existing global image hover/lift styling so the new directions images animate consistently with the name cards.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
 User reported that not all Home page directions were hiding when instructions were turned off and asked to move the "How to use this page" directions above the title.
 
 Files inspected
