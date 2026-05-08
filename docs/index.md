@@ -6,7 +6,7 @@ public_mode_toggle: true
 # Team Home: Make Me Your Own
 
 !!! note "Day 1 directions"
-    Day 1 is about becoming a team before becoming a project. Use the time today to add your breakout room, introduce the people on your team, write 2-3 team norms, and choose one simple decision rule. Do not try to do questions, data, methods, or results yet.
+    Change the title to the name of your project.
 
     [📣 Edit Day 1 setup in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L6){ .md-button target="_blank" rel="noopener" }
 
