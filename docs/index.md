@@ -62,7 +62,7 @@ This page captures your group’s process and thinking throughout the Summit and
         - Vote on your top 3 ideas. (Each person gets 3 votes; you can use all your votes on 1 idea or spread them out) (2 min).
         - In GitHub, move all team norms with votes to the top of the list.  
 
-    | Gradients of agreement | Summit team norms worksheet |
+    | Gradients of agreement | 
     |---|---|
     | ![Gradients of agreement scale for summit teams](assets/hero/norms.png) | 
 
