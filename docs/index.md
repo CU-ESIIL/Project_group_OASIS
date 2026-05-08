@@ -17,7 +17,12 @@ public_mode_toggle: true
 
     [📣 Edit Day 1 setup in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L11){ .md-button target="_blank" rel="noopener" }
 
-Breakout Room #: (To be assigned by ESIIL Staff)
+!!! note "For ESIIL staff"
+    Breakout Room #: (To be assigned by ESIIL Staff)
+
+    [📣 Edit Day 1 setup in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L11){ .md-button target="_blank" rel="noopener" }
+    
+
 
 ![Team hero image](assets/hero/hero.png)
 
