@@ -6,6 +6,8 @@ public_mode_toggle: true
 !!! tip "How to use this page during the summit"
     This page is your team’s shared workspace and final report-out page. The agenda gives teams limited time, so use the page differently each day: Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report out. Keep the page simple, current, and readable.
 
+    Look for the green buttons with 📣 for the things you need to edit. 
+
     [📣 Edit the top of Home in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L1){ .md-button target="_blank" rel="noopener" }
 
 # Team Home: Make Me Your Own
@@ -72,13 +74,9 @@ Our team norms:
 - ...
 - ...
 
-Our decision rule:
-
-...
-
 ## Define, Explore, Data, and Methods { #product-direction }
 
-!!! note "Day 2 Task"
+!!! note "Day 2 Morning Task"
     Day 2 morning: use this section to define what the team is trying to understand, name early hypotheses or hunches, and add context. Include at least one visual, such as a photo of a whiteboard or notes.
 
     [📣 Edit Define, Explore, Data, and Methods in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L78){ .md-button target="_blank" rel="noopener" }
@@ -98,7 +96,12 @@ Context people need to understand our work:
 
 ![Day 2 morning whiteboard or notes photo](assets/whiteboards/day2_morning_whiteboard.svg)
 
-*Morning whiteboard or notes showing the question, hypotheses, and context we used to start Day 2.*
+!!! note "Day 2 Morning Task"
+    Day 2 morning: Morning whiteboard or notes showing the question, hypotheses, and context we used to start Day 2.
+
+    [📣 Edit Define, Explore, Data, and Methods in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L78){ .md-button target="_blank" rel="noopener" }
+    
+
 
 Our primary output type is:
 
@@ -116,7 +119,7 @@ What we plan to test:
 
 ## Project Question { #project-question }
 
-!!! note "Day 2 Task"
+!!! note "Day 2 Morning Task"
     Day 2 morning: draft the project question, then spend no more than 10-15 minutes refining it so it matches what the team can realistically do.
 
     [📣 Edit Project Question in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L116){ .md-button target="_blank" rel="noopener" }
@@ -131,7 +134,7 @@ What would count as progress:
 
 ## Data Exploration { #data-exploration }
 
-!!! note "Day 2 Task"
+!!! note "Day 2 Afternoon Task"
     Day 2 afternoon: try a few datasets and analyses. Replace the snapshot below with a visual showing initial data patterns. Add 2-4 promising data sources with links and 1-line notes. Keep this public-facing: what the source is, why it matters, and what it might help the team test.
 
     [📣 Edit Data Exploration in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L131){ .md-button target="_blank" rel="noopener" }
@@ -149,7 +152,7 @@ Promising data sources:
 
 ## Method and Code { #methods-and-code }
 
-!!! note "Day 2 Task"
+!!! note "Day 2 Afternoon Task"
     Day 2 afternoon: add 2-4 methods or technologies you're testing, such as stats, models, or visualization. Then add challenges identified, visuals, and short- and long-term next steps.
 
     [📣 Edit Method and Code in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L149){ .md-button target="_blank" rel="noopener" }
