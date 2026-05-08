@@ -1779,6 +1779,34 @@ Verification
 
 Prompt
 
+User reported that not all Home page directions were hiding when instructions were turned off and asked to move the "How to use this page" directions above the title.
+
+Files inspected
+
+* docs/index.md
+* docs/javascripts/mode-toggle.js
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Moved the "How to use this page during the summit" instruction box above the Home page title.
+* Updated the instruction-toggle detection pattern so "How to use this page," "Day 1 directions," and similar direction labels are marked as hideable instruction blocks.
+* Moved hero-image replacement guidance into its instruction box so it hides with instructions.
+* Removed duplicate Method and Code instruction boxes that had drifted into the public content area.
+* Updated shifted Home page edit-button line anchors.
+
+Verification
+
+* Confirmed the Home page has the "How to use this page" instruction box above the title.
+* Confirmed the old standalone "Replace this hero image" guidance is no longer outside the hero instruction box.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
 User asked to add side-by-side images of the in-person name cards to the directions for getting to know the group.
 
 Files inspected
