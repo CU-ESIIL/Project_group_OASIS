@@ -27,8 +27,6 @@ Breakout Room #: (To be assigned by ESIIL Staff)
 
     [Open the hero image folder](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/hero){ .md-button target="_blank" rel="noopener" }
 
-Use this page as your team’s working record during the summit and your final report-out page on Day 3.
-
 ### This page becomes your Summit Report Out
 
 This page captures your group’s process and thinking throughout the Summit and will be used to share your work with others. 
