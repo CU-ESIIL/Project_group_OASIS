@@ -1779,6 +1779,54 @@ Verification
 
 Prompt
 
+User asked to add side-by-side images of the in-person name cards to the directions for getting to know the group.
+
+Files inspected
+
+* docs/index.md
+* docs/instructions/day1.md
+
+Actions taken
+
+* Added the two provided name-card screenshots as site assets in `docs/assets/team/`.
+* Added a side-by-side Markdown table of the name-card prompt and follow-up-note images to the Day 1 introduce-yourselves directions.
+* Added the same side-by-side visual inside the Home page People instruction box so it appears with instructions rather than as public team content.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User clarified that the Day 2 morning and afternoon divide should be a directions divide, not public content headings.
+
+Files inspected
+
+* docs/index.md
+
+Actions taken
+
+* Removed public-facing Morning Focus and Afternoon Focus headings from the Home page.
+* Moved Day 2 morning guidance into the Define, Explore, Data, and Methods and Project Question instruction boxes.
+* Moved Day 2 afternoon guidance into the Data Exploration and Method and Code instruction boxes.
+* Kept the public-facing content flowing through each category without exposing schedule labels as content structure.
+* Updated shifted edit-button line anchors.
+
+Verification
+
+* Confirmed `docs/index.md` no longer has public headings for Morning Focus or Afternoon Focus.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
 User asked to add a Day 1 directions box under the Home page title.
 
 Files inspected

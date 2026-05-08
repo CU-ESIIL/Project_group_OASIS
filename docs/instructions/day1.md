@@ -35,6 +35,12 @@ Each person should briefly share:
 
 Keep this fast. One sentence per person is enough.
 
+Use the in-person name cards to guide the conversation:
+
+| Name card prompts | Follow-up notes |
+|---|---|
+| ![Name card prompts for name, institution, area of expertise, research difference, and questions](../assets/team/name-card-prompts.png) | ![Follow-up notes card with space for names and follow-up ideas](../assets/team/name-card-followups.png) |
+
 ## D1-B — Create team norms
 
 **Main page:** Team Norms and Decision Making
