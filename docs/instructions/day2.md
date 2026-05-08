@@ -13,7 +13,7 @@ This is where most of the project happens. The goal is not to do everything. The
 
 By the end of Day 2, your Summit team should have:
 
-- A focused question
+- A drafted and focused question
 - A clear product direction
 - Evidence of work, such as data, methods, design, code, a concept, or a prototype
 - One early result or obstacle
@@ -23,19 +23,22 @@ By the end of Day 2, your Summit team should have:
 [Open Home](../index.md){ .md-button }
 [See the Example](../example.md){ .md-button }
 
-## D2-A — Refine your question
+## D2-A — Draft and refine your question
 
 **Main page:** Project Question
 
-Spend **no more than 10–15 minutes** tightening your question.
+Spend **no more than 10–15 minutes** drafting and tightening your question.
 
 Ask:
 
+- What are we trying to understand or enable?
+- Who would use the answer?
+- What would count as progress today?
 - What is realistic today?
 - What is too big?
 - Does this still match our product?
 
-Update the question so it matches the work you can actually do today.
+Write one working question, then update it so it matches the work you can actually do today.
 
 ## D2-B — Use AI breakout intentionally
 
@@ -71,13 +74,15 @@ Pick one:
 
 Do not try to make all of these. Pick the one that best matches your team, your time, and your question.
 
-## D2-D — Do the work
+## D2-D — Do the work and capture notes
 
 **Main pages:** Data Exploration, Methods and Code, Results
 
 You have roughly **3 hours total** to build something.
 
 Focus on making one useful thing. Update the page as you go. This page is your shared record.
+
+Use this block to capture the notes, links, decisions, and rough steps your team did not have time to write on Day 1.
 
 Depending on your output type, this might mean:
 
@@ -134,7 +139,7 @@ You are done when you have something real, even if it is incomplete.
 
 Before leaving, your page should have:
 
-- A focused question
+- A drafted and focused question
 - One chosen output type
 - Evidence of work
 - One early result or obstacle

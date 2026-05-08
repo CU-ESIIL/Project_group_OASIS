@@ -8,11 +8,12 @@ The visual task navigation workflow has been retired. These labels are kept so a
 | D1-B | Norms | Team Norms and Decision Making |
 | D1-C | Decisions | Team Norms and Decision Making |
 | D1-D | Product Sentence | Product Direction |
-| D1-E | Working Question | Project Question |
-| D2-A | Refine Question | Project Question |
+| D1-E | Moved to Day 2 | Project Question |
+| D1-F | Moved to Day 2 | Methods and Code |
+| D2-A | Draft and Refine Question | Project Question |
 | D2-B | AI Strategy | Specialty Tracks and Strategy |
 | D2-C | Choose One Output | Product Direction |
-| D2-D | Build | Data Exploration, Methods and Code, Results |
+| D2-D | Build and Capture Notes | Data Exploration, Methods and Code, Results |
 | D2-E | Early Signal | Results |
 | D2-F | 2-Min Report | Report Out (Day 2, 2 minutes) |
 | D3-A | Align Story | Project Question, Product Direction, Results |

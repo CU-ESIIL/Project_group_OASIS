@@ -17,9 +17,8 @@ By the end of Day 1, your Summit team should have:
 - Written 2–3 team norms
 - Chosen a simple decision rule
 - Defined a rough product direction in one sentence
-- Drafted a rough project question in one sentence
 
-Do not try to do data work, methods, or results on Day 1.
+Do not try to do project question refinement, data work, methods, notes cleanup, or results on Day 1.
 
 [Edit the Day 1 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
 [Open Home](../index.md){ .md-button }
@@ -79,18 +78,6 @@ Write one sentence:
 
 Do not overthink it. This can change tomorrow.
 
-## D1-E — Draft your project question
-
-**Main page:** Project Question
-
-Write one working question. Do not refine it yet.
-
-Helpful prompts:
-
-- What are we trying to understand or enable?
-- Who would use the answer?
-- What would count as progress tomorrow?
-
 ## Day 1 finish line
 
 You are done when you have alignment, not results.
@@ -101,6 +88,5 @@ Before leaving, your page should have:
 - 2–3 team norms
 - One decision rule
 - One product sentence
-- One working question
 
 If you have those, you are exactly on track.

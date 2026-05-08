@@ -1670,3 +1670,32 @@ Verification
 * Ran `python3 scripts/site_health.py`; it reported one pre-existing Orientation nav warning, so `docs/_site_health.md` was restored to avoid committing unrelated generated noise.
 * Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User clarified there is not time for D1-E or D1-F on Day 1 and asked to move that work to Day 2 activities.
+
+Files inspected
+
+* docs/index.md
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/stickers.md
+* docs/assets/stickers/tasks/
+
+Actions taken
+
+* Removed the Day 1 project-question task from the Day 1 directions and finish line.
+* Updated the Home Project Question instruction block so drafting and refining the question is a Day 2 task.
+* Updated Day 2 D2-A to draft and refine the question.
+* Updated Day 2 D2-D to include capturing notes, links, decisions, and rough steps that did not fit on Day 1.
+* Updated the task label registry and retired sticker asset labels so D1-E and D1-F are marked as moved to Day 2, D2-A covers drafting/refining the question, and D2-D covers build plus notes.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `python3 scripts/site_health.py`; it reported the existing Orientation nav warning, so `docs/_site_health.md` was restored to avoid committing unrelated generated noise.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.

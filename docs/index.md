@@ -77,8 +77,8 @@ Our primary output type is:
 
 ## Project Question { #project-question }
 
-!!! note "Day 1 and Day 2 task"
-    On Day 1, write one rough question. On Day 2, spend no more than 10–15 minutes refining it so it matches what the team can realistically do.
+!!! note "Day 2 task"
+    Draft the project question on Day 2, then spend no more than 10–15 minutes refining it so it matches what the team can realistically do.
 
     [Edit Project Question in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L70){ .md-button target="_blank" rel="noopener" }
 
@@ -105,7 +105,7 @@ Our primary output type is:
 ## Methods and Code { #methods-and-code }
 
 !!! note "Day 2 and Day 3 task"
-    Describe what the team tried. This might include a workflow, prompt, notebook, code example, diagram, design process, or comparison. Keep enough detail that another person can understand the work.
+    Describe what the team tried. This might include a workflow, prompt, notebook, code example, diagram, design process, or comparison. Use Day 2 to capture the notes your team did not have time to write on Day 1. Keep enough detail that another person can understand the work.
 
     [Edit Methods and Code in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L97){ .md-button target="_blank" rel="noopener" }
 
