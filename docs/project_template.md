@@ -25,7 +25,8 @@ edit_path: "docs/project_template.md"
 <img src="{{ page.team_logo }}" alt="Team Logo" />
 {% endif %}
 
-[✏️ Edit this page](https://github.com/{{ page.repo_owner }}/{{ page.repo_name }}/edit/main/{{ page.edit_path }})  
+[📣 Edit this page](https://github.com/{{ page.repo_owner }}/{{ page.repo_name }}/edit/main/{{ page.edit_path }})
+
 Slack: {{ page.contact_slack }} · Email: [{{ page.contact_email }}](mailto:{{ page.contact_email }})
 
 *If this link 404s, set `repo_owner`, `repo_name`, and `edit_path` in the front matter.*

@@ -18,13 +18,13 @@ By the end of Day 3, your Summit team should have:
 - A clean final report page
 - A 6-minute Summit Report Out
 
-[Edit the Day 3 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+[📣 Edit the Day 3 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
 [Open Home](../index.md){ .md-button }
 [See the Example](../example.md){ .md-button }
 
 ## D3-A — Align the story
 
-**Main pages:** Project Question, Product Direction, Results
+**Main pages:** Project Question, Define, Explore, Data, and Methods, Results
 
 Spend **20–30 minutes** making sure your question, product, and results match.
 

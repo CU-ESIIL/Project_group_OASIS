@@ -7,16 +7,16 @@ The visual task navigation workflow has been retired. These labels are kept so a
 | D1-A | Introductions | People |
 | D1-B | Norms | Team Norms and Decision Making |
 | D1-C | Decisions | Team Norms and Decision Making |
-| D1-D | Product Sentence | Product Direction |
+| D1-D | Product Sentence | Define, Explore, Data, and Methods |
 | D1-E | Moved to Day 2 | Project Question |
 | D1-F | Moved to Day 2 | Methods and Code |
 | D2-A | Draft and Refine Question | Project Question |
-| D2-B | AI Strategy | Specialty Tracks and Strategy |
-| D2-C | Choose One Output | Product Direction |
+| D2-B | AI Strategy | Define, Explore, Data, and Methods; Methods and Code |
+| D2-C | Choose One Output | Define, Explore, Data, and Methods |
 | D2-D | Build and Capture Notes | Data Exploration, Methods and Code, Results |
 | D2-E | Early Signal | Results |
 | D2-F | 2-Min Report | Report Out (Day 2, 2 minutes) |
-| D3-A | Align Story | Project Question, Product Direction, Results |
+| D3-A | Align Story | Project Question, Define, Explore, Data, and Methods, Results |
 | D3-B | Clean Evidence | Data Exploration, Methods and Code, Results |
 | D3-C | Choose Visuals | Results, Polished Outputs, Final Summit Report Out |
 | D3-D | 6-Min Report | Final Summit Report Out (Day 3, 6 minutes) |

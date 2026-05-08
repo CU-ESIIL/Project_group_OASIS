@@ -1,5 +1,4 @@
-science art
-================
+# science art
 2024-01-25
 
 # Ty’s art opinion

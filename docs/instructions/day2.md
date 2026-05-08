@@ -19,7 +19,7 @@ By the end of Day 2, your Summit team should have:
 - One early result or obstacle
 - A 2-minute report ready
 
-[Edit the Day 2 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+[📣 Edit the Day 2 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
 [Open Home](../index.md){ .md-button }
 [See the Example](../example.md){ .md-button }
 
@@ -42,7 +42,7 @@ Write one working question, then update it so it matches the work you can actual
 
 ## D2-B — Use AI breakout intentionally
 
-**Main page:** Specialty Tracks and Strategy
+**Main pages:** Define, Explore, Data, and Methods; Methods and Code
 
 Decide quickly who goes where during the AI breakout rotation.
 
@@ -55,11 +55,11 @@ The four focus areas are:
 - Advancing best practices for using large language models in environmental data science
 - AI and causal inference for ecological mechanisms and decision-making
 
-Document what your team used and what changed your thinking.
+Document only the ideas, methods, examples, or warnings that change what your team will build or test.
 
 ## D2-C — Choose one output type
 
-**Main page:** Product Direction
+**Main page:** Define, Explore, Data, and Methods
 
 Choose **one primary output type** for the rest of Day 2.
 

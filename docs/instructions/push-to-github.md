@@ -132,14 +132,14 @@ Fix: click **Pull** first. If conflicts appear, resolve them, commit, and push a
 
 ### Merge conflicts
 
-Conflicted files contain conflict markers like this:
+Conflicted files contain blocks labeled with your version and the incoming version, separated by a divider. They usually look like this in the editor:
 
 ```text
-<<<<<<< HEAD
+[start of your version]
 your edits
-=======
+[divider]
 teammate's edits
->>>>>>> origin/main
+[end of incoming version]
 ```
 
 Open the file, choose what should remain, delete the conflict markers, save, stage, commit, and push.

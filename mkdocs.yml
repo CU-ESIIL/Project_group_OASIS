@@ -14,10 +14,11 @@ copyright: 'Copyright &copy; 2024 University of Colorado Boulder · MIT License'
 nav:
   - Home: index.md
   - Example: example.md
-  - Instructions:
-      - Day 1 — Form Your Summit Team: instructions/day1.md
-      - Day 2 — Build and Report Back: instructions/day2.md
-      - Day 3 — Synthesize and Share: instructions/day3.md
+  # Instructions are hidden from the sidebar for now. Uncomment this block to show them again.
+  # - Instructions:
+  #     - Day 1 — Form Your Summit Team: instructions/day1.md
+  #     - Day 2 — Build and Report Back: instructions/day2.md
+  #     - Day 3 — Synthesize and Share: instructions/day3.md
   - AI for Sustainability:
       - Defining AI: ai-for-sustainability/defining-ai.md
       - Defining Sustainability: ai-for-sustainability/defining-sustainability.md
@@ -42,6 +43,9 @@ not_in_nav: |
   data.md
   stickers.md
   instructions.md
+  instructions/day1.md
+  instructions/day2.md
+  instructions/day3.md
   project_template.md
   assets/cyverse_basics/README.md
   assets/docker_basics/README.md

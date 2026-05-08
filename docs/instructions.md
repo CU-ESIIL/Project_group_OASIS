@@ -16,7 +16,7 @@ The Home page is the editable blank template your team fills out during the summ
 
 For a completed model, see the [Example Project Page](example.md).
 
-[Edit the Home page](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+[📣 Edit the Home page](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
 
 ## Summit Report Out workflow
 

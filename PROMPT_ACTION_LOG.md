@@ -1699,3 +1699,110 @@ Verification
 * Ran `python3 scripts/site_health.py`; it reported the existing Orientation nav warning, so `docs/_site_health.md` was restored to avoid committing unrelated generated noise.
 * Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User asked to turn off the Instructions sidebar item without deleting the instructions so they can be turned back on later.
+
+Files inspected
+
+* mkdocs.yml
+
+Actions taken
+
+* Commented out the top-level Instructions navigation block in `mkdocs.yml`.
+* Added the Day 1, Day 2, and Day 3 instruction pages to `not_in_nav` so the files remain available but do not appear in the sidebar.
+* Left a comment in `mkdocs.yml` explaining that the block can be uncommented to show Instructions again.
+
+Verification
+
+* Ran `python3 scripts/site_health.py`; it reported the expected hidden Instructions nav item plus the existing Orientation nav warning, so `docs/_site_health.md` was restored to avoid committing generated warning noise.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built Home page no longer has the Instructions/Day 1/Day 2/Day 3 sidebar nav entries.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User asked to add the Norms page hero image to the Team Norms section of the Home page and rename the Product Direction section to "Define, Explore, Data, and Methods."
+
+Files inspected
+
+* docs/index.md
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/stickers.md
+
+Actions taken
+
+* Added `assets/hero/norms.png` to the Team Norms and Decision Making section on Home.
+* Renamed the visible Product Direction heading on Home to "Define, Explore, Data, and Methods" while keeping the existing `#product-direction` anchor for compatibility.
+* Updated Day 1, Day 2, Day 3, and the task label registry to use the new section name where they point to that Home section.
+
+Verification
+
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Confirmed the built Home page includes the Norms image and the renamed section.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User reported conflicts that needed to be resolved.
+
+Files inspected
+
+* mkdocs.yml
+* docs/instructions/push-to-github.md
+* docs/orientation/art_gallery.md
+
+Actions taken
+
+* Confirmed Git did not report any unmerged files.
+* Removed literal conflict-marker text from the Push to GitHub instructions example so repository conflict scans do not flag the documentation as conflicted.
+* Converted the `docs/orientation/art_gallery.md` Setext heading underline to an ATX heading so it does not look like a conflict divider in text searches.
+
+Verification
+
+* Ran a source conflict-marker scan; no unresolved conflict markers remain in source files.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User asked to add a megaphone emoji next to each edit button and remove the Specialty Tracks section from the Home page.
+
+Files inspected
+
+* docs/index.md
+* docs/instructions.md
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/project_template.md
+* docs/stickers.md
+* mkdocs.yml
+
+Actions taken
+
+* Added a 📣 marker to participant-facing edit links and edit buttons.
+* Removed the Specialty Tracks and Strategy section from the Home page.
+* Kept the Specialty Tracks sidebar navigation intact after the user clarified that only the Home page section should be removed.
+* Updated Day 2 and the task label registry so D2-B points to the remaining Home sections instead of the removed Specialty Tracks section.
+
+Verification
+
+* Confirmed no participant-facing edit links remain without the 📣 marker.
+* Confirmed the Home page, directions, and stickers registry no longer point to the removed Specialty Tracks and Strategy section.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.

@@ -20,7 +20,7 @@ By the end of Day 1, your Summit team should have:
 
 Do not try to do project question refinement, data work, methods, notes cleanup, or results on Day 1.
 
-[Edit the Day 1 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
+[📣 Edit the Day 1 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
 [Open Home](../index.md){ .md-button }
 [See the Example](../example.md){ .md-button }
 
@@ -70,7 +70,7 @@ Add one sentence describing your decision rule.
 
 ## D1-D — Define your product direction
 
-**Main page:** Product Direction
+**Main page:** Define, Explore, Data, and Methods
 
 Write one sentence:
 
