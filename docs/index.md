@@ -166,6 +166,11 @@ Methods/technologies we are testing:
 | ... | ... | ... |
 
 ### Challenges identified
+!!! note "Day 2 Task"
+    Day 2 afternoon: *Replace this with a workflow diagram, model output, code screenshot, or analysis visual.*
+
+    [📣 Edit Method and Code in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L142){ .md-button target="_blank" rel="noopener" }
+    
 
 - ...
 - ...
@@ -174,9 +179,19 @@ Methods/technologies we are testing:
 
 ![Method or workflow visual](assets/figures/figure1.png)
 
-*Replace this with a workflow diagram, model output, code screenshot, or analysis visual.*
+!!! note "Day 2 Task"
+    Day 2 afternoon: *Replace this with a workflow diagram, model output, code screenshot, or analysis visual.*
+
+    [📣 Edit Method and Code in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L142){ .md-button target="_blank" rel="noopener" }
+    
 
 ### Next steps
+
+!!! note "Day 2 Task"
+    Day 2 afternoon: *Replace this with a workflow diagram, model output, code screenshot, or analysis visual.*
+
+    [📣 Edit Method and Code in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L142){ .md-button target="_blank" rel="noopener" }
+    
 
 Short term:
 
