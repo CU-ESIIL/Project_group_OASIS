@@ -94,15 +94,6 @@ Context people need to understand our work:
 
 ...
 
-![Day 2 morning whiteboard or notes photo](assets/whiteboards/day2_morning_whiteboard.svg)
-
-!!! note "Day 2 Morning Task"
-    Day 2 morning: Morning whiteboard or notes showing the question, hypotheses, and context we used to start Day 2.
-
-    [📣 Edit Define, Explore, Data, and Methods in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L78){ .md-button target="_blank" rel="noopener" }
-    
-
-
 Our primary output type is:
 
 - [ ] Figure or map
@@ -116,6 +107,13 @@ What we plan to test:
 
 - ...
 - ...
+
+![Day 2 morning whiteboard or notes photo](assets/whiteboards/day2_morning_whiteboard.svg)
+
+!!! note "Day 2 Morning Task"
+    Day 2 morning: Morning whiteboard or notes showing the question, hypotheses, and context we used to start Day 2.
+
+    [📣 Edit Define, Explore, Data, and Methods in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L78){ .md-button target="_blank" rel="noopener" }
 
 ## Project Question { #project-question }
 
