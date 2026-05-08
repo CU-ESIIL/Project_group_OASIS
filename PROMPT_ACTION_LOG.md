@@ -1779,6 +1779,64 @@ Verification
 
 Prompt
 
+User asked to reshape the Home page sections before report-out, especially Data Exploration, Method and Code, and Results.
+
+Files inspected
+
+* docs/index.md
+* docs/instructions/day2.md
+* docs/instructions/day3.md
+* docs/stickers.md
+
+Actions taken
+
+* Replaced the Data Exploration instruction with "Snapshot showing initial data patterns" and added a 2-4 item data-source list scaffold.
+* Renamed the Home page Methods section to "Method and Code" while preserving the existing `#methods-and-code` anchor.
+* Added Method and Code scaffolds for methods/technologies, challenges identified, visuals, and short- and long-term next steps.
+* Reworked Results into a synthesis-focused section with Team Photo, Findings at a glance, Visuals that tell the story, and What's next subsections.
+* Updated Day 2 directions, Day 3 references, and the task label registry to match the revised Home page structure.
+
+Verification
+
+* Confirmed the old "Use this section after Day 1" Data Exploration copy is gone from Home and directions.
+* Confirmed Home, Day 2, Day 3, and the task label registry use the revised "Method and Code" label where relevant.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User clarified that the Define, Explore, Data, and Methods section should be a Day 2 task split between morning and afternoon, with a whiteboard/notes visual placeholder.
+
+Files inspected
+
+* docs/index.md
+* docs/instructions/day1.md
+* docs/instructions/day2.md
+* docs/stickers.md
+* docs/assets/whiteboards/
+
+Actions taken
+
+* Changed the Define, Explore, Data, and Methods instruction label on Home to "Day 2 Task."
+* Reworked the Home section into Morning Focus for questions, hypotheses, and context, plus Afternoon Focus for datasets and analyses.
+* Added a new Day 2 morning whiteboard/notes placeholder image at `docs/assets/whiteboards/day2_morning_whiteboard.svg`.
+* Updated Day 1 directions so product direction is no longer listed as a Day 1 finish-line item.
+* Updated Day 2 directions and task labels to match the morning/afternoon workflow.
+
+Verification
+
+* Confirmed no remaining "Day 1 and Day 2 task" labels or Day 1 product-direction finish-line language in Home, directions, or stickers.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
 User asked to add a megaphone emoji next to each edit button and remove the Specialty Tracks section from the Home page.
 
 Files inspected

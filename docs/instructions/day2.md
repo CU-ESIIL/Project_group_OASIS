@@ -13,8 +13,9 @@ This is where most of the project happens. The goal is not to do everything. The
 
 By the end of Day 2, your Summit team should have:
 
-- A drafted and focused question
-- A clear product direction
+- Questions, hypotheses, and context from the morning
+- At least one visual, such as a photo of a whiteboard or notes
+- A clear product direction or analysis direction
 - Evidence of work, such as data, methods, design, code, a concept, or a prototype
 - One early result or obstacle
 - A 2-minute report ready
@@ -23,11 +24,11 @@ By the end of Day 2, your Summit team should have:
 [Open Home](../index.md){ .md-button }
 [See the Example](../example.md){ .md-button }
 
-## D2-A — Draft and refine your question
+## D2-A — Morning focus: questions, hypotheses, context
 
-**Main page:** Project Question
+**Main pages:** Define, Explore, Data, and Methods; Project Question
 
-Spend **no more than 10–15 minutes** drafting and tightening your question.
+Use the morning to draft questions, hypotheses, and context. Add at least one visual, such as a photo of your whiteboard, sticky notes, sketch, or shared notes.
 
 Ask:
 
@@ -38,11 +39,11 @@ Ask:
 - What is too big?
 - Does this still match our product?
 
-Write one working question, then update it so it matches the work you can actually do today.
+Write one working question, a few hypotheses or hunches, and the context someone needs to understand the work.
 
 ## D2-B — Use AI breakout intentionally
 
-**Main pages:** Define, Explore, Data, and Methods; Methods and Code
+**Main pages:** Define, Explore, Data, and Methods; Method and Code
 
 Decide quickly who goes where during the AI breakout rotation.
 
@@ -57,9 +58,11 @@ The four focus areas are:
 
 Document only the ideas, methods, examples, or warnings that change what your team will build or test.
 
-## D2-C — Choose one output type
+## D2-C — Afternoon focus: try datasets and analyses
 
 **Main page:** Define, Explore, Data, and Methods
+
+Try a few datasets and analyses. Keep it visual, keep it simple. Update the site to reflect what you test.
 
 Choose **one primary output type** for the rest of Day 2.
 
@@ -74,47 +77,45 @@ Pick one:
 
 Do not try to make all of these. Pick the one that best matches your team, your time, and your question.
 
-## D2-D — Do the work and capture notes
+## D2-D — Update data and methods as you test
 
-**Main pages:** Data Exploration, Methods and Code, Results
+**Main pages:** Data Exploration, Method and Code
 
 You have roughly **3 hours total** to build something.
 
 Focus on making one useful thing. Update the page as you go. This page is your shared record.
 
-Use this block to capture the notes, links, decisions, and rough steps your team did not have time to write on Day 1.
+Use these sections to capture:
 
-Depending on your output type, this might mean:
+- Snapshot showing initial data patterns
+- 2-4 promising data sources, with links and 1-line notes
+- 2-4 methods or technologies you are testing, such as stats, models, or visualization
+- Challenges identified
+- Visuals
+- Short-term and long-term next steps
 
-- exploring one dataset
-- making one figure or map
-- testing one workflow
-- drafting one concept
-- trying one AI method
-- sketching one system
-- documenting one obstacle clearly
+Keep it visual, keep it simple, and update the site to reflect what you test.
 
-## D2-E — Add one early signal
+## D2-E — Synthesize findings and visuals
 
 **Main page:** Results
 
-You need **one concrete output**, not a full project.
+Focus on synthesis. Highlight **2-3 visuals** that tell the story and keep text crisp.
 
-Add one of the following:
+Use the Results section to prepare a 6-minute walkthrough of the homepage:
 
-- A pattern
-- A figure
-- A map
-- A prototype
-- A comparison
-- A useful failure
-- A clear obstacle and next step
+- Why
+- Questions
+- Data/Methods
+- Findings
+- Next
 
-Good language:
+Add:
 
-- We are starting to see...
-- We expected..., but found...
-- We are blocked by..., next we will...
+- Team photo
+- Findings at a glance
+- Visuals that tell the story
+- What is next
 
 ## D2-F — Prepare the 2-minute report
 

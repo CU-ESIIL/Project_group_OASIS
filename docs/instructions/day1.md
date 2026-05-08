@@ -16,9 +16,8 @@ By the end of Day 1, your Summit team should have:
 - Introduced yourselves
 - Written 2–3 team norms
 - Chosen a simple decision rule
-- Defined a rough product direction in one sentence
 
-Do not try to do project question refinement, data work, methods, notes cleanup, or results on Day 1.
+Do not try to do questions, hypotheses, product direction, data work, methods, notes cleanup, or results on Day 1.
 
 [📣 Edit the Day 1 sections](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md){ .md-button .md-button--primary }
 [Open Home](../index.md){ .md-button }
@@ -68,16 +67,6 @@ Examples:
 
 Add one sentence describing your decision rule.
 
-## D1-D — Define your product direction
-
-**Main page:** Define, Explore, Data, and Methods
-
-Write one sentence:
-
-> Our team is trying to make _____ for _____ so that _____.
-
-Do not overthink it. This can change tomorrow.
-
 ## Day 1 finish line
 
 You are done when you have alignment, not results.
@@ -87,6 +76,5 @@ Before leaving, your page should have:
 - People
 - 2–3 team norms
 - One decision rule
-- One product sentence
 
 If you have those, you are exactly on track.

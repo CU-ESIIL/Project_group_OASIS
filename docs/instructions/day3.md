@@ -37,7 +37,7 @@ Ask:
 
 ## D3-B — Clean the evidence
 
-**Main pages:** Data Exploration, Methods and Code, Results
+**Main pages:** Data Exploration, Method and Code, Results
 
 Make your work understandable. Remove anything confusing.
 
