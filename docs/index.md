@@ -4,14 +4,16 @@ public_mode_toggle: true
 ---
 
 # Team Home: Make Me Your Own
+Breakout Room #: (To be assigned by ESIIL Staff)
 
 ![Team hero image](assets/hero/hero.png)
+Add images: upload to docs/assets/ and reference like assets/your_file.png
 
 Use this page as your team’s working record during the summit and your final report-out page on Day 3.
 
 ### This page becomes your Summit Report Out
 
-You will use this page to present your work on Day 3. Keep it clean, clear, and visual.
+This page captures your group’s process and thinking throughout the Summit and will be used to share your work with others. 
 
 [See a completed example](example.md){ .md-button }
 
@@ -23,11 +25,11 @@ You will use this page to present your work on Day 3. Keep it clean, clear, and 
 ## People { #people }
 
 !!! note "Day 1 task"
-    Introduce yourselves quickly. One sentence per person is enough. Day 1 is about alignment, not results.
+    Get to know your team: share your cards (5-7 mins). Update your team roster (2-3 min)
 
     [Edit People in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L23){ .md-button target="_blank" rel="noopener" }
 
-| Name | Role / affiliation | Focus | Skills |
+| Name | Affiliation | Contact | Github |
 |---|---|---|---|
 | | | | |
 | | | | |
