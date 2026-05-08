@@ -1779,6 +1779,53 @@ Verification
 
 Prompt
 
+User asked to add a Day 1 directions box under the Home page title.
+
+Files inspected
+
+* docs/index.md
+
+Actions taken
+
+* Added a Day 1 directions instruction box immediately under the Home page title.
+* Added a 📣 edit button inside that Day 1 directions box.
+* Updated shifted Home page edit-button line anchors after inserting the new box.
+
+Verification
+
+* Confirmed the Day 1 directions box appears under the Home page title with a 📣 edit button.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User said the previous Home page scaffold lost the interplay between instruction boxes and public-facing Markdown content.
+
+Files inspected
+
+* docs/index.md
+
+Actions taken
+
+* Reworked the Home page from Define, Explore, Data, and Methods through the end so instruction boxes explain the meta task and the content below each box is clean public-facing scaffold text.
+* Added instruction boxes with 📣 edit buttons for Team Photo, Findings at a glance, Visuals that tell the story, and What's next.
+* Removed megaphone markers from public headings so the megaphones live in edit buttons instead.
+* Updated edit-button line anchors after restructuring the sections.
+
+Verification
+
+* Confirmed no public headings in `docs/index.md` contain the 📣 marker.
+* Ran `python3 scripts/check_stickers.py`; passed.
+* Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
+* Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
 User asked to reshape the Home page sections before report-out, especially Data Exploration, Method and Code, and Results.
 
 Files inspected
