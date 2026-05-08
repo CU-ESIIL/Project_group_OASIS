@@ -64,7 +64,7 @@ This page captures your group’s process and thinking throughout the Summit and
 
     | Gradients of agreement | Summit team norms worksheet |
     |---|---|
-    | ![Gradients of agreement scale for summit teams](assets/hero/norms.png) | ![Summit team norms worksheet](assets/hero/norms-panel.png) |
+    | ![Gradients of agreement scale for summit teams](assets/hero/norms.png) | 
 
     [📣 Edit Team Norms in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L54){ .md-button target="_blank" rel="noopener" }
 
