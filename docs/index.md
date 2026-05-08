@@ -32,10 +32,6 @@ public_mode_toggle: true
 
     [Open the hero image folder](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/hero){ .md-button target="_blank" rel="noopener" }
 
-### This page becomes your Summit Report Out
-
-This page captures your group’s process and thinking throughout the Summit and will be used to share your work with others. 
-
 [See a completed example](example.md){ .md-button }
 
 ## People { #people }
