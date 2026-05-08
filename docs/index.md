@@ -43,11 +43,11 @@ This page captures your group’s process and thinking throughout the Summit and
 ## Team Norms and Decision Making { #team-norms-and-decision-making }
 
 !!! note "Day 1 task"
-   Suggested Self-Facilitation Instructions: 
-- Round Robin: Everyone shares 1 norm that they think will be important for their team during the summit and perhaps following the summit (2 min). 
-- After everyone has shared, make a list with as many norms as possible in GitHub (5-7 min).
-- Vote on your top 3 ideas. (Each person gets 3 votes; you can use all your votes on 1 idea or spread them out) (2 min).
-- In GitHub, move all team norms with votes to the top of the list.  
+       Suggested Self-Facilitation Instructions: 
+        - Round Robin: Everyone shares 1 norm that they think will be important for their team during the summit and perhaps following the summit (2 min). 
+        - After everyone has shared, make a list with as many norms as possible in GitHub (5-7 min).
+        - Vote on your top 3 ideas. (Each person gets 3 votes; you can use all your votes on 1 idea or spread them out) (2 min).
+        - In GitHub, move all team norms with votes to the top of the list.  
 
 
     [Edit Team Norms in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L35){ .md-button target="_blank" rel="noopener" }
