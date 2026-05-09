@@ -4,7 +4,11 @@ public_mode_toggle: true
 ---
 
 !!! tip "How to use this page during the summit"
-    This page is your team’s shared workspace and final report-out page. The agenda gives teams limited time, so use the page differently each day: Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report out. Keep the page simple, current, and readable.
+    This page is your team’s shared workspace and final report-out page. 
+    
+    The agenda gives teams limited time, so use the page differently each day: 
+    Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report out. Keep the page simple, current, and readable.
+    
     Look for the green buttons to see what your team should edit. A megaphone means that section will also appear when you click Summit Report Out. Fill out the megaphone sections first because those are the pieces you will present back to the room.
 
     [Edit the top of Home in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L1){ .md-button target="_blank" rel="noopener" }
@@ -18,6 +22,7 @@ public_mode_toggle: true
 
 !!! tip "For ESIIL staff"
     Group Number: 1
+    
     Breakout Room #: (To be assigned by ESIIL Staff)
 
     [ESIIL staff edit in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L11){ .md-button target="_blank" rel="noopener" }
