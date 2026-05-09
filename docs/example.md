@@ -161,7 +161,7 @@ Who should see this next:
 
 ## Cite & Reuse
 
-This example uses the Project OASIS template citation flow [@oasisProjectTemplate]. The scientific framing is adapted from the project brief, [Seven ways to measure fire polygon velocity](<assets/Seven ways to measure fire polygon velocity-4.pdf>), and the reusable project brief file, [Read the project brief PDF](assets/files/project_brief.pdf).
+This example uses the Project OASIS template citation flow [@oasisProjectTemplate]. The scientific framing is adapted from the project brief, *Seven ways to measure fire polygon velocity*.
 
 Reuse the structure, figures, and workflow patterns with attribution where appropriate. Dataset-specific credits and licenses should be added when a team replaces the synthetic example with real perimeter products.
 
