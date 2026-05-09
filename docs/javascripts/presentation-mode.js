@@ -15,30 +15,64 @@
     );
   }
 
-  function markReportOutBlocks() {
+  function clearReportOutBlocks() {
     document.querySelectorAll(".oasis-report-out-visible").forEach((element) => {
-      element.classList.remove("oasis-report-out-visible");
+      element.classList.remove(
+        "oasis-report-out-visible",
+        "oasis-report-out-title-visible",
+        "oasis-report-out-context-visible",
+        "oasis-report-out-day2-visible",
+        "oasis-report-out-day3-visible"
+      );
     });
+    document.querySelectorAll(".oasis-report-out-divider").forEach((element) => element.remove());
+  }
+
+  function markReportOutBlocks() {
+    clearReportOutBlocks();
 
     const title = document.querySelector(".md-typeset h1");
-    title?.classList.add("oasis-report-out-visible");
+    title?.classList.add("oasis-report-out-visible", "oasis-report-out-title-visible");
 
-    document.querySelectorAll(".md-typeset .oasis-report-out-hero").forEach((hero) => {
-      const directBlock = Array.from(document.querySelectorAll(".md-typeset > *")).find((element) =>
-        element.contains(hero)
-      );
-      (directBlock || hero).classList.add("oasis-report-out-visible");
-    });
-
-    document.querySelectorAll(".md-typeset h2.oasis-report-out-section").forEach((heading) => {
+    function markSection(heading, groupClass) {
       let element = heading;
       while (element) {
-        element.classList.add("oasis-report-out-visible");
+        element.classList.add("oasis-report-out-visible", groupClass);
         element = element.nextElementSibling;
         if (element?.tagName?.toLowerCase() === "h2") {
           break;
         }
       }
+    }
+
+    const peopleHeading = document.querySelector(".md-typeset h2#people");
+    if (peopleHeading) {
+      markSection(peopleHeading, "oasis-report-out-context-visible");
+    }
+
+    const typeset = document.querySelector(".md-typeset");
+    const firstDay2 = document.querySelector(".md-typeset h2.oasis-report-out-section.oasis-report-out-day2");
+    if (typeset && firstDay2) {
+      const divider = document.createElement("h2");
+      divider.className = "oasis-report-out-divider oasis-report-out-day2-divider oasis-report-out-visible";
+      divider.textContent = "Day 2 Report Out (2 minutes)";
+      typeset.insertBefore(divider, firstDay2);
+    }
+
+    const firstDay3 = document.querySelector(".md-typeset h2.oasis-report-out-section.oasis-report-out-day3");
+    if (typeset && firstDay3) {
+      const divider = document.createElement("h2");
+      divider.className = "oasis-report-out-divider oasis-report-out-day3-divider oasis-report-out-visible";
+      divider.textContent = "Day 3 Report Out (6 minutes)";
+      typeset.insertBefore(divider, firstDay3);
+    }
+
+    document.querySelectorAll(".md-typeset h2.oasis-report-out-section.oasis-report-out-day2").forEach((heading) => {
+      markSection(heading, "oasis-report-out-day2-visible");
+    });
+
+    document.querySelectorAll(".md-typeset h2.oasis-report-out-section.oasis-report-out-day3").forEach((heading) => {
+      markSection(heading, "oasis-report-out-day3-visible");
     });
   }
 
@@ -48,6 +82,8 @@
     }
     if (enabled) {
       markReportOutBlocks();
+    } else {
+      clearReportOutBlocks();
     }
     document.body.classList.toggle("presentation-mode", enabled);
     document.documentElement.classList.toggle("presentation-mode", enabled);

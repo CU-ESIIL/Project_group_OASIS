@@ -2146,3 +2146,81 @@ Verification
 * Confirmed `git status --short` no longer reports unmerged files.
 * Confirmed no conflict markers remain under `docs/`, `mkdocs.yml`, or `PROMPT_ACTION_LOG.md`.
 * Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+
+2026-05-09
+
+Prompt
+
+User asked to add a footer like the one in the LLM lesson exemplar site.
+
+Files inspected
+
+* mkdocs.yml
+* docs/overrides/partials/nav.html
+* docs/stylesheets/extra.css
+* https://github.com/CU-ESIIL/LLM_lesson_exemplar/blob/main/docs/overrides/main.html
+* https://github.com/CU-ESIIL/LLM_lesson_exemplar/blob/main/docs/stylesheets/extra.css
+
+Actions taken
+
+* Added `docs/overrides/main.html` with the ESIIL footer pattern from the LLM lesson exemplar.
+* Added institutional logo assets under `docs/assets/images/logos/`.
+* Replaced the default Material footer styling with the custom `.site-footer` layout, logo row, light/dark styling, and mobile adjustments.
+* Hid the new footer in Summit Report Out mode so presentation view remains clean.
+
+Verification
+
+* Confirmed the four logo files are valid PNGs.
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+* Tried `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_footer_check`; could not run because that local MkDocs executable no longer exists.
+
+2026-05-09
+
+Prompt
+
+User asked to hide the Digital Twins and Causal Inference sidebar links for now, ensure all note and tip boxes turn off with Instructions off, and check Home edit-button line links.
+
+Files inspected
+
+* mkdocs.yml
+* docs/index.md
+* docs/javascripts/mode-toggle.js
+
+Actions taken
+
+* Commented out the Digital Twins and Causal Inference sidebar links without deleting them.
+* Updated the instructions toggle so pages with `public_mode_toggle: true` mark every admonition and details block as template guidance.
+* Updated Home edit-button GitHub line anchors to point closer to the current editable Markdown lines.
+
+Verification
+
+* Confirmed Digital Twins and Causal Inference are commented out in `mkdocs.yml`.
+* Confirmed Home edit buttons now point to current line anchors.
+* Ran `node --check docs/javascripts/mode-toggle.js`; passed.
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+
+2026-05-09
+
+Prompt
+
+User asked to confirm and adjust Summit Report Out mode so it shows the title and People first, then Day 2 report-out content from Day 2 megaphone sections, then Day 3 report-out content from Day 3 megaphone sections.
+
+Files inspected
+
+* docs/index.md
+* docs/javascripts/presentation-mode.js
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Marked the People section as report-out context without adding a megaphone.
+* Split megaphone report-out sections into explicit Day 2 and Day 3 classes.
+* Updated Summit Report Out mode to show title, People, a Day 2 Report Out divider, Day 2 megaphone sections, a Day 3 Report Out divider, and Day 3 megaphone sections.
+* Kept report-out content sourced directly from the existing Home page sections rather than duplicating or rewriting the content.
+* Removed the Home hero from report-out mode so title and People appear first.
+* Added cleanup so inserted Day 2 and Day 3 dividers disappear when leaving report-out mode.
+
+Verification
+
+* Confirmed the only report-out content sections are the megaphone-marked sections in `docs/index.md`.
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.

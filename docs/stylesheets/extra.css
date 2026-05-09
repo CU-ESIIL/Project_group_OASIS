@@ -1084,6 +1084,7 @@ body.presentation-mode .md-header,
 body.presentation-mode .md-tabs,
 body.presentation-mode .md-sidebar,
 body.presentation-mode .md-footer,
+body.presentation-mode .site-footer,
 body.presentation-mode .md-content__button,
 body.presentation-mode .oasis-presentation-toolbar {
   display: none !important;
@@ -1131,8 +1132,34 @@ body.presentation-mode .md-content__inner {
 }
 
 body.presentation-mode .md-typeset {
+  display: flex;
+  flex-direction: column;
   font-size: 1.05rem;
   line-height: 1.72;
+}
+
+body.presentation-mode .md-typeset > .oasis-report-out-title-visible {
+  order: 10;
+}
+
+body.presentation-mode .md-typeset > .oasis-report-out-context-visible {
+  order: 20;
+}
+
+body.presentation-mode .md-typeset > .oasis-report-out-day2-divider {
+  order: 30;
+}
+
+body.presentation-mode .md-typeset > .oasis-report-out-day2-visible {
+  order: 40;
+}
+
+body.presentation-mode .md-typeset > .oasis-report-out-day3-divider {
+  order: 50;
+}
+
+body.presentation-mode .md-typeset > .oasis-report-out-day3-visible {
+  order: 60;
 }
 
 body.presentation-mode .md-typeset h1 {
@@ -1142,6 +1169,19 @@ body.presentation-mode .md-typeset h1 {
 
 body.presentation-mode .md-typeset h2 {
   margin-top: calc(var(--oasis-space-8) + var(--oasis-space-4));
+}
+
+body.presentation-mode .md-typeset .oasis-report-out-divider {
+  padding: var(--oasis-space-3) var(--oasis-space-4);
+  border-left: 0.45rem solid var(--oasis-color-accent-green);
+  border-radius: var(--oasis-radius-sm);
+  background: rgba(0, 113, 53, 0.08);
+  color: var(--oasis-color-primary-blue);
+}
+
+body.presentation-mode .md-typeset .oasis-report-out-day3-divider {
+  border-left-color: var(--oasis-color-accent-blue);
+  background: rgba(66, 188, 220, 0.12);
 }
 
 body.presentation-mode .md-typeset > p > img,
@@ -1167,20 +1207,66 @@ body.presentation-mode .md-typeset img.oasis-report-out-banner {
 }
 
 /* Footer */
-.md-footer {
-  background: var(--oasis-color-primary-blue);
+.site-footer {
+  margin-top: var(--oasis-space-8);
+  padding: var(--oasis-space-6) var(--oasis-space-4);
+  border-top: 1px solid rgba(22, 26, 25, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(247, 250, 249, 0.94)),
+    repeating-linear-gradient(164deg, transparent 0 0.85rem, rgba(0, 113, 53, 0.035) 0.9rem 0.94rem);
 }
 
-.md-footer-meta {
-  background: var(--oasis-color-body-text);
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 70rem;
+  margin: 0 auto;
+  gap: var(--oasis-space-6);
+  flex-wrap: wrap;
 }
 
-[data-md-color-scheme="slate"] .md-footer {
-  background: #132c3d;
+.footer-text {
+  color: rgba(22, 26, 25, 0.76);
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
-[data-md-color-scheme="slate"] .md-footer-meta {
-  background: #0b1112;
+.footer-text strong,
+.footer-text a {
+  color: var(--oasis-color-primary-blue);
+}
+
+.footer-text a {
+  font-weight: 700;
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: var(--oasis-space-4);
+  flex-wrap: wrap;
+}
+
+.footer-logos img {
+  display: block;
+  max-width: 7.5rem;
+  max-height: 2.4rem;
+  object-fit: contain;
+  opacity: 0.86;
+}
+
+[data-md-color-scheme="slate"] .site-footer {
+  border-top-color: rgba(227, 227, 227, 0.18);
+  background:
+    linear-gradient(180deg, rgba(18, 38, 41, 0.94), rgba(11, 23, 24, 0.98)),
+    repeating-linear-gradient(164deg, transparent 0 0.85rem, rgba(66, 188, 220, 0.04) 0.9rem 0.94rem);
+}
+
+[data-md-color-scheme="slate"] .footer-text,
+[data-md-color-scheme="slate"] .footer-text strong,
+[data-md-color-scheme="slate"] .footer-text a {
+  color: rgba(245, 250, 249, 0.86);
 }
 
 /* Responsive adjustments */
@@ -1215,6 +1301,23 @@ body.presentation-mode .md-typeset img.oasis-report-out-banner {
     width: 100%;
     justify-content: center;
     margin-right: 0;
+  }
+
+  .site-footer {
+    padding: var(--oasis-space-5) var(--oasis-space-3);
+  }
+
+  .footer-content {
+    align-items: flex-start;
+  }
+
+  .footer-logos {
+    gap: var(--oasis-space-3);
+  }
+
+  .footer-logos img {
+    max-width: 6.5rem;
+    max-height: 2.1rem;
   }
 
   .people-gallery {

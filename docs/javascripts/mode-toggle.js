@@ -99,11 +99,12 @@
   }
 
   function markTemplateInstructionBlocks() {
+    const shouldMarkAllAdmonitions = Boolean(document.querySelector(".oasis-public-mode-marker"));
     document.querySelectorAll(".md-typeset details, .md-typeset .admonition").forEach((block) => {
       const titleNode = block.querySelector("summary, .admonition-title");
       const title = titleNode ? titleNode.textContent.trim() : "";
       const text = block.textContent.trim();
-      if (instructionTitlePattern.test(title) || instructionTitlePattern.test(text)) {
+      if (shouldMarkAllAdmonitions || instructionTitlePattern.test(title) || instructionTitlePattern.test(text)) {
         block.classList.add("template-instructions-block", "template-guidance-block", "oasis-scaffold");
       }
     });

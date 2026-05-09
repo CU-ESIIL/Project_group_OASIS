@@ -26,9 +26,9 @@ nav:
   #    - What Does It Cost?: ai-for-sustainability/what-does-it-cost.md
   - Specialty Tracks:
       - LLM: https://cu-esiil.github.io/LLM_lesson_exemplar/cyverse/
-      - Digital Twins: specialty-tracks/digital-twins.md
+      # - Digital Twins: specialty-tracks/digital-twins.md
       - Earth Embeddings: https://center-for-effective-global-action-cega.github.io/MOSAIKS-Training-Manual/en/index.html
-      - Causal Inference: specialty-tracks/causal-inference.md
+      # - Causal Inference: specialty-tracks/causal-inference.md
   - Cloud Triangle:
       - Connect instance to GitHub: instructions/link-to-github.md
       - Instance to/from GitHub: instructions/push-to-github.md

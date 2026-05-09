@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block footer %}
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-text">
+      <strong>Environmental Data Science Innovation and Impact Lab (ESIIL)</strong><br>
+      University of Colorado Boulder<br>
+      Cooperative Institute for Research in Environmental Sciences (CIRES)<br>
+      Boulder, Colorado, USA<br>
+      Website: <a href="https://esiil.org">https://esiil.org</a><br>
+      <em>Last updated: {{ build_date_utc.strftime('%B %Y') if build_date_utc else 'May 2026' }}</em>
+    </div>
+    <div class="footer-logos" aria-label="Institutional logos">
+      <img src="{{ 'assets/images/logos/cu-logo.png' | url }}" alt="University of Colorado Boulder">
+      <img src="{{ 'assets/images/logos/cires-logo.png' | url }}" alt="CIRES">
+      <img src="{{ 'assets/images/logos/esiil-logo.png' | url }}" alt="ESIIL">
+      <img src="{{ 'assets/images/logos/nsf-logo.png' | url }}" alt="NSF">
+    </div>
+  </div>
+</footer>
+{% endblock %}

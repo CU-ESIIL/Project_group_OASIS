@@ -23,18 +23,18 @@ public_mode_toggle: true
 !!! note "Day 1 directions"
     Change the title to the name of your project.
 
-    [Edit Day 1 setup in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L12){ .md-button target="_blank" rel="noopener" }
+    [Edit Day 1 setup in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L21){ .md-button target="_blank" rel="noopener" }
 
 !!! tip "For ESIIL staff"
     Group Number: 1
     
     Breakout Room #: (To be assigned by ESIIL Staff)
 
-    [ESIIL staff edit in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L11){ .md-button target="_blank" rel="noopener" }
+    [ESIIL staff edit in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L28){ .md-button target="_blank" rel="noopener" }
     
 
 
-![Team hero image](assets/hero/hero.png){ .oasis-report-out-hero }
+![Team hero image](assets/hero/hero.png)
 
 !!! note "How to replace the image above"
     Upload an image that represents your porject and welcome people to your page. 
@@ -47,7 +47,7 @@ public_mode_toggle: true
 
 [See a completed example](example.md){ .md-button }
 
-## People { #people }
+## People { #people .oasis-report-out-context }
 
 !!! note "Day 1 task"
     Get to know your team: share your cards (5-7 mins). Update your team roster (2-3 min)
@@ -58,7 +58,7 @@ public_mode_toggle: true
     |---|---|
     | ![Name card prompts for name, institution, area of expertise, research difference, and questions](assets/team/name-card-prompts.png) | ![Follow-up notes card with space for names and follow-up ideas](assets/team/name-card-followups.png) |
 
-    [Edit People in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L37){ .md-button target="_blank" rel="noopener" }
+    [Edit People in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L63){ .md-button target="_blank" rel="noopener" }
 
 | Name | Affiliation | Contact | Github |
 |---|---|---|---|
@@ -82,7 +82,7 @@ public_mode_toggle: true
     |---|
     | ![Gradients of agreement scale for summit teams](assets/hero/norms.png) | 
 
-    [Edit Team Norms in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L54){ .md-button target="_blank" rel="noopener" }
+    [Edit Team Norms in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L87){ .md-button target="_blank" rel="noopener" }
 
 Our team norms:
 
@@ -94,14 +94,14 @@ Our decision making strategy:
 
 ...
 
-## Our product(s) 📣 { #product-direction .oasis-report-out-section }
+## Our product(s) 📣 { #product-direction .oasis-report-out-section .oasis-report-out-day2 }
 
 !!! note "Day 2 Tasks"
     Morning Focus: questions, hypothese, context; add at least one visual (photo of whiteboard/notes)
 
     Afternoon Focus: try a few datasets and analyses. Keep it visual, keep it simple. Update teh site to refelce what you test. 
 
-    [Edit content below here in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L80){ .md-button target="_blank" rel="noopener" }
+    [Edit content below here in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L106){ .md-button target="_blank" rel="noopener" }
 
 Short term:
 
@@ -116,7 +116,7 @@ Long term:
 
 *Morning whiteboard or notes showing the question, hypotheses, and context we used to start Day 2.*
 
-## Our question(s) 📣 { #project-question .oasis-report-out-section }
+## Our question(s) 📣 { #project-question .oasis-report-out-section .oasis-report-out-day2 }
 
 Our working question:
 
@@ -129,7 +129,7 @@ What would count as progress:
 ## Hypotheses/Intentions [Optional: probably not relevant if you are creating an educational tool]
 
 
-## Why this matters (the “upshot”) 📣 { #why-this-matters .oasis-report-out-section }
+## Why this matters (the “upshot”) 📣 { #why-this-matters .oasis-report-out-section .oasis-report-out-day3 }
 
 This matters because:
 
@@ -139,7 +139,7 @@ People who could use this:
 
 ...
 
-## Data sources we’re exploring 📣 { #data-exploration .oasis-report-out-section }
+## Data sources we’re exploring 📣 { #data-exploration .oasis-report-out-section .oasis-report-out-day2 }
 
 !!! note "data exploration"
     provide a snapshot showing some initial data patterns. 
@@ -157,7 +157,7 @@ Promising data sources:
 - [Data source 3](#): ...
 - [Data source 4](#): ...
 
-## Methods/technologies we’re testing 📣 { #methods-and-code .oasis-report-out-section }
+## Methods/technologies we’re testing 📣 { #methods-and-code .oasis-report-out-section .oasis-report-out-day2 }
 
 !!! note "methods"
     Add 2-4 methods/technologies we're testing (stats, models, viz)
@@ -191,7 +191,7 @@ Long term:
 !!! note "Day 3 Tasks"
     Sythesis: highlight 2-3 visuals that tell the story; keep text crisp. Practice a 6-minute walkthrough of the homepage. Why -> Questions -> Data/Methods -> Findings -> Next 
 
-    [Edit content below here in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L90){ .md-button target="_blank" rel="noopener" }
+    [Edit content below here in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L203){ .md-button target="_blank" rel="noopener" }
 
 
 ## Team Photo { #team-photo }
@@ -200,7 +200,7 @@ Long term:
 
 *Team members and collaborators who contributed to this project.*
 
-## Findings at a glance 📣 { #findings-at-a-glance .oasis-report-out-section }
+## Findings at a glance 📣 { #findings-at-a-glance .oasis-report-out-section .oasis-report-out-day3 }
 
 Headline 1 — what, where, how much
 
@@ -214,13 +214,13 @@ Headline 3 — implication for practice or policy
 
 ...
 
-## Visuals that tell a story 📣 { #story-visuals .oasis-report-out-section }
+## Visuals that tell a story 📣 { #story-visuals .oasis-report-out-section .oasis-report-out-day3 }
 
 ![Story visual](assets/figures/main_result.png)
 
 *Visual 1: the main pattern or output we want people to remember.*
 
-## What’s next? 📣 { #whats-next .oasis-report-out-section }
+## What’s next? 📣 { #whats-next .oasis-report-out-section .oasis-report-out-day3 }
 
 Short term:
 
@@ -233,4 +233,3 @@ Long term:
 Who should see this next
 
 - ...
-
