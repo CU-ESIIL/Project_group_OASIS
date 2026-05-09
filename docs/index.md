@@ -116,20 +116,6 @@ Long term:
 
 *Morning whiteboard or notes showing the question, hypotheses, and context we used to start Day 2.*
 
-Our primary output type is:
-
-- [ ] Figure or map
-- [ ] Prototype or workflow
-- [ ] Concept brief
-- [ ] Decision framework
-- [ ] Notebook or code example
-- [ ] Research question and next-step plan
-
-What we plan to test:
-
-- ...
-- ...
-
 ## Our question(s) 📣 { #project-question .oasis-report-out-section }
 
 Our working question:
@@ -139,6 +125,9 @@ Our working question:
 What would count as progress:
 
 ...
+
+## Hypotheses/Intentions [Optional: probably not relevant if you are creating an educational tool]
+
 
 ## Why this matters (the “upshot”) 📣 { #why-this-matters .oasis-report-out-section }
 
@@ -152,6 +141,11 @@ People who could use this:
 
 ## Data sources we’re exploring 📣 { #data-exploration .oasis-report-out-section }
 
+!!! note "data exploration"
+    provide a snapshot showing some initial data patterns. 
+
+    Add 2-4 promising data srouces (links +1-line notes)    
+
 ![Exploration figure](assets/explorations/explore_data_plot.png)
 
 *Snapshot showing initial data patterns.*
@@ -164,6 +158,9 @@ Promising data sources:
 - [Data source 4](#): ...
 
 ## Methods/technologies we’re testing 📣 { #methods-and-code .oasis-report-out-section }
+
+!!! note "methods"
+    Add 2-4 methods/technologies we're testing (stats, models, viz)
 
 [View shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code){ .md-button }
 
@@ -185,16 +182,17 @@ Methods/technologies we are testing:
 
 ![Method or workflow visual](assets/figures/figure1.png)
 
-### Testing notes
+### Next Steps
 
-- ...
-- ...
+Short term: 
 
-## Results { #results }
+Long term: 
 
-![Result figure](assets/figures/main_result.png)
+!!! note "Day 3 Tasks"
+    Sythesis: highlight 2-3 visuals that tell the story; keep text crisp. Practice a 6-minute walkthrough of the homepage. Why -> Questions -> Data/Methods -> Findings -> Next 
 
-*Lead result visual for the story.*
+    [Edit content below here in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L90){ .md-button target="_blank" rel="noopener" }
+
 
 ## Team Photo { #team-photo }
 
@@ -203,11 +201,6 @@ Methods/technologies we are testing:
 *Team members and collaborators who contributed to this project.*
 
 ## Findings at a glance 📣 { #findings-at-a-glance .oasis-report-out-section }
-
-!!! note "Day 3 Task"
-    Add three crisp headlines. Each one should make a public-facing claim: what happened, where it happened, how much it changed, or why it matters.
-
-    [Edit Findings at a glance in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L225){ .md-button target="_blank" rel="noopener" }
 
 Headline 1 — what, where, how much
 
@@ -223,21 +216,11 @@ Headline 3 — implication for practice or policy
 
 ## Visuals that tell a story 📣 { #story-visuals .oasis-report-out-section }
 
-!!! note "Day 3 Task"
-    Choose 2-3 visuals that tell the story. These can be maps, figures, screenshots, diagrams, sketches, or annotated photos. Keep captions short and claim-oriented.
-
-    [Edit Story Visuals in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L244){ .md-button target="_blank" rel="noopener" }
-
 ![Story visual](assets/figures/main_result.png)
 
 *Visual 1: the main pattern or output we want people to remember.*
 
 ## What’s next? 📣 { #whats-next .oasis-report-out-section }
-
-!!! note "Day 3 Task"
-    Add immediate follow-ups, what the team would do with one more week or month, and who should see this next. Keep this specific enough that someone could continue the work.
-
-    [Edit What's next in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L255){ .md-button target="_blank" rel="noopener" }
 
 Short term:
 
