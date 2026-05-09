@@ -4,7 +4,7 @@ public_mode_toggle: true
 ---
 
 !!! tip "How to use this page during the summit"
-    This page is your team’s shared workspace and final report-out page. 
+    This page is your team’s shared workspace and final report-out page. It captures your group’s process and thinking throughout the Summit and will be used to share your work with others. Use this page as your team’s working record during the summit and your final report-out
     
     The agenda gives teams limited time, so use the page differently each day: 
     Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report out. Keep the page simple, current, and readable.
@@ -44,11 +44,6 @@ public_mode_toggle: true
 
     [Open the hero image folder](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/hero){ .md-button target="_blank" rel="noopener" }
 
-Use this page as your team’s working record during the summit and your final report-out page on Day 3.
-
-### This page becomes your Summit Report Out
-
-This page captures your group’s process and thinking throughout the Summit and will be used to share your work with others.
 
 [See a completed example](example.md){ .md-button }
 
