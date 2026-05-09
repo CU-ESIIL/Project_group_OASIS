@@ -1779,6 +1779,35 @@ Verification
 
 Prompt
 
+User asked for a narrow fix to report-out mode and megaphone logic only.
+
+Files inspected
+
+* docs/index.md
+* docs/javascripts/presentation-mode.js
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Added explicit `.oasis-report-out-section` markers to the Home page sections that belong in end-of-day report-out mode.
+* Kept megaphones only on edit buttons for those marked report-out sections.
+* Removed megaphones from editable-but-not-report-out buttons.
+* Updated the Home page guidance text to explain that green buttons indicate editable content and megaphones indicate end-of-day report-out content.
+* Updated presentation mode JavaScript to reveal only explicitly marked report-out sections instead of hard-coded People and report-out blocks.
+* Updated presentation mode CSS to hide green buttons during report-out mode.
+
+Verification
+
+* Confirmed `docs/index.md` has exactly 8 `.oasis-report-out-section` markers for the requested report-out sections.
+* Confirmed megaphone edit buttons only appear for those marked report-out sections.
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+* Ran a modified-file trailing-whitespace check; passed.
+* Attempted `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; it hung during MkDocs file discovery at the `mkdocs-jupyter` files event, before rendering pages.
+
+2026-05-08
+
+Prompt
+
 User clarified that the Gradients of Agreement image should be on the Home page, not the directions or Norms page.
 
 Files inspected
@@ -2035,3 +2064,85 @@ Verification
 * Ran `python3 scripts/check_stickers.py`; passed.
 * Ran `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
 * Ran `git diff --check`; passed.
+
+2026-05-08
+
+Prompt
+
+User asked to update the completed example page so it matches the current homepage/template structure while preserving and improving the fictitious fire polygon velocity project.
+
+Files inspected
+
+* docs/index.md
+* docs/example.md
+* docs/assets/hero/hero.jpg
+* docs/assets/figures/fire_hull.png
+* docs/assets/figures/hull_panels.png
+* docs/assets/figures/main_result.png
+* docs/assets/Seven ways to measure fire polygon velocity-4.pdf
+
+Actions taken
+
+* Rebuilt `docs/example.md` around the current Home page section order and report-out section markers.
+* Restored the completed example hero image to `assets/hero/hero.jpg` instead of the generic Home placeholder.
+* Updated the People table to match the Home page columns: Name, Affiliation, Contact, Github.
+* Folded the old example sections into the current structure: Team Norms, Our product(s), Our question(s), Why this matters, Data sources, Methods/technologies, Results, Team Photo, Findings, Visuals, What's next, and Cite & Reuse.
+* Added concise fire polygon velocity content from the project brief, including the seven metric comparison framework.
+
+Verification
+
+* Tried `mkdocs build`; unavailable because `mkdocs` is not installed globally.
+* Tried `python3 -m mkdocs build`; unavailable because the active Python does not have the MkDocs module.
+* Tried `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_example_check`; the build started, reached "Building documentation", then timed out after 90 seconds without completing.
+
+2026-05-08
+
+Prompt
+
+User asked to make Summit Report Out mode literal and section-driven so the Home worksheet is the single source of truth for report-out content.
+
+Files inspected
+
+* docs/index.md
+* docs/javascripts/presentation-mode.js
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Replaced the top Home guidance with clearer green-button and megaphone language.
+* Marked the eight worksheet report-out sections with visible 📣 labels and the existing `.oasis-report-out-section` class.
+* Moved megaphones to the end of only the green edit buttons for report-out sections.
+* Kept non-report-out edit buttons without megaphones.
+* Replaced the duplicate Day 2 and Day 3 report-out fill-in forms with short guidance explaining that Summit Report Out presents the megaphone worksheet sections.
+* Updated presentation-mode JavaScript so the Home hero image can be explicitly included in report-out mode with `.oasis-report-out-hero`.
+
+Verification
+
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+* Confirmed duplicate report-out form prompts and gallery includes no longer appear in `docs/index.md`.
+* Tried `mkdocs build`; unavailable because `mkdocs` is not installed globally.
+* Tried `/tmp/project_oasis_mkdocs_check_venv/bin/mkdocs build --strict --clean --site-dir /tmp/project_oasis_report_out_check`; the build started, reached "Building documentation", then timed out after 90 seconds without completing.
+
+2026-05-08
+
+Prompt
+
+User reported merge conflicts preventing GitHub push.
+
+Files inspected
+
+* docs/index.md
+* PROMPT_ACTION_LOG.md
+
+Actions taken
+
+* Resolved conflict markers in `docs/index.md`.
+* Kept the section-driven Summit Report Out workflow, staff breakout-room note, Day 2 whiteboard visual, and two-image team norms guidance.
+* Marked `docs/index.md` as resolved in Git.
+* Restored generated `site/` files that had been deleted by the earlier local MkDocs build attempt.
+
+Verification
+
+* Confirmed `git status --short` no longer reports unmerged files.
+* Confirmed no conflict markers remain under `docs/`, `mkdocs.yml`, or `PROMPT_ACTION_LOG.md`.
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.

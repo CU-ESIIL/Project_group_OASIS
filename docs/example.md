@@ -2,93 +2,167 @@
 title: How Fast is a Fire?
 ---
 
-# How Fast is a Fire? Example Project Page
+# How Fast is a Fire?
 
-This page shows what a completed group project can look like. Edit the [Home page](index.md) to build your own.
+![Fire perimeter velocity example](assets/hero/hero.jpg)
 
-![Fire perimeter scaling example](assets/hero/hero.png)
+Tip: Click the edit button on this example page to view the Markdown that produced it. This is often the fastest way to learn how to format your own page.
 
-Wildfire spread is often described as if it were a line advancing through a landscape. That picture is useful at small scales, but large fires are seen from satellites as changing perimeters: complicated shapes that stretch, fold, branch, and merge. Once a fire becomes a polygon, speed is no longer only about how fast a front moves. It is also about how the boundary organizes growth.
+Wildfire spread is often described as a front moving across a landscape, but satellite products usually give us something messier and more interesting: changing polygons. Those polygons grow, stretch, fold, branch, merge, translate, dilate, and deform. Once a fire becomes an evolving polygon, velocity is no longer one obvious number.
 
-This example project asks how the geometry of a fire perimeter constrains large-scale growth. The team focused on a simple diagnostic: the relationship between burned area and perimeter length through time. If fire growth behaves like local diffusion, perimeter should scale roughly as the square root of area. If growth is increasingly controlled by boundary complexity, the exponent should rise toward a boundary-driven regime.
+This fictitious summit team built a compact decision framework for choosing fire polygon velocity metrics. Rather than asking which metric is correct, the team asked which story each metric tells about the same evolving perimeter. Their main insight was simple: choosing a velocity metric is choosing a story about the fire.
 
 ## People { #people }
 
-The group combined field experience, geospatial analysis, ecological modeling, and science communication. That mix mattered because the central question was both technical and interpretive: how should a team turn satellite-derived geometry into a claim about fire behavior?
+The group combined fire science, geospatial analysis, visualization, and reproducible workflow design. That mix mattered because the central question was both technical and interpretive: how should a team turn satellite-derived geometry into a claim about fire behavior?
 
-| Name | Role / affiliation | Focus | Skills |
+| Name | Affiliation | Contact | Github |
 |---|---|---|---|
-| Ty Tuff | ESIIL / facilitator | Fire-growth framing | Fire modeling, open science, synthesis |
-| Aakriti Joshi | Learner | Fire perimeter data | Remote sensing, GIS, Python |
-| Jane Example | Learner | Figure design | Visualization, uncertainty, public communication |
-| John Example | Learner | Reproducible workflow | Python, notebooks, spatial analysis |
+| Ty Tuff | ESIIL facilitator | ty.tuff@colorado.edu | github.com/tytuff |
+| Aakriti Joshi | Summit learner | aakriti@example.org | github.com/aakriti-example |
+| Jane Example | Summit learner | jane@example.org | github.com/jane-example |
+| John Example | Summit learner | john@example.org | github.com/john-example |
 
-## Project Question { #project-question }
+## Team Norms and Decision Making { #team-norms-and-decision-making }
 
-How does the geometry of a fire perimeter constrain its growth rate at large scales?
+Our team norms:
 
-Specifically, the group asked whether observed fire perimeters follow diffusion-like scaling, where perimeter grows approximately as area to the one-half power, or whether large events shift toward a boundary-driven scaling closer to area to the two-thirds power. The distinction is more than mathematical. A diffusion-like fire can be summarized as steady outward expansion, while a boundary-driven fire suggests that edge complexity, branching, and directional runs increasingly shape the event.
+- Keep the analysis small enough to explain clearly.
+- Name assumptions before choosing a metric.
+- Treat disagreement as a design signal, not a blocker.
+- Prefer one reproducible figure over many disconnected outputs.
 
-The team treated this as a Day 3 diagnostic rather than a final theory of fire behavior. The goal was to build one clear, reusable analysis that could reveal whether perimeter geometry carries information about changing growth regimes. A useful answer would show a measurable pattern, name its limits, and leave behind code that another group could run on a different fire event.
+Our decision making strategy:
 
-## Specialty Tracks and Strategy { #specialty-tracks-and-strategy }
+We used gradient-of-agreement checks for major choices. If the team was not in the green, we narrowed the question or moved the unresolved issue to next steps.
 
-The group divided into three functional roles: data acquisition, analysis, and synthesis. The data team worked with event-level fire perimeter products and checked which fields were consistent enough to compare across time. The analysis team built a small Python workflow for computing area, perimeter, and log-log scaling behavior. The synthesis team focused on turning those diagnostics into a short public story with one figure and one claim.
+## Our product(s) { #product-direction .oasis-report-out-section }
 
-The team deliberately prioritized a minimal working pipeline over a broad survey. Rather than compare every available fire product, they selected a small set of representative events and asked whether the same diagnostic behaved consistently. That choice kept the work achievable during the summit and made the final result easier to explain.
+The team produced a small summit-ready package for comparing fire polygon velocity metrics:
 
-This strategy also gave the group a shared decision rule. If a task did not help produce the scaling figure, the notebook, or the short interpretation, it moved to next steps. That constraint was useful because it turned a large geospatial problem into a reportable result.
+- a metric-selection decision guide
+- a comparison figure for seven velocity definitions
+- a short reproducible notebook workflow
+- a plain-language explanation of what each metric reveals and obscures
 
-## Data Exploration { #data-exploration }
+The product is useful because it reframes fire velocity as a decision problem. A modeler, manager, or ecologist should first ask what kind of movement matters, then choose a metric that matches that use.
 
-The team used event-level fire perimeter data to extract time series of burned area and perimeter length. Early exploration showed strong variability across events, especially in the first observations when perimeter estimates were sparse or coarse. Within individual fires, however, plotting log perimeter against log area produced approximately linear segments, suggesting that scaling behavior could be measured with a simple diagnostic.
+## Our question(s) { #project-question .oasis-report-out-section }
 
-The first plots were most useful as quality checks. Fires with abrupt geometry changes revealed likely data artifacts or changes in observation frequency. Events with smoother growth trajectories gave the team a cleaner test bed for comparing early and late growth. The group kept both kinds of cases visible, because the messy examples clarified where the method could fail.
+**How does the choice of fire polygon velocity metric change the story we tell about wildfire spread?**
 
-![Early exploration plot](assets/explorations/explore_data_plot.png)
+The team used three subquestions to keep the work focused:
 
-*Figure 1. A representative perimeter diagnostic compares area and boundary length through time, giving the team a quick way to see whether growth is compact, elongated, or increasingly complex.*
+- When does a fire look fast because the perimeter advances?
+- When does it look fast because the burned area reorganizes internally?
+- Which metrics are useful for operational spread, ecological interpretation, or model validation?
 
-## Methods and Code { #methods-and-code }
+## Why this matters (the upshot) { #why-this-matters .oasis-report-out-section }
 
-For each fire event, the team computed area and perimeter for each available time step, then estimated the scaling exponent between log perimeter and log area. They used rolling-window regressions so the exponent could change as a fire evolved, rather than forcing a single value across the whole event. This made it possible to distinguish early growth from later perimeter organization.
+The same wildfire can look explosive or nearly motionless depending on how velocity is defined. That is not a math error. It is a consequence of asking different questions about the same geometry.
 
-The workflow was intentionally lightweight. It used Python, pandas, numpy, and standard geospatial libraries to load perimeters, calculate geometry, filter invalid records, and export a summary table. The core output was a figure showing each event trajectory in log-log space, with reference slopes for diffusion-like and boundary-driven scaling.
+This matters for science and management because velocity metrics are used to compare fires, validate models, interpret ecological effects, and communicate risk. A head-fire surge, a migrating fire center, and a whole-perimeter reorganization are different events. Treating them as one number can hide the choice that actually shapes the conclusion.
 
-All code was written as a reusable notebook and a small script. The notebook explains the reasoning and displays intermediate figures; the script runs the same calculation on a selected event and writes out the summary data. That split made the analysis easier to inspect during the summit and easier to reuse afterward.
+## Data sources we’re exploring { #data-exploration .oasis-report-out-section }
+
+The team used a controlled synthetic ten-day polygon sequence to compare metrics without observational noise. The sequence mimicked directional, fractal fire growth so the group could see how each metric behaved when the same polygon expanded, stretched, and reorganized.
+
+They also reviewed real perimeter products that future teams could test:
+
+| Data source | What it offers | One-line note |
+|---|---|---|
+| MODIS MCD64A1 | Daily burn-date maps at coarse resolution | Useful for continental summaries, but narrow runs can be missed. |
+| VIIRS VNP64A1 | Finer burned-area mapping than MODIS | Better for smaller or fragmented burns, still raster-derived. |
+| ESA FireCCI | Global burned-area mapping from Sentinel-3 | Helpful for cross-region comparison. |
+| MTBS | Landsat-based fire perimeters and severity for large U.S. fires | Strong for retrospective ecology, less useful for near-real-time velocity. |
+| Active-fire alpha shapes | Near-real-time perimeters from active fire detections | Timely and dynamic, but jagged and sensitive to sensor noise. |
+
+![Synthetic fire hull sequence](assets/figures/fire_hull.png)
+
+*A synthetic perimeter sequence helped the team separate metric behavior from the artifacts that come with real satellite-derived polygons.*
+
+## Methods/technologies we’re testing { #methods-and-code .oasis-report-out-section }
+
+The team compared seven ways to measure fire polygon velocity. The table became the project's main decision guide.
+
+| Metric | What it captures | Best used for | Main caveat |
+|---|---|---|---|
+| Optimal transport / Sinkhorn | Whole-system rearrangement of burned area | Comparing whole-fire dynamics and regime shifts | Depends on parameter choices and is less intuitive than simpler metrics. |
+| ΔA/L | Area gain divided by perimeter length | Physics-based spread baseline | Returns zero when no new area is added. |
+| P95 advance | Fast leading-edge movement | Head-fire surges and directional runs | Sensitive to cutoff choices and boundary artifacts. |
+| Longest vector / directed Hausdorff | The single largest leap between perimeters | Spotting, extreme runs, and outlier detection | Can exaggerate one noisy jump. |
+| Mean advance | Typical boundary movement | Conservative baseline comparisons | Hides directional runs and anisotropy. |
+| Equivalent radius growth | Growth as if the fire were circular | Long-term summaries and simple size comparisons | Ignores irregular shape and dendritic growth. |
+| Centroid drift | Movement of the polygon center | Migration questions and net displacement | Misses expansion when the center stays still. |
+
+The workflow used Python geospatial tools to calculate daily polygon change, compare metric curves, and export figures. For the summit, the team prioritized a readable notebook over a large software package.
 
 [View shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code){ .md-button }
 
 ## Results { #results }
 
-The central result is that large-fire growth is not well described by a single compact-expansion model. Across the representative events, early fire growth was often compatible with diffusion-like scaling, with exponents near one-half. As fires expanded, several trajectories shifted upward toward exponents around 0.65 to 0.7, suggesting that boundary complexity increasingly shaped growth.
+All seven metrics tracked broad growth in the synthetic fire sequence, but they diverged in magnitude and interpretation. The largest split was philosophical. ΔA/L measures perimeter-driven area gain, so it can drop to zero when no new area is added. Optimal transport can still report kilometers of internal displacement because it measures how the burned mass rearranges.
 
-This supports one clear scientific claim: as fires become larger and more organized, perimeter geometry becomes part of the growth process rather than just a byproduct of it. A fire with a more complex boundary has more places to advance, stall, or branch, and that structure can change how area accumulates through time.
+That contrast became the team's core result. Fire velocity is not a single property. It is a family of perspectives, and each perspective is useful only when it matches the decision context.
 
-![Lead result visual](assets/figures/main_result.png)
+![Velocity metrics compared through time](assets/figures/main_result.png)
 
-*Figure 2. Representative log-log trajectories show a transition from compact early growth toward more boundary-driven scaling as fire events expand.*
+*The comparison figure shows that optimal transport can remain high while area-gain metrics flatten, making the choice of velocity definition visible instead of hidden.*
 
-The interpretation is promising but limited. Perimeter resolution, observation frequency, and smoothing choices all affect the measured exponent. Early fire boundaries can be especially uncertain, and a single daily perimeter may hide important sub-daily growth. The result should therefore be read as a geometric diagnostic, not a complete explanation of fire behavior.
+The team treated the result as a diagnostic, not a final fire model. Resolution, smoothing, raster stair-step edges, and observation interval can all change metric values. Those limits became part of the guidance: pick the metric for the question, then test whether the data source can support that metric.
 
-Even with those limits, the diagnostic was useful. It gave the group a compact way to compare events, identify transitions, and discuss whether a fire was growing mainly by expansion, elongation, or boundary reorganization. That is exactly the kind of reusable synthesis a summit project can leave behind.
+## Team Photo { #team-photo }
 
-## Polished Outputs { #polished-outputs }
+![Fictitious summit team working session](assets/team/team_photo.jpg)
 
-The group produced three reusable outputs: a notebook, a summary figure, and a short methods note. The notebook computes area-perimeter scaling for any selected fire event and exports the rolling exponent. The figure provides a compact visual summary of regime transitions. The methods note explains the assumptions and warns future users about resolution, smoothing, and early-observation uncertainty.
+*A fictitious summit working session where the team narrowed a large fire-behavior problem into one comparison figure and one decision guide.*
 
-These outputs are designed to be extended by future groups. A next team could apply the same workflow to simulated fire data, compare multiple perimeter products, or test whether similar scaling appears under different fuels and weather conditions. The deliverable is not a final fire model. It is a clear diagnostic that makes one geometric question easier to ask.
+## Findings at a glance { #findings-at-a-glance .oasis-report-out-section }
 
-[Read the project brief PDF](assets/files/project_brief.pdf){ .md-button .md-button--primary }
+**Fire velocity is not one number.** The same polygon sequence can look fast, slow, or stalled depending on the metric.
+
+**The largest split is philosophical.** Optimal transport measures whole-system rearrangement, while ΔA/L measures perimeter-driven area gain.
+
+**Metric choice should follow the decision context.** Operational surge detection, ecological interpretation, and model validation need different velocity definitions.
+
+## Visuals that tell a story { #story-visuals .oasis-report-out-section }
+
+![Fire perimeter velocity hero](assets/hero/hero.jpg)
+
+*Visual 1: A fire perimeter can expand at different apparent speeds depending on where and how velocity is measured.*
+
+![Fire hull panels](assets/figures/hull_panels.png)
+
+*Visual 2: Synthetic polygon sequences make it possible to compare metrics under controlled, repeatable fire-shape changes.*
+
+![Velocity metrics compared through time](assets/figures/main_result.png)
+
+*Visual 3: The velocity curves tell different stories about the same evolving fire, which is exactly why the decision guide matters.*
+
+## What’s next { #whats-next .oasis-report-out-section }
+
+Immediate follow-ups:
+
+- Apply the metric comparison to one observed fire perimeter product.
+- Test sensitivity to spatial resolution, smoothing, and observation interval.
+- Convert the decision guide into a reusable notebook helper.
+
+What we would do with one more week or month:
+
+- Compare synthetic and observed fire perimeters.
+- Link metric choice to model validation and management use cases.
+- Build guidance for when each metric is appropriate.
+
+Who should see this next:
+
+- Fire modelers comparing simulated and observed spread.
+- Remote-sensing teams building perimeter products.
+- Managers and analysts who need to explain whether a fire is surging, expanding, shifting, or reorganizing.
 
 ## Cite & Reuse
 
-This example uses the Project OASIS template citation flow [@oasisProjectTemplate]. Reuse the structure, figures, and workflow patterns with attribution where appropriate. Dataset-specific credits and licenses should be added when a group replaces the example data with real perimeter products.
+This example uses the Project OASIS template citation flow [@oasisProjectTemplate]. The scientific framing is adapted from the project brief, [Seven ways to measure fire polygon velocity](<assets/Seven ways to measure fire polygon velocity-4.pdf>), and the reusable project brief file, [Read the project brief PDF](assets/files/project_brief.pdf).
 
-## Next Steps
-
-Next steps include applying the framework to simulated fire perimeters where the true growth process is known, then comparing those results with observed fire products. The group also recommended testing how spatial resolution, smoothing, and observation interval affect the scaling exponent. Those checks would help determine when the diagnostic reflects fire behavior and when it mostly reflects the measurement system.
-
-More broadly, geometric diagnostics like this could become useful screening tools for fire modeling. Before building a complex model, a team could ask whether an event looks compact, elongated, boundary-driven, or unstable. That first pass would not replace process-based modeling, but it could make model choice and interpretation more transparent.
+Reuse the structure, figures, and workflow patterns with attribution where appropriate. Dataset-specific credits and licenses should be added when a team replaces the synthetic example with real perimeter products.
 
 {{ references }}

@@ -23,8 +23,14 @@
     const title = document.querySelector(".md-typeset h1");
     title?.classList.add("oasis-report-out-visible");
 
-    ["people", "report-out-day2", "report-out-day3"].forEach((id) => {
-      const heading = document.getElementById(id);
+    document.querySelectorAll(".md-typeset .oasis-report-out-hero").forEach((hero) => {
+      const directBlock = Array.from(document.querySelectorAll(".md-typeset > *")).find((element) =>
+        element.contains(hero)
+      );
+      (directBlock || hero).classList.add("oasis-report-out-visible");
+    });
+
+    document.querySelectorAll(".md-typeset h2.oasis-report-out-section").forEach((heading) => {
       let element = heading;
       while (element) {
         element.classList.add("oasis-report-out-visible");

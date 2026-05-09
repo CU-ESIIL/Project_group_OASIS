@@ -5,17 +5,16 @@ public_mode_toggle: true
 
 !!! tip "How to use this page during the summit"
     This page is your team’s shared workspace and final report-out page. The agenda gives teams limited time, so use the page differently each day: Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report out. Keep the page simple, current, and readable.
+    Look for the green buttons to see what your team should edit. A megaphone means that section will also appear when you click Summit Report Out. Fill out the megaphone sections first because those are the pieces you will present back to the room.
 
-    Look for the green buttons with 📣 for the things you need to edit. 
-
-    [📣 Edit the top of Home in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L1){ .md-button target="_blank" rel="noopener" }
+    [Edit the top of Home in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L1){ .md-button target="_blank" rel="noopener" }
 
 # Team Home: Make Me Your Own
 
 !!! note "Day 1 directions"
     Change the title to the name of your project.
 
-    [📣 Edit Day 1 setup in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L11){ .md-button target="_blank" rel="noopener" }
+    [Edit Day 1 setup in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L12){ .md-button target="_blank" rel="noopener" }
 
 !!! tip "For ESIIL staff"
     Breakout Room #: (To be assigned by ESIIL Staff)
@@ -24,13 +23,19 @@ public_mode_toggle: true
     
 
 
-![Team hero image](assets/hero/hero.png)
+![Team hero image](assets/hero/hero.png){ .oasis-report-out-hero }
 
 !!! note "How to replace the hero image"
     Upload your own image to `docs/assets/hero/` and replace the file named `hero.png`. Use a wide image if you can, then refresh the site preview to check how it looks.
     Keep the file path `docs/assets/hero/hero.png` if you want the Markdown above to keep working.
 
-    [📣 Open the hero image folder](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/hero){ .md-button target="_blank" rel="noopener" }
+    [Open the hero image folder](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/hero){ .md-button target="_blank" rel="noopener" }
+
+Use this page as your team’s working record during the summit and your final report-out page on Day 3.
+
+### This page becomes your Summit Report Out
+
+This page captures your group’s process and thinking throughout the Summit and will be used to share your work with others.
 
 [See a completed example](example.md){ .md-button }
 
@@ -45,7 +50,7 @@ public_mode_toggle: true
     |---|---|
     | ![Name card prompts for name, institution, area of expertise, research difference, and questions](assets/team/name-card-prompts.png) | ![Follow-up notes card with space for names and follow-up ideas](assets/team/name-card-followups.png) |
 
-    [📣 Edit People in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L37){ .md-button target="_blank" rel="noopener" }
+    [Edit People in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L37){ .md-button target="_blank" rel="noopener" }
 
 | Name | Affiliation | Contact | Github |
 |---|---|---|---|
@@ -55,17 +60,17 @@ public_mode_toggle: true
 ## Team Norms and Decision Making { #team-norms-and-decision-making }
 
 !!! note "Day 1 task"
-       Suggested Self-Facilitation Instructions: 
-        - Round Robin: Everyone shares 1 norm that they think will be important for their team during the summit and perhaps following the summit (2 min). 
+       Suggested Self-Facilitation Instructions:
+        - Round Robin: Everyone shares 1 norm that they think will be important for their team during the summit and perhaps following the summit (2 min).
         - After everyone has shared, make a list with as many norms as possible in GitHub (5-7 min).
         - Vote on your top 3 ideas. (Each person gets 3 votes; you can use all your votes on 1 idea or spread them out) (2 min).
-        - In GitHub, move all team norms with votes to the top of the list.  
+        - In GitHub, move all team norms with votes to the top of the list.
 
-    | Gradients of agreement | 
-    |---|
-    | ![Gradients of agreement scale for summit teams](assets/hero/norms.png) | 
+    | Gradients of agreement | Summit team norms worksheet |
+    |---|---|
+    | ![Gradients of agreement scale for summit teams](assets/hero/norms.png) | ![Summit team norms worksheet](assets/hero/norms-panel.png) |
 
-    [📣 Edit Team Norms in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L54){ .md-button target="_blank" rel="noopener" }
+    [Edit Team Norms in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L54){ .md-button target="_blank" rel="noopener" }
 
 Our team norms:
 
@@ -73,12 +78,16 @@ Our team norms:
 - ...
 - ...
 
-## Define, Explore, Data, and Methods { #product-direction }
+Our decision rule:
+
+...
+
+## Our product(s) 📣 { #product-direction .oasis-report-out-section }
 
 !!! note "Day 2 Morning Task"
     Day 2 morning: use this section to define what the team is trying to understand, name early hypotheses or hunches, and add context. Include at least one visual, such as a photo of a whiteboard or notes.
 
-    [📣 Edit Define, Explore, Data, and Methods in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L78){ .md-button target="_blank" rel="noopener" }
+    [Edit Our product(s) in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L80){ .md-button target="_blank" rel="noopener" }
 
 Our team is trying to understand or test:
 
@@ -92,6 +101,10 @@ Our working hypotheses or hunches:
 Context people need to understand our work:
 
 ...
+
+![Day 2 morning whiteboard or notes photo](assets/whiteboards/day2_morning_whiteboard.svg)
+
+*Morning whiteboard or notes showing the question, hypotheses, and context we used to start Day 2.*
 
 Our primary output type is:
 
@@ -107,19 +120,12 @@ What we plan to test:
 - ...
 - ...
 
-![Day 2 morning whiteboard or notes photo](assets/whiteboards/day2_morning_whiteboard.svg)
-
-!!! note "Day 2 Morning Task"
-    Day 2 morning: Morning whiteboard or notes showing the question, hypotheses, and context we used to start Day 2.
-
-    [📣 Edit Define, Explore, Data, and Methods in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L78){ .md-button target="_blank" rel="noopener" }
-
-## Project Question { #project-question }
+## Our question(s) 📣 { #project-question .oasis-report-out-section }
 
 !!! note "Day 2 Morning Task"
     Day 2 morning: draft the project question, then spend no more than 10-15 minutes refining it so it matches what the team can realistically do.
 
-    [📣 Edit Project Question in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L116){ .md-button target="_blank" rel="noopener" }
+    [Edit Our question(s) in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L118){ .md-button target="_blank" rel="noopener" }
 
 Our working question:
 
@@ -129,12 +135,27 @@ What would count as progress:
 
 ...
 
-## Data Exploration { #data-exploration }
+## Why this matters (the “upshot”) 📣 { #why-this-matters .oasis-report-out-section }
+
+!!! note "Day 3 Task"
+    Add the plain-language upshot. Keep this short: why the work matters, who could use it, and what changes if the team is right.
+
+    [Edit Why this matters in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L133){ .md-button target="_blank" rel="noopener" }
+
+This matters because:
+
+...
+
+People who could use this:
+
+...
+
+## Data sources we’re exploring 📣 { #data-exploration .oasis-report-out-section }
 
 !!! note "Day 2 Afternoon Task"
     Day 2 afternoon: try a few datasets and analyses. Replace the snapshot below with a visual showing initial data patterns. Add 2-4 promising data sources with links and 1-line notes. Keep this public-facing: what the source is, why it matters, and what it might help the team test.
 
-    [📣 Edit Data Exploration in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L131){ .md-button target="_blank" rel="noopener" }
+    [Edit Data sources in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L148){ .md-button target="_blank" rel="noopener" }
 
 ![Exploration figure](assets/explorations/explore_data_plot.png)
 
@@ -147,12 +168,12 @@ Promising data sources:
 - [Data source 3](#): ...
 - [Data source 4](#): ...
 
-## Method and Code { #methods-and-code }
+## Methods/technologies we’re testing 📣 { #methods-and-code .oasis-report-out-section }
 
 !!! note "Day 2 Afternoon Task"
     Day 2 afternoon: add 2-4 methods or technologies you're testing, such as stats, models, or visualization. Then add challenges identified, visuals, and short- and long-term next steps.
 
-    [📣 Edit Method and Code in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L149){ .md-button target="_blank" rel="noopener" }
+    [Edit Methods/technologies in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L166){ .md-button target="_blank" rel="noopener" }
 
 [View shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code){ .md-button }
 
@@ -174,14 +195,9 @@ Methods/technologies we are testing:
 
 ![Method or workflow visual](assets/figures/figure1.png)
 
-### Next steps
-
-Short term:
+### Testing notes
 
 - ...
-
-Long term:
-
 - ...
 
 ## Results { #results }
@@ -189,7 +205,7 @@ Long term:
 !!! note "Day 3 Task"
     Focus on synthesis. Highlight 2-3 visuals that tell the story and keep text crisp. Practice a 6-minute walkthrough of the homepage: Why → Questions → Data/Methods → Findings → Next.
 
-    [📣 Edit Results in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L186){ .md-button target="_blank" rel="noopener" }
+    [Edit Results in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L203){ .md-button target="_blank" rel="noopener" }
 
 ![Result figure](assets/figures/main_result.png)
 
@@ -200,18 +216,18 @@ Long term:
 !!! note "Day 3 Task"
     Add a team photo or working-session photo. This helps the report-out page feel connected to the people who made the work.
 
-    [📣 Edit Team Photo in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L197){ .md-button target="_blank" rel="noopener" }
+    [Edit Team Photo in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L214){ .md-button target="_blank" rel="noopener" }
 
 ![Team photo](assets/team/team_photo.jpg)
 
 *Team members and collaborators who contributed to this project.*
 
-## Findings at a glance { #findings-at-a-glance }
+## Findings at a glance 📣 { #findings-at-a-glance .oasis-report-out-section }
 
 !!! note "Day 3 Task"
     Add three crisp headlines. Each one should make a public-facing claim: what happened, where it happened, how much it changed, or why it matters.
 
-    [📣 Edit Findings at a glance in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L208){ .md-button target="_blank" rel="noopener" }
+    [Edit Findings at a glance in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L225){ .md-button target="_blank" rel="noopener" }
 
 Headline 1 — what, where, how much
 
@@ -225,29 +241,29 @@ Headline 3 — implication for practice or policy
 
 ...
 
-## Visuals that tell the story { #story-visuals }
+## Visuals that tell a story 📣 { #story-visuals .oasis-report-out-section }
 
 !!! note "Day 3 Task"
     Choose 2-3 visuals that tell the story. These can be maps, figures, screenshots, diagrams, sketches, or annotated photos. Keep captions short and claim-oriented.
 
-    [📣 Edit Story Visuals in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L227){ .md-button target="_blank" rel="noopener" }
+    [Edit Story Visuals in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L244){ .md-button target="_blank" rel="noopener" }
 
 ![Story visual](assets/figures/main_result.png)
 
 *Visual 1: the main pattern or output we want people to remember.*
 
-## What’s next? { #whats-next }
+## What’s next? 📣 { #whats-next .oasis-report-out-section }
 
 !!! note "Day 3 Task"
     Add immediate follow-ups, what the team would do with one more week or month, and who should see this next. Keep this specific enough that someone could continue the work.
 
-    [📣 Edit What's next in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L238){ .md-button target="_blank" rel="noopener" }
+    [Edit What's next in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L255){ .md-button target="_blank" rel="noopener" }
 
-Immediate follow-ups
+Short term:
 
 - ...
 
-What we would do with one more week/month
+Long term:
 
 - ...
 
@@ -255,96 +271,33 @@ Who should see this next
 
 - ...
 
-## Report Out (Day 2, 2 minutes) { #report-out-day2 }
+## Day 2 Report Out (2 minutes) { #report-out-day2 }
 
-![First Summit Report Out banner](assets/report-out/first-summit-report-out.png){ .oasis-report-out-banner }
+Use the `Summit Report Out` button to present the megaphone sections from this page. On Day 2, focus on your early framing:
 
-!!! note "Day 2 checkpoint"
-    Spend 15–20 minutes max preparing this. This is a checkpoint, not a final result.
+- what you are making
+- your main question
+- why it matters
+- promising datasets
+- methods you are testing
+- early observations or challenges
 
-    To choose Day 2 images, edit `docs/assets/report-out/day2-gallery.yml`. Use paths to images that already live in `docs/assets/`, such as `assets/hero/hero.png` or `assets/explorations/explore_data_plot.png`.
+## Day 3 Report Out (6 minutes) { #report-out-day3 }
 
-    [📣 Edit Day 2 Report Out in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L257){ .md-button target="_blank" rel="noopener" }
-    [📣 Edit Day 2 image list](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/assets/report-out/day2-gallery.yml){ .md-button target="_blank" rel="noopener" }
+Use the same megaphone sections, but now present the more complete version of the story:
 
-What we are making:
-
-...
-
-Question:
-
-...
-
-Why it matters:
-
-...
-
-What we tried:
-
-...
-
-What we found or learned:
-
-...
-
-What we will do tomorrow:
-
-...
-
-### Day 2 report-out images
-
---8<-- "_includes/day2_report_out_gallery.html"
-
-## Final Summit Report Out (Day 3, 6 minutes) { #report-out-day3 }
-
-![Second Summit Report Out banner](assets/report-out/second-summit-report-out.png){ .oasis-report-out-banner }
-
-!!! note "Day 3 final report"
-    Use this page as the guide for your 6-minute Summit Report Out. Do not read everything. Tell a clear story with 1–2 strong outputs.
-
-    To choose Day 3 images, edit `docs/assets/report-out/day3-gallery.yml`. Use paths to images that already live in `docs/assets/`, such as `assets/figures/main_result.png`, `assets/figures/fire_hull.png`, or `assets/hero/hero.png`.
-
-    [📣 Edit Final Summit Report Out in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L297){ .md-button target="_blank" rel="noopener" }
-    [📣 Edit Day 3 image list](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/assets/report-out/day3-gallery.yml){ .md-button target="_blank" rel="noopener" }
-
-Why it matters:
-
-...
-
-What we tried to make:
-
-...
-
-Question:
-
-...
-
-What we used or tried:
-
-...
-
-What we found, built, or learned:
-
-...
-
-What remains unfinished or uncertain:
-
-...
-
-What should happen next:
-
-...
-
-### Day 3 report-out images
-
---8<-- "_includes/day3_report_out_gallery.html"
+- your refined product
+- your refined question
+- key findings
+- visuals that tell the story
+- what comes next
 
 ## Polished Outputs { #polished-outputs }
 
 !!! note "Day 3 Task"
     Add only the strongest outputs someone should look at after the summit. Aim for 1–2 strong visuals or artifacts, not a long collection of everything the team made.
 
-    [📣 Edit Polished Outputs in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L341){ .md-button target="_blank" rel="noopener" }
+    [Edit Polished Outputs in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L295){ .md-button target="_blank" rel="noopener" }
 
 [Read the project brief PDF](assets/files/project_brief.pdf){ .md-button .md-button--primary }
 
@@ -355,6 +308,6 @@ What should happen next:
 !!! note "Day 3 Task"
     Add links, data sources, software credits, citations, licenses, and next steps. Make it easy for someone to reuse or continue the work after the summit.
 
-    [📣 Edit Cite & Reuse in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L352){ .md-button target="_blank" rel="noopener" }
+    [Edit Cite & Reuse in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L306){ .md-button target="_blank" rel="noopener" }
 
 {{ references }}
