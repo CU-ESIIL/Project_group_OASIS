@@ -12,6 +12,10 @@ public_mode_toggle: true
     Look for the green buttons to indicate what you need to edit. 
     
     Megaphones 📣 indicate which item you wil be presenting during the end-of-day report-outs.
+
+    Only the items with megaphones will be visible when you hit the 'Summit Report Out' button. 
+
+    If you turn of 'Instructions' then you will only see the page content for public display. 
     
 
 # Team Home: Make Me Your Own
