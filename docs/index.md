@@ -37,6 +37,8 @@ public_mode_toggle: true
 ![Team hero image](assets/hero/hero.png){ .oasis-report-out-hero }
 
 !!! note "How to replace the image above"
+    Upload an image that represents your porject and welcome people to your page. 
+    
     Upload your own image to `docs/assets/hero/` and replace the file named `hero.png`. Use a wide image if you can, then refresh the site preview to check how it looks.
     Keep the file path `docs/assets/hero/hero.png` if you want the Markdown above to keep working.
 
