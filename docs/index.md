@@ -17,6 +17,7 @@ public_mode_toggle: true
     [Edit Day 1 setup in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L12){ .md-button target="_blank" rel="noopener" }
 
 !!! tip "For ESIIL staff"
+    Group Number: 1
     Breakout Room #: (To be assigned by ESIIL Staff)
 
     [ESIIL staff edit in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L11){ .md-button target="_blank" rel="noopener" }
