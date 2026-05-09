@@ -22,7 +22,8 @@
         "oasis-report-out-title-visible",
         "oasis-report-out-context-visible",
         "oasis-report-out-day2-visible",
-        "oasis-report-out-day3-visible"
+        "oasis-report-out-day3-visible",
+        "oasis-report-out-hidden"
       );
     });
     document.querySelectorAll(".oasis-report-out-divider").forEach((element) => element.remove());
@@ -36,8 +37,17 @@
 
     function markSection(heading, groupClass) {
       let element = heading;
+      let hideRestOfSection = false;
       while (element) {
-        element.classList.add("oasis-report-out-visible", groupClass);
+        const tag = element.tagName?.toLowerCase();
+        if (element !== heading && tag === "h3" && !element.classList.contains("oasis-report-out-subsection")) {
+          hideRestOfSection = true;
+        }
+        if (hideRestOfSection) {
+          element.classList.add("oasis-report-out-visible", "oasis-report-out-hidden");
+        } else {
+          element.classList.add("oasis-report-out-visible", groupClass);
+        }
         element = element.nextElementSibling;
         if (element?.tagName?.toLowerCase() === "h2") {
           break;

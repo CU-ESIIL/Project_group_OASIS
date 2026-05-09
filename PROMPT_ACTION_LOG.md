@@ -2224,3 +2224,25 @@ Verification
 
 * Confirmed the only report-out content sections are the megaphone-marked sections in `docs/index.md`.
 * Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+
+2026-05-09
+
+Prompt
+
+User clarified that subheadings inside Methods do not have megaphones and that Challenges, Visuals, and Next Steps should not appear in report-out mode.
+
+Files inspected
+
+* docs/index.md
+* docs/javascripts/presentation-mode.js
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Updated report-out mode so unmarked `h3` subsections inside a megaphone section are hidden from Summit Report Out.
+* Added CSS for `.oasis-report-out-hidden` so those hidden subsection blocks stay out of presentation mode.
+* Kept the top-level Methods section in Day 2 report-out mode because it has the megaphone.
+
+Verification
+
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.

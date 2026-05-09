@@ -1098,6 +1098,10 @@ body.presentation-mode .md-typeset > .oasis-report-out-visible {
   display: revert !important;
 }
 
+body.presentation-mode .md-typeset > .oasis-report-out-hidden {
+  display: none !important;
+}
+
 body.presentation-mode .md-typeset .md-button {
   display: none !important;
 }
