@@ -9,9 +9,10 @@ public_mode_toggle: true
     The agenda gives teams limited time, so use the page differently each day: 
     Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report out. Keep the page simple, current, and readable.
     
-    Look for the green buttons to see what your team should edit. A megaphone means that section will also appear when you click Summit Report Out. Fill out the megaphone sections first because those are the pieces you will present back to the room.
-
-    [Edit the top of Home in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L1){ .md-button target="_blank" rel="noopener" }
+    Look for the green buttons to indicate what you need to edit. 
+    
+    Megaphones 📣 indicate which item you wil be presenting during the end-of-day report-outs.
+    
 
 # Team Home: Make Me Your Own
 
