@@ -70,7 +70,6 @@ public_mode_toggle: true
 !!! note "Day 1 task"
 
     Suggested Self-Facilitation Instructions:
-
     - Round Robin: Everyone shares 1 norm that they think will be important for their team during the summit and perhaps following the summit (2 min).
 
     - After everyone has shared, make a list with as many norms as possible in GitHub (5–7 min).
