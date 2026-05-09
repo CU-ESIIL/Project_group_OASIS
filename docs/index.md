@@ -96,23 +96,21 @@ Our decision making strategy:
 
 ## Our product(s) 📣 { #product-direction .oasis-report-out-section }
 
-!!! note "Day 2 Morning Task"
-    Day 2 morning: use this section to define what the team is trying to understand, name early hypotheses or hunches, and add context. Include at least one visual, such as a photo of a whiteboard or notes.
+!!! note "Day 2 Tasks"
+    Morning Focus: questions, hypothese, context; add at least one visual (photo of whiteboard/notes)
 
-    [Edit Our product(s) in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L80){ .md-button target="_blank" rel="noopener" }
+    Afternoon Focus: try a few datasets and analyses. Keep it visual, keep it simple. Update teh site to refelce what you test. 
 
-Our team is trying to understand or test:
+    [Edit content below here in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L80){ .md-button target="_blank" rel="noopener" }
+
+Short term:
 
 ...
 
-Our working hypotheses or hunches:
+Long term:
 
 - ...
 - ...
-
-Context people need to understand our work:
-
-...
 
 ![Day 2 morning whiteboard or notes photo](assets/whiteboards/day2_morning_whiteboard.svg)
 
@@ -134,11 +132,6 @@ What we plan to test:
 
 ## Our question(s) 📣 { #project-question .oasis-report-out-section }
 
-!!! note "Day 2 Morning Task"
-    Day 2 morning: draft the project question, then spend no more than 10-15 minutes refining it so it matches what the team can realistically do.
-
-    [Edit Our question(s) in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L118){ .md-button target="_blank" rel="noopener" }
-
 Our working question:
 
 ...
@@ -149,11 +142,6 @@ What would count as progress:
 
 ## Why this matters (the “upshot”) 📣 { #why-this-matters .oasis-report-out-section }
 
-!!! note "Day 3 Task"
-    Add the plain-language upshot. Keep this short: why the work matters, who could use it, and what changes if the team is right.
-
-    [Edit Why this matters in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L133){ .md-button target="_blank" rel="noopener" }
-
 This matters because:
 
 ...
@@ -163,11 +151,6 @@ People who could use this:
 ...
 
 ## Data sources we’re exploring 📣 { #data-exploration .oasis-report-out-section }
-
-!!! note "Day 2 Afternoon Task"
-    Day 2 afternoon: try a few datasets and analyses. Replace the snapshot below with a visual showing initial data patterns. Add 2-4 promising data sources with links and 1-line notes. Keep this public-facing: what the source is, why it matters, and what it might help the team test.
-
-    [Edit Data sources in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L148){ .md-button target="_blank" rel="noopener" }
 
 ![Exploration figure](assets/explorations/explore_data_plot.png)
 
@@ -181,11 +164,6 @@ Promising data sources:
 - [Data source 4](#): ...
 
 ## Methods/technologies we’re testing 📣 { #methods-and-code .oasis-report-out-section }
-
-!!! note "Day 2 Afternoon Task"
-    Day 2 afternoon: add 2-4 methods or technologies you're testing, such as stats, models, or visualization. Then add challenges identified, visuals, and short- and long-term next steps.
-
-    [Edit Methods/technologies in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L166){ .md-button target="_blank" rel="noopener" }
 
 [View shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code){ .md-button }
 
@@ -214,21 +192,11 @@ Methods/technologies we are testing:
 
 ## Results { #results }
 
-!!! note "Day 3 Task"
-    Focus on synthesis. Highlight 2-3 visuals that tell the story and keep text crisp. Practice a 6-minute walkthrough of the homepage: Why → Questions → Data/Methods → Findings → Next.
-
-    [Edit Results in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L203){ .md-button target="_blank" rel="noopener" }
-
 ![Result figure](assets/figures/main_result.png)
 
 *Lead result visual for the story.*
 
 ## Team Photo { #team-photo }
-
-!!! note "Day 3 Task"
-    Add a team photo or working-session photo. This helps the report-out page feel connected to the people who made the work.
-
-    [Edit Team Photo in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L214){ .md-button target="_blank" rel="noopener" }
 
 ![Team photo](assets/team/team_photo.jpg)
 
