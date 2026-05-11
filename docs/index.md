@@ -102,7 +102,7 @@ Our decision making strategy:
 
     Afternoon Focus: try a few datasets and analyses. Keep it visual, keep it simple. Update the site to reflect what you test. 
 
-    [Edit content below here in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L106){ .md-button target="_blank" rel="noopener" }
+    [Edit content below here in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L106){ .md-button target="_blank" rel="noopener" }
 
 Short term:
 
