@@ -8,11 +8,11 @@ title: Team Norms
 
 Good teams do not happen by accident. They happen when people make a few shared commitments early, name how they want to work together, and return to those commitments when the work gets busy.
 
-During the summit, your team will be moving quickly. You will be learning new tools, making choices under uncertainty, working across different backgrounds, and deciding what is good enough to share. Team norms help make that work more dependable, more generous, and more useful.
+During the Summit, your team will be moving quickly. You will be learning new tools, making choices under uncertainty, working across different backgrounds, and deciding what is good enough to share. Team norms help make that work more dependable, more generous, and more useful.
 
 ## Why norms matter
 
-Research on effective teams highlights several conditions that help groups work well together: dependability, clear roles and structure, psychological safety, meaning, and impact. For this summit, we are adding two more: even turn-taking and shared expectations for AI use.
+Research on effective teams highlights several conditions that help groups work well together: dependability, clear roles and structure, psychological safety, meaning, and impact. For this Summit, we are adding two more: even turn-taking and shared expectations for AI use.
 
 Use these ideas as prompts, not as a script. Your team does not need a long constitution. You need a short set of norms that people can remember, use, and revise.
 
@@ -22,12 +22,12 @@ Use these ideas as prompts, not as a script. Your team does not need a long cons
 
 Use this quick self-facilitation process with your team.
 
-1. **Round robin**: Everyone shares one norm they think will be important for the team during the summit. Keep this fast. Aim for one idea per person.
+1. **Round robin**: Everyone shares one norm they think will be important for the team during the Summit. Keep this fast. Aim for one idea per person.
 2. **Collect ideas in GitHub**: Make a list with as many possible norms as you can. Do not edit too much yet.
 3. **Vote on your top three**: Each person gets three votes. You can put all three votes on one idea or spread them across several ideas.
 4. **Move the voted norms to the top**: In GitHub, move all team norms with votes to the top of the list.
 
-Add your selected norms to your project website so the team can return to them during the summit.
+Add your selected norms to your project website so the team can return to them during the Summit.
 
 ![Summit team norms worksheet](../assets/hero/norms-panel.png)
 
@@ -41,7 +41,7 @@ Your team may want norms around:
 - **Roles and structure**: How will we divide work, keep track of tasks, and know who is doing what?
 - **Psychological safety**: How will we make it safe to ask questions, disagree, try unfinished ideas, and admit when something is not working?
 - **Meaning**: Why does this project matter to the people in the group?
-- **Impact**: Who could use this work, and what would make it valuable beyond the summit?
+- **Impact**: Who could use this work, and what would make it valuable beyond the Summit?
 - **Even turn-taking**: How will we make sure everyone has space to contribute?
 - **AI use**: When is it helpful to use AI, when should we slow down, and how will we keep human judgment in the loop?
 
@@ -96,7 +96,7 @@ Possible approaches include:
 - **Decider protocol**: One person proposes a decision, the group gives quick support or objections, and the team resolves objections before moving forward.
 - **Default experiment**: Choose a reasonable next step, try it for a fixed period, then revisit.
 
-For summit work, consent or a default experiment often works well because teams need to keep moving while still making space for concerns.
+For Summit work, consent or a default experiment often works well because teams need to keep moving while still making space for concerns.
 
 ## Add norms to your team website
 
@@ -114,4 +114,4 @@ Suggested format:
 **Decision-making norm:** We will use [chosen method] when the group needs to make a decision.
 ```
 
-If your group changes its norms during the summit, update the website. That is a sign the norms are alive, not that the first version failed.
+If your group changes its norms during the Summit, update the website. That is a sign the norms are alive, not that the first version failed.

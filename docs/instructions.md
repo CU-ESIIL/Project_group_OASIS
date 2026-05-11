@@ -12,7 +12,7 @@ Welcome! These guides help your team use this site as a live, visual record of y
 - **Day 2 →** [Build and Report Back](instructions/day2.md)
 - **Day 3 →** [Synthesize and Share](instructions/day3.md)
 
-The Home page is the editable blank template your team fills out during the summit. The Example page is a completed model that shows how a filled-in project story can look. Edit Home, not Example.
+The Home page is the editable blank template your team fills out during the Summit. The Example page is a completed model that shows how a filled-in project story can look. Edit Home, not Example.
 
 For a completed model, see the [Example Project Page](example.md).
 
@@ -20,7 +20,7 @@ For a completed model, see the [Example Project Page](example.md).
 
 ## Summit Report Out workflow
 
-Your team page is both your workspace and your final report-out page. During the summit, use the edit buttons to update the sections for each day. On Day 3, use the **Summit Report Out** button to view the page in a clean Summit Report Out layout.
+Your team page is both your workspace and your final report-out page. During the Summit, use the edit buttons to update the sections for each day. On Day 3, use the **Summit Report Out** button to view the page in a clean Summit Report Out layout.
 
 For the final report out, focus on:
 
@@ -54,7 +54,7 @@ Use the Cloud Triangle pages when you need to move work between those places:
 
 ## Editing this project site
 
-Most summit participants should only edit Markdown files.
+Most Summit participants should only edit Markdown files.
 
 You can safely edit:
 

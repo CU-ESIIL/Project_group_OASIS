@@ -1568,6 +1568,31 @@ Actions taken
 Verification
 
 * Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+
+2026-05-10
+
+Prompt
+
+User asked to capitalize Summit throughout the website.
+
+Files inspected
+
+* docs/index.md
+* docs/instructions.md
+* docs/example.md
+* docs/instructions/day1.md
+* docs/instructions/day3.md
+* docs/ai-for-sustainability/norms.md
+* docs/data.md
+
+Actions taken
+
+* Updated participant-facing prose and alt text so standalone lowercase “summit” reads “Summit.”
+* Left the `innovation-summit-2025` URL unchanged because it is part of a link target.
+
+Verification
+
+* Ran `rg -n "\\bsummit\\b" docs mkdocs.yml`; the only remaining match is the `innovation-summit-2025` URL in `docs/data.md`.
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.

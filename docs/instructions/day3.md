@@ -91,7 +91,7 @@ Do not read everything. Use the page to guide the story.
 
 **Main pages:** Polished Outputs, Cite & Reuse
 
-Add only what someone needs after the summit:
+Add only what someone needs after the Summit:
 
 - links
 - data sources
@@ -100,7 +100,7 @@ Add only what someone needs after the summit:
 - citations
 - next steps
 
-This page should work after the summit.
+This page should work after the Summit.
 
 ## D3-F — Final check
 

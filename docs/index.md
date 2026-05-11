@@ -3,10 +3,10 @@ title: Team Home
 public_mode_toggle: true
 ---
 
-!!! tip "How to use this page during the summit"
+!!! tip "How to use this page during the Summit"
     - This page is your team’s shared workspace and final report-out page. It captures your group’s process and thinking throughout the Summit and will be used to share your work with others. 
     
-    - Use this page as your team’s working record during the summit and your final report-out.
+    - Use this page as your team’s working record during the Summit and your final report-out.
     
     - The Summit has several different goals and thus you will use the page differently each day: Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report- out.
     
@@ -70,7 +70,7 @@ public_mode_toggle: true
 !!! note "Day 1 task"
 
     Suggested Self-Facilitation Instructions:
-    - Round Robin: Everyone shares 1 norm that they think will be important for their team during the summit and perhaps following the summit (2 min).
+    - Round Robin: Everyone shares 1 norm that they think will be important for their team during the Summit and perhaps following the Summit (2 min).
 
     - After everyone has shared, make a list with as many norms as possible in GitHub (5–7 min).
 
@@ -80,7 +80,7 @@ public_mode_toggle: true
 
     | Gradients of agreement | 
     |---|
-    | ![Gradients of agreement scale for summit teams](assets/hero/norms.png) | 
+    | ![Gradients of agreement scale for Summit teams](assets/hero/norms.png) | 
 
     [Edit Team Norms in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L87){ .md-button target="_blank" rel="noopener" }
 

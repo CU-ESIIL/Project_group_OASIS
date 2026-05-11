@@ -30,7 +30,7 @@ Do not try to do questions, hypotheses, product direction, data work, methods, n
 Each person should briefly share:
 
 - What you work on
-- Why you came to the summit
+- Why you came to the Summit
 - What you might want to create
 
 Keep this fast. One sentence per person is enough.

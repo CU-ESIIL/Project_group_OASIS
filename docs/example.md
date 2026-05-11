@@ -10,7 +10,7 @@ Tip: Click the edit button on this example page to view the Markdown that produc
 
 Wildfire spread is often described as a front moving across a landscape, but satellite products usually give us something messier and more interesting: changing polygons. Those polygons grow, stretch, fold, branch, merge, translate, dilate, and deform. Once a fire becomes an evolving polygon, velocity is no longer one obvious number.
 
-This fictitious summit team built a compact decision framework for choosing fire polygon velocity metrics. Rather than asking which metric is correct, the team asked which story each metric tells about the same evolving perimeter. Their main insight was simple: choosing a velocity metric is choosing a story about the fire.
+This fictitious Summit team built a compact decision framework for choosing fire polygon velocity metrics. Rather than asking which metric is correct, the team asked which story each metric tells about the same evolving perimeter. Their main insight was simple: choosing a velocity metric is choosing a story about the fire.
 
 ## People { #people }
 
@@ -38,7 +38,7 @@ We used gradient-of-agreement checks for major choices. If the team was not in t
 
 ## Our product(s) { #product-direction .oasis-report-out-section }
 
-The team produced a small summit-ready package for comparing fire polygon velocity metrics:
+The team produced a small Summit-ready package for comparing fire polygon velocity metrics:
 
 - a metric-selection decision guide
 - a comparison figure for seven velocity definitions
@@ -95,7 +95,7 @@ The team compared seven ways to measure fire polygon velocity. The table became 
 | Equivalent radius growth | Growth as if the fire were circular | Long-term summaries and simple size comparisons | Ignores irregular shape and dendritic growth. |
 | Centroid drift | Movement of the polygon center | Migration questions and net displacement | Misses expansion when the center stays still. |
 
-The workflow used Python geospatial tools to calculate daily polygon change, compare metric curves, and export figures. For the summit, the team prioritized a readable notebook over a large software package.
+The workflow used Python geospatial tools to calculate daily polygon change, compare metric curves, and export figures. For the Summit, the team prioritized a readable notebook over a large software package.
 
 [View shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code){ .md-button }
 
@@ -113,9 +113,9 @@ The team treated the result as a diagnostic, not a final fire model. Resolution,
 
 ## Team Photo { #team-photo }
 
-![Fictitious summit team working session](assets/team/team_photo.jpg)
+![Fictitious Summit team working session](assets/team/team_photo.jpg)
 
-*A fictitious summit working session where the team narrowed a large fire-behavior problem into one comparison figure and one decision guide.*
+*A fictitious Summit working session where the team narrowed a large fire-behavior problem into one comparison figure and one decision guide.*
 
 ## Findings at a glance { #findings-at-a-glance .oasis-report-out-section }
 
