@@ -1613,6 +1613,25 @@ Verification
 
 * Confirmed Day 2 report-out sections now include Product, Question, Why this matters, Data sources, and Methods in page order.
 * Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+
+2026-05-11
+
+Prompt
+
+User asked to add a Cite & Reuse section at the bottom of the Home page modeled on last year's Innovation Summit citation example.
+
+Files inspected
+
+* docs/index.md
+
+Actions taken
+
+* Added a bottom `Cite & Reuse` section to the Home page.
+* Included a template citation for Project Group OASIS and a CC-BY-4.0 license note with a link to the Data page.
+
+Verification
+
+* Confirmed the section was added after `What's next?` and is not marked as a report-out section.
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.

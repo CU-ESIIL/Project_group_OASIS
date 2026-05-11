@@ -234,3 +234,11 @@ Long term:
 Who should see this next
 
 - ...
+
+## Cite & Reuse { #cite-reuse }
+
+If you use these materials, please cite:
+
+Summit Team. (2026). *Project Group OASIS — Innovation Summit 2026*. https://github.com/CU-ESIIL/Project_group_OASIS
+
+License: CC-BY-4.0 unless noted. See dataset licenses on the [Data](data.md) page.
