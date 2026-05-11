@@ -130,7 +130,7 @@ What would count as progress:
 ## Hypotheses/Intentions [Optional: probably not relevant if you are creating an educational tool]
 
 
-## Why this matters (the “upshot”) 📣 { #why-this-matters .oasis-report-out-section .oasis-report-out-day3 }
+## Why this matters (the “upshot”) 📣 { #why-this-matters .oasis-report-out-section .oasis-report-out-day2 }
 
 This matters because:
 

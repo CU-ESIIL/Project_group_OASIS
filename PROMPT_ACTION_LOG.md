@@ -1593,6 +1593,26 @@ Actions taken
 Verification
 
 * Ran `rg -n "\\bsummit\\b" docs mkdocs.yml`; the only remaining match is the `innovation-summit-2025` URL in `docs/data.md`.
+
+2026-05-11
+
+Prompt
+
+User asked to fix presenter mode ordering so “Why this matters” appears in the Day 2 report-out group before data sources, matching its position on the Home page.
+
+Files inspected
+
+* docs/index.md
+* docs/javascripts/presentation-mode.js
+
+Actions taken
+
+* Changed the `Why this matters` heading marker from `.oasis-report-out-day3` to `.oasis-report-out-day2`.
+
+Verification
+
+* Confirmed Day 2 report-out sections now include Product, Question, Why this matters, Data sources, and Methods in page order.
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
