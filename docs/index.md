@@ -4,18 +4,19 @@ public_mode_toggle: true
 ---
 
 !!! tip "How to use this page during the summit"
-    This page is your team’s shared workspace and final report-out page. It captures your group’s process and thinking throughout the Summit and will be used to share your work with others. Use this page as your team’s working record during the summit and your final report-out
+    - This page is your team’s shared workspace and final report-out page. It captures your group’s process and thinking throughout the Summit and will be used to share your work with others. 
     
-    The agenda gives teams limited time, so use the page differently each day: 
-    Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report out. Keep the page simple, current, and readable.
+    - Use this page as your team’s working record during the summit and your final report-out.
     
-    Look for the green buttons to indicate what you need to edit. 
+    - The Summit has several different goals and thus you will use the page differently each day: Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report- out.
     
-    Megaphones 📣 indicate which item you wil be presenting during the end-of-day report-outs.
+    - Look for the green buttons to indicate what you need to edit. 
+    
+    - Megaphones 📣 indicate which item you wil be presenting during the end-of-day report-outs.
 
-    Only the items with megaphones will be visible when you hit the 'Summit Report Out' button. 
+    - Only the items with megaphones will be visible when you hit the 'Summit Report Out' button. 
 
-    If you turn of 'Instructions' then you will only see the page content for public display. 
+    - If you turn off 'Instructions' then you will only see the page content for public display.
     
 
 # Team Home: Make Me Your Own
@@ -33,16 +34,15 @@ public_mode_toggle: true
     [ESIIL staff edit in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L28){ .md-button target="_blank" rel="noopener" }
     
 
-
 ![Team hero image](assets/hero/hero.png)
 
 !!! note "How to replace the image above"
-    Upload an image that represents your porject and welcome people to your page. 
+    Upload an image that represents your project and welcome people to your page. 
     
     Upload your own image to `docs/assets/hero/` and replace the file named `hero.png`. Use a wide image if you can, then refresh the site preview to check how it looks.
     Keep the file path `docs/assets/hero/hero.png` if you want the Markdown above to keep working.
 
-    [Open the hero image folder](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/hero){ .md-button target="_blank" rel="noopener" }
+    [Open image folder for changing image](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/hero){ .md-button target="_blank" rel="noopener" }
 
 
 [See a completed example](example.md){ .md-button }
@@ -50,7 +50,7 @@ public_mode_toggle: true
 ## People { #people .oasis-report-out-context }
 
 !!! note "Day 1 task"
-    Get to know your team: share your cards (5-7 mins). Update your team roster (2-3 min)
+    Get to know your team: share your cards (5-7 mins). Update your team roster (2-3 min).
 
     Use the in-person name cards to guide quick introductions.
 
@@ -97,9 +97,9 @@ Our decision making strategy:
 ## Our product(s) 📣 { #product-direction .oasis-report-out-section .oasis-report-out-day2 }
 
 !!! note "Day 2 Tasks"
-    Morning Focus: questions, hypothese, context; add at least one visual (photo of whiteboard/notes)
+    Morning Focus: questions, hypotheses, context; add at least one visual (photo of whiteboard/notes)
 
-    Afternoon Focus: try a few datasets and analyses. Keep it visual, keep it simple. Update teh site to refelce what you test. 
+    Afternoon Focus: try a few datasets and analyses. Keep it visual, keep it simple. Update the site to reflect what you test. 
 
     [Edit content below here in Markdown 📣](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L106){ .md-button target="_blank" rel="noopener" }
 
@@ -142,9 +142,9 @@ People who could use this:
 ## Data sources we’re exploring 📣 { #data-exploration .oasis-report-out-section .oasis-report-out-day2 }
 
 !!! note "data exploration"
-    provide a snapshot showing some initial data patterns. 
+    Provide a snapshot showing some initial data patterns. 
 
-    Add 2-4 promising data srouces (links +1-line notes)    
+    Add 2-4 promising data sources (links +1-line notes)    
 
 ![Exploration figure](assets/explorations/explore_data_plot.png)
 
@@ -160,7 +160,7 @@ Promising data sources:
 ## Methods/technologies we’re testing 📣 { #methods-and-code .oasis-report-out-section .oasis-report-out-day2 }
 
 !!! note "methods"
-    Add 2-4 methods/technologies we're testing (stats, models, viz)
+    Add 2-4 methods/technologies we're testing (stats, models, viz).
 
 [View shared code](https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code){ .md-button }
 
