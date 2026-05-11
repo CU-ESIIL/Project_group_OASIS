@@ -12,7 +12,7 @@ public_mode_toggle: true
     
     - Look for the green buttons to indicate what you need to edit. 
     
-    - Megaphones 📣 indicate which item you wil be presenting during the end-of-day report-outs.
+    - Megaphones 📣 indicate which items you will be presenting during the end-of-day report-outs.
 
     - Only the items with megaphones will be visible when you hit the 'Summit Report Out' button. 
 
