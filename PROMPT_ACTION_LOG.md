@@ -1681,6 +1681,26 @@ Verification
 * Confirmed the gallery CSS includes full-width page styling, 5/3/2 responsive columns, and percentage-based iframe scaling.
 * Confirmed the page still contains 20 `?report=1` preview URLs.
 * Confirmed no conflict markers in `docs/summit-team-sites.md` or `mkdocs.yml`.
+
+2026-05-11
+
+Prompt
+
+User showed that the Summit Team Sites cards were wide enough but the iframe page image was not filling each card.
+
+Files inspected
+
+* docs/summit-team-sites.md
+
+Actions taken
+
+* Changed the iframe preview crop from percentage-based full-page scaling to a centered, zoomed iframe viewport.
+* Increased the iframe preview scale so the site content fills more of the card instead of appearing as a narrow strip.
+
+Verification
+
+* Confirmed the iframe CSS now positions previews absolutely, centers them, and scales them to `0.32`.
+* Confirmed no conflict markers in `docs/summit-team-sites.md`.
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
