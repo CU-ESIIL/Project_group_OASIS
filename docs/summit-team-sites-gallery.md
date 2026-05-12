@@ -226,56 +226,62 @@ body:has(.summit-team-gallery) .md-content__inner {
 }
 
 </style>
-
 <script>
 (function () {
-  function makePreviewUrl(teamNumber) {
-    return `https://cu-esiil.github.io/Summit_group_2026_${teamNumber}/?report=1&feedback=1&preview=1`;
+  function activateSummitReportOut(iframe, attempts) {
+    let doc;
+    let win;
+    try {
+      doc = iframe.contentDocument;
+      win = iframe.contentWindow;
+    } catch (error) {
+      return;
+    }
+
+    if (!doc || !win || !doc.body) {
+      if (attempts < 30) {
+        window.setTimeout(() => activateSummitReportOut(iframe, attempts + 1), 150);
+      }
+      return;
+    }
+
+    if (doc.body.classList.contains("presentation-mode")) {
+      return;
+    }
+
+    const button = doc.querySelector("[data-oasis-present-toggle], .oasis-present-button");
+    if (button) {
+      button.click();
+    } else {
+      doc.dispatchEvent(new win.KeyboardEvent("keydown", {
+        key: "p",
+        bubbles: true
+      }));
+    }
+
+    if (!doc.body.classList.contains("presentation-mode") && attempts < 30) {
+      window.setTimeout(() => activateSummitReportOut(iframe, attempts + 1), 150);
+    }
   }
 
-  function setPreviewFrames() {
-    document.querySelectorAll(".site-preview iframe").forEach((iframe, index) => {
-      const teamNumber = index + 1;
-      const url = makePreviewUrl(teamNumber);
-
-      iframe.srcdoc = `
-        <!doctype html>
-        <html>
-        <head>
-          <style>
-            html, body {
-              margin: 0;
-              padding: 0;
-              width: 1200px;
-              height: 900px;
-              overflow: hidden;
-              background: white;
-            }
-            iframe {
-              width: 1200px;
-              height: 900px;
-              border: 0;
-              transform: scale(0.31);
-              transform-origin: top left;
-            }
-          </style>
-        </head>
-        <body>
-          <iframe src="${url}"></iframe>
-        </body>
-        </html>
-      `;
+  function initSummitTeamPreviews() {
+    document.querySelectorAll(".site-preview iframe").forEach((iframe) => {
+      if (iframe.dataset.summitReportOutBound === "true") return;
+      iframe.dataset.summitReportOutBound = "true";
+      iframe.addEventListener("load", () => activateSummitReportOut(iframe, 0));
+      if (iframe.contentDocument?.readyState === "complete") {
+        activateSummitReportOut(iframe, 0);
+      }
     });
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", setPreviewFrames);
+    document.addEventListener("DOMContentLoaded", initSummitTeamPreviews);
   } else {
-    setPreviewFrames();
+    initSummitTeamPreviews();
   }
-
   if (typeof document$ !== "undefined") {
-    document$.subscribe(setPreviewFrames);
+    document$.subscribe(initSummitTeamPreviews);
   }
 })();
 </script>
