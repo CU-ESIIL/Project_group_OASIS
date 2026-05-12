@@ -1,5 +1,5 @@
 ---
-title: Team Home
+title: Team 2
 public_mode_toggle: true
 ---
 
