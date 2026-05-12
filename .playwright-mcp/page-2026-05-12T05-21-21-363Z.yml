@@ -1,0 +1,448 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#team-3-home-make-me-your-own
+  - banner [ref=e3]:
+    - navigation "Header" [ref=e4]:
+      - img [ref=e6] [cursor=pointer]
+      - generic [ref=e11]: "Team 3 Home: Make Me Your Own"
+      - generic [ref=e12]:
+        - radio "Switch to dark mode"
+        - generic "Switch to dark mode" [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+        - radio "Switch to light mode"
+      - dialog [ref=e16]:
+        - search [ref=e17]:
+          - generic [ref=e18]:
+            - textbox "Search" [ref=e19]
+            - generic:
+              - img
+            - navigation "Search":
+              - button "Clear":
+                - img
+          - generic [ref=e21]: Type to start searching
+      - link "link to repo 0 0" [ref=e23] [cursor=pointer]:
+        - /url: https://github.com/CU-ESIIL/Summit_group_2026_3
+        - img [ref=e25]
+        - generic [ref=e27]:
+          - text: link to repo
+          - list [ref=e28]:
+            - listitem [ref=e29]: "0"
+            - listitem [ref=e30]: "0"
+  - generic [ref=e31]:
+    - main [ref=e32]:
+      - generic [ref=e33]:
+        - navigation "Navigation" [ref=e36]:
+          - generic [ref=e37] [cursor=pointer]:
+            - link "OASIS Project Group Template" [ref=e38]:
+              - /url: https://cu-esiil.github.io/Summit_group_2026_3/
+            - text: OASIS Project Group Template
+          - list [ref=e39]:
+            - listitem [ref=e40]:
+              - link "Home" [ref=e41] [cursor=pointer]:
+                - /url: https://cu-esiil.github.io/Summit_group_2026_3/
+                - generic [ref=e42]: Home
+            - listitem [ref=e43]:
+              - link "Example" [ref=e44] [cursor=pointer]:
+                - /url: https://cu-esiil.github.io/Summit_group_2026_3/example/
+                - generic [ref=e45]: Example
+            - listitem [ref=e46]:
+              - generic [ref=e48]: Specialty Tracks
+              - navigation "Specialty Tracks" [ref=e50]:
+                - generic [ref=e51] [cursor=pointer]: Specialty Tracks
+                - list [ref=e53]:
+                  - listitem [ref=e54]:
+                    - link "LLM" [ref=e55] [cursor=pointer]:
+                      - /url: https://cu-esiil.github.io/LLM_lesson_exemplar/cyverse/
+                      - generic [ref=e56]: LLM
+                  - listitem [ref=e57]:
+                    - link "Digital Twins" [ref=e58] [cursor=pointer]:
+                      - /url: https://cu-esiil.github.io/Summit_group_2026_3/specialty-tracks/digital-twins/
+                      - generic [ref=e59]: Digital Twins
+                  - listitem [ref=e60]:
+                    - link "Earth Embeddings" [ref=e61] [cursor=pointer]:
+                      - /url: https://center-for-effective-global-action-cega.github.io/MOSAIKS-Training-Manual/en/index.html
+                      - generic [ref=e62]: Earth Embeddings
+            - listitem [ref=e63]:
+              - generic [ref=e65]: Cloud Triangle
+              - navigation "Cloud Triangle" [ref=e67]:
+                - generic [ref=e68] [cursor=pointer]: Cloud Triangle
+                - list [ref=e70]:
+                  - listitem [ref=e71]:
+                    - link "Connect instance to GitHub" [ref=e72] [cursor=pointer]:
+                      - /url: https://cu-esiil.github.io/Summit_group_2026_3/instructions/link-to-github/
+                      - generic [ref=e73]: Connect instance to GitHub
+                  - listitem [ref=e74]:
+                    - link "Instance to/from GitHub" [ref=e75] [cursor=pointer]:
+                      - /url: https://cu-esiil.github.io/Summit_group_2026_3/instructions/push-to-github/
+                      - generic [ref=e76]: Instance to/from GitHub
+                  - listitem [ref=e77]:
+                    - link "Instance to/from persistent storage" [ref=e78] [cursor=pointer]:
+                      - /url: https://cu-esiil.github.io/Summit_group_2026_3/instructions/save-to-persistent-storage/
+                      - generic [ref=e79]: Instance to/from persistent storage
+            - listitem [ref=e80]:
+              - generic [ref=e82]: Links
+              - navigation "Links" [ref=e84]:
+                - generic [ref=e85] [cursor=pointer]: Links
+                - list [ref=e87]:
+                  - listitem [ref=e88]:
+                    - link "Your code" [ref=e89] [cursor=pointer]:
+                      - /url: https://github.com/CU-ESIIL/Summit_group_2026_3/tree/main/code
+                      - generic [ref=e90]: Your code
+                  - listitem [ref=e91]:
+                    - link "Your documentation" [ref=e92] [cursor=pointer]:
+                      - /url: https://github.com/CU-ESIIL/Summit_group_2026_3/tree/main/documentation
+                      - generic [ref=e93]: Your documentation
+                  - listitem [ref=e94]:
+                    - link "Your persistent storage" [ref=e95] [cursor=pointer]:
+                      - /url: https://de.cyverse.org/data/ds/iplant/home/shared/esiil/Innovation_Summit_2026/Group_3?type=folder&resourceId=a1d20a86-4d8d-11f1-b642-90e2ba675364
+                      - generic [ref=e96]: Your persistent storage
+        - generic [ref=e99]:
+          - navigation "Table of contents" [ref=e100]:
+            - generic [ref=e101]: Table of contents
+            - list [ref=e102]:
+              - listitem [ref=e103]:
+                - link "People" [ref=e104] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#people
+                  - generic [ref=e105]: People
+              - listitem [ref=e106]:
+                - link "Team Norms and Decision Making" [ref=e107] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#team-norms-and-decision-making
+                  - generic [ref=e108]: Team Norms and Decision Making
+              - listitem [ref=e109]:
+                - link "Our product(s) 📣" [ref=e110] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#product-direction
+                  - generic [ref=e111]: Our product(s) 📣
+              - listitem [ref=e112]:
+                - link "Our question(s) 📣" [ref=e113] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#project-question
+                  - generic [ref=e114]: Our question(s) 📣
+              - listitem [ref=e115]:
+                - 'link "Hypotheses/Intentions [Optional: probably not relevant if you are creating an educational tool]" [ref=e116] [cursor=pointer]':
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#hypothesesintentions-optional-probably-not-relevant-if-you-are-creating-an-educational-tool
+                  - generic [ref=e117]: "Hypotheses/Intentions [Optional: probably not relevant if you are creating an educational tool]"
+              - listitem [ref=e118]:
+                - link "Why this matters (the “upshot”) 📣" [ref=e119] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#why-this-matters
+                  - generic [ref=e120]: Why this matters (the “upshot”) 📣
+              - listitem [ref=e121]:
+                - link "Data sources we’re exploring 📣" [ref=e122] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#data-exploration
+                  - generic [ref=e123]: Data sources we’re exploring 📣
+              - listitem [ref=e124]:
+                - link "Methods/technologies we’re testing 📣" [ref=e125] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#methods-and-code
+                  - generic [ref=e126]: Methods/technologies we’re testing 📣
+              - listitem [ref=e127]:
+                - link "Team Photo" [ref=e128] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#team-photo
+                  - generic [ref=e129]: Team Photo
+              - listitem [ref=e130]:
+                - link "Findings at a glance 📣" [ref=e131] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#findings-at-a-glance
+                  - generic [ref=e132]: Findings at a glance 📣
+              - listitem [ref=e133]:
+                - link "Visuals that tell a story 📣" [ref=e134] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#story-visuals
+                  - generic [ref=e135]: Visuals that tell a story 📣
+              - listitem [ref=e136]:
+                - link "What’s next? 📣" [ref=e137] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#whats-next
+                  - generic [ref=e138]: What’s next? 📣
+              - listitem [ref=e139]:
+                - link "Cite & Reuse" [ref=e140] [cursor=pointer]:
+                  - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#cite-reuse
+                  - generic [ref=e141]: Cite & Reuse
+          - generic [ref=e142]:
+            - group "Template instructions display setting" [ref=e143]:
+              - generic [ref=e144] [cursor=pointer]:
+                - checkbox "Show or hide template instructions" [checked] [ref=e145]
+                - generic [ref=e147]: Instructions on
+            - generic [ref=e148]:
+              - button "Open Summit Report Out layout" [ref=e149] [cursor=pointer]:
+                - generic [ref=e150]: ▶
+                - generic [ref=e151]: Summit Report Out
+              - generic [ref=e152]: Press P for Summit Report Out
+        - article [ref=e154]:
+          - link "Edit this page" [ref=e155] [cursor=pointer]:
+            - /url: https://github.com/CU-ESIIL/Summit_group_2026_3/edit/main/docs/index.md
+            - img [ref=e156]
+          - paragraph
+          - generic [ref=e158]:
+            - paragraph [ref=e159]: How to use this page during the Summit
+            - list [ref=e160]:
+              - listitem [ref=e161]:
+                - paragraph [ref=e162]: This page is your team’s shared workspace and final report-out page. It captures your group’s process and thinking throughout the Summit and will be used to share your work with others.
+              - listitem [ref=e163]:
+                - paragraph [ref=e164]: Use this page as your team’s working record during the Summit and your final report-out.
+              - listitem [ref=e165]:
+                - paragraph [ref=e166]: "The Summit has several different goals and thus you will use the page differently each day: Day 1 is for alignment, Day 2 is for building one useful thing, and Day 3 is for synthesis and report- out."
+              - listitem [ref=e167]:
+                - paragraph [ref=e168]: Look for the green buttons to indicate what you need to edit.
+              - listitem [ref=e169]:
+                - paragraph [ref=e170]: Megaphones 📣 indicate which items you will be presenting during the end-of-day report-outs.
+              - listitem [ref=e171]:
+                - paragraph [ref=e172]: Only the items with megaphones will be visible when you hit the 'Summit Report Out' button.
+              - listitem [ref=e173]:
+                - paragraph [ref=e174]: If you turn off 'Instructions' then you will only see the page content for public display.
+          - 'heading "Team 3 Home: Make Me Your Own" [level=1] [ref=e175]'
+          - generic [ref=e176]:
+            - paragraph [ref=e177]: Day 1 directions
+            - paragraph [ref=e178]: Change the title to the name of your project.
+            - paragraph [ref=e179]:
+              - link "Edit Day 1 setup in Markdown" [ref=e180] [cursor=pointer]:
+                - /url: https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L21
+          - generic [ref=e181]:
+            - paragraph [ref=e182]: For ESIIL staff
+            - paragraph [ref=e183]: "Group Number: 3"
+            - paragraph [ref=e184]: "Breakout Room #: (To be assigned by ESIIL Staff)"
+            - paragraph [ref=e185]:
+              - link "ESIIL staff edit in Markdown" [ref=e186] [cursor=pointer]:
+                - /url: https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L28
+          - paragraph [ref=e187]:
+            - img "Team hero image" [ref=e188]
+          - generic [ref=e189]:
+            - paragraph [ref=e190]: How to replace the image above
+            - paragraph [ref=e191]: Upload an image that represents your project and welcome people to your page.
+            - paragraph [ref=e192]:
+              - text: Upload your own image to
+              - code [ref=e193]: docs/assets/hero/
+              - text: and replace the file named
+              - code [ref=e194]: hero.png
+              - text: . Use a wide image if you can, then refresh the site preview to check how it looks. Keep the file path
+              - code [ref=e195]: docs/assets/hero/hero.png
+              - text: if you want the Markdown above to keep working.
+            - paragraph [ref=e196]:
+              - link "Open image folder for changing image" [ref=e197] [cursor=pointer]:
+                - /url: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/docs/assets/hero
+          - paragraph [ref=e198]:
+            - link "See a completed example" [ref=e199] [cursor=pointer]:
+              - /url: https://cu-esiil.github.io/Summit_group_2026_3/example/
+          - heading "People" [level=2] [ref=e200]
+          - generic [ref=e201]:
+            - paragraph [ref=e202]: Day 1 task
+            - paragraph [ref=e203]: "Get to know your team: share your cards (5-7 mins). Update your team roster (2-3 min)."
+            - paragraph [ref=e204]: Use the in-person name cards to guide quick introductions.
+            - table [ref=e207]:
+              - rowgroup [ref=e208]:
+                - row "Name card prompts Follow-up notes" [ref=e209]:
+                  - columnheader "Name card prompts" [ref=e210]
+                  - columnheader "Follow-up notes" [ref=e211]
+              - rowgroup [ref=e212]:
+                - row "Name card prompts for name, institution, area of expertise, research difference, and questions Follow-up notes card with space for names and follow-up ideas" [ref=e213]:
+                  - cell "Name card prompts for name, institution, area of expertise, research difference, and questions" [ref=e214]:
+                    - img "Name card prompts for name, institution, area of expertise, research difference, and questions" [ref=e215]
+                  - cell "Follow-up notes card with space for names and follow-up ideas" [ref=e216]:
+                    - img "Follow-up notes card with space for names and follow-up ideas" [ref=e217]
+            - paragraph [ref=e218]:
+              - link "Edit People in Markdown" [ref=e219] [cursor=pointer]:
+                - /url: https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L63
+          - table [ref=e222]:
+            - rowgroup [ref=e223]:
+              - row "Name Affiliation Contact Github" [ref=e224]:
+                - columnheader "Name" [ref=e225]
+                - columnheader "Affiliation" [ref=e226]
+                - columnheader "Contact" [ref=e227]
+                - columnheader "Github" [ref=e228]
+            - rowgroup [ref=e229]:
+              - row [ref=e230]:
+                - cell [ref=e231]
+                - cell [ref=e232]
+                - cell [ref=e233]
+                - cell [ref=e234]
+              - row [ref=e235]:
+                - cell [ref=e236]
+                - cell [ref=e237]
+                - cell [ref=e238]
+                - cell [ref=e239]
+          - heading "Team Norms and Decision Making" [level=2] [ref=e240]
+          - generic [ref=e241]:
+            - paragraph [ref=e242]: Day 1 task
+            - paragraph [ref=e243]: "Suggested Self-Facilitation Instructions:"
+            - list [ref=e244]:
+              - listitem [ref=e245]:
+                - paragraph [ref=e246]: "Round Robin: Everyone shares 1 norm that they think will be important for their team during the Summit and perhaps following the Summit (2 min)."
+              - listitem [ref=e247]:
+                - paragraph [ref=e248]: After everyone has shared, make a list with as many norms as possible in GitHub (5–7 min).
+              - listitem [ref=e249]:
+                - paragraph [ref=e250]: Vote on your top 3 ideas. (Each person gets 3 votes; you can use all your votes on 1 idea or spread them out) (2 min).
+              - listitem [ref=e251]:
+                - paragraph [ref=e252]: In GitHub, move all team norms with votes to the top of the list.
+            - table [ref=e255]:
+              - rowgroup [ref=e256]:
+                - row "Gradients of agreement" [ref=e257]:
+                  - columnheader "Gradients of agreement" [ref=e258]
+              - rowgroup [ref=e259]:
+                - row "Gradients of agreement scale for Summit teams" [ref=e260]:
+                  - cell "Gradients of agreement scale for Summit teams" [ref=e261]:
+                    - img "Gradients of agreement scale for Summit teams" [ref=e262]
+            - paragraph [ref=e263]:
+              - link "Edit Team Norms in Markdown" [ref=e264] [cursor=pointer]:
+                - /url: https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L87
+          - paragraph [ref=e265]: "Our team norms:"
+          - list [ref=e266]:
+            - listitem [ref=e267]: ...
+            - listitem [ref=e268]: ...
+            - listitem [ref=e269]: ...
+          - paragraph [ref=e270]: "Our decision making strategy:"
+          - paragraph [ref=e271]: ...
+          - heading "Our product(s) 📣" [level=2] [ref=e272]
+          - generic [ref=e273]:
+            - paragraph [ref=e274]: Day 2 Tasks
+            - paragraph [ref=e275]: "Morning Focus: questions, hypotheses, context; add at least one visual (photo of whiteboard/notes)"
+            - paragraph [ref=e276]: "Afternoon Focus: try a few datasets and analyses. Keep it visual, keep it simple. Update the site to reflect what you test."
+            - paragraph [ref=e277]:
+              - link "Edit content below here in Markdown" [ref=e278] [cursor=pointer]:
+                - /url: https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L106
+          - paragraph [ref=e279]: "Short term:"
+          - paragraph [ref=e280]: ...
+          - paragraph [ref=e281]: "Long term:"
+          - list [ref=e282]:
+            - listitem [ref=e283]: ...
+            - listitem [ref=e284]: ...
+          - paragraph [ref=e285]:
+            - img "Day 2 morning whiteboard or notes photo" [ref=e286]
+          - paragraph [ref=e287]:
+            - emphasis [ref=e288]: Morning whiteboard or notes showing the question, hypotheses, and context we used to start Day 2.
+          - heading "Our question(s) 📣" [level=2] [ref=e289]
+          - paragraph [ref=e290]: "Our working question:"
+          - paragraph [ref=e291]: ...
+          - paragraph [ref=e292]: "What would count as progress:"
+          - paragraph [ref=e293]: ...
+          - 'heading "Hypotheses/Intentions [Optional: probably not relevant if you are creating an educational tool]" [level=2] [ref=e294]'
+          - heading "Why this matters (the “upshot”) 📣" [level=2] [ref=e295]
+          - paragraph [ref=e296]: "This matters because:"
+          - paragraph [ref=e297]: ...
+          - paragraph [ref=e298]: "People who could use this:"
+          - paragraph [ref=e299]: ...
+          - heading "Data sources we’re exploring 📣" [level=2] [ref=e300]
+          - generic [ref=e301]:
+            - paragraph [ref=e302]: data exploration
+            - paragraph [ref=e303]: Provide a snapshot showing some initial data patterns.
+            - paragraph [ref=e304]: Add 2-4 promising data sources (links +1-line notes)
+          - paragraph [ref=e305]:
+            - img "Exploration figure" [ref=e306]
+          - paragraph [ref=e307]:
+            - emphasis [ref=e308]: Snapshot showing initial data patterns.
+          - paragraph [ref=e309]: "Promising data sources:"
+          - list [ref=e310]:
+            - listitem [ref=e311]:
+              - link "Data source 1" [ref=e312] [cursor=pointer]:
+                - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#
+              - text: ": ..."
+            - listitem [ref=e313]:
+              - link "Data source 2" [ref=e314] [cursor=pointer]:
+                - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#
+              - text: ": ..."
+            - listitem [ref=e315]:
+              - link "Data source 3" [ref=e316] [cursor=pointer]:
+                - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#
+              - text: ": ..."
+            - listitem [ref=e317]:
+              - link "Data source 4" [ref=e318] [cursor=pointer]:
+                - /url: https://cu-esiil.github.io/Summit_group_2026_3/?report=1#
+              - text: ": ..."
+          - heading "Methods/technologies we’re testing 📣" [level=2] [ref=e319]
+          - generic [ref=e320]:
+            - paragraph [ref=e321]: methods
+            - paragraph [ref=e322]: Add 2-4 methods/technologies we're testing (stats, models, viz).
+          - paragraph [ref=e323]:
+            - link "View shared code" [ref=e324] [cursor=pointer]:
+              - /url: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
+          - paragraph [ref=e325]: "Methods/technologies we are testing:"
+          - table [ref=e328]:
+            - rowgroup [ref=e329]:
+              - row "Method or technology What we tested Early note" [ref=e330]:
+                - columnheader "Method or technology" [ref=e331]
+                - columnheader "What we tested" [ref=e332]
+                - columnheader "Early note" [ref=e333]
+            - rowgroup [ref=e334]:
+              - row "... ... ..." [ref=e335]:
+                - cell "..." [ref=e336]
+                - cell "..." [ref=e337]
+                - cell "..." [ref=e338]
+              - row "... ... ..." [ref=e339]:
+                - cell "..." [ref=e340]
+                - cell "..." [ref=e341]
+                - cell "..." [ref=e342]
+              - row "... ... ..." [ref=e343]:
+                - cell "..." [ref=e344]
+                - cell "..." [ref=e345]
+                - cell "..." [ref=e346]
+              - row "... ... ..." [ref=e347]:
+                - cell "..." [ref=e348]
+                - cell "..." [ref=e349]
+                - cell "..." [ref=e350]
+          - heading "Challenges identified" [level=3] [ref=e351]
+          - list [ref=e352]:
+            - listitem [ref=e353]: ...
+            - listitem [ref=e354]: ...
+          - heading "Visuals" [level=3] [ref=e355]
+          - paragraph [ref=e356]:
+            - img "Method or workflow visual" [ref=e357]
+          - heading "Next Steps" [level=3] [ref=e358]
+          - paragraph [ref=e359]: "Short term:"
+          - paragraph [ref=e360]: "Long term:"
+          - generic [ref=e361]:
+            - paragraph [ref=e362]: Day 3 Tasks
+            - paragraph [ref=e363]: "Sythesis: highlight 2-3 visuals that tell the story; keep text crisp. Practice a 6-minute walkthrough of the homepage. Why -> Questions -> Data/Methods -> Findings -> Next"
+            - paragraph [ref=e364]:
+              - link "Edit content below here in Markdown" [ref=e365] [cursor=pointer]:
+                - /url: https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L203
+          - heading "Team Photo" [level=2] [ref=e366]
+          - paragraph [ref=e367]:
+            - img "Team photo" [ref=e368]
+          - paragraph [ref=e369]:
+            - emphasis [ref=e370]: Team members and collaborators who contributed to this project.
+          - heading "Findings at a glance 📣" [level=2] [ref=e371]
+          - paragraph [ref=e372]: Headline 1 — what, where, how much
+          - paragraph [ref=e373]: ...
+          - paragraph [ref=e374]: Headline 2 — change/trend/contrast
+          - paragraph [ref=e375]: ...
+          - paragraph [ref=e376]: Headline 3 — implication for practice or policy
+          - paragraph [ref=e377]: ...
+          - heading "Visuals that tell a story 📣" [level=2] [ref=e378]
+          - paragraph [ref=e379]:
+            - img "Story visual" [ref=e380]
+          - paragraph [ref=e381]:
+            - emphasis [ref=e382]: "Visual 1: the main pattern or output we want people to remember."
+          - heading "What’s next? 📣" [level=2] [ref=e383]
+          - paragraph [ref=e384]: "Short term:"
+          - list [ref=e385]:
+            - listitem [ref=e386]: ...
+          - paragraph [ref=e387]: "Long term:"
+          - list [ref=e388]:
+            - listitem [ref=e389]: ...
+          - paragraph [ref=e390]: Who should see this next
+          - list [ref=e391]:
+            - listitem [ref=e392]: ...
+          - heading "Cite & Reuse" [level=2] [ref=e393]
+          - paragraph [ref=e394]: "If you use these materials, please cite:"
+          - paragraph [ref=e395]:
+            - text: Summit Team. (2026).
+            - emphasis [ref=e396]: Project Group OASIS — Innovation Summit 2026
+            - text: . https://github.com/CU-ESIIL/Project_group_OASIS
+          - paragraph [ref=e397]: "License: CC-BY-4.0 unless noted."
+          - complementary [ref=e398]:
+            - generic [ref=e399]:
+              - generic "Last update" [ref=e400]:
+                - img [ref=e401]
+              - text: 2026-05-11
+      - button "Back to top":
+        - img
+        - text: Back to top
+    - contentinfo [ref=e403]:
+      - generic [ref=e404]:
+        - generic [ref=e405]:
+          - strong [ref=e406]: Environmental Data Science Innovation and Impact Lab (ESIIL)
+          - text: University of Colorado Boulder
+          - text: Cooperative Institute for Research in Environmental Sciences (CIRES)
+          - text: Boulder, Colorado, USA
+          - text: "Website:"
+          - link "https://esiil.org" [ref=e407] [cursor=pointer]:
+            - /url: https://esiil.org
+          - emphasis [ref=e408]: "Last updated: May 2026"
+        - generic "Institutional logos" [ref=e409]:
+          - img "University of Colorado Boulder" [ref=e410]
+          - img "CIRES" [ref=e411]
+          - img "ESIIL" [ref=e412]
+          - img "NSF" [ref=e413]

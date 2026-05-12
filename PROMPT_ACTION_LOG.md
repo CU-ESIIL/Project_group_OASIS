@@ -1739,6 +1739,26 @@ Actions taken
 Verification
 
 * Confirmed the iframe CSS now uses a fixed desktop viewport with scaled rendering.
+
+2026-05-11
+
+Prompt
+
+User clarified that `?report=1` should force the team homepage into Summit Report Out mode, and the iframe was showing the normal mobile homepage because the query parameter was not being handled.
+
+Files inspected
+
+* docs/javascripts/presentation-mode.js
+* docs/summit-team-sites.md
+
+Actions taken
+
+* Added `?report=1` and `?report=true` detection to `presentation-mode.js`.
+* Updated initialization so pages automatically enter Summit Report Out mode when that query parameter is present.
+
+Verification
+
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.

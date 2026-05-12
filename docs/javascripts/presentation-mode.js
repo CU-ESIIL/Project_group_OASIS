@@ -15,6 +15,11 @@
     );
   }
 
+  function shouldAutoOpenReportOut() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("report") === "1" || params.get("report") === "true";
+  }
+
   function clearReportOutBlocks() {
     document.querySelectorAll(".oasis-report-out-visible").forEach((element) => {
       element.classList.remove(
@@ -217,6 +222,9 @@
     ensurePresentationControls();
     ensurePresentationChrome();
     bindShortcuts();
+    if (shouldAutoOpenReportOut()) {
+      window.requestAnimationFrame(() => setPresentationMode(true));
+    }
   }
 
   if (document.readyState === "loading") {
