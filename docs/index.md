@@ -1,5 +1,5 @@
 ---
-title: Team 2
+title: Utilizing AI to Assess Community Response to Wildfire
 public_mode_toggle: true
 ---
 
