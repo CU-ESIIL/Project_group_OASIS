@@ -219,3 +219,63 @@ body:has(.summit-team-gallery) .md-content__inner {
   }
 }
 </style>
+
+<script>
+(function () {
+  function activateSummitReportOut(iframe, attempts) {
+    let doc;
+    let win;
+    try {
+      doc = iframe.contentDocument;
+      win = iframe.contentWindow;
+    } catch (error) {
+      return;
+    }
+
+    if (!doc || !win || !doc.body) {
+      if (attempts < 30) {
+        window.setTimeout(() => activateSummitReportOut(iframe, attempts + 1), 150);
+      }
+      return;
+    }
+
+    if (doc.body.classList.contains("presentation-mode")) {
+      return;
+    }
+
+    const button = doc.querySelector("[data-oasis-present-toggle], .oasis-present-button");
+    if (button) {
+      button.click();
+    } else {
+      doc.dispatchEvent(new win.KeyboardEvent("keydown", {
+        key: "p",
+        bubbles: true
+      }));
+    }
+
+    if (!doc.body.classList.contains("presentation-mode") && attempts < 30) {
+      window.setTimeout(() => activateSummitReportOut(iframe, attempts + 1), 150);
+    }
+  }
+
+  function initSummitTeamPreviews() {
+    document.querySelectorAll(".site-preview iframe").forEach((iframe) => {
+      if (iframe.dataset.summitReportOutBound === "true") return;
+      iframe.dataset.summitReportOutBound = "true";
+      iframe.addEventListener("load", () => activateSummitReportOut(iframe, 0));
+      if (iframe.contentDocument?.readyState === "complete") {
+        activateSummitReportOut(iframe, 0);
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSummitTeamPreviews);
+  } else {
+    initSummitTeamPreviews();
+  }
+  if (typeof document$ !== "undefined") {
+    document$.subscribe(initSummitTeamPreviews);
+  }
+})();
+</script>
