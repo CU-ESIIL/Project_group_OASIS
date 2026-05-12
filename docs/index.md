@@ -62,10 +62,15 @@ bea testing to see who sees this. sorry if this shows up for everyone.
 
     [Edit People in Markdown](https://github.com/CU-ESIIL/Project_group_OASIS/edit/main/docs/index.md?plain=1#L63){ .md-button target="_blank" rel="noopener" }
 
+
 | Name | Affiliation | Contact | Github |
 |---|---|---|---|
-| | | | |
-| | | | |
+|Rosana Aguilera |University of California San Diego |r1aguilerabecker@ucsd.edu |raguilbeck |
+| Chamisa Edmo| University of Kansas|chamisa@ku.edu | ChamisaE|
+|Rachel Mador-House|NA|rachelmador@gmail.com|rachelmador|
+|Alexis O’Callahan|University of Arkansas|aocallah@uark.edu; ocallahana@gmail.com|ocallahana|
+|Julie Peeling|Cornell University|jap479@cornell.edu|JuliePeeling|
+|Foster Sawyer|Oglala Lakota College|jfsawyer@olc.edu |TBD|
 
 ## Team Norms and Decision Making { #team-norms-and-decision-making }
 
