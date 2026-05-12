@@ -1720,6 +1720,25 @@ Actions taken
 Verification
 
 * Confirmed no fixed iframe scale, fixed 1600px width, or inverse percentage sizing remains in `docs/summit-team-sites.md`.
+
+2026-05-11
+
+Prompt
+
+User clarified the Summit Team Sites previews were rendering the embedded sites in mobile mode because the iframe viewport was constrained to the card size.
+
+Files inspected
+
+* docs/summit-team-sites.md
+
+Actions taken
+
+* Set each iframe to a desktop-style internal viewport of `1200px` by `720px`.
+* Scaled that desktop viewport down with `transform: scale(0.28)` so the preview card shows the desktop layout instead of triggering mobile mode.
+
+Verification
+
+* Confirmed the iframe CSS now uses a fixed desktop viewport with scaled rendering.
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.

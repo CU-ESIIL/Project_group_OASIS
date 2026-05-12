@@ -197,10 +197,11 @@ body:has(.summit-team-gallery) .md-content__inner {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 1200px;
+  height: 720px;
   border: 0;
-  transform: none;
+  transform: scale(0.28);
+  transform-origin: top left;
   pointer-events: none;
 }
 
