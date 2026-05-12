@@ -1569,6 +1569,27 @@ Verification
 
 * Ran `node --check docs/javascripts/presentation-mode.js`; passed.
 
+2026-05-11
+
+Prompt
+
+User reported that gallery iframes still showed normal homepage mode rather than Summit Report Out mode, even though links worked.
+
+Files inspected
+
+* docs/summit-team-sites.md
+
+Actions taken
+
+* Added a self-contained gallery script that scales each iframe based on its actual card width.
+* Added same-origin iframe handling to click the embedded Summit Report Out button after load when available.
+* Added a fallback that marks report-out sections directly inside the iframe if the embedded team site does not yet support `?report=1`.
+
+Verification
+
+* Confirmed the gallery page contains dynamic iframe scaling and report-mode forcing logic.
+* Confirmed no conflict markers in `docs/summit-team-sites.md`.
+
 2026-05-10
 
 Prompt

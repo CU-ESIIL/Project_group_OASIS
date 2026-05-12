@@ -197,10 +197,10 @@ body:has(.summit-team-gallery) .md-content__inner {
   position: absolute;
   top: 0;
   left: 0;
-  width: 1000px;
-  height: 640px;
+  width: 1200px;
+  height: 760px;
   border: 0;
-  transform: scale(0.34);
+  transform: scale(var(--summit-preview-scale, 0.28));
   transform-origin: top left;
   pointer-events: none;
 }
@@ -224,3 +224,123 @@ body:has(.summit-team-gallery) .md-content__inner {
   }
 }
 </style>
+
+<script>
+(function () {
+  const BASE_WIDTH = 1200;
+
+  function scalePreview(preview) {
+    const iframe = preview.querySelector("iframe");
+    if (!iframe) return;
+    const scale = preview.clientWidth / BASE_WIDTH;
+    iframe.style.setProperty("--summit-preview-scale", scale.toString());
+    iframe.style.height = `${Math.ceil(preview.clientHeight / scale)}px`;
+  }
+
+  function hideNonReportOutContent(doc) {
+    doc.querySelectorAll(".oasis-report-out-visible").forEach((element) => {
+      element.classList.remove(
+        "oasis-report-out-visible",
+        "oasis-report-out-title-visible",
+        "oasis-report-out-context-visible",
+        "oasis-report-out-day2-visible",
+        "oasis-report-out-day3-visible",
+        "oasis-report-out-hidden"
+      );
+    });
+    doc.querySelectorAll(".oasis-report-out-divider").forEach((element) => element.remove());
+
+    const title = doc.querySelector(".md-typeset h1");
+    title?.classList.add("oasis-report-out-visible", "oasis-report-out-title-visible");
+
+    function markSection(heading, groupClass) {
+      let element = heading;
+      let hideRestOfSection = false;
+      while (element) {
+        const tag = element.tagName?.toLowerCase();
+        if (element !== heading && tag === "h3" && !element.classList.contains("oasis-report-out-subsection")) {
+          hideRestOfSection = true;
+        }
+        if (hideRestOfSection) {
+          element.classList.add("oasis-report-out-visible", "oasis-report-out-hidden");
+        } else {
+          element.classList.add("oasis-report-out-visible", groupClass);
+        }
+        element = element.nextElementSibling;
+        if (element?.tagName?.toLowerCase() === "h2") break;
+      }
+    }
+
+    const people = doc.querySelector(".md-typeset h2#people");
+    if (people) markSection(people, "oasis-report-out-context-visible");
+
+    const typeset = doc.querySelector(".md-typeset");
+    const firstDay2 = doc.querySelector(".md-typeset h2.oasis-report-out-section.oasis-report-out-day2");
+    const firstDay3 = doc.querySelector(".md-typeset h2.oasis-report-out-section.oasis-report-out-day3");
+
+    if (typeset && firstDay2) {
+      const divider = doc.createElement("h2");
+      divider.className = "oasis-report-out-divider oasis-report-out-day2-divider oasis-report-out-visible";
+      divider.textContent = "Day 2 Report Out (2 minutes)";
+      typeset.insertBefore(divider, firstDay2);
+    }
+
+    if (typeset && firstDay3) {
+      const divider = doc.createElement("h2");
+      divider.className = "oasis-report-out-divider oasis-report-out-day3-divider oasis-report-out-visible";
+      divider.textContent = "Day 3 Report Out (6 minutes)";
+      typeset.insertBefore(divider, firstDay3);
+    }
+
+    doc.querySelectorAll(".md-typeset h2.oasis-report-out-section.oasis-report-out-day2").forEach((heading) => {
+      markSection(heading, "oasis-report-out-day2-visible");
+    });
+    doc.querySelectorAll(".md-typeset h2.oasis-report-out-section.oasis-report-out-day3").forEach((heading) => {
+      markSection(heading, "oasis-report-out-day3-visible");
+    });
+
+    doc.documentElement.classList.add("presentation-mode");
+    doc.body.classList.add("presentation-mode");
+  }
+
+  function forceReportMode(iframe) {
+    try {
+      const doc = iframe.contentDocument;
+      if (!doc) return;
+      const button = doc.querySelector("[data-oasis-present-toggle]");
+      if (button && !doc.body.classList.contains("presentation-mode")) {
+        button.click();
+      }
+      if (!doc.body.classList.contains("presentation-mode")) {
+        hideNonReportOutContent(doc);
+      }
+    } catch (error) {
+      // If a future site moves off this origin, the iframe will still behave as a normal clickable preview.
+    }
+  }
+
+  function initSummitPreviews() {
+    document.querySelectorAll(".site-preview").forEach((preview) => {
+      scalePreview(preview);
+      const iframe = preview.querySelector("iframe");
+      if (!iframe || iframe.dataset.summitPreviewBound === "true") return;
+      iframe.dataset.summitPreviewBound = "true";
+      iframe.addEventListener("load", () => {
+        scalePreview(preview);
+        window.setTimeout(() => forceReportMode(iframe), 100);
+        window.setTimeout(() => forceReportMode(iframe), 700);
+      });
+    });
+  }
+
+  window.addEventListener("resize", initSummitPreviews);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSummitPreviews);
+  } else {
+    initSummitPreviews();
+  }
+  if (typeof document$ !== "undefined") {
+    document$.subscribe(initSummitPreviews);
+  }
+})();
+</script>
