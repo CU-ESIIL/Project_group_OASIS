@@ -1659,6 +1659,28 @@ Verification
 * Confirmed no conflict markers in `mkdocs.yml` or `docs/summit-team-sites.md`.
 * Tried `python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_summit_team_sites_check`; failed because the active Python does not have MkDocs installed.
 * Tried `mkdocs build --strict --clean --site-dir /tmp/project_oasis_summit_team_sites_check`; failed because `mkdocs` is not installed globally.
+
+2026-05-11
+
+Prompt
+
+User reported that the Summit Team Sites gallery was too narrow and some previews appeared as grey/broken-link areas.
+
+Files inspected
+
+* docs/summit-team-sites.md
+
+Actions taken
+
+* Expanded the Summit Team Sites page content area to use the full site grid width on that page.
+* Updated iframe sizing from fixed pixels to inverse percentage scaling so each live preview fills its card.
+* Kept the 5/3/2 column responsive behavior and 20 `?report=1` preview URLs intact.
+
+Verification
+
+* Confirmed the gallery CSS includes full-width page styling, 5/3/2 responsive columns, and percentage-based iframe scaling.
+* Confirmed the page still contains 20 `?report=1` preview URLs.
+* Confirmed no conflict markers in `docs/summit-team-sites.md` or `mkdocs.yml`.
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.

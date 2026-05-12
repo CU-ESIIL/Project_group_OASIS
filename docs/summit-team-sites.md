@@ -151,6 +151,15 @@ hide:
 </div>
 
 <style>
+body:has(.summit-team-gallery) .md-content {
+  max-width: none;
+}
+
+body:has(.summit-team-gallery) .md-content__inner {
+  max-width: 88rem;
+  margin: 0 auto;
+}
+
 .summit-team-gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -176,14 +185,17 @@ hide:
 }
 
 .site-preview {
+  position: relative;
   height: 180px;
   overflow: hidden;
-  background: #f4f4f4;
+  background:
+    linear-gradient(135deg, rgba(66, 188, 220, 0.12), rgba(0, 113, 53, 0.1)),
+    #f4f4f4;
 }
 
 .site-preview iframe {
-  width: 1600px;
-  height: 1100px;
+  width: 556%;
+  height: 556%;
   border: 0;
   transform: scale(0.18);
   transform-origin: top left;
