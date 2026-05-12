@@ -1,5 +1,5 @@
 ---
-title: Team 2
+title: Using AI to Assesss Community Response to Climate Hazards
 public_mode_toggle: true
 ---
 
