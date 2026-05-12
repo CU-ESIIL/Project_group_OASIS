@@ -1590,6 +1590,26 @@ Verification
 * Confirmed the gallery page contains dynamic iframe scaling and report-mode forcing logic.
 * Confirmed no conflict markers in `docs/summit-team-sites.md`.
 
+2026-05-11
+
+Prompt
+
+User showed that Summit Team Sites iframe previews were in presenter mode but the presenter content itself was still too narrow inside each card.
+
+Files inspected
+
+* docs/summit-team-sites.md
+
+Actions taken
+
+* Added preview-only CSS injection into same-origin iframes.
+* Overrode the embedded presenter layout width to use a wide desktop preview canvas inside each card.
+* Kept the original site presentation layout unchanged outside the gallery iframe context.
+
+Verification
+
+* Confirmed the gallery script now injects `summit-gallery-preview-style` into each iframe.
+
 2026-05-10
 
 Prompt

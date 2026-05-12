@@ -303,6 +303,37 @@ body:has(.summit-team-gallery) .md-content__inner {
     doc.body.classList.add("presentation-mode");
   }
 
+  function widenEmbeddedReportOut(doc) {
+    if (doc.getElementById("summit-gallery-preview-style")) return;
+    const style = doc.createElement("style");
+    style.id = "summit-gallery-preview-style";
+    style.textContent = `
+      body.presentation-mode .md-content__inner {
+        width: 1120px !important;
+        max-width: 1120px !important;
+        margin: 0 !important;
+        padding: 1.5rem 2rem !important;
+      }
+      body.presentation-mode .md-typeset {
+        width: 100% !important;
+        max-width: none !important;
+      }
+      body.presentation-mode .md-typeset h1 {
+        max-width: 24rem !important;
+        font-size: 3.2rem !important;
+        line-height: 0.95 !important;
+      }
+      body.presentation-mode .md-typeset h2 {
+        font-size: 1.55rem !important;
+        margin-top: 2rem !important;
+      }
+      body.presentation-mode .md-typeset table {
+        width: 100% !important;
+      }
+    `;
+    doc.head.append(style);
+  }
+
   function forceReportMode(iframe) {
     try {
       const doc = iframe.contentDocument;
@@ -314,6 +345,7 @@ body:has(.summit-team-gallery) .md-content__inner {
       if (!doc.body.classList.contains("presentation-mode")) {
         hideNonReportOutContent(doc);
       }
+      widenEmbeddedReportOut(doc);
     } catch (error) {
       // If a future site moves off this origin, the iframe will still behave as a normal clickable preview.
     }
