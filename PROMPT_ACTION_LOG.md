@@ -1632,6 +1632,33 @@ Actions taken
 Verification
 
 * Confirmed the section was added after `What's next?` and is not marked as a report-out section.
+
+2026-05-11
+
+Prompt
+
+User asked to create a standalone Summit Team Sites MkDocs page with a 20-card iframe gallery and add it to navigation.
+
+Files inspected
+
+* mkdocs.yml
+* docs/summit-team-sites.md
+
+Actions taken
+
+* Added `docs/summit-team-sites.md`.
+* Added `Summit Team Sites: summit-team-sites.md` to the top-level navigation.
+* Added 20 linked live iframe preview cards using the `?report=1` presenter-mode URL pattern.
+* Kept gallery styling self-contained in the page.
+
+Verification
+
+* Confirmed the page contains 20 summit team cards.
+* Confirmed the page contains 20 `?report=1` iframe preview URLs.
+* Confirmed the nav entry points to `summit-team-sites.md`.
+* Confirmed no conflict markers in `mkdocs.yml` or `docs/summit-team-sites.md`.
+* Tried `python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_summit_team_sites_check`; failed because the active Python does not have MkDocs installed.
+* Tried `mkdocs build --strict --clean --site-dir /tmp/project_oasis_summit_team_sites_check`; failed because `mkdocs` is not installed globally.
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.

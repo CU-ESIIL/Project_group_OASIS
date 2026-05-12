@@ -1,0 +1,211 @@
+---
+title: Summit Team Sites
+hide:
+  - toc
+---
+
+# Summit Team Sites
+
+<div class="summit-team-gallery">
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_01/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_01/?report=1" title="Summit Team 1 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 1</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_02/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_02/?report=1" title="Summit Team 2 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 2</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_03/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_03/?report=1" title="Summit Team 3 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 3</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_04/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_04/?report=1" title="Summit Team 4 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 4</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_05/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_05/?report=1" title="Summit Team 5 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 5</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_06/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_06/?report=1" title="Summit Team 6 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 6</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_07/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_07/?report=1" title="Summit Team 7 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 7</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_08/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_08/?report=1" title="Summit Team 8 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 8</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_09/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_09/?report=1" title="Summit Team 9 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 9</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_10/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_10/?report=1" title="Summit Team 10 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 10</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_11/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_11/?report=1" title="Summit Team 11 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 11</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_12/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_12/?report=1" title="Summit Team 12 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 12</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_13/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_13/?report=1" title="Summit Team 13 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 13</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_14/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_14/?report=1" title="Summit Team 14 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 14</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_15/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_15/?report=1" title="Summit Team 15 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 15</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_16/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_16/?report=1" title="Summit Team 16 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 16</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_17/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_17/?report=1" title="Summit Team 17 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 17</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_18/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_18/?report=1" title="Summit Team 18 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 18</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_19/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_19/?report=1" title="Summit Team 19 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 19</div>
+</a>
+
+<a class="summit-team-card" href="https://cu-esiil.github.io/Summit_group_2026_20/" target="_blank">
+  <div class="site-preview">
+    <iframe src="https://cu-esiil.github.io/Summit_group_2026_20/?report=1" title="Summit Team 20 preview"></iframe>
+  </div>
+  <div class="summit-team-label">Team 20</div>
+</a>
+
+</div>
+
+<style>
+.summit-team-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.summit-team-card {
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.summit-team-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0.8rem 2rem rgba(0,0,0,0.18);
+}
+
+.site-preview {
+  height: 180px;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.site-preview iframe {
+  width: 1600px;
+  height: 1100px;
+  border: 0;
+  transform: scale(0.18);
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.summit-team-label {
+  text-align: center;
+  font-weight: 800;
+  padding: 0.7rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .summit-team-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .summit-team-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
