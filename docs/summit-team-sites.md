@@ -162,8 +162,8 @@ body:has(.summit-team-gallery) .md-content__inner {
 
 .summit-team-gallery {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
   margin-top: 1.5rem;
 }
 
@@ -187,7 +187,7 @@ body:has(.summit-team-gallery) .md-content__inner {
 .site-preview {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #f4f4f4;
 }
@@ -207,17 +207,6 @@ body:has(.summit-team-gallery) .md-content__inner {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 1100px) {
-  .summit-team-gallery {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .summit-team-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 </style>
 
 <script>
