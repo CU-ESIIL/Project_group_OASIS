@@ -186,22 +186,17 @@ body:has(.summit-team-gallery) .md-content__inner {
 
 .site-preview {
   position: relative;
-  height: 180px;
+  width: 100%;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(66, 188, 220, 0.12), rgba(0, 113, 53, 0.1)),
-    #f4f4f4;
+  background: #f4f4f4;
 }
 
 .site-preview iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1200px;
-  height: 760px;
+  display: block;
+  width: 100%;
+  height: 100%;
   border: 0;
-  transform: scale(var(--summit-preview-scale, 0.28));
-  transform-origin: top left;
   pointer-events: none;
 }
 
@@ -224,37 +219,3 @@ body:has(.summit-team-gallery) .md-content__inner {
   }
 }
 </style>
-
-<script>
-(function () {
-  const BASE_WIDTH = 1200;
-
-  function scalePreview(preview) {
-    const iframe = preview.querySelector("iframe");
-    if (!iframe) return;
-    const scale = preview.clientWidth / BASE_WIDTH;
-    iframe.style.setProperty("--summit-preview-scale", scale.toString());
-    iframe.style.height = `${Math.ceil(preview.clientHeight / scale)}px`;
-  }
-
-  function initSummitPreviews() {
-    document.querySelectorAll(".site-preview").forEach((preview) => {
-      scalePreview(preview);
-      const iframe = preview.querySelector("iframe");
-      if (!iframe || iframe.dataset.summitPreviewBound === "true") return;
-      iframe.dataset.summitPreviewBound = "true";
-      iframe.addEventListener("load", () => scalePreview(preview));
-    });
-  }
-
-  window.addEventListener("resize", initSummitPreviews);
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initSummitPreviews);
-  } else {
-    initSummitPreviews();
-  }
-  if (typeof document$ !== "undefined") {
-    document$.subscribe(initSummitPreviews);
-  }
-})();
-</script>
