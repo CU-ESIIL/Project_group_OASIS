@@ -15,6 +15,7 @@ nav:
   - Home: index.md
   - Example: example.md
   - Summit Team Sites: summit-team-sites.md
+  - Summit Team Sites Gallery: summit-team-sites-gallery.md
   # Instructions are hidden from the sidebar for now. Uncomment this block to show them again.
   # - Instructions:
   #     - Day 1 — Form Your Summit Team: instructions/day1.md

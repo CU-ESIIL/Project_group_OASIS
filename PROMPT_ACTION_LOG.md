@@ -1569,6 +1569,31 @@ Verification
 
 * Ran `node --check docs/javascripts/presentation-mode.js`; passed.
 
+2026-05-12
+
+Prompt
+
+User liked the full-width Summit Team Sites preview page, but also wanted a second page that keeps a compact 4-by-5 gallery version.
+
+Files changed
+
+* docs/summit-team-sites-gallery.md
+* mkdocs.yml
+
+Actions taken
+
+* Added `docs/summit-team-sites-gallery.md` as a separate compact gallery page.
+* Kept the existing full-width `docs/summit-team-sites.md` page unchanged.
+* Reused the same live iframe previews, `?report=1&feedback=1&preview=1` URLs, and Summit Report Out activator behavior.
+* Set the new gallery to four columns on desktop with responsive collapse to three, two, and one column.
+* Added the new page to the top-level navigation as `Summit Team Sites Gallery`.
+
+Verification
+
+* Confirmed the new gallery page has all 20 preview URLs.
+* Confirmed no iframe transform scaling code exists in either Summit Team Sites page.
+* Attempted `python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; could not run because the current Python environment does not have `mkdocs` installed.
+
 2026-05-11
 
 Prompt
