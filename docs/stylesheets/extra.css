@@ -1205,6 +1205,69 @@ body.presentation-mode .md-typeset img.oasis-report-out-banner {
   transform: none;
 }
 
+body.iframe-preview-mode {
+  overflow: hidden;
+  font-size: 0.82rem;
+}
+
+body.iframe-preview-mode.presentation-mode .md-grid,
+body.iframe-preview-mode.presentation-mode .md-main,
+body.iframe-preview-mode.presentation-mode .md-main__inner,
+body.iframe-preview-mode.presentation-mode .md-content,
+body.iframe-preview-mode.presentation-mode .md-content__inner,
+body.iframe-preview-mode.presentation-mode main,
+body.iframe-preview-mode.presentation-mode article {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+body.iframe-preview-mode.presentation-mode .md-content__inner {
+  padding: 0.55rem 0.7rem 1rem !important;
+}
+
+body.iframe-preview-mode.presentation-mode .md-typeset {
+  width: 100% !important;
+  max-width: none !important;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+body.iframe-preview-mode.presentation-mode .md-typeset h1 {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.65rem, 5vw, 2.5rem);
+  line-height: 0.98;
+}
+
+body.iframe-preview-mode.presentation-mode .md-typeset h2 {
+  margin-top: 0.9rem;
+  font-size: 1.05rem;
+  line-height: 1.1;
+}
+
+body.iframe-preview-mode.presentation-mode .md-typeset p,
+body.iframe-preview-mode.presentation-mode .md-typeset ul,
+body.iframe-preview-mode.presentation-mode .md-typeset ol,
+body.iframe-preview-mode.presentation-mode .md-typeset table:not([class]) {
+  margin-top: 0.35rem;
+  margin-bottom: 0.45rem;
+}
+
+body.iframe-preview-mode.presentation-mode .md-typeset table:not([class]) {
+  width: 100%;
+  font-size: 0.68rem;
+}
+
+body.iframe-preview-mode.presentation-mode .md-typeset .oasis-report-out-divider {
+  margin-top: 0.9rem;
+  padding: 0.38rem 0.55rem;
+}
+
+body.iframe-preview-mode.presentation-mode .oasis-present-exit,
+body.iframe-preview-mode.presentation-mode .oasis-present-identity {
+  display: none !important;
+}
+
 /* Utility alignment for inline edit icon pattern in the homepage */
 .md-typeset p[style*="text-align: right;"] {
   margin-bottom: 0;

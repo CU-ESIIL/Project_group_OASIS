@@ -20,6 +20,17 @@
     return params.get("report") === "1" || params.get("report") === "true";
   }
 
+  function isIframePreviewMode() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("preview") === "1" || params.get("preview") === "true";
+  }
+
+  function applyIframePreviewMode() {
+    const enabled = isIframePreviewMode();
+    document.documentElement.classList.toggle("iframe-preview-mode", enabled);
+    document.body.classList.toggle("iframe-preview-mode", enabled);
+  }
+
   function clearReportOutBlocks() {
     document.querySelectorAll(".oasis-report-out-visible").forEach((element) => {
       element.classList.remove(
@@ -219,6 +230,7 @@
   }
 
   function init() {
+    applyIframePreviewMode();
     ensurePresentationControls();
     ensurePresentationChrome();
     bindShortcuts();

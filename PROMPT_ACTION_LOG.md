@@ -1610,6 +1610,31 @@ Verification
 
 * Confirmed the gallery script now injects `summit-gallery-preview-style` into each iframe.
 
+2026-05-11
+
+Prompt
+
+User asked to stop solving the Summit Team Sites preview issue with outer iframe hacks and instead make embedded pages respond to `?report=1&preview=1` with an internal iframe preview mode.
+
+Files inspected
+
+* docs/summit-team-sites.md
+* docs/javascripts/presentation-mode.js
+* docs/stylesheets/extra.css
+
+Actions taken
+
+* Updated all Summit Team Sites iframe URLs from `?report=1` to `?report=1&preview=1`.
+* Added `preview=1` detection in `presentation-mode.js`.
+* Added `.iframe-preview-mode` to the embedded document body and root element when preview mode is active.
+* Added `.iframe-preview-mode.presentation-mode` CSS to remove width constraints, reduce margins, scale typography down, compact headings and tables, and hide presentation chrome inside previews.
+* Removed the gallery page's same-origin report-out forcing and injected iframe style hack, leaving only the iframe scaling system in the gallery page.
+
+Verification
+
+* Confirmed 20 iframe URLs use `?report=1&preview=1`.
+* Ran `node --check docs/javascripts/presentation-mode.js`; passed.
+
 2026-05-10
 
 Prompt
