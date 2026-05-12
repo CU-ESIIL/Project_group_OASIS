@@ -196,12 +196,11 @@ body:has(.summit-team-gallery) .md-content__inner {
 .site-preview iframe {
   position: absolute;
   top: 0;
-  left: 50%;
-  width: 1600px;
-  height: 1000px;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 0;
-  transform: translateX(-50%) scale(0.32);
-  transform-origin: top left;
+  transform: none;
   pointer-events: none;
 }
 

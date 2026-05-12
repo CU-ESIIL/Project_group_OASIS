@@ -1701,6 +1701,25 @@ Verification
 
 * Confirmed the iframe CSS now positions previews absolutely, centers them, and scales them to `0.32`.
 * Confirmed no conflict markers in `docs/summit-team-sites.md`.
+
+2026-05-11
+
+Prompt
+
+User showed the Summit Team Sites previews still were not filling the card image area.
+
+Files inspected
+
+* docs/summit-team-sites.md
+
+Actions taken
+
+* Removed the scaled desktop iframe approach.
+* Updated each preview iframe to render at `width: 100%` and `height: 100%` inside the card image area, with no transform.
+
+Verification
+
+* Confirmed no fixed iframe scale, fixed 1600px width, or inverse percentage sizing remains in `docs/summit-team-sites.md`.
 * Ran `python3 scripts/check_stickers.py`; passed for 19 task sticker pairs.
 * Ran `python3 scripts/site_health.py`; generated `docs/_site_health.md` with 0 warnings.
 * Ran `PYTHONPATH=/tmp/project_oasis_mkdocs_pkgs python3 -m mkdocs build --strict --clean --site-dir /tmp/project_oasis_site_check`; passed with the standard Material for MkDocs 2.0 warning.
