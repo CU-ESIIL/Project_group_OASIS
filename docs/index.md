@@ -5,8 +5,6 @@ public_mode_toggle: true
 
 !!! tip "How to use this page during the Summit"
     - This page is your team’s shared workspace and final report-out page. It captures your group’s process and thinking throughout the Summit and will be used to share your work with others. 
-
-bea testing to see who sees this. sorry if this shows up for everyone.
     
     - Use this page as your team’s working record during the Summit and your final report-out.
     
