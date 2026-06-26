@@ -32,9 +32,11 @@ nav:
       - Earth Embeddings: https://center-for-effective-global-action-cega.github.io/MOSAIKS-Training-Manual/en/index.html
       # - Causal Inference: specialty-tracks/causal-inference.md
   - Cloud Triangle:
+      - Overview: resources/cloud-triangle.md
       - Connect instance to GitHub: instructions/link-to-github.md
       - Instance to/from GitHub: instructions/push-to-github.md
       - Instance to/from persistent storage: instructions/save-to-persistent-storage.md
+      - Cite and Reuse: resources/cite-and-reuse.md
   - Links:
       - Your code: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/code
       - Your documentation: https://github.com/CU-ESIIL/Project_group_OASIS/tree/main/documentation
